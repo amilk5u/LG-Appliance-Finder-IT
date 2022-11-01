@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* Font style setting */
+$bau: Bau Asem, Arial, Apple SD Gothic Neo, sans-serif;
+$smart: LG Smart, Roboto, Arial, Apple SD Gothic Neo, sans-serif;
+$Berlin: Berlin, Roboto, Arial, Apple SD Gothic Neo, sans-serif;
+
+/* Point color setting */
+$violet : #2e008b;
+$red : #c61a49;
+
+$black : #000;
+$white : #fff;
+
+$gray1 : #212827;
+$gray2 : #555;
+$gray3 : #aaa;
+$gray4 : #dbdbdb;
+$gray5 : #f4f2f9;
+ 
+/**
+ * BASE SETTING
+ */
+$base-font:$smart;
+$base-font-size:16px;
+$base-font-color : $black;
+$letter-spacing : -0.5px;
+
+$light : 400;
+$bold : 600;
