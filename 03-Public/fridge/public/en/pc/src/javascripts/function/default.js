@@ -20,420 +20,468 @@ if (window.innerWidth >= 1024) {
 	imgPath = './images/';
 }
 
+/* 변수 정의 start -------------------------------*/
+let Type_value1 = 'Type_value1';
+let Type_value2 = 'Type_value2';
+let Type_value3 = 'Type_value3';
+
+let Capacity_value1 = 'Capacity_value1';
+let Capacity_value2 = 'Capacity_value2';
+let Capacity_value3 = 'Capacity_value3';
+
+let Depth_value1 = 'Depth_value1';
+
+let Width_value1 = 'Width_value1';
+let Width_value2 = 'Width_value2';
+let Width_value3 = 'Width_value3';
+
+let Height_value1 = 'Height_value1';
+let Height_value2 = 'Height_value2';
+let Height_value3 = 'Height_value3';
+
+let EnergyGrade_value1 = 'EnergyGrade_value1';
+let EnergyGrade_value2 = 'EnergyGrade_value2';
+let EnergyGrade_value3 = 'EnergyGrade_value3';
+let EnergyGrade_value4 = 'EnergyGrade_value4';
+let EnergyGrade_value5 = 'EnergyGrade_value5';
+
+let ThinQ_value1 = 'ThinQ_value1';
+
+let Feature_value1 = 'Feature_value1';
+let Feature_value2 = 'Feature_value2';
+let Feature_value3 = 'Feature_value3';
+let Feature_value4 = 'Feature_value4';
+let Feature_value5 = 'Feature_value5';
+let Feature_value6 = 'Feature_value6';
+let Feature_value7 = 'Feature_value7';
+let Feature_value8 = 'Feature_value8';
+let Feature_value9 = 'Feature_value9';
+let Feature_value10 = 'Feature_value10';
+let Feature_value11 = 'Feature_value11';
+let Feature_value12 = 'Feature_value12';
+let Feature_value13 = 'Feature_value13';
+
+let Color_value1 = 'Color_value1';
+let Color_value2 = 'Color_value2';
+let Color_value3 = 'Color_value3';
+
+let Dummy = 'dummy';
+
+/* 변수 정의 end -------------------------------*/
+
 // 제품 키 / 벨류
 const product = {
 	//  Multi Door Fridge Freezer
 	'LSR100': { // 1
-		FT06513471: 'FV65320784', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319109,FV65319100', // Feature
-		FT06513243: 'FV65319314' // Color
+		Type: Type_value1,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value1,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_value2,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value8, Feature_value9],
+		Color: Color_value3
 	},
-	// 데이터 
 	'GMX945MC9F': {// 2
-		FT06513471: 'FV65320784', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', //Energy Grade
-		FT06511872: 'FTV0329684V', //Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319144,FV65319109,FV65319100,FTV0329998V', //Feature
-		FT06513243: 'FTV0330121V' //Color
+		Type: Type_value1,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value1,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_value1,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value8, Feature_value9, Feature_value5],
+		Color: Color_value2
 	},
 	'GML945PZ8F': {// 3
-		FT06513471: 'FV65320784', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', //Energy Grade
-		FT06511872: 'FTV0329684V', //Smart Technology (ThinQ(Wi-Fi))"FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319109,FV65319100,FTV0329998V,FV65319144"
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319144,FTV0329998V', //Feature
-		FT06513243: 'FTV0329693V' //Color
+		Type: Type_value1,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value1,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_value1,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value5],
+		Color: Color_value1,
 	},
 	'GMX844MC6F': {// 4
-		FT06513471: 'FV65320784', // Type
-		FT06510172: 'FTV0330203V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FV65318477', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', //Energy Grade
-		FT06511872: 'FTV0329684V', //Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319144,FV65319109,FV65319100,FTV0329998V,', //Feature
-		FT06513243: 'FTV0330121V' //Color
+		Type: Type_value1,
+		Capacity: Capacity_value2,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_value1,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value8, Feature_value9, Feature_value5],
+		Color: Color_value2,
 	},
 	'GML844PZ6F': {// 5
-		FT06513471: 'FV65320784', // Type
-		FT06510172: 'FTV0330203V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FV65318477', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', //Energy Grade
-		FT06511872: 'FTV0329684V', //Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319144,FTV0329998V', //Feature
-		FT06513243: 'FTV0329693V' //Color
+		Type: Type_value1,
+		Capacity: Capacity_value2,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_value1,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value5],
+		Color: Color_value1,
 	},
 
-	// American Style Fridge Freezer
-	'GSXV91MCAE': { //1
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FTV0330428V,FV65319131,FV65319130,FV65318506,FV65319109,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0330121V' // Color
-	},
-	'GSXV90MCAE': { //2
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319109,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0330121V' // Color
-	},
-	'GSXV91BSAE': { //3
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FTV0330428V,FV65319131,FV65319130,FV65319109,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSXV90BSAE': { //4
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319109,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSJV91BSAE': { //5
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FTV0330428V,FV65319131,FV65319130,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSJV91PZAE': { //6
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FTV0330428V,FV65319131,FV65319130,FV65319100,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLV91PZAE': { //7
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FTV0330428V,FV65319131,FV65319130,FV65319146,FV65319136', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLD81PZRF': { //8
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319144,FV65319100,FV65319146', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLD80PZRF': { //9
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSJV70PZTF': { //10
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130,FV65319100', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLA81PZLF': { //11
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FV65319130,FV65319131,FTV0330428V,FV65319136,FTV0329684V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLA80PZLF': { //12
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V,FV65319136,FTV0329684V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLV71MCTF': { //13
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FV65319130,FV65319131,FTV0330428V,FTV0329684V', // Feature
-		FT06513243: 'FTV0330121V' // Color
-	},
-	'GSLV70MCTF': { //14
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V,FTV0329684V', // Feature
-		FT06513243: 'FTV0330121V' // Color
-	},
-	'GSLV71PZTF': { //15
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319150,FV65319130,FV65319131,FTV0330428V,FTV0329684V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLV70PZTF': { //16
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V,FV65319144,FV65319100,FTV0329684V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLV50DSXM': { //17
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSLD50DSXM': { //18
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FTV0330428V,FV65319131,FV65319130', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSBV70DSTF': { //19
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSI960PZVV': { //20
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FTV0329685V', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V,FV65319144,FV65319109,FV65319100,FV65319146,FV65319136,FTV0329684V', // Feature
-		FT06513243: 'FTV0329693V' // Color
-	},
-	'GSXV90MCDE': { //21
-		FT06513471: 'FV65320783', // Type
-		FT06510172: 'FTV0330202V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0329676V', // Width
-		FT06509991: 'FTV0329681V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FV65319133,FV65319130,FV65319131,FTV0330428V,FV65319109,FV65319100,FV65319146,FV65319136,FTV0329684V', // Feature
-		FT06513243: 'FTV0330121V' // Color
-	},
+	// // American Style Fridge Freezer
+	// 'GSXV91MCAE': { //1
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value2' // Color
+	// },
+	// 'GSXV90MCAE': { //2
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value2' // Color
+	// },
+	// 'GSXV91BSAE': { //3
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSXV90BSAE': { //4
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSJV91BSAE': { //5
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSJV91PZAE': { //6
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value9,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLV91PZAE': { //7
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value10,Feature_value3', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLD81PZRF': { //8
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value7,Feature_value9,Feature_value10', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLD80PZRF': { //9
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSJV70PZTF': { //10
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value9', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLA81PZLF': { //11
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,Feature_value3,ThinQ_value1', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLA80PZLF': { //12
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value3,ThinQ_value1', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLV71MCTF': { //13
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
+	// 	Color: 'Color_value2' // Color
+	// },
+	// 'GSLV70MCTF': { //14
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
+	// 	Color: 'Color_value2' // Color
+	// },
+	// 'GSLV71PZTF': { //15
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLV70PZTF': { //16
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value7,Feature_value9,ThinQ_value1', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLV50DSXM': { //17
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSLD50DSXM': { //18
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSBV70DSTF': { //19
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSI960PZVV': { //20
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value7,Feature_value8,Feature_value9,Feature_value10,Feature_value3,ThinQ_value1', // Feature
+	// 	Color: 'Color_value1' // Color
+	// },
+	// 'GSXV90MCDE': { //21
+	// 	Type: 'Type_value2', // Type
+	// 	Capacity: 'Capacity_value1', // Capacity
+	// 	Depth: 'Depth_value1', // Depth
+	// 	Width: 'Width_value1', // Width
+	// 	Height: 'Height_value1', // Height
+	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
+	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
+	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value8,Feature_value9,Feature_value10,Feature_value3,ThinQ_value1', // Feature
+	// 	Color: 'Color_value2' // Color
+	// },
 
 	//Tall Fridge Freezer
 	'GBB92MCBAP': { //1
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318510', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138,FTV0329998V', // Feature
-		FT06513243: 'FTV0330121V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value5,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
+		Color: Color_value2
 	},
 	'GBB92STAXP': { //2
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318507', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138,FTV0329998V', // Feature
-		FT06513243: 'FV65319314' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value3,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
+		Color: Color_value3
 	},
 	'GBB72MCUFN': { //3
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318507', // Energy Grade
-		FT06511872: 'FTV0329684V', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138,FTV0329998V', // Feature
-		FT06513243: 'FTV0330121V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value3,
+		SmartTechnology: ThinQ_value1,
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
+		Color: Color_value2
 	},
 	'GBB62PZGCC': { //4
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65319300', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value4,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
+		Color: Color_value1
 	},
 	'GBB72PZEFN': { //5
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318507', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138,FTV0329998V', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value3,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
+		Color: Color_value1
 	},
 	'GBD62PZYFN': { //6
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318507', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value3,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
+		Color: Color_value1
 	},
 	'GBB62PZGFN': { //7
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329683V', // Height
-		FT06513242: 'FV65318507', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319136,FV65319138', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_value3,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
+		Color: Color_value1
 	},
 	'GBF62PZJMN': { //8
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329682V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'FT05036514,FTV0330428V,FV65319131,FV65319130,FV65319138,FV65319132', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_value2,
+		SmartTechnology: '',
+		Feature: [Feature_value6, Feature_value1, Feature_value2, Feature_value4, Feature_value13],
+		Color: Color_value1
 	},
 	'GBB61DSJEN': { //9
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329683V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130', // Feature
-		FT06513243: 'FTV0329693V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_value2,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2],
+		Color: Color_value1
 	},
 	'GBB61BLJEC': { //10
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329683V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319138', // Feature
-		FT06513243: 'FTV0330121V' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_value2,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value4],
+		Color: Color_value2
 	},
 	'GBB61SWJEC': { //11
-		FT06513471: 'FV65320785', // Type
-		FT06510172: 'FTV0330201V', // Capacity
-		FT06509990: 'FTV0323815V', // Depth
-		FT06509987: 'FTV0323454V', // Width
-		FT06509991: 'FTV0329683V', // Height
-		FT06513242: 'FV65318506', // Energy Grade
-		FT06511872: '', // Smart Technology (ThinQ(Wi-Fi))
-		FT05036514: 'dummy,FTV0330428V,FV65319131,FV65319130,FV65319138', // Feature
-		FT06513243: 'FV65319316' // Color
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_value2,
+		SmartTechnology: '',
+		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value4],
+		Color: Color_value3
 	},
 }
 
@@ -441,7 +489,7 @@ const configData = {
 	// 제품 정보 정의
 	object: [
 		{
-			key: 'FV65320784',
+			key: 'Type_value1',
 			class: 'multi',
 			screenImg: {
 				changeScreenImg: 'step02/que_img01.png',
@@ -450,7 +498,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'FV65320783',
+			key: 'Type_value2',
 			class: 'american',
 			screenImg: {
 				changeScreenImg: 'step02/que_img02.png',
@@ -459,7 +507,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'FV65320785',
+			key: 'Type_value3',
 			class: 'tall',
 			screenImg: {
 				changeScreenImg: 'step02/que_img03.png',
@@ -511,8 +559,8 @@ const configData = {
 		//1번 스탭
 		[
 			{
-				key: 'FT06513471',
-				value: 'FV65320784',
+				key: 'Type',
+				value: 'Type_value1',
 				content: 'Multi Door Fridge Freezer',
 				changeData: {
 					description: 'Multi doors with a full-width fridge above and the freezer below.',
@@ -526,8 +574,8 @@ const configData = {
 				resultContent: 'step01',
 			},
 			{
-				key: 'FT06513471',
-				value: 'FV65320783',
+				key: 'Type',
+				value: 'Type_value2',
 				content: 'American Style Fridge Freezer',
 				changeData: {
 					description: 'A two-door model, with fridge and freezer standing side by side.',
@@ -541,8 +589,8 @@ const configData = {
 				resultContent: 'step01',
 			},
 			{
-				key: 'FT06513471',
-				value: 'FV65320785',
+				key: 'Type',
+				value: 'Type_value3',
 				content: 'Tall Fridge Freezer',
 				changeData: {
 					description: 'Slimline with fridge on top and freezer below.',
@@ -559,8 +607,8 @@ const configData = {
 		//2번 스탭
 		[
 			{
-				key: 'FT06510172',
-				value: 'FTV0330201V',
+				key: 'Capacity',
+				value: 'Capacity_value3',
 				content: 'Under 450L',
 				changeData: {
 					description: 'A practical choice for infrequent fridge users or people who buy smaller quantities of food at a time.',
@@ -568,8 +616,8 @@ const configData = {
 				}
 			},
 			{
-				key: 'FT06510172',
-				value: 'FTV0330203V',
+				key: 'Capacity',
+				value: 'Capacity_value2',
 				content: '500-600L',
 				changeData: {
 					description: 'A frequently chosen option for many households.',
@@ -577,8 +625,8 @@ const configData = {
 				}
 			},
 			{
-				key: 'FT06510172',
-				value: 'FTV0330202V',
+				key: 'Capacity',
+				value: 'Capacity_value1',
 				content: '600L or more',
 				changeData: {
 					description: 'For those who do a big grocery shop, or share the fridge with many others.',
@@ -589,8 +637,8 @@ const configData = {
 		//3번 스탭
 		[
 			{
-				key: 'FT06509990',
-				value: 'FTV0323815V',
+				key: 'Depth',
+				value: 'Depth_value1',
 				content: 'UNDER <em>760</em>mm <br>(COUNTER DEPTH)',
 				changeData: {
 					description: {
@@ -611,43 +659,43 @@ const configData = {
 		],
 		[
 			{
-				key: 'FT06509987',
-				value: 'FTV0323454V',
+				key: 'Width',
+				value: 'Width_value3',
 				content: 'UNDER <br><em>600</em>mm',
 			},
 			{
-				key: 'FT06509987',
-				value: 'FV65318477',
+				key: 'Width',
+				value: 'Width_value2',
 				content: '<em>600</em> ~ <br><em>900</em>mm',
 			},
 			{
-				key: 'FT06509987',
-				value: 'FTV0329676V',
+				key: 'Width',
+				value: 'Width_value1',
 				content: '<em>900</em>mm <br>OR MORE',
 			},
 		],
 		[
 			{
-				key: 'FT06509991',
-				value: 'FTV0329681V',
+				key: 'Height',
+				value: 'Height_value1',
 				content: 'UNDER <br><em>1800</em>mm',
 			},
 			{
-				key: 'FT06509991',
-				value: 'FTV0329683V',
+				key: 'Height',
+				value: 'Height_value3',
 				content: '<em>1800</em> ~ <br><em>2000</em>mm',
 			},
 			{
-				key: 'FT06509991',
-				value: 'FTV0329682V',
+				key: 'Height',
+				value: 'Height_value2',
 				content: '<em>2000</em>mm <br>OR MORE',
 			},
 		],
 		//4번 스탭
 		[
 			{
-				key: 'FT05036514',
-				value: 'FV65319133',
+				key: 'Feature',
+				value: 'Feature_value11',
 				content: 'Plumbed',
 				changeData: {
 					description: 'Get handy access to water and ice without refilling the water tank.',
@@ -655,8 +703,8 @@ const configData = {
 				}
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319150',
+				key: 'Feature',
+				value: 'Feature_value12',
 				content: 'Non Plumbed',
 				changeData: {
 					description: {
@@ -667,8 +715,8 @@ const configData = {
 				}
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319132',
+				key: 'Feature',
+				value: 'Feature_value13',
 				content: 'Non Plumbed (Water only)',
 				changeData: {
 					description: {
@@ -679,21 +727,21 @@ const configData = {
 				}
 			},
 			{
-				key: 'FT05036514',
+				key: 'Feature',
 				value: 'dummy',
 				content: 'Doesn’t matter to me, </br>I’d like to see all models.',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: 'Doesn’t matter to me, I’d like to see all models.',
 					screenImg: 'step04/que_img01.png',
-				} 
+				}
 			},
 		],
 		//5번스탭
 		[
 			{
-				key: 'FT05036514',
-				value: 'FTV0330428V,FV65319131,FV65319130',
+				key: 'Feature',
+				value: 'Feature_value6,Feature_value1,Feature_value2',
 				content: 'Long-lasting freshness',
 				changeData: {
 					description: 'Enjoy fresh food with LG’s temperature control and cooling technology. ',
@@ -706,8 +754,8 @@ const configData = {
 
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319144',
+				key: 'Feature',
+				value: 'Feature_value7',
 				content: 'Ventilation',
 				changeData: {
 					description: 'Pure N Fresh minimises food odours and keeps the air fresh inside your fridge.',
@@ -719,8 +767,8 @@ const configData = {
 				resultContent: 'step05',
 			},
 			{
-				key: 'FT06513242',
-				value: 'FV65318510,FV65319300',
+				key: 'EnergyGrade',
+				value: 'EnergyGrade_value5,EnergyGrade_value4',
 				content: 'A or better Energy Ratings',
 				changeData: {
 					description: {
@@ -735,8 +783,8 @@ const configData = {
 		//6번 스탭
 		[
 			{
-				key: 'FT05036514',
-				value: 'FV65319109',
+				key: 'Feature',
+				value: 'Feature_value8',
 				content: 'InstaView™</br> Door-in-Door®',
 				changeData: {
 					description: 'Knock twice to see inside while keeping your fridge cool and saving energy.',
@@ -748,8 +796,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319100',
+				key: 'Feature',
+				value: 'Feature_value9',
 				content: 'Door-in-Door®',
 				changeData: {
 					description: 'Easy-access opening system allows you to quickly reach your favourite foods.',
@@ -758,8 +806,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319146',
+				key: 'Feature',
+				value: 'Feature_value10',
 				content: 'Extra storage',
 				changeData: {
 					description: {
@@ -771,8 +819,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319138',
+				key: 'Feature',
+				value: 'Feature_value4',
 				content: 'Reversible door',
 				changeData: {
 					description: 'The reversible door lets you customize your appliance to fit in the given space. Prevents your refrigerator door from getting dinged and scratched.',
@@ -781,8 +829,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT05036514',
-				value: 'FTV0329998V',
+				key: 'Feature',
+				value: 'Feature_value5',
 				content: 'Folding shelf',
 				changeData: {
 					description: 'Simply adjust the shelf by sliding it back when you are storing tall and bulky bottles or pots',
@@ -791,8 +839,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT05036514',
-				value: 'FV65319136',
+				key: 'Feature',
+				value: 'Feature_value3',
 				content: 'Wine rack',
 				changeData: {
 					description: 'Built-in wine rack provides the perfect place to keep chilled bottles of your favourite wine or beverage - always on hand and easy to get to from your fridge shelf.',
@@ -801,8 +849,8 @@ const configData = {
 				resultContent: 'step06',
 			},
 			{
-				key: 'FT06511872',
-				value: 'FTV0329684V',
+				key: 'SmartTechnology',
+				value: 'ThinQ_value1',
 				content: 'Smart/AI features',
 				changeData: {
 					description: 'Control your wi-fi enabled LG smart fridge remotely via your smartphone using the LG ThinQ™ app.',
@@ -817,8 +865,8 @@ const configData = {
 		//7번 스탭
 		[
 			{
-				key: 'FT06513243',
-				value: 'FTV0330121V',
+				key: 'Color',
+				value: 'Color_value2',
 				content: 'Black',
 				changeData: {
 					description: 'A chic, stylish colour that is both eye-catching and luxurious.',
@@ -830,8 +878,8 @@ const configData = {
 				resultContent: 'step07',
 			},
 			{
-				key: 'FT06513243',
-				value: 'FV65319314',
+				key: 'Color',
+				value: 'Color_value3',
 				content: 'Stainless steel',
 				changeData: {
 					description: 'A graceful look that’s also easy to maintain.',
@@ -843,8 +891,8 @@ const configData = {
 				resultContent: 'step07',
 			},
 			{
-				key: 'FT06513243',
-				value: 'FTV0329693V',
+				key: 'Color',
+				value: 'Color_value1',
 				content: 'Silver',
 				changeData: {
 					description: 'Complementing diverse styles, silver is a simple way to add style to your kitchen.',
@@ -856,7 +904,7 @@ const configData = {
 				resultContent: 'step07',
 			},
 			{
-				key: 'FT06513243',
+				key: 'Color',
 				value: 'FV65319316',
 				content: 'White',
 				changeData: {

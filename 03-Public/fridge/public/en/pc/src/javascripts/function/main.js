@@ -220,29 +220,86 @@ function main() {
 				for (let i = 0; i < _lastPro.length; i++) {
 					let _valueCounting = stepCount[stepCount.length - 1];
 					let _judgmentNum = 0;
+					console.log(_lastPro[i])
+
 					// 마지막에 선택한 value 값 추출
 					for (let j = 0; j < _valueCounting; j++) {
 						let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
 						let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-
 						// value 값 비교
 						let _bol = false;
-						for (let p = 0; p < _selectValue.split(',').length; p++) {
-							for (let u = 0; u < _lastPro[i][_selectKey].split(',').length; u++) {
-								if (_selectValue.split(',')[p] === _lastPro[i][_selectKey].split(',')[u]) {
-									_bol = true;
+						console.debug('사용자 선택 : ', _selectValue, '배열 : ', _selectValue.split(','))
+
+						if (Array.isArray(_lastPro[i][_selectKey])) {
+							console.log('배열 있음')
+							for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+								console.log(_selectValue.split(',')[p])
+								console.log(_lastPro[i][_selectKey])
+								for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
+									console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+									if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
+										// _judgmentNum++;
+										_bol = true;
+										break;
+									}
+								} 
+							}
+							if (_bol) {
+								_judgmentNum++;
+							}
+						} else {
+							console.log('배열 없음')
+							for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+								if (_selectValue.split(',')[p] === _lastPro[i][_selectKey]) {
+									console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey])
+									_judgmentNum++;
 									break;
 								}
 							}
-							//  true 이면 반복문 벗어남
-							if (_bol) {
-								_judgmentNum++;
-								break;
-							}
 						}
+
+
+						// if (Array.isArray(_lastPro[i][_selectKey])) {
+						// 	console.log('배열 O')
+						// 	for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+						// 		for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
+						// 			console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+						// 			if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
+						// 				_bol = true;
+						// 				break;
+						// 			}
+						// 		}
+						// 		//  true 이면 반복문 벗어남
+						// 		console.log('_bol : ', _bol)
+						// 		if (_bol) {
+						// 			_judgmentNum++;
+						// 			console.log('_judgmentNum : ', _judgmentNum)
+						// 			break;
+						// 		}
+						// 	}
+						// } else { 
+						// 	console.log('배열 X')
+						// 	for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+						// 		console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey], _selectValue.split(',')[p] === _lastPro[i][_selectKey])
+						// 		if (_selectValue.split(',')[p] === _lastPro[i][_selectKey]) {
+						// 			_bol = true;
+						// 			break;
+						// 		}
+						// 	}
+						// 	//  true 이면 반복문 벗어남
+						// 	console.log('_bol : ', _bol)
+						// 	if (_bol) {
+						// 		_judgmentNum++;
+						// 		console.log('_judgmentNum : ', _judgmentNum)
+						// 		break;
+						// 	}
+						// }
 					}
+
+					console.log('true 갯수 : ', _judgmentNum, '사용자 선택 갯수 : ', _valueCounting)
 					// 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
 					if (_judgmentNum === _valueCounting) {
+						console.log('선택된 제품 : ', _lastPro[i])
 						_stepProductArray.push(_lastPro[i]);
 					}
 				}
@@ -268,8 +325,8 @@ function main() {
 						}
 						// 사용자가 선택한 key 중에 Feature 가 포함되어 있을 때
 						if (!_bol) {
-							if (_selectKey === 'FT05036514') {
-								let selectValueArray = _lastPro[i][_selectKey].split(',');
+							if (Array.isArray(_lastPro[i][_selectKey])) {
+								let selectValueArray = _lastPro[i][_selectKey];
 								// , 기준으로 배열 생성
 								for (let p = 0; p < selectValueArray.length; p++) {
 									if (selectValueArray[p] === _selectValue) {
@@ -316,8 +373,8 @@ function main() {
 				// 현재 스텝의 있는 key 갯수만큼 for 문 실행
 				for (let j = 0; j < _currentKeyRemoval.length; j++) {
 					// 현재스텝의 key에 Feature 가 있을 때 _dataValue에 value값 모두 push
-					if (_currentKeyRemoval[j] === 'FT05036514') {
-						let binArray = _lastPro[i][_currentKeyRemoval[j]].split(',');
+					if (Array.isArray(_lastPro[i][_currentKeyRemoval[j]])) {
+						let binArray = _lastPro[i][_currentKeyRemoval[j]];
 						for (let p = 0; p < binArray.length; p++) {
 							_dataValue.push(binArray[p]);
 						}
