@@ -32,5 +32,24 @@ Part
 이런게 바로 `HTML`, `CSS`입니다.
 
 ```javascript
-이 부분에 코드 적기
+	return ScrollTrigger.create({
+			animation: gsap.fromTo(content, { y: 0 }, {
+				y: () => document.documentElement.clientHeight - height,
+				ease: "none",
+				onUpdate: ScrollTrigger.update
+			}),
+			scroller: window,
+			invalidateOnRefresh: true,
+			start: 0,
+			end: refreshHeight,
+			refreshPriority: -999,
+			scrub: smoothness,
+			onUpdate: self => {
+				if (isProxyScrolling) {
+					killScrub(self);
+					isProxyScrolling = false;
+				}
+			},
+			onRefresh: killScrub
+		});
 ```
