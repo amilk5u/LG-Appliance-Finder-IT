@@ -33,7 +33,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 🎫Result 
 
-![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img.jpg)
+![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
 
 
 ## 💡개선사항
