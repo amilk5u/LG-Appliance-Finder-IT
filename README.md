@@ -1,4 +1,6 @@
-# LG-Appliance_Finder_IT
-Appliance Finder
+# LG Appliance Finder IT (이태리) 프로젝트 
 
-이미지는 dist/images/ 
+- DEMO : [What is this?](https://www.lg.com/uk/washing-machine/appliance-finder)
+
+
+
