@@ -31,8 +31,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 - `ㅇㅇㅇㅇ` 을 활용하여 특정 백그라운드 동작을 에약하는 기능을 구현할 수 있게 되었음
 - `dfsdfdf`, 와 `ㄹㄴㅇㄹㄴㅇㄹ` 을 이용한 백그라운드 동작원래를 이해 할 수 있게 되었음
 
-🎫Result 
-
+## 🎫Result 
 ![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
 
 
