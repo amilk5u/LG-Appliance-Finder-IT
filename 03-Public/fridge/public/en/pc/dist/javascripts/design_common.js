@@ -1110,7 +1110,6 @@ function main() {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
 			}
 		}
-		// $selectWrap.find('ol').append('<li><button class="minju" type="button"><i></i><p>asasass</p></button></li>');
 
 		// 선택된 제품 추출 
 		// step 1만 동작
@@ -1365,49 +1364,70 @@ function main() {
 		let _lastAnswerValue; // 저장된 데이터에서 마지막 value
 		let _currentHtml = configData.htmlData[_htmlIdx]; // 현재 스텝의 항목 데이터
 
-		$('.minju').on('click', function () {
-			let _this = $(this);
-			!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active
-		});
-
 		// 항목 클릭 
 		$('.answer_btn').on('click', function () {
 			let _this = $(this);
 			let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
+			let _answerBtnActive = 0;
+			let _AllSelectKeyValue;
 
 
-			// All Select Option 가르기
-			if (_this.data('value') === AllSelectOption) {
-				// _this.addClass('active')
-				console.log('All Select Button')
+			if (_this.data('value') === AllSelectOption) { // All Select Button (전체 선택 버튼)
 				if (idx !== 2) {
-					$('.answer_btn').addClass('active')
+					// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
 					$('.answer_btn').each(function () {
-						if ($(this).attr('disabled') === undefined) {
-							// console.log($(this).data('key') + '=' + $(this).data('value'))
+						if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) {
 							selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
 						}
+						// active 전체 갯수??!!!
+						if ($(this).attr('disabled') === undefined) {
+							_answerBtnActive++
+						}
 					});
+					console.log(_answerBtnActive)
+					// All Select 선택시 모든 옵션이 선택됨
+					if (!_this.hasClass('active')) {
+						$('.answer_btn').each(function () {
+							if ($(this).attr('disabled') === undefined) {
+								$(this).addClass('active');
+							}
+						});
+					} else {
+						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
+						$('.answer_btn').removeClass('active');
+						for (let i = 0; i < _answerBtnActive; i++) {
+							selectedParameters.splice(-1, 1);
+						}
+					}
+
 				} else {
-					console.log('step02 번');
+					// console.log('step02 번');
 				}
-
-
-			} else {
-				console.log('일반 버튼')
+			} else { // Answer Button (일반 버튼)
 				// 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
 				if (idx === 0) {
 					// button active 
 					$('.answer_btn').removeClass('active');
 					_this.addClass('active');
-
 					selectedParameters = []; // selectedParameters 초기화
 					selectedParameters.push(_currentKeyValue); // push
 					selectedProduct = configData.object.filter(item => {
 						return item.key === selectedParameters[0].split('=')[1]
 					});
 				} else {
-					!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active
+					!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active					
+					// $('.answer_btn').each(function () {
+					// 	$(this).removeClass('active')
+					// 	if ($(this).data('value') === AllSelectOption) {
+					// 		_AllSelectKeyValue = $(this).data('key') + '=' + $(this).data('value')
+					// 	}
+					// });
+					// All Select Button 데이터 값 selectedParameters 배열에서 삭제
+					// selectedParameters.forEach(function (item, i) {
+					// 	if (item === _AllSelectKeyValue) {
+					// 		selectedParameters.splice(i, 1);
+					// 	}
+					// });
 				}
 			}
 
@@ -1426,7 +1446,8 @@ function main() {
 				stepCount.push($('.answer_btn.active').length);
 			}
 
-			console.log('_currentKeyValue (선택한 키/벨류 값) : ', _currentKeyValue);
+			console.log('stepCount : ', stepCount);
+			// console.log('_currentKeyValue (선택한 키/벨류 값) : ', _currentKeyValue);
 			console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
 			_lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
