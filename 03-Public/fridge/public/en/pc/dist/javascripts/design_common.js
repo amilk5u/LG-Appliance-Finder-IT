@@ -24,10 +24,13 @@ if (window.innerWidth >= 1024) {
 let Type_value1 = 'Type_value1';
 let Type_value2 = 'Type_value2';
 let Type_value3 = 'Type_value3';
+let Type_value4 = 'Type_value4';
+let Type_value5 = 'Type_value5';
 
 let Capacity_value1 = 'Capacity_value1';
 let Capacity_value2 = 'Capacity_value2';
 let Capacity_value3 = 'Capacity_value3';
+let Capacity_value4 = 'Capacity_value4';
 
 let Depth_value1 = 'Depth_value1';
 
@@ -39,449 +42,212 @@ let Height_value1 = 'Height_value1';
 let Height_value2 = 'Height_value2';
 let Height_value3 = 'Height_value3';
 
-let EnergyGrade_value1 = 'EnergyGrade_value1';
-let EnergyGrade_value2 = 'EnergyGrade_value2';
-let EnergyGrade_value3 = 'EnergyGrade_value3';
-let EnergyGrade_value4 = 'EnergyGrade_value4';
-let EnergyGrade_value5 = 'EnergyGrade_value5';
+let Plumbed = 'Plumbed';
+let Non_Plumbed = 'Non_Plumbed';
+let Water_Only = 'Water_Only';
 
-let ThinQ_value1 = 'ThinQ_value1';
+let Door_cooling = 'Door_cooling';
+let Linearcooling = 'Linearcooling';
+let Pure_N_Fresh = 'Pure_N_Fresh';
+let EnergyGrade_A = 'EnergyGrade_A';
+let EnergyGrade_B = 'EnergyGrade_B';
+let EnergyGrade_C = 'EnergyGrade_C';
+let EnergyGrade_D = 'EnergyGrade_D';
+let EnergyGrade_E = 'EnergyGrade_E';
 
-let Feature_value1 = 'Feature_value1';
-let Feature_value2 = 'Feature_value2';
-let Feature_value3 = 'Feature_value3';
-let Feature_value4 = 'Feature_value4';
-let Feature_value5 = 'Feature_value5';
-let Feature_value6 = 'Feature_value6';
-let Feature_value7 = 'Feature_value7';
-let Feature_value8 = 'Feature_value8';
-let Feature_value9 = 'Feature_value9';
-let Feature_value10 = 'Feature_value10';
-let Feature_value11 = 'Feature_value11';
-let Feature_value12 = 'Feature_value12';
-let Feature_value13 = 'Feature_value13';
+let Instaview = 'Instaview';
+let Door_in_Door = 'Door_in_Door';
+let Wine_Rack = 'Wine_Rack';
+let Folding_Shelf = 'Folding_Shelf';
+let Reversible_Door = 'Reversible_Door';
+
+let ThinQ = 'ThinQ';
 
 let Color_value1 = 'Color_value1';
 let Color_value2 = 'Color_value2';
 let Color_value3 = 'Color_value3';
+let Color_value4 = 'Color_value4';
 
 let Dummy = 'dummy';
+let AllSelectOption = 'AllSelectOption';
 
 /* 변수 정의 end -------------------------------*/
 
 // 제품 키 / 벨류
 const product = {
-	//  Multi Door Fridge Freezer
-	'LSR100': { // 1
+	// Multidoor
+	'product1': { //1
 		Type: Type_value1,
 		Capacity: Capacity_value1,
 		Depth: Depth_value1,
 		Width: Width_value1,
 		Height: Height_value1,
-		EnergyGrade: EnergyGrade_value2,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value8, Feature_value9],
-		Color: Color_value3
-	},
-	'GMX945MC9F': {// 2
-		Type: Type_value1,
-		Capacity: Capacity_value1,
-		Depth: Depth_value1,
-		Width: Width_value1,
-		Height: Height_value1,
-		EnergyGrade: EnergyGrade_value1,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value8, Feature_value9, Feature_value5],
+		EnergyGrade: EnergyGrade_A,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Instaview, Folding_Shelf, Reversible_Door, Linearcooling, Wine_Rack],
 		Color: Color_value2
 	},
-	'GML945PZ8F': {// 3
-		Type: Type_value1,
-		Capacity: Capacity_value1,
-		Depth: Depth_value1,
-		Width: Width_value1,
-		Height: Height_value1,
-		EnergyGrade: EnergyGrade_value1,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value5],
-		Color: Color_value1,
-	},
-	'GMX844MC6F': {// 4
+	'product2': { //1
 		Type: Type_value1,
 		Capacity: Capacity_value2,
 		Depth: Depth_value1,
 		Width: Width_value2,
-		Height: Height_value1,
-		EnergyGrade: EnergyGrade_value1,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value8, Feature_value9, Feature_value5],
-		Color: Color_value2,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_C,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Instaview, Folding_Shelf, Linearcooling, Reversible_Door],
+		Color: Color_value3
 	},
-	'GML844PZ6F': {// 5
+	'product3': { //1
 		Type: Type_value1,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_C,
+		SmartTechnology: '',
+		Feature: [Water_Only, Instaview, Reversible_Door, Linearcooling, Wine_Rack],
+		Color: Color_value4
+	},
+
+	// Side-by-Side
+	'product4': { //1
+		Type: Type_value2,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_C,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Wine_Rack, Reversible_Door],
+		Color: Color_value1
+	},
+	'product5': { //1
+		Type: Type_value2,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_C,
+		SmartTechnology: ThinQ,
+		Feature: [Non_Plumbed, Door_cooling, Pure_N_Fresh, Wine_Rack, Reversible_Door],
+		Color: Color_value3
+	},
+	'product6': { //1
+		Type: Type_value2,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_B,
+		SmartTechnology: '',
+		Feature: [Plumbed, Door_cooling, Instaview, Linearcooling, Folding_Shelf, Wine_Rack, Reversible_Door],
+		Color: Color_value2
+	},
+
+	// Combinati
+	'product7': { //1
+		Type: Type_value3,
+		Capacity: Capacity_value4,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_D,
+		SmartTechnology: '',
+		Feature: [Water_Only, Pure_N_Fresh, Door_in_Door, Folding_Shelf, Reversible_Door, Wine_Rack],
+		Color: Color_value2
+	},
+	'product8': { //1
+		Type: Type_value3,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value3,
+		EnergyGrade: EnergyGrade_A,
+		SmartTechnology: '',
+		Feature: [Non_Plumbed, Pure_N_Fresh, Door_in_Door, Folding_Shelf, Reversible_Door, Wine_Rack],
+		Color: Color_value1
+	},
+	'product9': { //1
+		Type: Type_value3,
+		Capacity: Capacity_value3,
+		Depth: Depth_value1,
+		Width: Width_value2,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_C,
+		SmartTechnology: '',
+		Feature: [Non_Plumbed, Pure_N_Fresh, Door_in_Door, Reversible_Door, Wine_Rack],
+		Color: Color_value4
+	},
+
+	// Doppia Porta
+	'product10': { //1
+		Type: Type_value4,
+		Capacity: Capacity_value1,
+		Depth: Depth_value1,
+		Width: Width_value1,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_B,
+		SmartTechnology: '',
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Pure_N_Fresh],
+		Color: Color_value1
+	},
+	'product11': { //1
+		Type: Type_value4,
+		Capacity: Capacity_value4,
+		Depth: Depth_value1,
+		Width: Width_value3,
+		Height: Height_value2,
+		EnergyGrade: EnergyGrade_E,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling],
+		Color: Color_value1
+	},
+	'product12': { //1
+		Type: Type_value4,
 		Capacity: Capacity_value2,
 		Depth: Depth_value1,
 		Width: Width_value2,
 		Height: Height_value1,
-		EnergyGrade: EnergyGrade_value1,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value11, Feature_value6, Feature_value1, Feature_value2, Feature_value7, Feature_value5],
-		Color: Color_value1,
+		EnergyGrade: EnergyGrade_E,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Wine_Rack],
+		Color: Color_value1
 	},
 
-	// // American Style Fridge Freezer
-	// 'GSXV91MCAE': { //1
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value2' // Color
-	// },
-	// 'GSXV90MCAE': { //2
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value2' // Color
-	// },
-	// 'GSXV91BSAE': { //3
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSXV90BSAE': { //4
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value8,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSJV91BSAE': { //5
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSJV91PZAE': { //6
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value9,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLV91PZAE': { //7
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value6,Feature_value1,Feature_value2,Feature_value10,Feature_value3', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLD81PZRF': { //8
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value7,Feature_value9,Feature_value10', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLD80PZRF': { //9
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSJV70PZTF': { //10
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2,Feature_value9', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLA81PZLF': { //11
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,Feature_value3,ThinQ_value1', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLA80PZLF': { //12
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value3,ThinQ_value1', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLV71MCTF': { //13
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
-	// 	Color: 'Color_value2' // Color
-	// },
-	// 'GSLV70MCTF': { //14
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
-	// 	Color: 'Color_value2' // Color
-	// },
-	// 'GSLV71PZTF': { //15
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value1', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value12,Feature_value2,Feature_value1,Feature_value6,ThinQ_value1', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLV70PZTF': { //16
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value7,Feature_value9,ThinQ_value1', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLV50DSXM': { //17
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSLD50DSXM': { //18
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value6,Feature_value1,Feature_value2', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSBV70DSTF': { //19
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSI960PZVV': { //20
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: 'ThinQ_value1', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value7,Feature_value8,Feature_value9,Feature_value10,Feature_value3,ThinQ_value1', // Feature
-	// 	Color: 'Color_value1' // Color
-	// },
-	// 'GSXV90MCDE': { //21
-	// 	Type: 'Type_value2', // Type
-	// 	Capacity: 'Capacity_value1', // Capacity
-	// 	Depth: 'Depth_value1', // Depth
-	// 	Width: 'Width_value1', // Width
-	// 	Height: 'Height_value1', // Height
-	// 	EnergyGrade: 'EnergyGrade_value2', // Energy Grade
-	// 	SmartTechnology: '', // Smart Technology (ThinQ(Wi-Fi))
-	// 	Feature: 'dummy,Feature_value11,Feature_value2,Feature_value1,Feature_value6,Feature_value8,Feature_value9,Feature_value10,Feature_value3,ThinQ_value1', // Feature
-	// 	Color: 'Color_value2' // Color
-	// },
-
-	//Tall Fridge Freezer
-	'GBB92MCBAP': { //1
-		Type: Type_value3,
-		Capacity: Capacity_value3,
+	// Maxi Side by Side
+	'product13': { //1
+		Type: Type_value5,
+		Capacity: Capacity_value1,
 		Depth: Depth_value1,
 		Width: Width_value3,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_A,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Instaview, Folding_Shelf, Reversible_Door, Wine_Rack, Pure_N_Fresh],
+		Color: Color_value4
+	},
+	'product14': { //1
+		Type: Type_value5,
+		Capacity: Capacity_value2,
+		Depth: Depth_value1,
+		Width: Width_value2,
 		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value5,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
-		Color: Color_value2
+		EnergyGrade: EnergyGrade_B,
+		SmartTechnology: ThinQ,
+		Feature: [Non_Plumbed, Instaview, Folding_Shelf, Reversible_Door, Wine_Rack, Door_in_Door],
+		Color: Color_value4
 	},
-	'GBB92STAXP': { //2
-		Type: Type_value3,
-		Capacity: Capacity_value3,
+	'product15': { //1
+		Type: Type_value5,
+		Capacity: Capacity_value4,
 		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value3,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
-		Color: Color_value3
-	},
-	'GBB72MCUFN': { //3
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value3,
-		SmartTechnology: ThinQ_value1,
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
-		Color: Color_value2
-	},
-	'GBB62PZGCC': { //4
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value4,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
-		Color: Color_value1
-	},
-	'GBB72PZEFN': { //5
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value3,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4, Feature_value5],
-		Color: Color_value1
-	},
-	'GBD62PZYFN': { //6
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value3,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
-		Color: Color_value1
-	},
-	'GBB62PZGFN': { //7
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value3,
-		EnergyGrade: EnergyGrade_value3,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value3, Feature_value4],
-		Color: Color_value1
-	},
-	'GBF62PZJMN': { //8
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value2,
-		EnergyGrade: EnergyGrade_value2,
-		SmartTechnology: '',
-		Feature: [Feature_value6, Feature_value1, Feature_value2, Feature_value4, Feature_value13],
-		Color: Color_value1
-	},
-	'GBB61DSJEN': { //9
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value3,
-		EnergyGrade: EnergyGrade_value2,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2],
-		Color: Color_value1
-	},
-	'GBB61BLJEC': { //10
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value3,
-		EnergyGrade: EnergyGrade_value2,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value4],
-		Color: Color_value2
-	},
-	'GBB61SWJEC': { //11
-		Type: Type_value3,
-		Capacity: Capacity_value3,
-		Depth: Depth_value1,
-		Width: Width_value3,
-		Height: Height_value3,
-		EnergyGrade: EnergyGrade_value2,
-		SmartTechnology: '',
-		Feature: [Dummy, Feature_value6, Feature_value1, Feature_value2, Feature_value4],
-		Color: Color_value3
+		Width: Width_value1,
+		Height: Height_value1,
+		EnergyGrade: EnergyGrade_A,
+		SmartTechnology: ThinQ,
+		Feature: [Plumbed, Instaview, Folding_Shelf, Reversible_Door, Linearcooling],
+		Color: Color_value4
 	},
 }
 
@@ -510,9 +276,27 @@ const configData = {
 			key: 'Type_value3',
 			class: 'tall',
 			screenImg: {
-				changeScreenImg: 'step02/que_img03.png',
-				lastScreenImg: 'step07/tall_que_img04.png',
-				resultImg: 'result/center_img03.png',
+				changeScreenImg: 'step02/que_img02.png',
+				lastScreenImg: 'step07/american_que_img04.png',
+				resultImg: 'result/center_img02.png',
+			}
+		},
+		{
+			key: 'Type_value4',
+			class: 'tall2',
+			screenImg: {
+				changeScreenImg: 'step02/que_img02.png',
+				lastScreenImg: 'step07/american_que_img04.png',
+				resultImg: 'result/center_img02.png',
+			}
+		},
+		{
+			key: 'Type_value5',
+			class: 'tall3',
+			screenImg: {
+				changeScreenImg: 'step02/que_img02.png',
+				lastScreenImg: 'step07/american_que_img04.png',
+				resultImg: 'result/center_img02.png',
 			}
 		}
 	],
@@ -560,10 +344,10 @@ const configData = {
 		[
 			{
 				key: 'Type',
-				value: 'Type_value1',
-				content: 'Multi Door Fridge Freezer',
+				value: Type_value1,
+				content: 'Type_content1',
 				changeData: {
-					description: 'Multi doors with a full-width fridge above and the freezer below.',
+					description: 'Multi doors with a full-width Refrigerator above and the freezer below.',
 					screenImg: 'step01/que_img01.png',
 					learnMore: {
 						interactionPage: 'multi',
@@ -575,10 +359,10 @@ const configData = {
 			},
 			{
 				key: 'Type',
-				value: 'Type_value2',
-				content: 'American Style Fridge Freezer',
+				value: Type_value2,
+				content: 'Type_content2',
 				changeData: {
-					description: 'A two-door model, with fridge and freezer standing side by side.',
+					description: 'A two-door model, with Refrigerator and freezer standing side by side.',
 					screenImg: 'step01/que_img02.png',
 					learnMore: {
 						interactionPage: 'american',
@@ -590,10 +374,40 @@ const configData = {
 			},
 			{
 				key: 'Type',
-				value: 'Type_value3',
-				content: 'Tall Fridge Freezer',
+				value: Type_value3,
+				content: 'Type_content3',
 				changeData: {
-					description: 'Slimline with fridge on top and freezer below.',
+					description: 'A slimline model with Refrigerator on top and freezer below.',
+					screenImg: 'step01/que_img03.png',
+					learnMore: {
+						interactionPage: 'tall',
+						// additionalDesc: true,
+						// videoPopup: true,
+					},
+				},
+				resultContent: 'step01',
+			},
+			{
+				key: 'Type',
+				value: Type_value4,
+				content: 'Type_content4',
+				changeData: {
+					description: 'A two-door model with a freezer on top and a refrigerator on the bottom.',
+					screenImg: 'step01/que_img03.png',
+					learnMore: {
+						interactionPage: 'tall',
+						// additionalDesc: true,
+						// videoPopup: true,
+					},
+				},
+				resultContent: 'step01',
+			},
+			{
+				key: 'Type',
+				value: Type_value5,
+				content: 'Type_content5',
+				changeData: {
+					description: 'A smart solution for those who require a seperate fridge or freezer for the sake of space or convenience. ',
 					screenImg: 'step01/que_img03.png',
 					learnMore: {
 						interactionPage: 'tall',
@@ -608,8 +422,8 @@ const configData = {
 		[
 			{
 				key: 'Capacity',
-				value: 'Capacity_value3',
-				content: 'Under 450L',
+				value: Capacity_value1,
+				content: 'Capacity_content1',
 				changeData: {
 					description: 'A practical choice for infrequent fridge users or people who buy smaller quantities of food at a time.',
 					icon: 'step02/disc_icon01.png',
@@ -617,8 +431,8 @@ const configData = {
 			},
 			{
 				key: 'Capacity',
-				value: 'Capacity_value2',
-				content: '500-600L',
+				value: Capacity_value2,
+				content: 'Capacity_content2',
 				changeData: {
 					description: 'A frequently chosen option for many households.',
 					icon: 'step02/disc_icon02.png',
@@ -626,8 +440,26 @@ const configData = {
 			},
 			{
 				key: 'Capacity',
-				value: 'Capacity_value1',
-				content: '600L or more',
+				value: 'Capacity_value3',
+				content: 'Capacity_content3',
+				changeData: {
+					description: 'For those who do a big grocery shop, or share the fridge with many others.',
+					icon: 'step02/disc_icon03.png',
+				}
+			},
+			{
+				key: 'Capacity',
+				value: Capacity_value4,
+				content: 'Capacity_content4',
+				changeData: {
+					description: 'For those who do a big grocery shop, or share the fridge with many others.',
+					icon: 'step02/disc_icon03.png',
+				}
+			},
+			{
+				key: 'Capacity',
+				value: AllSelectOption,
+				content: 'Select ALL Options',
 				changeData: {
 					description: 'For those who do a big grocery shop, or share the fridge with many others.',
 					icon: 'step02/disc_icon03.png',
@@ -638,12 +470,12 @@ const configData = {
 		[
 			{
 				key: 'Depth',
-				value: 'Depth_value1',
-				content: 'UNDER <em>760</em>mm <br>(COUNTER DEPTH)',
+				value: Depth_value1,
+				content: 'Depth_value1',
 				changeData: {
 					description: {
-						head: 'A guide to measuring your fridge space.',
-						detail: 'Calculate how much space you have for your fridge. Doors require (25-50mm) space to open and ventilate. All LG fridges are counter-depth and offer a slender, complementary structure. Cold or hot spots are not advised.'
+						head: 'head',
+						detail: 'detail'
 					},
 					learnMore: {
 						additionalDesc: true,
@@ -653,49 +485,59 @@ const configData = {
 			},
 			{
 				key: '',
-				value: 'dummy',
-				content: '<em>760</em>mm OR MORE <br>(STANDARD DEPTH)'
+				value: Dummy,
+				content: 'Depth_value2'
 			}
 		],
 		[
 			{
 				key: 'Width',
-				value: 'Width_value3',
-				content: 'UNDER <br><em>600</em>mm',
+				value: Width_value1,
+				content: 'Width_content1',
 			},
 			{
 				key: 'Width',
-				value: 'Width_value2',
-				content: '<em>600</em> ~ <br><em>900</em>mm',
+				value: Width_value2,
+				content: 'Width_content2',
 			},
 			{
 				key: 'Width',
-				value: 'Width_value1',
-				content: '<em>900</em>mm <br>OR MORE',
+				value: Width_value3,
+				content: 'Width_content3',
+			},
+			{
+				key: 'Width',
+				value: AllSelectOption,
+				content: 'AllSelectOption',
 			},
 		],
 		[
 			{
 				key: 'Height',
-				value: 'Height_value1',
-				content: 'UNDER <br><em>1800</em>mm',
+				value: Height_value1,
+				content: 'Height_content1',
 			},
 			{
 				key: 'Height',
-				value: 'Height_value3',
-				content: '<em>1800</em> ~ <br><em>2000</em>mm',
+				value: Height_value2,
+				content: 'Height_content2',
 			},
 			{
 				key: 'Height',
-				value: 'Height_value2',
-				content: '<em>2000</em>mm <br>OR MORE',
+				value: Height_value3,
+				content: 'Height_content3',
+			},
+			{
+				key: 'Height',
+				value: AllSelectOption,
+				content: 'AllSelectOption',
 			},
 		],
 		//4번 스탭
 		[
 			{
 				key: 'Feature',
-				value: 'Feature_value11',
+				value: Plumbed,
 				content: 'Plumbed',
 				changeData: {
 					description: 'Get handy access to water and ice without refilling the water tank.',
@@ -704,7 +546,7 @@ const configData = {
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value12',
+				value: Non_Plumbed,
 				content: 'Non Plumbed',
 				changeData: {
 					description: {
@@ -716,7 +558,7 @@ const configData = {
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value13',
+				value: Water_Only,
 				content: 'Non Plumbed (Water only)',
 				changeData: {
 					description: {
@@ -736,29 +578,38 @@ const configData = {
 					screenImg: 'step04/que_img01.png',
 				}
 			},
+			{
+				key: 'Feature',
+				value: AllSelectOption,
+				content: 'AllSelectOption',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+				changeData: {
+					description: 'AllSelectOption',
+					screenImg: 'step04/que_img01.png',
+				}
+			},
 		],
 		//5번스탭
 		[
 			{
 				key: 'Feature',
-				value: 'Feature_value6,Feature_value1,Feature_value2',
+				value: 'Door_cooling,Linearcooling',
 				content: 'Long-lasting freshness',
 				changeData: {
-					description: 'Enjoy fresh food with LG’s temperature control and cooling technology. ',
+					description: 'asas',
 					screenImg: 'step05/que_img02.png',
 					learnMore: {
 						videoPopup: 'long',
 					},
 				},
 				resultContent: 'step05',
-
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value7',
+				value: Pure_N_Fresh,
 				content: 'Ventilation',
 				changeData: {
-					description: 'Pure N Fresh minimises food odours and keeps the air fresh inside your fridge.',
+					description: 'asas',
 					screenImg: 'step05/que_img03.png',
 					learnMore: {
 						videoPopup: 'ventilation',
@@ -768,7 +619,7 @@ const configData = {
 			},
 			{
 				key: 'EnergyGrade',
-				value: 'EnergyGrade_value5,EnergyGrade_value4',
+				value: 'EnergyGrade_A,EnergyGrade_B,EnergyGrade_C',
 				content: 'A or better Energy Ratings',
 				changeData: {
 					description: {
@@ -779,25 +630,37 @@ const configData = {
 				},
 				resultContent: 'step05',
 			},
+			{
+				key: 'EnergyGrade',
+				value: AllSelectOption,
+				content: 'AllSelectOption',
+				changeData: {
+					description: {
+						head: 'asas',
+						detail: 'asas'
+					},
+					screenImg: 'step05/que_img04.png',
+				},
+			},
 		],
 		//6번 스탭
 		[
 			{
 				key: 'Feature',
-				value: 'Feature_value8',
+				value: Instaview,
 				content: 'InstaView™</br> Door-in-Door®',
 				changeData: {
 					description: 'Knock twice to see inside while keeping your fridge cool and saving energy.',
 					screenImg: 'step06/que_img02.png',
-					learnMore: {
-						videoPopup: 'instaview',
-					},
+					// learnMore: {
+					// 	videoPopup: 'instaview',
+					// },
 				},
 				resultContent: 'step06',
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value9',
+				value: Door_in_Door,
 				content: 'Door-in-Door®',
 				changeData: {
 					description: 'Easy-access opening system allows you to quickly reach your favourite foods.',
@@ -807,20 +670,7 @@ const configData = {
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value10',
-				content: 'Extra storage',
-				changeData: {
-					description: {
-						head: 'Extra space for easy access to frequently used items.',
-						detail: 'Extra compartments like the Smart Storage system, Retractable Shelf and others offer efficient ways to store small items like deli meat, snacks and butter.'
-					},
-					screenImg: 'step06/que_img04.png',
-				},
-				resultContent: 'step06',
-			},
-			{
-				key: 'Feature',
-				value: 'Feature_value4',
+				value: Reversible_Door,
 				content: 'Reversible door',
 				changeData: {
 					description: 'The reversible door lets you customize your appliance to fit in the given space. Prevents your refrigerator door from getting dinged and scratched.',
@@ -830,7 +680,7 @@ const configData = {
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value5',
+				value: Folding_Shelf,
 				content: 'Folding shelf',
 				changeData: {
 					description: 'Simply adjust the shelf by sliding it back when you are storing tall and bulky bottles or pots',
@@ -840,7 +690,7 @@ const configData = {
 			},
 			{
 				key: 'Feature',
-				value: 'Feature_value3',
+				value: Wine_Rack,
 				content: 'Wine rack',
 				changeData: {
 					description: 'Built-in wine rack provides the perfect place to keep chilled bottles of your favourite wine or beverage - always on hand and easy to get to from your fridge shelf.',
@@ -850,7 +700,7 @@ const configData = {
 			},
 			{
 				key: 'SmartTechnology',
-				value: 'ThinQ_value1',
+				value: ThinQ,
 				content: 'Smart/AI features',
 				changeData: {
 					description: 'Control your wi-fi enabled LG smart fridge remotely via your smartphone using the LG ThinQ™ app.',
@@ -866,8 +716,8 @@ const configData = {
 		[
 			{
 				key: 'Color',
-				value: 'Color_value2',
-				content: 'Black',
+				value: Color_value1,
+				content: '1',
 				changeData: {
 					description: 'A chic, stylish colour that is both eye-catching and luxurious.',
 					screenImg: 'que_img01.png',
@@ -879,40 +729,40 @@ const configData = {
 			},
 			{
 				key: 'Color',
-				value: 'Color_value3',
-				content: 'Stainless steel',
+				value: Color_value2,
+				content: '2',
 				changeData: {
 					description: 'A graceful look that’s also easy to maintain.',
 					screenImg: 'que_img02.png',
-					learnMore: {
-						interactionPage: 'stainless_steel',
-					},
+					// learnMore: {
+					// 	interactionPage: 'stainless_steel',
+					// },
 				},
 				resultContent: 'step07',
 			},
 			{
 				key: 'Color',
-				value: 'Color_value1',
-				content: 'Silver',
+				value: Color_value3,
+				content: '3',
 				changeData: {
 					description: 'Complementing diverse styles, silver is a simple way to add style to your kitchen.',
 					screenImg: 'que_img03.png',
-					learnMore: {
-						interactionPage: 'silver',
-					},
+					// learnMore: {
+					// 	interactionPage: 'silver',
+					// },
 				},
 				resultContent: 'step07',
 			},
 			{
 				key: 'Color',
-				value: 'FV65319316',
-				content: 'White',
+				value: Color_value4,
+				content: '4',
 				changeData: {
 					description: 'A nice touch or a backdrop for any environment.',
 					screenImg: 'que_img04.png',
-					learnMore: {
-						interactionPage: 'white',
-					},
+					// learnMore: {
+					// 	interactionPage: 'white',
+					// },
 				},
 				resultContent: 'step07',
 			},
@@ -1200,6 +1050,7 @@ function main() {
 		// 앞전 데이터 삭제
 		_judgmentStep === 'backStep' && matchingProducts.pop();
 
+		console.log('index : ', idx, ' -------------------------------------------------')
 		$('body,html').scrollTop(0);
 		$descDetailWrap.removeClass('open');
 		TweenMax.to($nextBtn, .2, { display: 'none', opacity: 0 });
@@ -1236,6 +1087,7 @@ function main() {
 		$selectWrap.html('<button type="button" class="caution_open_btn">Click here for a guide to dimensions and measurement.</button><p class="select_tit"><em>You Can Select Multiple Choices.</em></p>');
 		$selectWrap.append('<ol></ol>');
 
+
 		if (idx === 2) {
 			// step 3 데이터 뿌리기
 			let liHtml = '';
@@ -1249,7 +1101,6 @@ function main() {
 				_htmlIdx++;
 			}
 			$selectWrap.find('ol').append(liHtml);
-
 		} else if (idx === 6) {
 			for (let i = 0; i < _currentHtml.length; i++) {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><span></span><p>' + _currentHtml[i].content + '</p></button></li>');
@@ -1259,6 +1110,7 @@ function main() {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
 			}
 		}
+		// $selectWrap.find('ol').append('<li><button class="minju" type="button"><i></i><p>asasass</p></button></li>');
 
 		// 선택된 제품 추출 
 		// step 1만 동작
@@ -1268,6 +1120,9 @@ function main() {
 			let _selectValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; // value
 			for (let key in product) {
 				// value 값 비교
+				// console.log(product[key])
+				// console.log(product[key][_selectKey])
+				// console.log(product[key][_selectKey], _selectValue, product[key][_selectKey] === _selectValue)
 				if (product[key][_selectKey] === _selectValue) {
 					_stepProductArray.push(product[key]);
 				}
@@ -1295,13 +1150,14 @@ function main() {
 						let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
 						for (let p = 0; p < _restKey.length; p++) {
 							// value값 비교해서 같으면 ++
+							// console.log(_lastPro[i][_restKey[p]], _selectValue, _lastPro[i][_restKey[p]] === _selectValue, _lastPro[i])
 							if (_lastPro[i][_restKey[p]] === _selectValue) {
-								// console.log(_lastPro[i][_restKey[p]], _selectValue, _lastPro[i][_restKey[p]] === _selectValue, _lastPro[i])
 								_judgmentNum++
 							}
 						}
 					}
 					// 선택한 key 만큼 _judgmentNum 의 true 된 갯수가 동일 할 때의 제품을 추출
+					// console.log(_judgmentNum)
 					if (_judgmentNum === _restKey.length) {
 						_stepProductArray.push(_lastPro[i]);
 					}
@@ -1313,86 +1169,39 @@ function main() {
 				for (let i = 0; i < _lastPro.length; i++) {
 					let _valueCounting = stepCount[stepCount.length - 1];
 					let _judgmentNum = 0;
-					console.log(_lastPro[i])
-
+					// console.log('비교제품 : ', _lastPro[i])
 					// 마지막에 선택한 value 값 추출
 					for (let j = 0; j < _valueCounting; j++) {
 						let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
 						let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
 						// value 값 비교
 						let _bol = false;
-						console.debug('사용자 선택 : ', _selectValue, '배열 : ', _selectValue.split(','))
-
 						if (Array.isArray(_lastPro[i][_selectKey])) {
-							console.log('배열 있음')
 							for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-								console.log(_selectValue.split(',')[p])
-								console.log(_lastPro[i][_selectKey])
 								for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-									console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
 									if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-										// _judgmentNum++;
+										// console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
 										_bol = true;
 										break;
 									}
-								} 
+								}
 							}
 							if (_bol) {
 								_judgmentNum++;
 							}
 						} else {
-							console.log('배열 없음')
 							for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
 								if (_selectValue.split(',')[p] === _lastPro[i][_selectKey]) {
-									console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey])
+									// console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[p] === _lastPro[i][_selectKey])
 									_judgmentNum++;
 									break;
 								}
 							}
 						}
-
-
-						// if (Array.isArray(_lastPro[i][_selectKey])) {
-						// 	console.log('배열 O')
-						// 	for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-						// 		for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-						// 			console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
-						// 			if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-						// 				_bol = true;
-						// 				break;
-						// 			}
-						// 		}
-						// 		//  true 이면 반복문 벗어남
-						// 		console.log('_bol : ', _bol)
-						// 		if (_bol) {
-						// 			_judgmentNum++;
-						// 			console.log('_judgmentNum : ', _judgmentNum)
-						// 			break;
-						// 		}
-						// 	}
-						// } else { 
-						// 	console.log('배열 X')
-						// 	for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-						// 		console.log(_selectValue.split(',')[p], _lastPro[i][_selectKey], _selectValue.split(',')[p] === _lastPro[i][_selectKey])
-						// 		if (_selectValue.split(',')[p] === _lastPro[i][_selectKey]) {
-						// 			_bol = true;
-						// 			break;
-						// 		}
-						// 	}
-						// 	//  true 이면 반복문 벗어남
-						// 	console.log('_bol : ', _bol)
-						// 	if (_bol) {
-						// 		_judgmentNum++;
-						// 		console.log('_judgmentNum : ', _judgmentNum)
-						// 		break;
-						// 	}
-						// }
 					}
-
-					console.log('true 갯수 : ', _judgmentNum, '사용자 선택 갯수 : ', _valueCounting)
 					// 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
 					if (_judgmentNum === _valueCounting) {
-						console.log('선택된 제품 : ', _lastPro[i])
+						// console.debug('선택된 제품 : ', _lastPro[i]);
 						_stepProductArray.push(_lastPro[i]);
 					}
 				}
@@ -1487,19 +1296,25 @@ function main() {
 
 			// 1:n 다중비교
 			$('.answer_btn').each(function () {
+				let _this = $(this);
 				// value 값이 여러개가 있는지 없는지 판단
-				if ($(this).data('value').includes(',')) {
-					let severalValue = $(this).data('value').split(','); // 다중 value
+				if (_this.data('value').includes(',')) {
+					let severalValue = _this.data('value').split(','); // 다중 value
 					// 여러개의 밸류값은 갯수만큼 배열 생성하여 반복
 					for (let j = 0; j < severalValue.length; j++) {
 						// 선택한 value 값 만큼 반복
 						for (let i = 0; i < _arrayDataValue.length; i++) {
 							// 같은 value 값이 있으면 false
 							if (severalValue[j] === _arrayDataValue[i]) {
-								$(this).removeAttr('disabled');
+								_this.removeAttr('disabled');
 							}
 						}
 					}
+				}
+
+				// All Select Option (전체선택)
+				if (_this.data('value') === AllSelectOption) {
+					_this.removeAttr('disabled');
 				}
 			});
 		}
@@ -1550,31 +1365,57 @@ function main() {
 		let _lastAnswerValue; // 저장된 데이터에서 마지막 value
 		let _currentHtml = configData.htmlData[_htmlIdx]; // 현재 스텝의 항목 데이터
 
+		$('.minju').on('click', function () {
+			let _this = $(this);
+			!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active
+		});
+
 		// 항목 클릭 
 		$('.answer_btn').on('click', function () {
 			let _this = $(this);
 			let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
 
-			// 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
-			if (idx === 0) {
-				// button active 
-				$('.answer_btn').removeClass('active');
-				_this.addClass('active');
 
-				selectedParameters = []; // selectedParameters 초기화
-				selectedParameters.push(_currentKeyValue); // push
-				selectedProduct = configData.object.filter(item => {
-					return item.key === selectedParameters[0].split('=')[1]
-				});
+			// All Select Option 가르기
+			if (_this.data('value') === AllSelectOption) {
+				// _this.addClass('active')
+				console.log('All Select Button')
+				if (idx !== 2) {
+					$('.answer_btn').addClass('active')
+					$('.answer_btn').each(function () {
+						if ($(this).attr('disabled') === undefined) {
+							// console.log($(this).data('key') + '=' + $(this).data('value'))
+							selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
+						}
+					});
+				} else {
+					console.log('step02 번');
+				}
+
+
 			} else {
-				!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active
+				console.log('일반 버튼')
+				// 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
+				if (idx === 0) {
+					// button active 
+					$('.answer_btn').removeClass('active');
+					_this.addClass('active');
+
+					selectedParameters = []; // selectedParameters 초기화
+					selectedParameters.push(_currentKeyValue); // push
+					selectedProduct = configData.object.filter(item => {
+						return item.key === selectedParameters[0].split('=')[1]
+					});
+				} else {
+					!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active
+				}
 			}
+
 
 			// selectedParameters에서 현재 선택된 key,value 중복되는 데이터 제거
 			selectedParameters.forEach(function (item, i) {
 				item === _currentKeyValue && selectedParameters.splice(i, 1)
 			});
-
 			_this.hasClass('active') && selectedParameters.push(_currentKeyValue); // 선택된 value push
 			taggingEvent(); // 태깅 함수
 
@@ -1584,6 +1425,9 @@ function main() {
 			} else {
 				stepCount.push($('.answer_btn.active').length);
 			}
+
+			console.log('_currentKeyValue (선택한 키/벨류 값) : ', _currentKeyValue);
+			console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
 			_lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
 			sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
