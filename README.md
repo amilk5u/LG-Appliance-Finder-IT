@@ -53,3 +53,6 @@ Part
 			onRefresh: killScrub
 		});
 ```
+
+
+<a href="#" class="btn--success">Success Button</a>
