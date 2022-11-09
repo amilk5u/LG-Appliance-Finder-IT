@@ -189,7 +189,7 @@ const product = {
 		Height: Height_value2,
 		EnergyGrade: EnergyGrade_B,
 		SmartTechnology: '',
-		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Pure_N_Fresh],
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Door_cooling, Linearcooling, Pure_N_Fresh],
 		Color: Color_value1
 	},
 	'product11': { //1
@@ -200,7 +200,7 @@ const product = {
 		Height: Height_value2,
 		EnergyGrade: EnergyGrade_E,
 		SmartTechnology: ThinQ,
-		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling],
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Door_cooling, Linearcooling],
 		Color: Color_value1
 	},
 	'product12': { //1
@@ -211,7 +211,7 @@ const product = {
 		Height: Height_value1,
 		EnergyGrade: EnergyGrade_E,
 		SmartTechnology: ThinQ,
-		Feature: [Plumbed, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Wine_Rack],
+		Feature: [Plumbed, Reversible_Door, Instaview, Door_cooling, Linearcooling, Wine_Rack],
 		Color: Color_value1
 	},
 
@@ -460,9 +460,10 @@ const configData = {
 				key: 'Capacity',
 				value: AllSelectOption,
 				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: 'For those who do a big grocery shop, or share the fridge with many others.',
-					icon: 'step02/disc_icon03.png',
+					description: '',
+					icon: '',
 				}
 			},
 		],
@@ -581,10 +582,10 @@ const configData = {
 			{
 				key: 'Feature',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Select ALL Options',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: 'AllSelectOption',
+					description: '',
 					screenImg: 'step04/que_img01.png',
 				}
 			},
@@ -633,14 +634,12 @@ const configData = {
 			{
 				key: 'EnergyGrade',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: {
-						head: 'asas',
-						detail: 'asas'
-					},
-					screenImg: 'step05/que_img04.png',
-				},
+					description: '',
+					screenImg: 'step04/que_img01.png',
+				}
 			},
 		],
 		//6번 스탭
@@ -711,6 +710,16 @@ const configData = {
 				},
 				resultContent: 'step06',
 			},
+			{
+				key: 'SmartTechnology',
+				value: AllSelectOption,
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+				changeData: {
+					description: '',
+					screenImg: 'step04/que_img01.png',
+				}
+			},
 		],
 		//7번 스탭
 		[
@@ -761,10 +770,20 @@ const configData = {
 					description: 'A nice touch or a backdrop for any environment.',
 					screenImg: 'que_img04.png',
 					// learnMore: {
-					// 	interactionPage: 'white',
+					// 	interactionPage: 'white', 
 					// },
 				},
 				resultContent: 'step07',
+			},
+			{
+				key: 'Color',
+				value: AllSelectOption,
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+				changeData: {
+					description: '',
+					screenImg: 'que_img04.png',
+				}
 			},
 		],
 	],

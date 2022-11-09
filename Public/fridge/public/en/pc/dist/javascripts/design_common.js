@@ -189,7 +189,7 @@ const product = {
 		Height: Height_value2,
 		EnergyGrade: EnergyGrade_B,
 		SmartTechnology: '',
-		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Pure_N_Fresh],
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Door_cooling, Linearcooling, Pure_N_Fresh],
 		Color: Color_value1
 	},
 	'product11': { //1
@@ -200,7 +200,7 @@ const product = {
 		Height: Height_value2,
 		EnergyGrade: EnergyGrade_E,
 		SmartTechnology: ThinQ,
-		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling],
+		Feature: [Plumbed, Door_in_Door, Reversible_Door, Instaview, Door_cooling, Linearcooling],
 		Color: Color_value1
 	},
 	'product12': { //1
@@ -211,7 +211,7 @@ const product = {
 		Height: Height_value1,
 		EnergyGrade: EnergyGrade_E,
 		SmartTechnology: ThinQ,
-		Feature: [Plumbed, Reversible_Door, Instaview, Reversible_Door, Door_cooling, Linearcooling, Wine_Rack],
+		Feature: [Plumbed, Reversible_Door, Instaview, Door_cooling, Linearcooling, Wine_Rack],
 		Color: Color_value1
 	},
 
@@ -460,9 +460,10 @@ const configData = {
 				key: 'Capacity',
 				value: AllSelectOption,
 				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: 'For those who do a big grocery shop, or share the fridge with many others.',
-					icon: 'step02/disc_icon03.png',
+					description: '',
+					icon: '',
 				}
 			},
 		],
@@ -581,10 +582,10 @@ const configData = {
 			{
 				key: 'Feature',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Select ALL Options',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: 'AllSelectOption',
+					description: '',
 					screenImg: 'step04/que_img01.png',
 				}
 			},
@@ -633,14 +634,12 @@ const configData = {
 			{
 				key: 'EnergyGrade',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
-					description: {
-						head: 'asas',
-						detail: 'asas'
-					},
-					screenImg: 'step05/que_img04.png',
-				},
+					description: '',
+					screenImg: 'step04/que_img01.png',
+				}
 			},
 		],
 		//6번 스탭
@@ -711,6 +710,16 @@ const configData = {
 				},
 				resultContent: 'step06',
 			},
+			{
+				key: 'SmartTechnology',
+				value: AllSelectOption,
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+				changeData: {
+					description: '',
+					screenImg: 'step04/que_img01.png',
+				}
+			},
 		],
 		//7번 스탭
 		[
@@ -761,10 +770,20 @@ const configData = {
 					description: 'A nice touch or a backdrop for any environment.',
 					screenImg: 'que_img04.png',
 					// learnMore: {
-					// 	interactionPage: 'white',
+					// 	interactionPage: 'white', 
 					// },
 				},
 				resultContent: 'step07',
+			},
+			{
+				key: 'Color',
+				value: AllSelectOption,
+				content: 'Select ALL Options',
+				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+				changeData: {
+					description: '',
+					screenImg: 'que_img04.png',
+				}
 			},
 		],
 	],
@@ -1162,8 +1181,9 @@ function main() {
 				let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
 				// 추출된 마지막 제품 갯수 만큼 for 문 실행 
 				for (let i = 0; i < _lastPro.length; i++) {
-					let _valueCounting = stepCount[stepCount.length - 1];
-					let _judgmentNum = 0;
+					let _valueCounting = stepCount[stepCount.length - 1]; // step count
+					let _judgmentNum = 0; // 매칭 count
+					let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
 					// console.log('비교제품 : ', _lastPro[i])
 					// 마지막에 선택한 value 값 추출
 					for (let j = 0; j < _valueCounting; j++) {
@@ -1171,6 +1191,7 @@ function main() {
 						let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
 						// value 값 비교
 						let _bol = false;
+
 						if (Array.isArray(_lastPro[i][_selectKey])) {
 							for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
 								for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
@@ -1179,6 +1200,11 @@ function main() {
 										_bol = true;
 										break;
 									}
+								}
+
+								// AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+								if (_selectValue.split(',')[p] === AllSelectOption) {
+									_AllSelectBol = true;
 								}
 							}
 							if (_bol) {
@@ -1191,12 +1217,21 @@ function main() {
 									_judgmentNum++;
 									break;
 								}
+
+								// AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+								if (_selectValue.split(',')[p] === AllSelectOption) {
+									_AllSelectBol = true;
+								}
 							}
 						}
 					}
+					if (_AllSelectBol) { // All Select 가 있으면 - 1
+						_valueCounting--;
+					}
 					// 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
+					// console.log(_judgmentNum, _valueCounting, _judgmentNum === _valueCounting)
 					if (_judgmentNum === _valueCounting) {
-						// console.debug('선택된 제품 : ', _lastPro[i]);
+						console.debug('선택된 제품 : ', _lastPro[i]);
 						_stepProductArray.push(_lastPro[i]);
 					}
 				}
@@ -1208,9 +1243,12 @@ function main() {
 
 				// 추출된 마지막 제품 갯수 만큼 for 문 실행 
 				for (let i = 0; i < _lastPro.length; i++) {
-					let _valueCounting = stepCount[stepCount.length - 1];
-					let _judgmentNum = 0;
+					let _valueCounting = stepCount[stepCount.length - 1]; // step count
+					let _judgmentNum = 0; // 매칭 count
+					let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
 					// 마지막에 선택한 value 값 추출
+
+					// console.log('비교제품 : ', _lastPro[i])
 
 					for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
 						let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
@@ -1226,21 +1264,37 @@ function main() {
 								let selectValueArray = _lastPro[i][_selectKey];
 								// , 기준으로 배열 생성
 								for (let p = 0; p < selectValueArray.length; p++) {
+									console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
 									if (selectValueArray[p] === _selectValue) {
-										// console.log(selectValueArray[p], _selectValue, selectValueArray[p] === _selectValue)
 										idx !== 6 && _stepProductArray.push(_lastPro[i]);
 										_judgmentNum++;
 									}
+
+									// AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+									if (_selectValue === AllSelectOption) {
+										_AllSelectBol = true;
+									}
 								}
 							} else {
+								// console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
 								if (_lastPro[i][_selectKey] === _selectValue) {
 									idx !== 6 && _stepProductArray.push(_lastPro[i]);
 									_judgmentNum++;
 								}
+
+								// AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+								if (_selectValue === AllSelectOption) {
+									_AllSelectBol = true;
+								}
 							}
 						}
 					}
+
+					if (_AllSelectBol) { // All Select 가 있으면 - 1
+						_valueCounting--;
+					}
 					// 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
+					// console.log(_judgmentNum, _valueCounting, _judgmentNum === _valueCounting)
 					if (idx === 6 && _judgmentNum === _valueCounting) {
 						_stepProductArray.push(_lastPro[i]);
 					}
@@ -1365,7 +1419,9 @@ function main() {
 			let _this = $(this);
 			let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
 			let _answerBtnActive = 0; // 버튼 active 카운팅 저장용 (All Select 해제 시 카운팅 수 필요)
+			let _AllSelectKeyValue;
 
+			// console.log(AllSelectOption)
 			if (_this.data('value') === AllSelectOption) { // All Select Button (전체 선택 버튼)
 				if (idx !== 2) {
 					// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
@@ -1407,30 +1463,26 @@ function main() {
 						return item.key === selectedParameters[0].split('=')[1]
 					});
 				} else {
-					!_this.hasClass('active') ? _this.addClass('active') : _this.removeClass('active'); // button active					
-					// console.log('안녕');
-					// $('.answer_btn').each(function () {
-					// 	$(this).removeClass('active')
-					// 	if ($(this).data('value') === AllSelectOption) {
-					// 		_AllSelectKeyValue = $(this).data('key') + '=' + $(this).data('value')
-					// 	}
-					// });
-					// // All Select Button 데이터 값 selectedParameters 배열에서 삭제
-					// selectedParameters.forEach(function (item, i) {
-					// 	if (item === _AllSelectKeyValue) {
-					// 		selectedParameters.splice(i, 1);
-					// 	}
-					// });
+					if (!_this.hasClass('active')) {
+						_this.addClass('active');
+					} else {
+						_this.removeClass('active');
+						// All Select Option Active 삭제 & key / value 값 저장
+						$('.answer_btn').each(function () {
+							if ($(this).data('value') === AllSelectOption) {
+								console.log($(this).removeClass('active'))
+								_AllSelectKeyValue = $(this).data('key') + '=' + $(this).data('value')
+							}
+						});
+						// All Select Option key / value 배열에서 삭제
+						selectedParameters.forEach(function (item, i) {
+							if (item === _AllSelectKeyValue) {
+								selectedParameters.splice(i, 1);
+							}
+						});
+					}
 				}
 			}
-
-
-
-
-
-
-
-
 
 			// selectedParameters에서 현재 선택된 key,value 중복되는 데이터 제거
 			selectedParameters.forEach(function (item, i) {
@@ -1490,6 +1542,11 @@ function main() {
 			TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
 			$showNow.addClass('active');
 
+			// 데이터 없는 부분
+			if (idx !== 2 && _selectData[0].DataNon === true) {
+				$('.que_title').css('display', 'block');
+				$descHeadWrap.css('display', 'none');
+			}
 			if (idx === 1) {
 				$descIcon.attr('style', 'background-image:url(' + imgPath + _selectData[0].changeData.icon + ')');
 				$descHead.text(_selectData[0].changeData.description);
@@ -1504,10 +1561,10 @@ function main() {
 			} else {
 				// 해당 idx 0, 3, 4, 5 
 				// 데이터 없는 부분
-				if (_selectData[0].DataNon === true) {
-					$('.que_title').css('display', 'block');
-					$descHeadWrap.css('display', 'none');
-				}
+				// if (_selectData[0].DataNon === true) {
+				// 	$('.que_title').css('display', 'block');
+				// 	$descHeadWrap.css('display', 'none');
+				// }
 				$qnaImgWrap.attr('style', 'background-image:url(' + imgPath + _selectData[0].changeData.screenImg + ')');
 				if (_selectData[0].changeData.description.head !== undefined) {
 					// 디스크립션 디테일
