@@ -29,12 +29,14 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 - json 데이터를 가져와 사용자와 선택한 데이터 값과 매칭시켜 결과를 노출 시키는 형식으로 다양한 `javascript` 의 무궁무진함을 느낌
 - 클라이언트의 `수정`, `보안`, `Update` 를 통해 부족한 부분을 보안하며 프로젝트의 퀄리티를 높일 수 있었음
 - 처음 `lottie`, `json` 을 웹페이지에 json을 사용한 영상을 삽입해보며 `lottie` 기술을 알게 되어 다양한 영상을 노출 할 수 있음
-- 동작 ㅇㅇ에 따라 `function(함수화)` 을 하여 쉽게 동작기능을 구분 할 수 있게 코드를 짤 수 있음
-- 통해 DI 를 처음으로 적용해보며, 의존성 주입의 편리함을 깨닫게 되었음
+- 동작기능에 `script` 를 `function` 함수화하여 쉽게 동작기능을 구분 할 수 있게 코드를 짤 수 있음
+
+</br>
 
 ## 🎫Result 
 ![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
 
+</br>
 
 ## 💡 Improvements
 - 이미지 로딩 속도 개선
