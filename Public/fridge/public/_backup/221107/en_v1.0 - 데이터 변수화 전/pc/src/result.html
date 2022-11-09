@@ -1,0 +1,145 @@
+@@include("./include/header.html")
+	<!-- Enter Code Here -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!--intro-->
+	<div id="finderIntro" style="display: none;">
+		<div id="introAnimation">
+			<lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+		</div>
+		
+		
+	</div>
+	<!--//intro-->
+	<!-- Enter Code Here -->
+	<div id="quickFinder" class="step07" style="display: none;">
+		<!--navigation-->
+		<div id="finderNav">
+			<ul>
+				<li>
+					<strong>1</strong>
+					<p>PRODUCT TYPE</p>
+				</li>
+				<li>
+					<strong>2</strong>
+					<p>PRODUCT CAPACITY</p>
+				</li>
+				<li>
+					<strong>3</strong>
+					<p>PRODUCT SIZE</p>
+				</li>
+				<li>
+					<strong>4</strong>
+					<p>Ice & Water Dispenser</p>
+				</li>
+				<li>
+					<strong>5</strong>
+					<p>KEY FEATURE</p>
+				</li>
+				<li>
+					<strong>6</strong>
+					<p>ADDITIONAL FEATURES</p>
+				</li>
+				<li>
+					<strong>7</strong>
+					<p>PRODUCT COLOUR</p>
+				</li>
+			</ul>
+		</div>
+		<!--//navigation-->
+		<!--question & answer area-->
+		<div class="qna_wrap">
+			<strong class="que_title"> Which colour theme matches your interior? </strong>
+			<div class="qna_description qna_description01">
+				<strong> Which colour theme matches your interior? </strong>
+				<div class="txt_box">
+					<p>Knock twice to see inside while keeping it cool.</p>
+					<button type="button" class="disc_more_btn" style="display: none;">LOAD MORE</button>
+				</div>
+			</div>
+			<div class="qna_description qna_description02" style="display: none;">
+				<div class="txt_box">
+					<p></p>
+					<button type="button" class="disc_more_btn">CLOSE</button>
+				</div>
+			</div>
+		</div>
+		<!--//question & answer area-->
+		<!--question image-->
+		<div id="qnaImgWrap" style="background-image:url(./images/step07/que_img01.png);"></div>
+		<!--//question image-->
+		<!--선택 항목 버튼-->
+		<!--선택 된 항목은 button에 active 클래스-->
+		<!--선택 불가 항목은 button에 disable 클래스-->
+		<div id="selectWrap">
+			<p class="select_tit">
+				<em>You Can Select Multiple Choices.</em>
+			</p>
+			<ol>
+				<li>
+					<button type="button" class="active">
+						<i></i>
+						<p>Black</p>
+					</button>
+				</li>
+				<li>
+					<button type="button" disabled>
+						<i></i>
+						<p> Stainless <br> Steel </p>
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						<i></i>
+						<p>Silver</p>
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						<i></i>
+						<p>White</p>
+					</button>
+				</li>
+			</ol>
+		</div>
+		<!--//선택 항목 버튼-->
+		<!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+		<div class="show_now_wrap">
+			<button type="button" id="shopNowBtn">See Results Now</button>
+		</div>
+		<!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+		<div class="step_move_wrap">
+			<button type="button" id="backStepBtn">BACK</button>
+			<button type="button" id="nextStepBtn" class="active" style="display: block; opacity:1;">NEXT</button>
+		</div>
+	</div>
+	<!--result-->
+	<div id="finderResult" style="display: block;">
+		<strong class="tit">You’re set out <br>to make a savvy choice!</strong>
+		<div class="center_img_wrap" style="background-image: url(./images/pc/result/center_img03.png);"></div>
+		<div class="txt_wrap">
+			<dl>
+				<dt>You chose a</dt>
+				<dd>Multi Door Fridge Freezer<span>.</span></dd>
+			</dl>
+			<dl>
+				<dt>You prioritise</dt>
+				<dd>Long-lasting freshness<span>.</span></dd>
+			</dl>
+			<dl>
+				<dt>We'll recommend you</dt>
+				<dd>InstaView™ <br> Door-in-Door®</dd>
+			</dl>
+			<dl>
+				<dt>fridges with</dt>
+				<dd>Black<span>.</span></dd>
+			</dl>
+		</div>
+		<div class="result_btn_wrap">
+			<button type="button" id="tryAgain">Try Again</button>
+			<button type="button" id="shopNowBtn02">Get Result</button>
+		</div>
+	</div>
+	<!--//result--> 
+@@include("./include/popup.html") @@include("./include/footer.html")
