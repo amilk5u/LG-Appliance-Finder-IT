@@ -1,6 +1,7 @@
 # LG Appliance Finder Project / IT. Version
 
 Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-finder)
+ 
 </br>
 
 ## 📝 Service Introduce
@@ -11,7 +12,6 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 - LG 에서 제공되는 제품을 `script`상에서 데이터화시켜 사용자가 선택한 제품만 필터링하여 원하는 제품 노출함
 - 사용자의 취향대로 제품을 옵션에 해당하는 제품을 구매 할 수 있음
 </br>
-
 ## 🛠 Technology 
 `HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`
 </br>
