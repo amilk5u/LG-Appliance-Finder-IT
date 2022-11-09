@@ -19,7 +19,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 </br>
 
-## ✒Part
+## ✒ Part
 - 개인 프로젝트 (디자인 제외/ UI & 백단 개발)
 
 </br>
@@ -33,7 +33,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 </br>
 
-## 🎫Result 
+## 🎫 Result 
 ![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
 
 </br>
