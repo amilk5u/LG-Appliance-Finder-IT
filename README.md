@@ -4,8 +4,8 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 </br>
 
-## 📝Service Introduce
-### LG 제품을 편리하게 구매할 수 있도록 재미있는 모션을 이용한 일러스트 디자인의 설문 페이지 구축
+## 1. Service Introduce
+### LG 냉장고와 세탁기를 편리하게 구매할 수 있도록 재미있는 모션을 이용한 일러스트 디자인의 설문 페이지 구축
 - Intro 의 이펙터를 이용한 동적 모션을 통해 사용자의 재미를 유발함
 - 일러스트 디자인을 제공하여 좀 더 친근 한 이미지로 하여금 사용자 흥미 유발함
 - 원하는 옵션을 선택 할 때마다 해당 옵션의 대한 설명 또는 관련 영상을 한 눈에 볼 수 있음
@@ -14,7 +14,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 </br>
 
-## 🛠Technology 
+## 2. Technology 
 `HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`
 
 </br>
@@ -31,12 +31,9 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 - `ㅇㅇㅇㅇ` 을 활용하여 특정 백그라운드 동작을 에약하는 기능을 구현할 수 있게 되었음
 - `dfsdfdf`, 와 `ㄹㄴㅇㄹㄴㅇㄹ` 을 이용한 백그라운드 동작원래를 이해 할 수 있게 되었음
 
-</br>
-
 ## 🎫Result 
 ![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
 
-</br>
 
 ## 💡개선사항
 - 이미지 로딩 속도 개선
