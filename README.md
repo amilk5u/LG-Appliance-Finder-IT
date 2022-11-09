@@ -1,4 +1,4 @@
-# LG Appliance Finder Project / IT. Version
+# LG Appliance Finder / IT. Version
 
 Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-finder)
  
