@@ -15,7 +15,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 </br>
 
 ## 🛠 Technology 
-`HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`, `Swiper`, `dddd`
+`HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`
 
 </br>
 
