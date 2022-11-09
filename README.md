@@ -44,6 +44,5 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 - `React` 라이브러리를 사용하여 json 데이터 API화 시켜 동작하기에 수월 할 것 같음
 
 </br>
----
 
-<a href="#" class="btn--success">Success Button</a>
+<a href="#" class="btn--success">Going up</a>
