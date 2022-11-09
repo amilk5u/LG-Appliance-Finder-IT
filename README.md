@@ -15,7 +15,7 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 </br>
 
 ## 🛠 Technology 
-`HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`
+`HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`, `Swiper`, `dddd`
 
 </br>
 
@@ -26,13 +26,11 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 
 ## 📚 Learned
 - `javascript`을 깊게 다뤄보며 동작 원리를 이해하고, 자동화 시스템의 필요성에 대해 알게 됨
-- json 데이터를 가져와 사용자와 선택한 데이터 값과 매칭시켜 결과를 노출 시키는 형식으로 다양한 `javascript` 의 무궁무진을 느낌!
-- 수정, 업데이트를 통해 부족한 부분을 보안하며 프로젝트의 퀄리티를 높일 수 있었음
-- `lottie`, `json` 을 웹페이지에 json을 사용한 영상을 삽입하여 `lottie` 기술을 알게 되었음
-- 
-통해 DI 를 처음으로 적용해보며, 의존성 주입의 편리함을 깨닫게 되었음
-- `ㅇㅇㅇㅇ` 을 활용하여 특정 백그라운드 동작을 에약하는 기능을 구현할 수 있게 되었음
-- `dfsdfdf`, 와 `ㄹㄴㅇㄹㄴㅇㄹ` 을 이용한 백그라운드 동작원래를 이해 할 수 있게 되었음
+- json 데이터를 가져와 사용자와 선택한 데이터 값과 매칭시켜 결과를 노출 시키는 형식으로 다양한 `javascript` 의 무궁무진함을 느낌
+- 클라이언트의 `수정`, `보안`, `Update` 를 통해 부족한 부분을 보안하며 프로젝트의 퀄리티를 높일 수 있었음
+- 처음 `lottie`, `json` 을 웹페이지에 json을 사용한 영상을 삽입해보며 `lottie` 기술을 알게 되어 다양한 영상을 노출 할 수 있음
+- 동작 ㅇㅇ에 따라 `function(함수화)` 을 하여 쉽게 동작기능을 구분 할 수 있게 코드를 짤 수 있음
+- 통해 DI 를 처음으로 적용해보며, 의존성 주입의 편리함을 깨닫게 되었음
 
 ## 🎫Result 
 ![image](http://chamshin.kr/images/lg/appliance_Finder/washing_img1.jpg)
@@ -41,3 +39,4 @@ Demo : [Appliance Finder IT](https://www.lg.com/uk/washing-machine/appliance-fin
 ## 💡 Improvements
 - 이미지 로딩 속도 개선
 - `javascript` 동작 속도 개선
+- `React` 라이브러리를 사용하여 json 데이터 API화 시켜 동작하기에 수월 할 것 같음
