@@ -167,6 +167,12 @@ function main() {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
 			}
 		}
+		// All Select Button 에 class 삽입
+		$('.answer_btn').each(function () {
+			if ($(this).data('value') === AllSelectOption) {
+				$(this).addClass('all_select');
+			}
+		})
 
 		// 선택된 제품 추출 
 		// step 1만 동작
@@ -302,7 +308,7 @@ function main() {
 								let selectValueArray = _lastPro[i][_selectKey];
 								// , 기준으로 배열 생성
 								for (let p = 0; p < selectValueArray.length; p++) {
-									console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
+									// console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
 									if (selectValueArray[p] === _selectValue) {
 										idx !== 6 && _stepProductArray.push(_lastPro[i]);
 										_judgmentNum++;
@@ -427,11 +433,19 @@ function main() {
 
 			// 현재 선택된 카운트 만큼 for문 실행 
 			for (let i = 0; i < stepCount[stepCount.length - 1]; i++) {
-				let _currentValue = selectedParameters[selectedParameters.length - (i + 1)].split('=')[1]; // key=value에서 value 값만 추출
+				let _selectKey = selectedParameters[selectedParameters.length - (1 + i)].split('=')[0]; // key
+				let _selectValue = selectedParameters[selectedParameters.length - (1 + i)].split('=')[1]; // value
+
+
 				// 버튼 value와 저장된 value와 같으면 active 
 				$('.answer_btn').each(function () {
 					let _thisValue = $(this).data('value');
-					if (_currentValue === _thisValue) {
+					let _thisKey = $(this).data('key');
+
+					console.log(_thisKey, _selectKey, _selectValue, _thisValue, _thisKey === _selectKey && _selectValue === _thisValue)
+
+					// console.log('마크업의 벨류값 : ', _thisValue, '마크업의 키 값 : ', _thisKey, '선택한 벨류값 : ', _currentValue, _currentValue === _thisValue)
+					if (_thisKey === _selectKey && _selectValue === _thisValue) {
 						$(this).addClass('active')
 					}
 				});
@@ -458,23 +472,24 @@ function main() {
 			let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
 			let _answerBtnActive = 0; // 버튼 active 카운팅 저장용 (All Select 해제 시 카운팅 수 필요)
 			let _AllSelectKeyValue;
+			let _step2AnswerBtnActive = 1; // step02 의 acitve 된 버튼의 count
 
-			// console.log(AllSelectOption)
 			if (_this.data('value') === AllSelectOption) { // All Select Button (전체 선택 버튼)
-				if (idx !== 2) {
-					// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+				if (idx !== 2) { // step02 제외 
 					$('.answer_btn').each(function () {
-						if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
-							selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
-						}
 						// active 전체 갯수 카운팅 ++
 						if ($(this).attr('disabled') === undefined) {
+							console.log($(this))
 							_answerBtnActive++
 						}
 					});
 					// All Select 선택시 모든 옵션이 선택됨
 					if (!_this.hasClass('active')) {
 						$('.answer_btn').each(function () {
+							// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+							if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
+								selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
+							}
 							if ($(this).attr('disabled') === undefined) {
 								$(this).addClass('active');
 							}
@@ -482,12 +497,43 @@ function main() {
 					} else {
 						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
 						$('.answer_btn').removeClass('active');
+						console.log(_answerBtnActive)
 						for (let i = 0; i < _answerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
 							selectedParameters.splice(-1, 1);
 						}
 					}
-				} else {
-					// console.log('step02 번');
+				} else { // step02 
+					let _notAllSelectOption = _this.siblings(); // AllSelectOption 가 아닌 기존버튼
+
+					// step02 의 acitve 된 버튼의 count ++
+					_notAllSelectOption.each(function () {
+						if ($(this).attr('disabled') === undefined) {
+							console.log($(this))
+							_step2AnswerBtnActive++;
+						}
+					});
+
+					// All Select 선택시 모든 옵션이 선택됨
+					if (!_this.hasClass('active')) {
+						_this.addClass('active');
+						_notAllSelectOption.each(function () {
+							// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+							if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
+								selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
+							}
+							if ($(this).attr('disabled') === undefined) {
+								$(this).addClass('active');
+							}
+						});
+					} else {
+						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
+						_this.removeClass('active');
+						_this.siblings().removeClass('active');
+						console.log(_step2AnswerBtnActive)
+						for (let i = 0; i < _step2AnswerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
+							selectedParameters.splice(-1, 1);
+						}
+					}
 				}
 			} else { // Answer Button (일반 버튼)
 				// 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
@@ -504,15 +550,16 @@ function main() {
 					if (!_this.hasClass('active')) {
 						_this.addClass('active');
 					} else {
+						// active 해제
 						_this.removeClass('active');
-						// All Select Option Active 삭제 & key / value 값 저장
-						$('.answer_btn').each(function () {
-							if ($(this).data('value') === AllSelectOption) {
-								console.log($(this).removeClass('active'))
-								_AllSelectKeyValue = $(this).data('key') + '=' + $(this).data('value')
-							}
-						});
-						// All Select Option key / value 배열에서 삭제
+						if (idx !== 2) {
+							$('.all_select').removeClass('active');
+						} else {
+							_this.siblings('.all_select').removeClass('active');
+						}
+						// All Select Option key / value 값 저장
+						_AllSelectKeyValue = $('.all_select').data('key') + '=' + $('.all_select').data('value');
+						// All Select Option Active 삭제 
 						selectedParameters.forEach(function (item, i) {
 							if (item === _AllSelectKeyValue) {
 								selectedParameters.splice(i, 1);

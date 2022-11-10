@@ -121,8 +121,8 @@
 				}
 			}
 		}
-		#selectWrap {
-			li {
+		#selectWrap {			
+			li {				
 				padding:vw(20) 0 0;
 				&:first-child {padding:0;}
 				&:nth-of-type(1) i {background-image:url(../../images/step01/btn_icon01.png);}
@@ -544,7 +544,7 @@
 				@include boxSizing; 
 				em { font-size:18px; }
 			}
-			ol { width: 1180px; margin: 0 auto; display: flex; gap: 20px; justify-content: center; }
+			ol { width: 1180px; margin: 0 auto; display: flex; gap: 20px; justify-content: left; }
 			li {
 				width:100%; padding:0;
 				button {
@@ -570,9 +570,10 @@
 			}
 			#qnaImgWrap { height: calc(100vh - 550px); min-height: 230px; max-height: 347px; }
 			#selectWrap {
-				padding: 70px 0 0; 
+				width: 1180px; padding: 70px 0 0;
+				ol { justify-content: left; flex-wrap: wrap; gap: 12px 20px; }
 				li {
-					width: 100%; padding: 0;
+					width: 380px; padding: 0;
 					&:nth-of-type(1) i { background-image: url(../../images/pc/step01/btn_icon01.png); }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step01/btn_icon02.png); }
 					&:nth-of-type(3) i { background-image: url(../../images/pc/step01/btn_icon03.png); }
@@ -612,9 +613,9 @@
 			}
 			#selectWrap {
 				padding: 20px 0 0;
-				ol { width: 820px; padding: 15px 0 0; }
+				ol { width: 820px; padding: 15px 0 0; flex-wrap: wrap; justify-content: left; gap: 12px 20px; }
 				li {
-					padding:0; 
+					width: 400px; padding: 0;
 					&:nth-of-type(1) i { background-image: url(../../images/pc/step02/btn_icon01.png); }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step02/btn_icon02.png); }
 					&:nth-of-type(3) i { background-image: url(../../images/pc/step02/btn_icon03.png); }
@@ -675,18 +676,24 @@
 					}
 				}
 				ol { width: 820px; padding: 0; display: block; text-align: left; }
-				li {
+				li {					
 					padding: 20px 0 0;
+					&:first-of-type { 
+						> div {
+							flex-wrap: nowrap;
+							button { width: 100%; }
+						}
+					}
 					> span {
 						padding: 0 0 0 10px; font-size: 24px;
 						em { font-size: 18px; margin: 0 0 0 10px; font-weight: $light; }
 					}
-					> div { padding: 10px 0 0; gap: 20px; }
-					button { padding: 0; }
+					> div { padding: 10px 0 0; gap: 12px 20px; flex-wrap: wrap; }
+					button { width: 260px; padding: 0; }
 					p {
-						font-size: 18px; line-height: 28px;
-						em { font-size: 22px; }
-						br { display: none; }
+						font-size: 21px; line-height: 28px;
+						// em { font-size: 22px; }
+						// br { display: none; }
 					}
 				}
 			}
@@ -806,7 +813,7 @@
 					}
 					p { 
 						font-size: 24px; line-height: 30px; 
-						br { display: none; }
+						// br { display: none; }
 					}
 				}
 			}
@@ -830,10 +837,10 @@
 			#qnaImgWrap { height: calc(100vh - 650px); min-height: 230px; max-height: 311px; }
 			#selectWrap {
 				padding: 40px 0 0;
-				.select_tit { width: 1180px; }
-				ol { width: 1180px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
+				.select_tit { width: 820px; }
+				ol { width: 820px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
-					width: 280px; padding: 0; float: none;
+					width: 260px; padding: 0;
 					&:nth-of-type(even) { float:none; }
 					button {
 						height: 70px; padding: 0;

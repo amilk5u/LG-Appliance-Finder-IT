@@ -37,6 +37,7 @@ let Depth_value1 = 'Depth_value1';
 let Width_value1 = 'Width_value1';
 let Width_value2 = 'Width_value2';
 let Width_value3 = 'Width_value3';
+let Width_value4 = 'Width_value4';
 
 let Height_value1 = 'Height_value1';
 let Height_value2 = 'Height_value2';
@@ -67,6 +68,7 @@ let Color_value1 = 'Color_value1';
 let Color_value2 = 'Color_value2';
 let Color_value3 = 'Color_value3';
 let Color_value4 = 'Color_value4';
+let Color_value5 = 'Color_value5';
 
 let Dummy = 'dummy';
 let AllSelectOption = 'AllSelectOption';
@@ -305,36 +307,36 @@ const configData = {
 		// 제품 선택
 		{
 			finderStep: 'step01',
-			questionText: 'What type of fridge are </br>you looking for?',
+			questionText: 'Che tipo di frigorifero </br>stai cercando?',
 			defaultScreenImg: 'step01/que_img00.png',
 		},
 		{
 			finderStep: 'step02',
-			questionText: 'What capacity do you need?',
+			questionText: 'Qual è la capacità del frigo che stai cercando?',
 		},
 		{
 			finderStep: 'step03',
-			questionText: 'Which size best fits </br>your space?',
+			questionText: 'Quanto spazio hai a disposizione in casa?',
 			key: ['Depth', 'Width', 'Height'],
 		},
 		{
 			finderStep: 'step04',
-			questionText: 'Do you need a fridge </br>with an Ice & Water Dispenser?',
+			questionText: 'Hai bisogno di un frigorifero che </br>eroghi acqua fresca e ghiaccio?',
 			defaultScreenImg: 'step04/que_img01.png',
 		},
 		{
 			finderStep: 'step05',
-			questionText: 'Which aspect of fridge </br>performance is most important for you?',
+			questionText: 'Quali sono gli aspetti che </br>reputi più importanti di un frigorifero?',
 			defaultScreenImg: 'step05/que_img01.png',
 		},
 		{
 			finderStep: 'step06',
-			questionText: 'Which features </br>do you want from your fridge?',
+			questionText: 'Quali sono le caratteristiche che </br>ti interessano di più in un frigorifero?',
 			defaultScreenImg: 'step06/que_img01.png',
 		},
 		{
 			finderStep: 'step07',
-			questionText: 'Which colour theme </br>matches your interior?',
+			questionText: 'Qual è il colore che si </br>adatta meglio al tuo arredamento?',
 			productColorImg: ['_black_popup_img', '_steel_popup_img', '_silver_popup_img', '_white_popup_img'], // step07 인터렉션 페이지 컬러매칭 이미지 뿌리기
 		},
 	],
@@ -345,9 +347,9 @@ const configData = {
 			{
 				key: 'Type',
 				value: Type_value1,
-				content: 'Type_content1',
+				content: 'Multidoor',
 				changeData: {
-					description: 'Multi doors with a full-width Refrigerator above and the freezer below.',
+					description: 'Caratterizzato dalla grande capacità e dagli scompartimenti frigo e congelatore uno sopra l’altro.',
 					screenImg: 'step01/que_img01.png',
 					learnMore: {
 						interactionPage: 'multi',
@@ -360,9 +362,9 @@ const configData = {
 			{
 				key: 'Type',
 				value: Type_value2,
-				content: 'Type_content2',
+				content: 'Side-by-Side',
 				changeData: {
-					description: 'A two-door model, with Refrigerator and freezer standing side by side.',
+					description: 'Ideale se cerchi un modello dalla grande capacità, ha il frigorifero a destra e il congelatore a sinistra.',
 					screenImg: 'step01/que_img02.png',
 					learnMore: {
 						interactionPage: 'american',
@@ -375,9 +377,9 @@ const configData = {
 			{
 				key: 'Type',
 				value: Type_value3,
-				content: 'Type_content3',
+				content: 'Combinato',
 				changeData: {
-					description: 'A slimline model with Refrigerator on top and freezer below.',
+					description: 'Il modello di frigorifero a due porte più diffuso in Italia, con frigo nella parte superiore e congelatore in quella inferiore.',
 					screenImg: 'step01/que_img03.png',
 					learnMore: {
 						interactionPage: 'tall',
@@ -390,9 +392,9 @@ const configData = {
 			{
 				key: 'Type',
 				value: Type_value4,
-				content: 'Type_content4',
+				content: 'Doppia porta',
 				changeData: {
-					description: 'A two-door model with a freezer on top and a refrigerator on the bottom.',
+					description: 'Modello a due porte, dove il congelatore sta nella parte superiore e il frigo in quella inferiore.',
 					screenImg: 'step01/que_img03.png',
 					learnMore: {
 						interactionPage: 'tall',
@@ -405,9 +407,9 @@ const configData = {
 			{
 				key: 'Type',
 				value: Type_value5,
-				content: 'Type_content5',
+				content: 'Frigoriferi Maxi Side-by-Side',
 				changeData: {
-					description: 'A smart solution for those who require a seperate fridge or freezer for the sake of space or convenience. ',
+					description: 'La soluzione ideale se desideri frigorifero e congelatore separati.',
 					screenImg: 'step01/que_img03.png',
 					learnMore: {
 						interactionPage: 'tall',
@@ -423,43 +425,43 @@ const configData = {
 			{
 				key: 'Capacity',
 				value: Capacity_value1,
-				content: 'Capacity_content1',
+				content: 'Meno di 400L',
 				changeData: {
-					description: 'A practical choice for infrequent fridge users or people who buy smaller quantities of food at a time.',
+					description: 'La scelta più pratica se hai poco spazio a disposizione oppure se fai la spesa al supermercato più volte alla settimana.',
 					icon: 'step02/disc_icon01.png',
 				}
 			},
 			{
 				key: 'Capacity',
 				value: Capacity_value2,
-				content: 'Capacity_content2',
+				content: 'Da 400L a 500L',
 				changeData: {
-					description: 'A frequently chosen option for many households.',
+					description: 'La capacità ideale se fai la spesa una volta alla settimana e devi conservare tanto cibo.',
 					icon: 'step02/disc_icon02.png',
 				}
 			},
 			{
 				key: 'Capacity',
 				value: 'Capacity_value3',
-				content: 'Capacity_content3',
+				content: 'Da 500L a 600L',
 				changeData: {
-					description: 'For those who do a big grocery shop, or share the fridge with many others.',
+					description: 'Consigliato se hai una famiglia numerosa e vuoi avere più spazio per i tuoi alimenti rispetto a un frigo tradizionale.',
 					icon: 'step02/disc_icon03.png',
 				}
 			},
 			{
 				key: 'Capacity',
 				value: Capacity_value4,
-				content: 'Capacity_content4',
+				content: 'Oltre 600L',
 				changeData: {
-					description: 'For those who do a big grocery shop, or share the fridge with many others.',
+					description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
 					icon: 'step02/disc_icon03.png',
 				}
 			},
 			{
-				key: 'Capacity',
+				key: 'step02',
 				value: AllSelectOption,
-				content: 'Select ALL Options',
+				content: 'Scelta multipla',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: '',
@@ -472,11 +474,11 @@ const configData = {
 			{
 				key: 'Depth',
 				value: Depth_value1,
-				content: 'Depth_value1',
+				content: 'Meno di 76cm',
 				changeData: {
 					description: {
-						head: 'head',
-						detail: 'detail'
+						head: 'Come misurare lo spazio che hai a disposizione per un nuovo frigorifero.',
+						detail: 'Individua il punto in cui vuoi installare il frigo e prendi le misure dello spazio disponibile. Le porte necessitano dai 25 ai 50mm di spazio per l’apertura e la ventilazione. Sconsigliamo l’installazione vicino a zone molto calde o molto fredde.'
 					},
 					learnMore: {
 						additionalDesc: true,
@@ -487,51 +489,56 @@ const configData = {
 			{
 				key: '',
 				value: Dummy,
-				content: 'Depth_value2'
+				content: '76cm o più'
 			}
 		],
 		[
 			{
 				key: 'Width',
 				value: Width_value1,
-				content: 'Width_content1',
+				content: 'Meno di 60cm',
 			},
 			{
 				key: 'Width',
 				value: Width_value2,
-				content: 'Width_content2',
+				content: 'Da 61 a 80cm',
 			},
 			{
 				key: 'Width',
 				value: Width_value3,
-				content: 'Width_content3',
+				content: 'Da 81 a 90cm',
 			},
 			{
 				key: 'Width',
+				value: Width_value4,
+				content: '91cm o più',
+			},
+			{
+				key: 'step03-1',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Scelta multipla',
 			},
 		],
 		[
 			{
 				key: 'Height',
 				value: Height_value1,
-				content: 'Height_content1',
+				content: 'Meno di 180cm',
 			},
 			{
 				key: 'Height',
 				value: Height_value2,
-				content: 'Height_content2',
+				content: 'Da 180 a 200cm',
 			},
 			{
 				key: 'Height',
 				value: Height_value3,
-				content: 'Height_content3',
+				content: '200cm o più',
 			},
 			{
-				key: 'Height',
+				key: 'step03-2',
 				value: AllSelectOption,
-				content: 'AllSelectOption',
+				content: 'Scelta multipla',
 			},
 		],
 		//4번 스탭
@@ -539,20 +546,20 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Plumbed,
-				content: 'Plumbed',
+				content: 'Con allacciamento idrico',
 				changeData: {
-					description: 'Get handy access to water and ice without refilling the water tank.',
+					description: 'Goditi dell’acqua sempre fresca e ghiaccio a cubetti o tritato, grazie al collegamento diretto a un rubinetto dell’acqua dedicato.',
 					screenImg: 'step04/que_img02.png',
 				}
 			},
 			{
 				key: 'Feature',
 				value: Non_Plumbed,
-				content: 'Non Plumbed',
+				content: 'Senza allacciamento idrico',
 				changeData: {
 					description: {
-						head: 'Refillable water tanks connected to the dispenser.',
-						detail: 'When connecting to a direct water supply isn’t feasible, non-plumbed fridges offer the convenient alternative of refillable water tanks connected to a door-mounted dispenser.'
+						head: 'Il dispenser preleva l’acqua da una tanica interna al frigorifero che dovrai riempire di volta in volta.',
+						detail: 'Quando non hai a disposizione un rubinetto dell’acqua nelle vicinanze, i frigorifero con tanica interna sono la soluzione ideale per avere acqua fresca e ghiaccio ogni volta che vuoi.'
 					},
 					screenImg: 'step04/que_img03.png',
 				}
@@ -560,11 +567,11 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Water_Only,
-				content: 'Non Plumbed (Water only)',
+				content: 'Senza allacciamento idrico (solo acqua)',
 				changeData: {
 					description: {
-						head: 'Enjoy chilled water straight from your fridge.',
-						detail: 'A handy way to enjoy chilled water from your freezer through a built-in refillable water tank.'
+						head: 'Goditi dell’acqua sempre fresca tutte le volte che vuoi.',
+						detail: 'Una soluzione pratica per avere sempre pronta dell’acqua fresca grazie alla tanica interna al frigorifero.'
 					},
 					screenImg: 'step04/que_img04.png',
 				}
@@ -572,7 +579,7 @@ const configData = {
 			{
 				key: 'Feature',
 				value: 'dummy',
-				content: 'Doesn’t matter to me, </br>I’d like to see all models.',
+				content: 'Non ho particolari esigenze, </br>fammi vedere tutti i modelli.',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: 'Doesn’t matter to me, I’d like to see all models.',
@@ -580,9 +587,9 @@ const configData = {
 				}
 			},
 			{
-				key: 'Feature',
+				key: 'step04',
 				value: AllSelectOption,
-				content: 'Select ALL Options',
+				content: 'Scelta multipla',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: '',
@@ -595,9 +602,9 @@ const configData = {
 			{
 				key: 'Feature',
 				value: 'Door_cooling,Linearcooling',
-				content: 'Long-lasting freshness',
+				content: 'Mantenimento della freschezza',
 				changeData: {
-					description: 'asas',
+					description: 'Le tecnologie di raffreddamento e di controllo della temperatura dei nostri frigoriferi mantengono i cibi freschi.',
 					screenImg: 'step05/que_img02.png',
 					learnMore: {
 						videoPopup: 'long',
@@ -608,9 +615,9 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Pure_N_Fresh,
-				content: 'Ventilation',
+				content: 'Ventilazione',
 				changeData: {
-					description: 'asas',
+					description: 'I filtri Pure N Fresh minimizzano gli odori e mantengono più fresca l’aria dentro al frigorifero.',
 					screenImg: 'step05/que_img03.png',
 					learnMore: {
 						videoPopup: 'ventilation',
@@ -621,20 +628,20 @@ const configData = {
 			{
 				key: 'EnergyGrade',
 				value: 'EnergyGrade_A,EnergyGrade_B,EnergyGrade_C',
-				content: 'A or better Energy Ratings',
+				content: 'Classe di efficienza </br>energetica A o superiore',
 				changeData: {
 					description: {
-						head: 'Save energy, save money',
-						detail: 'The LG Inverter Linear Compressor™ saves you energy by efficiently maintaining ideal temperatures inside your fridge freezer.'
+						head: 'Risparmia energia, risparmia sulla bolletta',
+						detail: 'La nostra tecnologia Linear Inverter ti aiuta a risparmiare energia mantenendo la temperatura ideale nel frigorifero.'
 					},
 					screenImg: 'step05/que_img04.png',
 				},
 				resultContent: 'step05',
 			},
 			{
-				key: 'EnergyGrade',
+				key: 'step05',
 				value: AllSelectOption,
-				content: 'Select ALL Options',
+				content: 'Scelta multipla',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: '',
@@ -647,9 +654,9 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Instaview,
-				content: 'InstaView™</br> Door-in-Door®',
+				content: 'InstaView™ </br>Door-in-Door®',
 				changeData: {
-					description: 'Knock twice to see inside while keeping your fridge cool and saving energy.',
+					description: 'Bussa sul vetro per vedere cos’hai nel frigorifero senza aprire la porta principale ed evitando dispersioni di aria fredda.',
 					screenImg: 'step06/que_img02.png',
 					// learnMore: {
 					// 	videoPopup: 'instaview',
@@ -662,7 +669,7 @@ const configData = {
 				value: Door_in_Door,
 				content: 'Door-in-Door®',
 				changeData: {
-					description: 'Easy-access opening system allows you to quickly reach your favourite foods.',
+					description: 'Ti permette di accedere rapidamente ai cibi che usi di più senza aprire la porta principale del frigorifero.',
 					screenImg: 'step06/que_img03.png',
 				},
 				resultContent: 'step06',
@@ -670,9 +677,9 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Reversible_Door,
-				content: 'Reversible door',
+				content: 'Porte reversibili',
 				changeData: {
-					description: 'The reversible door lets you customize your appliance to fit in the given space. Prevents your refrigerator door from getting dinged and scratched.',
+					description: 'Ti permette di personalizzare il verso di apertura delle porte in base al tuo arredamento.',
 					screenImg: 'step06/que_img05.png',
 				},
 				resultContent: 'step06',
@@ -680,9 +687,9 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Folding_Shelf,
-				content: 'Folding shelf',
+				content: 'Ripiano pieghevole',
 				changeData: {
-					description: 'Simply adjust the shelf by sliding it back when you are storing tall and bulky bottles or pots',
+					description: 'Aumenta lo spazio sui ripiani quando devi conservare bottiglie o pentole semplicemente ripiegando il ripiano su se stesso.',
 					screenImg: 'step06/que_img06.png',
 				},
 				resultContent: 'step06',
@@ -692,28 +699,25 @@ const configData = {
 				value: Wine_Rack,
 				content: 'Wine rack',
 				changeData: {
-					description: 'Built-in wine rack provides the perfect place to keep chilled bottles of your favourite wine or beverage - always on hand and easy to get to from your fridge shelf.',
+					description: 'Un pratico supporto in metallo sagomato per organizzare e tenere in fresco fino a 5 bottiglie di vino, disposte parallelamente agli altri ripiani.',
 					screenImg: 'step06/que_img07.png',
 				},
 				resultContent: 'step06',
 			},
 			{
 				key: 'SmartTechnology',
-				value: ThinQ,
-				content: 'Smart/AI features',
-				changeData: {
-					description: 'Control your wi-fi enabled LG smart fridge remotely via your smartphone using the LG ThinQ™ app.',
-					screenImg: 'step06/que_img08.png',
-					learnMore: {
-						videoPopup: 'smart_ai_features',
-					},
+				value: ThinQ, 
+				content: 'Funzioni Smart con </br>Intelligenza Artificiale',
+				description: {
+					head: 'Un assistente smart che ti dà una mano',
+					detail: 'Collega il frigorifero al Wi-Fi e gestiscilo anche quando sei fuori casa direttamente dal tuo smartphone.'
 				},
 				resultContent: 'step06',
 			},
 			{
-				key: 'SmartTechnology',
+				key: 'step06',
 				value: AllSelectOption,
-				content: 'Select ALL Options',
+				content: 'Scelta multipla',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: '',
@@ -726,9 +730,9 @@ const configData = {
 			{
 				key: 'Color',
 				value: Color_value1,
-				content: '1',
+				content: 'Nero',
 				changeData: {
-					description: 'A chic, stylish colour that is both eye-catching and luxurious.',
+					description: 'Un colore che fa diventare il frigorifero il protagonista della tua cucina',
 					screenImg: 'que_img01.png',
 					learnMore: {
 						interactionPage: 'black',
@@ -739,9 +743,9 @@ const configData = {
 			{
 				key: 'Color',
 				value: Color_value2,
-				content: '2',
+				content: 'Acciaio inox',
 				changeData: {
-					description: 'A graceful look that’s also easy to maintain.',
+					description: 'Un look aggraziato per un frigorifero facile da pulire.',
 					screenImg: 'que_img02.png',
 					// learnMore: {
 					// 	interactionPage: 'stainless_steel',
@@ -752,9 +756,9 @@ const configData = {
 			{
 				key: 'Color',
 				value: Color_value3,
-				content: '3',
+				content: 'Argento',
 				changeData: {
-					description: 'Complementing diverse styles, silver is a simple way to add style to your kitchen.',
+					description: 'Si abbina a gran parte degli elettrodomestici, donando uniformità di stile alla tua cucina.',
 					screenImg: 'que_img03.png',
 					// learnMore: {
 					// 	interactionPage: 'silver',
@@ -765,9 +769,9 @@ const configData = {
 			{
 				key: 'Color',
 				value: Color_value4,
-				content: '4',
+				content: 'Bianco',
 				changeData: {
-					description: 'A nice touch or a backdrop for any environment.',
+					description: 'Adattabile a qualunque arredamento.',
 					screenImg: 'que_img04.png',
 					// learnMore: {
 					// 	interactionPage: 'white', 
@@ -777,8 +781,21 @@ const configData = {
 			},
 			{
 				key: 'Color',
+				value: Color_value5,
+				content: 'Beige',
+				changeData: {
+					description: 'Un tocco delicato al colore della tua cucina.',
+					screenImg: 'que_img04.png',
+					// learnMore: {
+					// 	interactionPage: 'white', 
+					// },
+				},
+				resultContent: 'step07',
+			},
+			{
+				key: 'step07',
 				value: AllSelectOption,
-				content: 'Select ALL Options',
+				content: 'Scelta multipla',
 				DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
 				changeData: {
 					description: '',
@@ -1129,6 +1146,12 @@ function main() {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
 			}
 		}
+		// All Select Button 에 class 삽입
+		$('.answer_btn').each(function () {
+			if ($(this).data('value') === AllSelectOption) {
+				$(this).addClass('all_select');
+			}
+		})
 
 		// 선택된 제품 추출 
 		// step 1만 동작
@@ -1264,7 +1287,7 @@ function main() {
 								let selectValueArray = _lastPro[i][_selectKey];
 								// , 기준으로 배열 생성
 								for (let p = 0; p < selectValueArray.length; p++) {
-									console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
+									// console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
 									if (selectValueArray[p] === _selectValue) {
 										idx !== 6 && _stepProductArray.push(_lastPro[i]);
 										_judgmentNum++;
@@ -1389,11 +1412,19 @@ function main() {
 
 			// 현재 선택된 카운트 만큼 for문 실행 
 			for (let i = 0; i < stepCount[stepCount.length - 1]; i++) {
-				let _currentValue = selectedParameters[selectedParameters.length - (i + 1)].split('=')[1]; // key=value에서 value 값만 추출
+				let _selectKey = selectedParameters[selectedParameters.length - (1 + i)].split('=')[0]; // key
+				let _selectValue = selectedParameters[selectedParameters.length - (1 + i)].split('=')[1]; // value
+
+
 				// 버튼 value와 저장된 value와 같으면 active 
 				$('.answer_btn').each(function () {
 					let _thisValue = $(this).data('value');
-					if (_currentValue === _thisValue) {
+					let _thisKey = $(this).data('key');
+
+					console.log(_thisKey, _selectKey, _selectValue, _thisValue, _thisKey === _selectKey && _selectValue === _thisValue)
+
+					// console.log('마크업의 벨류값 : ', _thisValue, '마크업의 키 값 : ', _thisKey, '선택한 벨류값 : ', _currentValue, _currentValue === _thisValue)
+					if (_thisKey === _selectKey && _selectValue === _thisValue) {
 						$(this).addClass('active')
 					}
 				});
@@ -1420,23 +1451,24 @@ function main() {
 			let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
 			let _answerBtnActive = 0; // 버튼 active 카운팅 저장용 (All Select 해제 시 카운팅 수 필요)
 			let _AllSelectKeyValue;
+			let _step2AnswerBtnActive = 1; // step02 의 acitve 된 버튼의 count
 
-			// console.log(AllSelectOption)
 			if (_this.data('value') === AllSelectOption) { // All Select Button (전체 선택 버튼)
-				if (idx !== 2) {
-					// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+				if (idx !== 2) { // step02 제외 
 					$('.answer_btn').each(function () {
-						if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
-							selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
-						}
 						// active 전체 갯수 카운팅 ++
 						if ($(this).attr('disabled') === undefined) {
+							console.log($(this))
 							_answerBtnActive++
 						}
 					});
 					// All Select 선택시 모든 옵션이 선택됨
 					if (!_this.hasClass('active')) {
 						$('.answer_btn').each(function () {
+							// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+							if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
+								selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
+							}
 							if ($(this).attr('disabled') === undefined) {
 								$(this).addClass('active');
 							}
@@ -1444,12 +1476,43 @@ function main() {
 					} else {
 						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
 						$('.answer_btn').removeClass('active');
+						console.log(_answerBtnActive)
 						for (let i = 0; i < _answerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
 							selectedParameters.splice(-1, 1);
 						}
 					}
-				} else {
-					// console.log('step02 번');
+				} else { // step02 
+					let _notAllSelectOption = _this.siblings(); // AllSelectOption 가 아닌 기존버튼
+
+					// step02 의 acitve 된 버튼의 count ++
+					_notAllSelectOption.each(function () {
+						if ($(this).attr('disabled') === undefined) {
+							console.log($(this))
+							_step2AnswerBtnActive++;
+						}
+					});
+
+					// All Select 선택시 모든 옵션이 선택됨
+					if (!_this.hasClass('active')) {
+						_this.addClass('active');
+						_notAllSelectOption.each(function () {
+							// All Select 선택시 나머지 active 버튼의 key / value 값 배열 삽입
+							if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
+								selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
+							}
+							if ($(this).attr('disabled') === undefined) {
+								$(this).addClass('active');
+							}
+						});
+					} else {
+						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
+						_this.removeClass('active');
+						_this.siblings().removeClass('active');
+						console.log(_step2AnswerBtnActive)
+						for (let i = 0; i < _step2AnswerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
+							selectedParameters.splice(-1, 1);
+						}
+					}
 				}
 			} else { // Answer Button (일반 버튼)
 				// 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
@@ -1466,15 +1529,16 @@ function main() {
 					if (!_this.hasClass('active')) {
 						_this.addClass('active');
 					} else {
+						// active 해제
 						_this.removeClass('active');
-						// All Select Option Active 삭제 & key / value 값 저장
-						$('.answer_btn').each(function () {
-							if ($(this).data('value') === AllSelectOption) {
-								console.log($(this).removeClass('active'))
-								_AllSelectKeyValue = $(this).data('key') + '=' + $(this).data('value')
-							}
-						});
-						// All Select Option key / value 배열에서 삭제
+						if (idx !== 2) {
+							$('.all_select').removeClass('active');
+						} else {
+							_this.siblings('.all_select').removeClass('active');
+						}
+						// All Select Option key / value 값 저장
+						_AllSelectKeyValue = $('.all_select').data('key') + '=' + $('.all_select').data('value');
+						// All Select Option Active 삭제 
 						selectedParameters.forEach(function (item, i) {
 							if (item === _AllSelectKeyValue) {
 								selectedParameters.splice(i, 1);
