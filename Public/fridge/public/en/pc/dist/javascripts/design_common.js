@@ -1333,7 +1333,7 @@ function main() {
 			let _currentKey = []; // 현재 스텝의 key 값
 			let _currentKeyRemoval = []; // 중복된데이터 제거된 key 값
 
-			$(".answer_btn").prop('disabled', true); // default disabled true
+			// $(".answer_btn").prop('disabled', true); // default disabled true
 
 			// 현재 스텝의 key 값을 모두 추출 하고, 중복된 key값은 제거
 			$('.answer_btn').each(function () {
