@@ -278,27 +278,27 @@ const configData = {
 			key: 'Type_value3',
 			class: 'tall',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img03.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img03.png',
 			}
 		},
 		{
 			key: 'Type_value4',
-			class: 'tall2',
+			class: 'product4',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img04.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img04.png',
 			}
 		},
 		{
 			key: 'Type_value5',
-			class: 'tall3',
+			class: 'product5',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img05.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img05.png',
 			}
 		}
 	],
@@ -317,7 +317,7 @@ const configData = {
 		{
 			finderStep: 'step03',
 			questionText: 'Quanto spazio hai a disposizione in casa?',
-			key: ['Depth', 'Width', 'Height'],
+			key: ['Profondità', 'Larghezza', 'Altezza'],
 		},
 		{
 			finderStep: 'step04',
@@ -395,9 +395,9 @@ const configData = {
 				content: 'Doppia porta',
 				changeData: {
 					description: 'Modello a due porte, dove il congelatore sta nella parte superiore e il frigo in quella inferiore.',
-					screenImg: 'step01/que_img03.png',
+					screenImg: 'step01/que_img04.png',
 					learnMore: {
-						interactionPage: 'tall',
+						interactionPage: 'double',
 						// additionalDesc: true,
 						// videoPopup: true,
 					},
@@ -410,9 +410,9 @@ const configData = {
 				content: 'Frigoriferi Maxi Side-by-Side',
 				changeData: {
 					description: 'La soluzione ideale se desideri frigorifero e congelatore separati.',
-					screenImg: 'step01/que_img03.png',
+					screenImg: 'step01/que_img05.png',
 					learnMore: {
-						interactionPage: 'tall',
+						interactionPage: 'lader',
 						// additionalDesc: true,
 						// videoPopup: true,
 					},
@@ -455,7 +455,7 @@ const configData = {
 				content: 'Oltre 600L',
 				changeData: {
 					description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
-					icon: 'step02/disc_icon03.png',
+					icon: 'step02/disc_icon04.png',
 				}
 			},
 			{
@@ -1094,6 +1094,7 @@ function main() {
 		$quickFinder.removeClass();
 		$quickFinder.addClass(configData.finderSetting[idx].finderStep); // step class 변경
 		$(window).scrollTop(headerH);
+		// console.log($('#nextStepBtn').text())
 
 		// next 버튼에 내용 step 별 내용 심기
 		$nextBtn.attr('data-link-name', 'Next : Q' + (idx + 1) + ' ' + $('#finderNav li').eq(idx).find('p').text());
@@ -1116,11 +1117,11 @@ function main() {
 			$nextBtn.text('Almost Done!');
 			$qnaImgWrap.attr('style', 'background-image:url(' + imgPath + selectedProduct[0].screenImg.lastScreenImg + ')');
 		} else {
-			$nextBtn.text('NEXT');
+			$nextBtn.text($nextBtn.text());
 		}
 
 		// 항목 버튼 초기화 
-		$selectWrap.html('<button type="button" class="caution_open_btn">Click here for a guide to dimensions and measurement.</button><p class="select_tit"><em>You Can Select Multiple Choices.</em></p>');
+		$selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>');
 		$selectWrap.append('<ol></ol>');
 
 
@@ -1133,7 +1134,7 @@ function main() {
 				for (let i = 0; i < _currentHtml.length; i++) {
 					_buttonHtml += '<button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '" data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button>';
 				}
-				liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>You Can Select Multiple Choices.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
+				liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>Scegli tutte le opzioni che vuoi.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
 				_htmlIdx++;
 			}
 			$selectWrap.find('ol').append(liHtml);

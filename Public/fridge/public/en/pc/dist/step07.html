@@ -61,132 +61,126 @@
 </head>
 <body>
 	<noscript> <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WMRN2JB" height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager iframe"> </iframe> </noscript>
-	<!-- <div class="guide_line">
+	<div class="guide_line">
       <div class="guide_70"></div>
       <div class="guide_center"></div>
       <div class="guide_1320"></div> 
       <div class="guide_1180"></div>
-   </div> -->
+   </div>
 
 	<!-- 스테이징 / 라이브 적용시 삭제 -->
 	<!-- <header>header</header> -->
 	<!-- //스테이징 / 라이브 적용시 삭제 -->
 	<!-- <div class="cookie-banner"></div> -->
-	<!-- Enter Code Here -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	<!--intro-->
-	<div id="finderIntro" style="display: none;">
-		<div id="introAnimation">
-			<lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+<!-- Enter Code Here -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--intro-->
+<div id="finderIntro" style="display: none;">
+	<div id="introAnimation">
+		<lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+	</div>
+</div>
+<!--//intro-->
+<div id="quickFinder" style="display: block;" class="step07">
+	<div class="finder_wrap">
+		<!--navigation-->
+		<div id="finderNav">
+			<ul>
+				<li>
+					<strong>1</strong>
+					<p>TYPE</p>
+				</li>
+				<li>
+					<strong>2</strong>
+					<p>CAPACITY</p>
+				</li>
+				<li>
+					<strong>3</strong>
+					<p>SIZE</p>
+				</li>
+				<li>
+					<strong>4</strong>
+					<p>ICE & WATER DISPENSER</p>
+				</li>
+				<li>
+					<strong>5</strong>
+					<p>PERFORMAMCE</p>
+				</li>
+				<li>
+					<strong>6</strong>
+					<p>FEATURE</p>
+				</li>
+				<li>
+					<strong>7</strong>
+					<p>COLOUR</p>
+				</li>
+			</ul>
+		</div>
+		<!--//navigation-->
+		<!--question & answer area-->
+		<div class="qna_wrap">
+			<strong class="que_title" style="display: block;">Which colour theme <br> matches your interior?</strong>
+			<div class="qna_description qna_description01" style="display: none;"><strong>Which colour theme <br> matches your interior?</strong>
+				<div class="txt_box">
+					<i style="background-image:url(./images/pc/step03/disc_icon01.png)"></i>
+					<p>Easy-access opening system allows you to quickly reach your favourite foods.</p>
+					<button type="button" class="load_more_btn">LOAD MORE</button>
+					<button type="button" class="learn_more_btn">Learn More</button>
+				</div>
+			</div>
+			<div class="qna_description qna_description02" style="display: none;">
+				<div class="txt_box">
+					<p>When connecting to a direct water supply isn’t feasible, non-plumbed fridges offer the convenient alternative of refillable water tanks connected to a door-mounted dispenser.</p>
+					<button id="detailCloseBtn" type="button" class="close_more_btn">CLOSE</button>
+				</div>
+			</div>
+		</div>
+		<!--//question & answer area-->
+		<!--question image-->
+		<div id="qnaImgWrap" style="background-image:url(./images/pc/step07/american_que_img04.png)"></div>
+		<!--//question image-->
+	</div>
+	<!--선택 항목 버튼-->
+	<!--선택 된 항목은 button에 active 클래스-->
+	<!--선택 불가 항목은 button에 disable 클래스-->
+	<div id="selectWrap"><button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button>
+		<p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>
+		<ol>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value1"><span></span>
+					<p>Nero</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value2"><span></span>
+					<p>Acciaio inox</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value3"><span></span>
+					<p>Argento</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value4"><span></span>
+					<p>Bianco</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value5"><span></span>
+					<p>Beige</p>
+				</button></li>
+			<li><button class="answer_btn all_select" type="button" data-key="step07" data-value="AllSelectOption"><span></span><p>Scelta multipla</p></button></li>
+		</ol>
+	</div>
+	<!--//선택 항목 버튼-->
+	<!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+	<div class="show_now_wrap">
+		<button type="button" id="shopNowBtn" data-link-name="r_Btn_stage6" data-model-description="American Style Fridge Freezer,600L or more,UNDER 760mm (COUNTER DEPTH),Non Plumbed,Plumbed,760mm OR MORE (STANDARD DEPTH),Doesn’t matter to me,  I’d like to see all models.,Ventilation,Long-lasting freshness,InstaView™ Door-in-Door®,Door-in-Door®" class="">See Results Now</button>
+	</div>
+	<!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+	<div class="step_move_wrap">
+		<div class="btn_cont">
+			<button type="button" id="backStepBtn" style="display: block;">BACK</button>
+		</div>
+		<div class="btn_cont">
+			<button type="button" id="nextStepBtn" data-link-name="Next : Q2 CAPACITY" class="active" style="opacity: 1; display: block;">NEXT</button>
 		</div>
 	</div>
-	<!--//intro-->
-	<div id="quickFinder" style="display: block;" class="step07">
-		<div class="finder_wrap">
-			<!--navigation-->
-			<div id="finderNav">
-				<ul>
-					<li>
-						<strong>1</strong>
-						<p>TYPE</p>
-					</li>
-					<li>
-						<strong>2</strong>
-						<p>CAPACITY</p>
-					</li>
-					<li>
-						<strong>3</strong>
-						<p>SIZE</p>
-					</li>
-					<li>
-						<strong>4</strong>
-						<p>ICE & WATER DISPENSER</p>
-					</li>
-					<li>
-						<strong>5</strong>
-						<p>PERFORMAMCE</p>
-					</li>
-					<li>
-						<strong>6</strong>
-						<p>FEATURE</p>
-					</li>
-					<li>
-						<strong>7</strong>
-						<p>COLOUR</p>
-					</li>
-				</ul>
-			</div>
-			<!--//navigation-->
-			<!--question & answer area-->
-			<div class="qna_wrap">
-				<strong class="que_title" style="display: block;">Which colour theme <br> matches your interior?</strong>
-				<div class="qna_description qna_description01" style="display: none;"><strong>Which colour theme <br> matches your interior?</strong>
-					<div class="txt_box">
-						<i style="background-image:url(./images/pc/step03/disc_icon01.png)"></i>
-						<p>Easy-access opening system allows you to quickly reach your favourite foods.</p>
-						<button type="button" class="load_more_btn">LOAD MORE</button>
-						<button type="button" class="learn_more_btn">Learn More</button>
-					</div>
-				</div>
-				<div class="qna_description qna_description02" style="display: none;">
-					<div class="txt_box">
-						<p>When connecting to a direct water supply isn’t feasible, non-plumbed fridges offer the convenient alternative of refillable water tanks connected to a door-mounted dispenser.</p>
-						<button id="detailCloseBtn" type="button" class="close_more_btn">CLOSE</button>
-					</div>
-				</div>
-			</div>
-			<!--//question & answer area-->
-			<!--question image-->
-			<div id="qnaImgWrap" style="background-image:url(./images/pc/step07/american_que_img04.png)"></div>
-			<!--//question image-->
-		</div>
-		<!--선택 항목 버튼-->
-		<!--선택 된 항목은 button에 active 클래스-->
-		<!--선택 불가 항목은 button에 disable 클래스-->
-		<div id="selectWrap">
-			<button type="button" class="caution_open_btn">Click here for a guide to dimensions and measurement.</button>
-			<p class="select_tit"><em>You Can Select Multiple Choices.</em></p>
-			<ol>
-				<li>
-					<button class="answer_btn" type="button" data-key="FT06513243" data-value="FTV0330121V" disabled=""> <span></span>
-						<p> Black</p>
-					</button>
-				</li>
-				<li>
-					<button class="answer_btn" type="button" data-key="FT06513243" data-value="FV65319314" disabled=""> <span></span>
-						<p> Stainless steel</p>
-					</button>
-				</li>
-				<li>
-					<button class="answer_btn" type="button" data-key="FT06513243" data-value="FTV0329693V"> <span></span>
-						<p> Silver</p>
-					</button>
-				</li>
-				<li>
-					<button class="answer_btn" type="button" data-key="FT06513243" data-value="FV65319316" disabled=""> <span></span>
-						<p> White</p>
-					</button>
-				</li>
-			</ol>
-		</div>
-		<!--//선택 항목 버튼-->
-		<!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
-		<div class="show_now_wrap">
-			<button type="button" id="shopNowBtn" data-link-name="r_Btn_stage6" data-model-description="American Style Fridge Freezer,600L or more,UNDER 760mm (COUNTER DEPTH),Non Plumbed,Plumbed,760mm OR MORE (STANDARD DEPTH),Doesn’t matter to me,  I’d like to see all models.,Ventilation,Long-lasting freshness,InstaView™ Door-in-Door®,Door-in-Door®" class="">See Results Now</button>
-		</div>
-		<!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
-      <div class="step_move_wrap">
-         <div class="btn_cont">
-            <button type="button" id="backStepBtn" style="display: block;">BACK</button>
-         </div>
-         <div class="btn_cont">
-            <button type="button" id="nextStepBtn" data-link-name="Next : Q2 CAPACITY" class="active" style="opacity: 1; display: block;">NEXT</button>
-         </div>
-      </div>
-	</div> 
-	<!-- step01 Interactive Popup -->
+</div> 	<!-- step01 Interactive Popup -->
 	<div class="popup_step01 popup_step">
 		<!-- Multidoor -->
 		<div class="popup_wrap">
@@ -195,13 +189,13 @@
 				<strong>Multidoor</strong>
 			</div>
 			<div class="popup_con">
-				<strong>La scelta più indicata se devi conservare tanti alimenti o se hai una famiglia numerosa.</strong>
+				<strong>La scelta più indicata se devi conservare tanti alimenti o se hai una famiglia numerosa</strong>
 				<div class="txt_wrap">
 					<img class="mo_only" src="./images/step01/popup_contents_img01.png" alt="family & Multidoor">
 					<img class="pc_only" src="./images/pc/step01/popup_contents_img01.png" alt="family & Multidoor">
 					<div class="txt_box">
 						<p>Comodo per le famiglie numerose o per chi usa spesso la zona frigo, facilmente raggiungibile senza chinarti. Chiamato anche frigorifero francese, sta trovando sempre più spazio anche qui in Italia.</p>
-						<button type="button" class="close_btn">Moving On</button>
+						<button type="button" class="close_btn">Andiamo avanti</button>
 					</div>
 				</div>
 			</div>
@@ -214,91 +208,108 @@
 				<strong>Side-by-Side</strong>
 			</div>
 			<div class="popup_con">
-				<strong>Una scelta indicata se usi spesso il freezer e se hai bisogno di tanto spazio di conservazione.</strong>
+				<strong>Una scelta indicata se usi spesso il freezer e se hai bisogno di tanto spazio di conservazione</strong>
 				<div class="txt_wrap">
 					<img class="mo_only" src="./images/step01/popup_contents_img02.png" alt="cooking & Side-by-Side">
 					<img class="pc_only" src="./images/pc/step01/popup_contents_img02.png" alt="cooking & Side-by-Side">
 					<div class="txt_box">
 						<p>Chiamato anche "americano", è sempre più popolare anche qui in Italia. Ha il frigorifero a destra e il congelatore a sinistra e offre tanto spazio per gli alimenti. </p>
-						<button type="button" class="close_btn">Moving On</button>
+						<button type="button" class="close_btn">Andiamo avanti</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- // Side-by-Side -->
-		<!-- Combinati (Combi) -->
+		<!-- Combinati -->
 		<div class="popup_wrap">
 			<div class="tit_wrap">
 				<i></i>
-				<strong>Combinati (Combi) </strong>
+				<strong>Combinati</strong>
 			</div>
 			<div class="popup_con">
-				<strong>Una soluzione pratica dall'ingombro ridotto.</strong>
+				<strong>Una soluzione pratica dall'ingombro ridotto</strong>
 				<div class="txt_wrap">
 					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="best seller & Combinati (Combi)">
 					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="best seller & Combinati (Combi)">
 					<div class="txt_box">
 						<p>È la tipologia più diffusa qui in Italia: il classico frigorifero alto e snello con congelatore in basso, particolarmente indicato per chi fa la spesa più volte nell'arco della settimana.</p>
-						<button type="button" class="close_btn">Moving On</button>
+						<button type="button" class="close_btn">Andiamo avanti</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- // Combinati (Combi) -->
-		<!-- Doppia Porta (Top Freezer) -->
+		<!-- // Combinati -->
+		<!-- Doppia Porta -->
 		<div class="popup_wrap">
 			<div class="tit_wrap">
 				<i></i>
-				<strong>Doppia Porta (Top Freezer)</strong>
+				<strong>Doppia Porta</strong>
 			</div>
 			<div class="popup_con">
 				<strong>Il frigorifero Doppia porta è indicato se hai bisogno di più spazio di conservazione nel comparto frigo.</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="best seller & Doppia Porta (Top Freezer)">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="best seller & Doppia Porta (Top Freezer)">
+					<img class="mo_only" src="./images/step01/popup_contents_img04.png" alt="best seller & Doppia Porta (Top Freezer)">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img04.png" alt="best seller & Doppia Porta (Top Freezer)">
 					<div class="txt_box">
 						<p>Più largo e capiente dei frigoriferi combinati tradizionali, è indicato se hai bisogno di tanto spazio per i tuoi cibi, ma non vuoi passare a un modello Side-by-Side o Multidoor.</p>
-						<button type="button" class="close_btn">Moving On</button>
+						<button type="button" class="close_btn">Andiamo avanti</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- // Doppia Porta (Top Freezer)-->
-		<!-- Frigoriferi Maxi Side-by-Side (Lader & Freezer) -->
+		<!-- // Doppia Porta -->
+		<!-- Frigoriferi Maxi Side-by-Side -->
 		<div class="popup_wrap">
 			<div class="tit_wrap">
 				<i></i>
-				<strong>Frigoriferi Maxi Side-by-Side (Lader & Freezer)</strong>
+				<strong>Frigoriferi Maxi Side-by-Side</strong>
 			</div>
 			<div class="popup_con">
 				<strong>La scelta migliore se hai bisogno di separare frigo e congelatore</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
+					<img class="mo_only" src="./images/step01/popup_contents_img05.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img05.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
 					<div class="txt_box">
 						<p>Questi elettrodomestici sono perfetti se vuoi un frigo o un congelatore supplementare per conservare ancora più alimenti. Sono modelli componibili in base alle tue esigenze.</p>
-						<button type="button" class="close_btn">Moving On</button>
+						<button type="button" class="close_btn">Andiamo avanti</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- // Frigoriferi Maxi Side-by-Side (Lader & Freezer) -->
+		<!-- // Frigoriferi Maxi Side-by-Side -->
 	</div>
 	<!-- //step01 Interactive Popup -->
 
 	<!-- step03 Size Popup -->
 	<div class="popup_step03 popup_step">
 		<div class="popup_wrap">
-			<strong>SIZE GUIDE</strong>
+			<strong>INFO SULLE DIMENSIONI</strong>
 			<div class="multi">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img class="mo_only" src="./images/step03/popup_img01_1.jpg" alt="Multi Door Fridge Freezer, width / height / depth">
 						<img class="pc_only" src="./images/pc/step03/popup_img01_1.jpg" alt="Multi Door Fridge Freezer, width / height / depth">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
 					</div>
 					<div class="swiper-slide">
 						<img class="mo_only" src="./images/step03/popup_img01_2.jpg" alt="Multi Door Fridge Freezer, depth">
 						<img class="pc_only" src="./images/pc/step03/popup_img01_2.jpg" alt="Multi Door Fridge Freezer, depth">
+						<div class="depth_size">
+							<div class="size_elm">
+								<p>In linea con <br> l'arredamento</p>
+							</div>
+							<div class="size_elm">
+								<p>Sporgente</p>
+							</div>
+						</div>
+						<div class="under_more_txt">
+							<span>Meno di 760mm</span>
+							<span>Più di 760mm</span>
+						</div>
 					</div>
 				</div>
 				<div class="indicator"></div>
@@ -308,10 +319,27 @@
 					<div class="swiper-slide">
 						<img class="mo_only" src="./images/step03/popup_img02_1.jpg" alt="American Style Fridge Freezer, width / height / depth">
 						<img class="pc_only" src="./images/pc/step03/popup_img02_1.jpg" alt="American Style Fridge Freezer, width / height / depth">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
 					</div>
 					<div class="swiper-slide">
 						<img class="mo_only" src="./images/step03/popup_img02_2.jpg" alt="American Style Fridge Freezer, depth">
 						<img class="pc_only" src="./images/pc/step03/popup_img02_2.jpg" alt="American Style Fridge Freezer, depth">
+						<div class="depth_size">
+							<div class="size_elm">
+								<p>In linea con <br> l'arredamento</p>
+							</div>
+							<div class="size_elm">
+								<p>Sporgente</p>
+							</div>
+						</div>
+						<div class="under_more_txt">
+							<span>Meno di 760mm</span>
+							<span>Più di 760mm</span>
+						</div>
 					</div>
 				</div>
 				<div class="indicator"></div>
@@ -321,6 +349,11 @@
 					<div class="swiper-slide">
 						<img class="mo_only" src="./images/step03/popup_img03_1.jpg" alt="Tall Fridge Freezer, width / height / depth">
 						<img class="pc_only" src="./images/pc/step03/popup_img03_1.jpg" alt="Tall Fridge Freezer, width / height / depth">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
 					</div>
 				</div>
 				<div class="indicator"></div>

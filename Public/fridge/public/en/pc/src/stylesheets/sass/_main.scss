@@ -128,9 +128,13 @@
 				&:nth-of-type(1) i {background-image:url(../../images/step01/btn_icon01.png);}
 				&:nth-of-type(2) i {background-image:url(../../images/step01/btn_icon02.png);}
 				&:nth-of-type(3) i {background-image:url(../../images/step01/btn_icon03.png);}
+				&:nth-of-type(4) i {background-image:url(../../images/step01/btn_icon04.png);}
+				&:nth-of-type(5) i {background-image:url(../../images/step01/btn_icon05.png);}
 				&:nth-of-type(1) button.active i {background-image:url(../../images/step01/btn_icon01_on.png);}
 				&:nth-of-type(2) button.active i {background-image:url(../../images/step01/btn_icon02_on.png);}
 				&:nth-of-type(3) button.active i {background-image:url(../../images/step01/btn_icon03_on.png);}
+				&:nth-of-type(4) button.active i {background-image:url(../../images/step01/btn_icon04_on.png);}
+				&:nth-of-type(5) button.active i {background-image:url(../../images/step01/btn_icon05_on.png);}
 				button { padding: vw(30) vw(70) vw(25) vw(60); }
 				i {
 					min-width: vw(48); min-height: vw(44); display: block; margin: 0 vw(10) 0 0;
@@ -170,14 +174,19 @@
 				&:nth-of-type(1) i { background-image: url(../../images/step02/btn_icon01.png); }
 				&:nth-of-type(2) i { background-image: url(../../images/step02/btn_icon02.png); }
 				&:nth-of-type(3) i { background-image: url(../../images/step02/btn_icon03.png); }
+				&:nth-of-type(4) i { background-image: url(../../images/step02/btn_icon04.png); }
+				&:nth-of-type(5) {
+					i { display: none; }
+				}
 				&:nth-of-type(1) button.active i { background-image: url(../../images/step02/btn_icon01_on.png); }
 				&:nth-of-type(2) button.active i { background-image: url(../../images/step02/btn_icon02_on.png); }
 				&:nth-of-type(3) button.active i { background-image: url(../../images/step02/btn_icon03_on.png); }
+				&:nth-of-type(4) button.active i { background-image: url(../../images/step02/btn_icon04_on.png); }
 				i {
 					min-width: vw(44); min-height: vw(44); display: block; margin: 0 vw(10) 0 0;
 					@include backgroundSoltC;
 				}
-				p { width: vw(450); text-align: center; }
+				p { width: 100%; text-align: center; }
 			}
 		}
 	}
@@ -191,7 +200,7 @@
 						width:vw(56); height:vw(40); display:block; content:""; background-image:url(../../images/step02/txt_bubble_icon.png);
                    position:absolute; bottom:vw(-40); left:vw(470);
 						@include backgroundSoltC;
-					}
+					}					
 					i {
 						width:vw(110); height:vw(110); display:block; content:""; position:absolute; left:vw(25); top:50%;
 						border: vw(2) solid #e9e6e2; box-shadow: 0 vw(2) vw(10) #e9e6e2;
@@ -205,8 +214,8 @@
 		#qnaImgWrap { height: vw(506); }
 		#selectWrap {
 			.caution_open_btn {
-				font-size:vw(26); color:#730923; line-height:vw(35); text-decoration:underline; padding:0 0 0 vw(43); 
-				display: inline-block; position: relative;
+				display: inline-block; position: relative; padding:0 0 0 vw(43); 
+				font-size:vw(26); color:#730923; line-height:vw(35); text-decoration:underline; 
 				&:before {
 					width: vw(36); height: vw(36); position: absolute; left: 0; content: ""; display: block;
 					background: url(../../images/step03/caution_icon.png) 50% 50% no-repeat; background-size: cover;
@@ -219,22 +228,30 @@
 			}
 			ol { width: 100%; padding: vw(10) 0 0; }
 			li {
-				padding:vw(20) 0 0;
+				padding: vw(20) 0 0;
 				&:first-child {
                margin:0;
                span {
                   em { display: none; }
                }
             }
+				&:nth-of-type(2) {
+					> div { flex-wrap: wrap; }
+					button { width: 49.26%; }
+				}
+				&:nth-of-type(3) {
+					> div { flex-wrap: wrap; }
+					button { width: 49.26%; }
+				}
 				> span {
 					font-size: vw(30); color: #333333; font-weight: 600;
-					em { color: #b49759; font-size: vw(22); display: inline-block; margin: 0 0 0 vw(3); }
+					em { color: #b49759; font-size: vw(22); display: inline-block; margin: 0 0 0 vw(10); }
 				}
-				> div { display: flex; padding: vw(10) 0 0; gap: vw(10); }
-				button { padding: vw(27) 0 vw(20); }
+				> div { display: flex; padding: vw(15) 0 0; gap: vw(15) vw(10); }
+				button { padding: vw(35) 0 vw(32); }
 				i { display: none; }
 				p {
-					width: 100%; text-align: center; font-size: vw(20); line-height: vw(30);
+					width: 100%; text-align: center; font-size: vw(33); line-height: vw(30);
 					em { font-size: vw(30); }
 				}
 			}
@@ -271,6 +288,7 @@
 				&:nth-of-type(2) i { background-image: url(../../images/step04/btn_icon02.png); }
 				&:nth-of-type(3) i { background-image: url(../../images/step04/btn_icon03.png); }
 				&:nth-of-type(4) i { display: none; }
+				&:nth-of-type(5) i { display: none; }
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active {background-color:#464646; }
@@ -314,6 +332,9 @@
 				&:nth-of-type(1) i { background-image: url(../../images/step05/btn_icon01.png); }
 				&:nth-of-type(2) i { background-image: url(../../images/step05/btn_icon02.png); }
 				&:nth-of-type(3) i { background-image: url(../../images/step05/btn_icon03.png); }
+				&:nth-of-type(4) {
+					i { display: none; }
+				}
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active { background-color: #464646; }
@@ -359,7 +380,9 @@
 				&:nth-of-type(4) i { background-image: url(../../images/step06/btn_icon04.png); }
 				&:nth-of-type(5) i { background-image: url(../../images/step06/btn_icon05.png); }
 				&:nth-of-type(6) i { background-image: url(../../images/step06/btn_icon06.png); }
-				&:nth-of-type(7) i { background-image: url(../../images/step06/btn_icon07.png); }
+				&:nth-of-type(7) {
+					i { display: none; }
+				}
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active { background-color: #464646; }
@@ -390,7 +413,7 @@
 				}
 			}
 		}
-		#qnaImgWrap { height: vw(457); }
+		#qnaImgWrap { height: vw(456); }
 		#selectWrap {
 			padding: vw(55) vw(45) vw(60);
 			@include backgroundSolt(0, 0, repeat-x); 
@@ -409,6 +432,15 @@
 				}
 				&:nth-of-type(4) { 
 					button {	span { background-color: $white; }}
+				}
+				&:nth-of-type(5) { 
+					button {	span { background-image: url(../../images/step07/btn_icon04.jpg); }}
+				}
+				&:nth-of-type(6) { 
+					button {	
+						padding: vw(37.5) 0;
+						span { display: none; }
+					}
 				}
 				button {
 					padding:vw(15) 0;
@@ -577,9 +609,13 @@
 					&:nth-of-type(1) i { background-image: url(../../images/pc/step01/btn_icon01.png); }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step01/btn_icon02.png); }
 					&:nth-of-type(3) i { background-image: url(../../images/pc/step01/btn_icon03.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step01/btn_icon04.png); }
+					&:nth-of-type(5) i { background-image: url(../../images/pc/step01/btn_icon05.png); }
 					&:nth-of-type(1) button.active i { background-image: url(../../images/pc/step01/btn_icon01_on.png); }
 					&:nth-of-type(2) button.active i { background-image: url(../../images/pc/step01/btn_icon02_on.png); }
 					&:nth-of-type(3) button.active i { background-image: url(../../images/pc/step01/btn_icon03_on.png); }
+					&:nth-of-type(4) button.active i { background-image: url(../../images/pc/step01/btn_icon04_on.png); }
+					&:nth-of-type(5) button.active i { background-image: url(../../images/pc/step01/btn_icon05_on.png); }
 					button { width: 100%; height: 60px; padding: 0; }
 					i { min-width: 21px; min-height: 26px; margin: 0 20px 0 0; }
 					p { width: 73%; }
@@ -615,19 +651,20 @@
 				padding: 20px 0 0;
 				ol { width: 820px; padding: 15px 0 0; flex-wrap: wrap; justify-content: left; gap: 12px 20px; }
 				li {
-					width: 400px; padding: 0;
+					width: 260px; padding: 0;
 					&:nth-of-type(1) i { background-image: url(../../images/pc/step02/btn_icon01.png); }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step02/btn_icon02.png); }
 					&:nth-of-type(3) i { background-image: url(../../images/pc/step02/btn_icon03.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step02/btn_icon04.png); }
+					&:nth-of-type(5) {
+						i { display: none; }
+					}
 					&:nth-of-type(1) button.active i { background-image: url(../../images/pc/step02/btn_icon01_on.png); }
 					&:nth-of-type(2) button.active i { background-image: url(../../images/pc/step02/btn_icon02_on.png); }
 					&:nth-of-type(3) button.active i { background-image: url(../../images/pc/step02/btn_icon03_on.png); }
-					button {
-						width: 100%; height: 60px; padding: 0;
-					}
-					i { 
-						min-width: 28px; min-height: 28px; margin: 0 20px 0 0; 
-					}
+					&:nth-of-type(4) button.active i { background-image: url(../../images/pc/step02/btn_icon04_on.png); }
+					button { width: 100%; height: 60px; padding: 0; }
+					i { min-width: 28px; min-height: 28px; margin: 0 20px 0 0; }
 					p { width: 62%; }
 				}
 			}

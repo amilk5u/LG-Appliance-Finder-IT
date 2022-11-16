@@ -278,27 +278,27 @@ const configData = {
 			key: 'Type_value3',
 			class: 'tall',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img03.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img03.png',
 			}
 		},
 		{
 			key: 'Type_value4',
-			class: 'tall2',
+			class: 'product4',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img04.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img04.png',
 			}
 		},
 		{
 			key: 'Type_value5',
-			class: 'tall3',
+			class: 'product5',
 			screenImg: {
-				changeScreenImg: 'step02/que_img02.png',
+				changeScreenImg: 'step02/que_img05.png',
 				lastScreenImg: 'step07/american_que_img04.png',
-				resultImg: 'result/center_img02.png',
+				resultImg: 'result/center_img05.png',
 			}
 		}
 	],
@@ -317,7 +317,7 @@ const configData = {
 		{
 			finderStep: 'step03',
 			questionText: 'Quanto spazio hai a disposizione in casa?',
-			key: ['Depth', 'Width', 'Height'],
+			key: ['Profondità', 'Larghezza', 'Altezza'],
 		},
 		{
 			finderStep: 'step04',
@@ -395,9 +395,9 @@ const configData = {
 				content: 'Doppia porta',
 				changeData: {
 					description: 'Modello a due porte, dove il congelatore sta nella parte superiore e il frigo in quella inferiore.',
-					screenImg: 'step01/que_img03.png',
+					screenImg: 'step01/que_img04.png',
 					learnMore: {
-						interactionPage: 'tall',
+						interactionPage: 'double',
 						// additionalDesc: true,
 						// videoPopup: true,
 					},
@@ -410,9 +410,9 @@ const configData = {
 				content: 'Frigoriferi Maxi Side-by-Side',
 				changeData: {
 					description: 'La soluzione ideale se desideri frigorifero e congelatore separati.',
-					screenImg: 'step01/que_img03.png',
+					screenImg: 'step01/que_img05.png',
 					learnMore: {
-						interactionPage: 'tall',
+						interactionPage: 'lader',
 						// additionalDesc: true,
 						// videoPopup: true,
 					},
@@ -455,7 +455,7 @@ const configData = {
 				content: 'Oltre 600L',
 				changeData: {
 					description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
-					icon: 'step02/disc_icon03.png',
+					icon: 'step02/disc_icon04.png',
 				}
 			},
 			{

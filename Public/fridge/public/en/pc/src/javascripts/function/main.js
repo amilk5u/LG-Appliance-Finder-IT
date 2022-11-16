@@ -115,6 +115,7 @@ function main() {
 		$quickFinder.removeClass();
 		$quickFinder.addClass(configData.finderSetting[idx].finderStep); // step class 변경
 		$(window).scrollTop(headerH);
+		// console.log($('#nextStepBtn').text())
 
 		// next 버튼에 내용 step 별 내용 심기
 		$nextBtn.attr('data-link-name', 'Next : Q' + (idx + 1) + ' ' + $('#finderNav li').eq(idx).find('p').text());
@@ -137,11 +138,11 @@ function main() {
 			$nextBtn.text('Almost Done!');
 			$qnaImgWrap.attr('style', 'background-image:url(' + imgPath + selectedProduct[0].screenImg.lastScreenImg + ')');
 		} else {
-			$nextBtn.text('NEXT');
+			$nextBtn.text($nextBtn.text());
 		}
 
 		// 항목 버튼 초기화 
-		$selectWrap.html('<button type="button" class="caution_open_btn">Click here for a guide to dimensions and measurement.</button><p class="select_tit"><em>You Can Select Multiple Choices.</em></p>');
+		$selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>');
 		$selectWrap.append('<ol></ol>');
 
 
@@ -154,7 +155,7 @@ function main() {
 				for (let i = 0; i < _currentHtml.length; i++) {
 					_buttonHtml += '<button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '" data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button>';
 				}
-				liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>You Can Select Multiple Choices.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
+				liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>Scegli tutte le opzioni che vuoi.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
 				_htmlIdx++;
 			}
 			$selectWrap.find('ol').append(liHtml);
