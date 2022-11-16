@@ -30,4 +30,21 @@ function intro() {
 		observe: true,
 		effect: "fade"
 	});
+
+	var popupStep03swiperDouble = new Swiper(".popup_step03 .double", {
+		pagination: {
+			el: ".popup_step03 .double .indicator",
+		},
+		observe: true,
+		effect: "fade"
+	});
+
+	var popupStep03swiperLader = new Swiper(".popup_step03 .lader", {
+		pagination: { 
+			el: ".popup_step03 .lader .indicator",
+		},
+		observe: true,
+		effect: "fade"
+	});
+
 }

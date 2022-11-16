@@ -279,25 +279,25 @@ const configData = {
 			class: 'tall',
 			screenImg: {
 				changeScreenImg: 'step02/que_img03.png',
-				lastScreenImg: 'step07/american_que_img04.png',
+				lastScreenImg: 'step07/tall_que_img04.png',
 				resultImg: 'result/center_img03.png',
 			}
 		},
 		{
 			key: 'Type_value4',
-			class: 'product4',
+			class: 'double',
 			screenImg: {
 				changeScreenImg: 'step02/que_img04.png',
-				lastScreenImg: 'step07/american_que_img04.png',
+				lastScreenImg: 'step07/double_que_img04.png',
 				resultImg: 'result/center_img04.png',
 			}
 		},
 		{
 			key: 'Type_value5',
-			class: 'product5',
+			class: 'lader',
 			screenImg: {
 				changeScreenImg: 'step02/que_img05.png',
-				lastScreenImg: 'step07/american_que_img04.png',
+				lastScreenImg: 'step07/lader_que_img04.png',
 				resultImg: 'result/center_img05.png',
 			}
 		}
@@ -337,7 +337,7 @@ const configData = {
 		{
 			finderStep: 'step07',
 			questionText: 'Qual è il colore che si </br>adatta meglio al tuo arredamento?',
-			productColorImg: ['_black_popup_img', '_steel_popup_img', '_silver_popup_img', '_white_popup_img'], // step07 인터렉션 페이지 컬러매칭 이미지 뿌리기
+			productColorImg: ['_black_popup_img', '_steel_popup_img', '_silver_popup_img', '_white_popup_img', '_beige_popup_img'], // step07 인터렉션 페이지 컬러매칭 이미지 뿌리기
 		},
 	],
 	// 페이지 데이터 정의
@@ -559,7 +559,7 @@ const configData = {
 				changeData: {
 					description: {
 						head: 'Il dispenser preleva l’acqua da una tanica interna al frigorifero che dovrai riempire di volta in volta.',
-						detail: 'Quando non hai a disposizione un rubinetto dell’acqua nelle vicinanze, i frigorifero con tanica interna sono la soluzione ideale per avere acqua fresca e ghiaccio ogni volta che vuoi.'
+						detail: 'Quando non hai a disposizione un rubinetto dell’acqua nelle vicinanze, i frigoriferi con tanica interna sono la soluzione ideale per avere acqua fresca e ghiaccio ogni volta che vuoi.'
 					},
 					screenImg: 'step04/que_img03.png',
 				}
@@ -567,7 +567,7 @@ const configData = {
 			{
 				key: 'Feature',
 				value: Water_Only,
-				content: 'Senza allacciamento idrico (solo acqua)',
+				content: 'Senza allacciamento idrico </br>(solo acqua)',
 				changeData: {
 					description: {
 						head: 'Goditi dell’acqua sempre fresca tutte le volte che vuoi.',
@@ -655,12 +655,13 @@ const configData = {
 				key: 'Feature',
 				value: Instaview,
 				content: 'InstaView™ </br>Door-in-Door®',
+				// content: '인스타뷰',
 				changeData: {
 					description: 'Bussa sul vetro per vedere cos’hai nel frigorifero senza aprire la porta principale ed evitando dispersioni di aria fredda.',
 					screenImg: 'step06/que_img02.png',
-					// learnMore: {
-					// 	videoPopup: 'instaview',
-					// },
+					learnMore: {
+						videoPopup: 'instaview',
+					},
 				},
 				resultContent: 'step06',
 			},
@@ -668,6 +669,7 @@ const configData = {
 				key: 'Feature',
 				value: Door_in_Door,
 				content: 'Door-in-Door®',
+				// content: '도어인도어',
 				changeData: {
 					description: 'Ti permette di accedere rapidamente ai cibi che usi di più senza aprire la porta principale del frigorifero.',
 					screenImg: 'step06/que_img03.png',
@@ -680,7 +682,7 @@ const configData = {
 				content: 'Porte reversibili',
 				changeData: {
 					description: 'Ti permette di personalizzare il verso di apertura delle porte in base al tuo arredamento.',
-					screenImg: 'step06/que_img05.png',
+					screenImg: 'step06/que_img04.png',
 				},
 				resultContent: 'step06',
 			},
@@ -688,9 +690,10 @@ const configData = {
 				key: 'Feature',
 				value: Folding_Shelf,
 				content: 'Ripiano pieghevole',
+				// content: '볼딩셀프',
 				changeData: {
 					description: 'Aumenta lo spazio sui ripiani quando devi conservare bottiglie o pentole semplicemente ripiegando il ripiano su se stesso.',
-					screenImg: 'step06/que_img06.png',
+					screenImg: 'step06/que_img05.png',
 				},
 				resultContent: 'step06',
 			},
@@ -698,19 +701,24 @@ const configData = {
 				key: 'Feature',
 				value: Wine_Rack,
 				content: 'Wine rack',
+				// content: '와인렉',
 				changeData: {
 					description: 'Un pratico supporto in metallo sagomato per organizzare e tenere in fresco fino a 5 bottiglie di vino, disposte parallelamente agli altri ripiani.',
-					screenImg: 'step06/que_img07.png',
+					screenImg: 'step06/que_img06.png',
 				},
 				resultContent: 'step06',
 			},
 			{
 				key: 'SmartTechnology',
-				value: ThinQ, 
+				value: ThinQ,
 				content: 'Funzioni Smart con </br>Intelligenza Artificiale',
-				description: {
-					head: 'Un assistente smart che ti dà una mano',
-					detail: 'Collega il frigorifero al Wi-Fi e gestiscilo anche quando sei fuori casa direttamente dal tuo smartphone.'
+				// content: '띵큐',
+				changeData: {
+					description: 'Un assistente smart che ti dà una mano',
+					screenImg: 'step06/que_img07.png',
+					learnMore: {
+						videoPopup: 'smart_ai_features',
+					},
 				},
 				resultContent: 'step06',
 			},
@@ -747,9 +755,9 @@ const configData = {
 				changeData: {
 					description: 'Un look aggraziato per un frigorifero facile da pulire.',
 					screenImg: 'que_img02.png',
-					// learnMore: {
-					// 	interactionPage: 'stainless_steel',
-					// },
+					learnMore: {
+						interactionPage: 'stainless_steel',
+					},
 				},
 				resultContent: 'step07',
 			},
@@ -760,9 +768,9 @@ const configData = {
 				changeData: {
 					description: 'Si abbina a gran parte degli elettrodomestici, donando uniformità di stile alla tua cucina.',
 					screenImg: 'que_img03.png',
-					// learnMore: {
-					// 	interactionPage: 'silver',
-					// },
+					learnMore: {
+						interactionPage: 'silver',
+					},
 				},
 				resultContent: 'step07',
 			},
@@ -773,9 +781,9 @@ const configData = {
 				changeData: {
 					description: 'Adattabile a qualunque arredamento.',
 					screenImg: 'que_img04.png',
-					// learnMore: {
-					// 	interactionPage: 'white', 
-					// },
+					learnMore: {
+						interactionPage: 'white',
+					},
 				},
 				resultContent: 'step07',
 			},
@@ -785,10 +793,10 @@ const configData = {
 				content: 'Beige',
 				changeData: {
 					description: 'Un tocco delicato al colore della tua cucina.',
-					screenImg: 'que_img04.png',
-					// learnMore: {
-					// 	interactionPage: 'white', 
-					// },
+					screenImg: 'que_img05.png',
+					learnMore: {
+						interactionPage: 'beige',
+					},
 				},
 				resultContent: 'step07',
 			},

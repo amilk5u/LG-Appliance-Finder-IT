@@ -237,11 +237,11 @@
             }
 				&:nth-of-type(2) {
 					> div { flex-wrap: wrap; }
-					button { width: 49.26%; }
+					button { width: 49.23%; }
 				}
 				&:nth-of-type(3) {
 					> div { flex-wrap: wrap; }
-					button { width: 49.26%; }
+					button { width: 49.23%; }
 				}
 				> span {
 					font-size: vw(30); color: #333333; font-weight: 600;
@@ -721,6 +721,12 @@
 							button { width: 100%; }
 						}
 					}
+					&:nth-of-type(2) {
+						button { width: 260px; }
+					}
+					&:nth-of-type(3) {
+						button { width: 260px; }
+					}
 					> span {
 						padding: 0 0 0 10px; font-size: 24px;
 						em { font-size: 18px; margin: 0 0 0 10px; font-weight: $light; }
@@ -879,6 +885,9 @@
 				li {
 					width: 260px; padding: 0;
 					&:nth-of-type(even) { float:none; }
+					&:nth-of-type(6) { 
+						button { padding: 0; }
+					}
 					button {
 						height: 70px; padding: 0;
 						&[disabled],&:disabled {
@@ -1009,6 +1018,7 @@
 				padding: 50px 0 0;
 				ol { width: 1120px; }
 				li {
+					width: 360px;
 					button { height: 53px; }
 				}
 			}
@@ -1051,13 +1061,19 @@
 				ol { width: 750px; }
 				li {
 					padding: 10px 0 0;
+					&:nth-of-type(2) {
+						button { width: 236.5px; }
+					}
+					&:nth-of-type(3) {
+						button { width: 236.5px; }
+					}
 					> span {
 						padding: 0 0 0 10px; font-size: 22px;
 						em { font-size: 16px; }
 					}
 					button { height: 53px; }
 					p { 
-						font-size: 17px; 
+						font-size: 19px; 
 						em { font-size: 20px; }
 					}
 				}
@@ -1142,10 +1158,10 @@
 			}
 			#selectWrap {
 				padding: 30px 0 0;
-				.select_tit { width: 1060px; }
-				ol { width: 1060px; }
+				.select_tit { width: 750px; }
+				ol { width: 750px; }
 				li {
-					width: 250px; 
+					width: 235px; 
 					button { height: 63px; }
 					p { line-height: 34px; font-size: 20px; }
 				}
