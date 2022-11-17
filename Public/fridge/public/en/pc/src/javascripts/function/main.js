@@ -101,13 +101,13 @@ function main() {
 		let _stepProductArray = []; // 스텝별 제품 추출
 		currentStep = configData.finderSetting[idx]; // 인터렉션 페이지 유/무
 
-		!stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
+		// !stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
 		idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
 
 		// 앞전 데이터 삭제
 		_judgmentStep === 'backStep' && matchingProducts.pop();
 
-		console.log('index : ', idx, ' -------------------------------------------------')
+		// console.log('index : ', idx, ' -------------------------------------------------')
 		$('body,html').scrollTop(0);
 		$descDetailWrap.removeClass('open');
 		TweenMax.to($nextBtn, .2, { display: 'none', opacity: 0 });
@@ -115,7 +115,6 @@ function main() {
 		$quickFinder.removeClass();
 		$quickFinder.addClass(configData.finderSetting[idx].finderStep); // step class 변경
 		$(window).scrollTop(headerH);
-		// console.log($('#nextStepBtn').text())
 
 		// next 버튼에 내용 step 별 내용 심기
 		$nextBtn.attr('data-link-name', 'Next : Q' + (idx + 1) + ' ' + $('#finderNav li').eq(idx).find('p').text());
@@ -135,7 +134,7 @@ function main() {
 		}
 		// 첫번째 선택지에서 선택한 이미지 추출
 		if (idx === 6) {
-			$nextBtn.text('Almost Done!');
+			$nextBtn.text('Abbiamo quasi finito!');
 			$qnaImgWrap.attr('style', 'background-image:url(' + imgPath + selectedProduct[0].screenImg.lastScreenImg + ')');
 		} else {
 			$nextBtn.text($nextBtn.text());
@@ -163,6 +162,12 @@ function main() {
 			for (let i = 0; i < _currentHtml.length; i++) {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><span></span><p>' + _currentHtml[i].content + '</p></button></li>');
 			}
+			// 더블도어 선택시 beige 컬러는 open
+			if (selectedProduct[0].key === Type_value3 || selectedProduct[0].key === Type_value4) {
+				$selectWrap.removeClass('beige_none');
+			} else {
+				$selectWrap.addClass('beige_none');
+			}
 		} else {
 			for (let i = 0; i < _currentHtml.length; i++) {
 				$selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
@@ -173,7 +178,7 @@ function main() {
 			if ($(this).data('value') === AllSelectOption) {
 				$(this).addClass('all_select');
 			}
-		})
+		});
 
 		// 선택된 제품 추출 
 		// step 1만 동작
@@ -201,23 +206,31 @@ function main() {
 					_wholeKey.push(_selectKey);
 				}
 				let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
+				let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
+					if (item !== 'step03-1' && item !== 'step03-2') {
+						return item;
+					}
+				});
 
 				// 제품 갯수만큼 for 문 실행
 				for (let i = 0; i < _lastPro.length; i++) {
 					let _judgmentNum = 0; // true 된 갯수 판단
+
+					console.log('_lastPro 선택된 제품 : ', _lastPro[i])
+
 					// 선택한 value 값 추출
 					for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
 						let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-						for (let p = 0; p < _restKey.length; p++) {
-							// value값 비교해서 같으면 ++
-							// console.log(_lastPro[i][_restKey[p]], _selectValue, _lastPro[i][_restKey[p]] === _selectValue, _lastPro[i])
-							if (_lastPro[i][_restKey[p]] === _selectValue) {
+
+						for (let p = 0; p < _restKeyLength.length; p++) {
+							console.log(_lastPro[i][_restKeyLength[p]], _selectValue, _lastPro[i][_restKeyLength[p]] === _selectValue)
+							if (_lastPro[i][_restKeyLength[p]] === _selectValue) {
 								_judgmentNum++
 							}
 						}
 					}
-					// 선택한 key 만큼 _judgmentNum 의 true 된 갯수가 동일 할 때의 제품을 추출
-					if (_judgmentNum === _restKey.length) {
+					console.debug(_judgmentNum, _restKeyLength.length, _judgmentNum === _restKeyLength.length)
+					if (_judgmentNum === _restKeyLength.length) {
 						_stepProductArray.push(_lastPro[i]);
 					}
 				}
@@ -286,6 +299,8 @@ function main() {
 				let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
 				let _bol = false;
 
+				console.log('민주니주마ㅣㄴㅇ리')
+
 				// 추출된 마지막 제품 갯수 만큼 for 문 실행 
 				for (let i = 0; i < _lastPro.length; i++) {
 					let _valueCounting = stepCount[stepCount.length - 1]; // step count
@@ -293,7 +308,7 @@ function main() {
 					let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
 					// 마지막에 선택한 value 값 추출
 
-					// console.log('비교제품 : ', _lastPro[i])
+					console.log('비교제품 : ', _lastPro[i])
 
 					for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
 						let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
@@ -355,7 +370,7 @@ function main() {
 			let _currentKey = []; // 현재 스텝의 key 값
 			let _currentKeyRemoval = []; // 중복된데이터 제거된 key 값
 
-			// $(".answer_btn").prop('disabled', true); // default disabled true
+			$(".answer_btn").prop('disabled', true); // default disabled true
 
 			// 현재 스텝의 key 값을 모두 추출 하고, 중복된 key값은 제거
 			$('.answer_btn').each(function () {
@@ -365,7 +380,6 @@ function main() {
 
 			// 추출된 제품 갯수만큼 for 문 실행 
 			for (let i = 0; i < _lastPro.length; i++) {
-
 				// 현재 스텝의 있는 key 갯수만큼 for 문 실행
 				for (let j = 0; j < _currentKeyRemoval.length; j++) {
 					// 현재스텝의 key에 Feature 가 있을 때 _dataValue에 value값 모두 push
@@ -437,17 +451,12 @@ function main() {
 				let _selectKey = selectedParameters[selectedParameters.length - (1 + i)].split('=')[0]; // key
 				let _selectValue = selectedParameters[selectedParameters.length - (1 + i)].split('=')[1]; // value
 
-
 				// 버튼 value와 저장된 value와 같으면 active 
 				$('.answer_btn').each(function () {
 					let _thisValue = $(this).data('value');
 					let _thisKey = $(this).data('key');
-
-					console.log(_thisKey, _selectKey, _selectValue, _thisValue, _thisKey === _selectKey && _selectValue === _thisValue)
-
-					// console.log('마크업의 벨류값 : ', _thisValue, '마크업의 키 값 : ', _thisKey, '선택한 벨류값 : ', _currentValue, _currentValue === _thisValue)
 					if (_thisKey === _selectKey && _selectValue === _thisValue) {
-						$(this).addClass('active')
+						$(this).addClass('active');
 					}
 				});
 			}
@@ -480,7 +489,6 @@ function main() {
 					$('.answer_btn').each(function () {
 						// active 전체 갯수 카운팅 ++
 						if ($(this).attr('disabled') === undefined) {
-							console.log($(this))
 							_answerBtnActive++
 						}
 					});
@@ -498,7 +506,6 @@ function main() {
 					} else {
 						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
 						$('.answer_btn').removeClass('active');
-						console.log(_answerBtnActive)
 						for (let i = 0; i < _answerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
 							selectedParameters.splice(-1, 1);
 						}
@@ -509,7 +516,6 @@ function main() {
 					// step02 의 acitve 된 버튼의 count ++
 					_notAllSelectOption.each(function () {
 						if ($(this).attr('disabled') === undefined) {
-							console.log($(this))
 							_step2AnswerBtnActive++;
 						}
 					});
@@ -530,7 +536,7 @@ function main() {
 						// All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
 						_this.removeClass('active');
 						_this.siblings().removeClass('active');
-						console.log(_step2AnswerBtnActive)
+						// console.log(_step2AnswerBtnActive)
 						for (let i = 0; i < _step2AnswerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
 							selectedParameters.splice(-1, 1);
 						}

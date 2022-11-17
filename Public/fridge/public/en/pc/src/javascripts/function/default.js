@@ -257,7 +257,7 @@ const configData = {
 	// 제품 정보 정의
 	object: [
 		{
-			key: 'Type_value1',
+			key: Type_value1,
 			class: 'multi',
 			screenImg: {
 				changeScreenImg: 'step02/que_img01.png',
@@ -266,7 +266,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'Type_value2',
+			key: Type_value2,
 			class: 'american',
 			screenImg: {
 				changeScreenImg: 'step02/que_img02.png',
@@ -275,7 +275,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'Type_value3',
+			key: Type_value3,
 			class: 'tall',
 			screenImg: {
 				changeScreenImg: 'step02/que_img03.png',
@@ -284,7 +284,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'Type_value4',
+			key: Type_value4,
 			class: 'double',
 			screenImg: {
 				changeScreenImg: 'step02/que_img04.png',
@@ -293,7 +293,7 @@ const configData = {
 			}
 		},
 		{
-			key: 'Type_value5',
+			key: Type_value5,
 			class: 'lader',
 			screenImg: {
 				changeScreenImg: 'step02/que_img05.png',

@@ -152,13 +152,16 @@
 		.tall,.lader {
 			.size_txt {
 				span { 
-					&:nth-of-type(1) { top: 5%; left: 57%; }
-					&:nth-of-type(2) { top: 6%; left: 39%; }
+					&:nth-of-type(1) { top: 7%; left: 57%; }
+					&:nth-of-type(2) { top: 4%; left: 39%; }
 					&:nth-of-type(3) { top: 47%; left: 17%; }
 				}
 			}
 		}
-		.swiper-slide { height: 95vw; background-color: $white; }
+		.swiper-slide { 
+			height: 95vw; background-color: $white; 
+			// &:nth-of-type(1) { margin: vw(20) 0 0; }
+		}
 		.size_txt {
 			span { 
 				position: absolute; color: #787878; font-size: vw(26); font-weight: $bold;
@@ -205,21 +208,30 @@
 				padding: 0;
 			}
 			// 제품 별 텍스트 정렬 설정
-			// .tall,.lader {
-			// 	.size_txt {
-			// 		span { 
-			// 			&:nth-of-type(1) { top: 5%; left: 57%; }
-			// 			&:nth-of-type(2) { top: 6%; left: 39%; }
-			// 			&:nth-of-type(3) { top: 47%; left: 17%; }
-			// 		}
-			// 	}
-			// }
+			.tall,.lader {
+				.size_txt {
+					span { 
+						&:nth-of-type(1) { top: 5%; left: 55%; }
+						&:nth-of-type(2) { top: 2%; left: 41%; }
+						&:nth-of-type(3) { top: 47%; left: 22%; }
+					}
+				}
+			}
+			.double {
+				.size_txt {
+					span { 
+						&:nth-of-type(1) { top: 4%; left: 60%; }
+						&:nth-of-type(2) { top: 4%; left: 41%; }
+						&:nth-of-type(3) { top: 47%; left: 17%; }
+					}
+				}
+			}
 			.swiper-slide { height: auto; }
 			.size_txt {
 				span { 
 					font-size: 20px;
 					&:nth-of-type(1) { top: 4%; left: 62%; }
-					&:nth-of-type(2) { top: 3%; left: 40%; }
+					&:nth-of-type(2) { top: 4%; left: 40%; }
 					&:nth-of-type(3) { top: 47%; left: 15%; }
 				}
 			}
@@ -236,8 +248,6 @@
 					&:nth-of-type(2) { top: 7%; left: 58%; }
 				}
 			}
-
-
 			.popup_close_btn {
 				width:30px; height:30px; top:40px; right:40px;
 				&:before,
@@ -253,6 +263,9 @@
 		.popup_wrap {
 			width: 485px; padding: 40px 40px 70px;
 			strong { font-size: 26px; padding: 0 0 30px; }
+			.size_txt {
+				span { font-size: 15px; }
+			}
 			.popup_close_btn {
 				width: 26px; height: 26px; top: 38px; right: 40px;
 				&:before,&:after { width: 25px; height: 2px; }

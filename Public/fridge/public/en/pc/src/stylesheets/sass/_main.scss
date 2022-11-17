@@ -417,10 +417,14 @@
 		#selectWrap {
 			padding: vw(55) vw(45) vw(60);
 			@include backgroundSolt(0, 0, repeat-x); 
-			@extend %clearfix;
+			&.beige_none {
+				li {
+					&:nth-of-type(5) { display: none; }
+				}
+			}
+			ol { display: flex; flex-wrap: wrap; gap: vw(15) vw(10); padding: vw(15) 0 0; }
          li {
-				width: 49.25%; float: left; padding: vw(10) 0 0;
-				&:nth-of-type(even) { float:right; }
+				width: 49.23%; 
 				&:nth-of-type(1) { 
 					button {	span { background-color: $black; }}
 				}
