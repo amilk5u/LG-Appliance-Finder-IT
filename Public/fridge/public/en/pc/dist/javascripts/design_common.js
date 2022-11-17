@@ -1481,18 +1481,21 @@ function main() {
          let _this = $(this);
          let _currentKeyValue = _this.data('key') + '=' + _this.data('value'); // 현재 선택한 키/벨류 ex) Q2=Q2_value2
          let _answerBtnActive = 0; // 버튼 active 카운팅 저장용 (All Select 해제 시 카운팅 수 필요)
-         let _AllSelectKeyValue;
          let _step2AnswerBtnActive = 1; // step02 의 acitve 된 버튼의 count
-         let count = 0; // All Select 제외한 나머지 버튼
-         let dddd = 0;
+         let _btnAllCount = 0; // All Select 제외한 나머지 버튼 count
+         let _activeBtn = 0; // 현재 클릭된 버튼 count
 
+         // step 02
+         let _btnAllCount1 = 0; // All Select 제외한 나머지 버튼 count
+         let _btnAllCount2 = 0; // All Select 제외한 나머지 버튼 count
+         let _activeBtn1 = 0; // 현재 클릭된 버튼 count
+         let _activeBtn2 = 0; // 현재 클릭된 버튼 count
 
          $('.answer_btn').each(function () {
             if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
-               count++;
+               _btnAllCount++;
             }
          });
-         console.log(count)
 
          if (_this.data('value') === AllSelectOption) { // All Select Button (전체 선택 버튼)
             if (idx !== 2) { // step03 제외 
@@ -1554,6 +1557,9 @@ function main() {
                }
             }
          } else { // Answer Button (일반 버튼)
+            // All Select Option key / value 값 저장
+            let _AllSelectKeyValue = $('.all_select').data('key') + '=' + $('.all_select').data('value');
+
             // 항목 매칭된 데이터 뿌리기 & 선택된 데이터 push
             if (idx === 0) {
                // button active 
@@ -1575,8 +1581,6 @@ function main() {
                   } else {
                      _this.siblings('.all_select').removeClass('active');
                   }
-                  // All Select Option key / value 값 저장
-                  _AllSelectKeyValue = $('.all_select').data('key') + '=' + $('.all_select').data('value');
                   // All Select Option Active 삭제 
                   selectedParameters.forEach(function (item, i) {
                      if (item === _AllSelectKeyValue) {
@@ -1584,25 +1588,39 @@ function main() {
                      }
                   });
                }
-
-
-               if (idx !== 2) {
+               if (idx !== 2) { // step03 제외
                   $('.answer_btn').each(function () {
-                     // console.debug($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption)
                      if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) {
                         if ($(this).hasClass('active')) {
-                           dddd++
+                           _activeBtn++
                         }
                      }
                   });
-                  if (dddd === count) {
+                  if (_activeBtn === _btnAllCount) { // active 된 버튼 갯수와 전체버튼의 갯수와 일치 할 때 All Select 버튼 acitve 
                      $('.all_select').addClass('active');
-                     // if (!$(this).hasClass('active') && $(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
-                        // selectedParameters.push($(this).data('key') + '=' + $(this).data('value')); // push
-                     // }
+                     selectedParameters.push($('.all_select').data('key') + '=' + $('.all_select').data('value'));
                   }
-               } else {
+               } else { // step03
+                  let _divBtn = _this.parent().find('button');
+                  _divBtn.each(function (i) {
+                     if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
+                        _btnAllCount1++;
+                     }
+                  });
 
+                  _divBtn.each(function (i) {
+                     if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) {
+                        if ($(this).hasClass('active')) {
+                           _activeBtn1++
+                        }
+                     }
+                  });
+
+                  if (_btnAllCount1 === _activeBtn1) { // active 된 버튼 갯수와 전체버튼의 갯수와 일치 할 때 All Select 버튼 acitve 
+                     // console.log(_this.parent().find('.all_select'))
+                     _this.parent().find('.all_select').addClass('active');
+                     // selectedParameters.push(_this.parent().find('.all_select').data('key') + '=' + _this.parent().find('.all_select').data('value'));
+                  }
                }
             }
          }
