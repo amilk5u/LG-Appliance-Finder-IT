@@ -407,7 +407,7 @@ const configData = {
          {
             key: 'Type',
             value: Type_value5,
-            content: 'Frigoriferi Maxi Side-by-Side',
+            content: 'Maxi Side-by-Side componibile',
             changeData: {
                description: 'La soluzione ideale se desideri frigorifero e congelatore separati.',
                screenImg: 'step01/que_img05.png',
@@ -461,7 +461,7 @@ const configData = {
          {
             key: 'step02',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -516,7 +516,7 @@ const configData = {
          {
             key: 'step03-1',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
          },
       ],
       [
@@ -538,7 +538,7 @@ const configData = {
          {
             key: 'step03-2',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
          },
       ],
       //4번 스탭
@@ -589,7 +589,7 @@ const configData = {
          {
             key: 'step04',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -641,7 +641,7 @@ const configData = {
          {
             key: 'step05',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -725,7 +725,7 @@ const configData = {
          {
             key: 'step06',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -776,19 +776,6 @@ const configData = {
          },
          {
             key: 'Color',
-            value: Color_value4,
-            content: 'Bianco',
-            changeData: {
-               description: 'Adattabile a qualunque arredamento.',
-               screenImg: 'que_img04.png',
-               learnMore: {
-                  interactionPage: 'white',
-               },
-            },
-            resultContent: 'step07',
-         },
-         {
-            key: 'Color',
             value: Color_value5,
             content: 'Beige',
             changeData: {
@@ -803,7 +790,7 @@ const configData = {
          {
             key: 'step07',
             value: AllSelectOption,
-            content: 'Scelta multipla',
+            content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -835,119 +822,37 @@ function imgPreload() {
       './images/pc/common/shop_now_character.png',
       './images/pc/common/try_again_icon.png',
       './images/common/video01_poster_img.jpg',
-      './images/common/video02_poster_img.jpg',
-      './images/common/video03_poster_img.jpg',
-      './images/common/video04_poster_img.jpg',
 
       // result
       './images/pc/result/bg_unit.jpg',
-      './images/pc/result/center_img01.png',
-      './images/pc/result/center_img02.png',
-      './images/pc/result/center_img03.png',
 
       // step01
       './images/pc/step01/btn_icon01.png',
-      './images/pc/step01/btn_icon01_on.png',
-      './images/pc/step01/btn_icon02.png',
-      './images/pc/step01/btn_icon02_on.png',
-      './images/pc/step01/btn_icon03.png',
-      './images/pc/step01/btn_icon03_on.png',
-      './images/pc/step01/popup_contents_img01.png',
-      './images/pc/step01/popup_contents_img02.png',
-      './images/pc/step01/popup_contents_img03.png',
-      './images/pc/step01/popup_icon01.png',
-      './images/pc/step01/popup_icon02.png',
-      './images/pc/step01/popup_icon03.png',
-      './images/pc/step01/que_img00.png',
-      './images/pc/step01/que_img01.png',
-      './images/pc/step01/que_img02.png',
-      './images/pc/step01/que_img03.png',
-      './images/pc/step01/txt_bubble_icon.png',
+
 
       // step02
       './images/pc/step02/btn_icon01.png',
-      './images/pc/step02/btn_icon01_on.png',
-      './images/pc/step02/btn_icon02.png',
-      './images/pc/step02/btn_icon02_on.png',
-      './images/pc/step02/btn_icon03.png',
-      './images/pc/step02/btn_icon03_on.png',
-      './images/pc/step02/disc_icon01.png',
-      './images/pc/step02/disc_icon02.png',
-      './images/pc/step02/disc_icon03.png',
-      './images/pc/step02/que_img01.png',
-      './images/pc/step02/que_img02.png',
-      './images/pc/step02/que_img03.png',
-      './images/pc/step02/txt_bubble_icon.png',
+
 
       // step03
       './images/pc/step03/caution_icon.png',
-      './images/pc/step03/disc_icon01.png',
-      './images/pc/step03/popup_img01_1.jpg',
-      './images/pc/step03/popup_img01_2.jpg',
-      './images/pc/step03/popup_img02_1.jpg',
-      './images/pc/step03/popup_img02_2.jpg',
-      './images/pc/step03/popup_img03_1.jpg',
+
 
       // step04
       './images/pc/step04/btn_icon01.png',
-      './images/pc/step04/btn_icon02.png',
-      './images/pc/step04/btn_icon03.png',
-      './images/pc/step04/que_img01.png',
-      './images/pc/step04/que_img02.png',
-      './images/pc/step04/que_img03.png',
-      './images/pc/step04/que_img04.png',
+
 
       // step05
       './images/pc/step05/btn_icon01.png',
-      './images/pc/step05/btn_icon02.png',
-      './images/pc/step05/btn_icon03.png',
-      './images/pc/step05/que_img01.png',
-      './images/pc/step05/que_img02.png',
-      './images/pc/step05/que_img03.png',
-      './images/pc/step05/que_img04.png',
+
 
       // step06
       './images/pc/step06/btn_icon01.png',
-      './images/pc/step06/btn_icon02.png',
-      './images/pc/step06/btn_icon03.png',
-      './images/pc/step06/btn_icon04.png',
-      './images/pc/step06/btn_icon05.png',
-      './images/pc/step06/btn_icon06.png',
-      './images/pc/step06/btn_icon07.png',
-      './images/pc/step06/que_img01.png',
-      './images/pc/step06/que_img02.png',
-      './images/pc/step06/que_img03.png',
-      './images/pc/step06/que_img04.png',
-      './images/pc/step06/que_img05.png',
-      './images/pc/step06/que_img06.png',
-      './images/pc/step06/que_img07.png',
-      './images/pc/step06/que_img08.png',
+
 
       // step07
       './images/pc/step07/american_black_popup_img.png',
-      './images/pc/step07/american_que_img01.png',
-      './images/pc/step07/american_que_img02.png',
-      './images/pc/step07/american_que_img03.png',
-      './images/pc/step07/american_que_img04.png',
-      './images/pc/step07/american_silver_popup_img.png',
-      './images/pc/step07/american_steel_popup_img.png',
-      './images/pc/step07/american_white_popup_img.png',
-      './images/pc/step07/multi_black_popup_img.png',
-      './images/pc/step07/multi_que_img01.png',
-      './images/pc/step07/multi_que_img02.png',
-      './images/pc/step07/multi_que_img03.png',
-      './images/pc/step07/multi_que_img04.png',
-      './images/pc/step07/multi_silver_popup_img.png',
-      './images/pc/step07/multi_steel_popup_img.png',
-      './images/pc/step07/multi_tall_popup_img.png',
-      './images/pc/step07/multi_white_popup_img.png',
-      './images/pc/step07/tall_black_popup_img.png',
-      './images/pc/step07/tall_que_img01.png',
-      './images/pc/step07/tall_que_img02.png',
-      './images/pc/step07/tall_que_img03.png',
-      './images/pc/step07/tall_que_img04.png',
-      './images/pc/step07/tall_silver_popup_img.png',
-      './images/pc/step07/tall_steel_popup_img.png',
+
    ]);
 }
 intro();
