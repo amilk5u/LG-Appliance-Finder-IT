@@ -443,8 +443,6 @@ const product = {
    //    Color: 
    // },
 
-
-
    // // Doppia Porta
    'GTF916SEPYD': { // 1
       Type: double,

@@ -32,7 +32,7 @@ function main() {
    let currentUrl = document.location.href; // 현재 url
    let resultPageUrl; // pdp 페이지 (result)
    let stageLiveDecide; // 현재 url 판단
-   let _animationJson; // json file
+   let animationJson; // json file
    let headerH = $('header').outerHeight();
 
    // LG stg live <--> 로컬 판단
@@ -46,15 +46,15 @@ function main() {
 
    // json animation Desktop / Mobile 구분
    if (window.innerWidth >= 1024) {
-      _animationJson = './images/pc/intro/intro_animation.json';
+      animationJson = './images/pc/intro/intro_animation.json';
    } else {
-      _animationJson = './images/intro/intro_animation.json';
+      animationJson = './images/intro/intro_animation.json';
    }
 
    // json animation
    var introLottie = lottie.loadAnimation({
       container: document.getElementById('animationPlayer'), // required
-      path: _animationJson, // required
+      path: animationJson, // required
       renderer: 'svg', // required
       loop: false
    });
