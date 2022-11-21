@@ -162,7 +162,7 @@ function main() {
          let _colorNoneBol = false; // tall & double door 아닐 때 판단 
          for (let i = 0; i < _currentHtml.length; i++) {
             // tall & double door 가 아닐 때 베이지 컬러 삭제
-            if ((selectedProduct[0].key !== Type_value3 && selectedProduct[0].key !== Type_value4) && _currentHtml[i].value === Color_value4) {
+            if ((selectedProduct[0].key !== tall && selectedProduct[0].key !== double) && _currentHtml[i].value === beige) {
                _colorNoneBol = true;
                continue;
             } 

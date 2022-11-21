@@ -29,13 +29,13 @@
 }
 #finderResult {
 	padding:vw(90) vw(45) vw(40); background:url(../../images/result/bg_unit.jpg) 50% 0 no-repeat #fff2ca;
-	-webkit-background-size:100% auto; background-size:100%; display:none;
-	.tit {font-size:vw(52); line-height:vw(64); text-align:center; display:block;}
+	-webkit-background-size: 100% auto; background-size: 100%; display: none;
+	.tit { font-size: vw(52); line-height: vw(64); text-align: center; display: block; }
 	.center_img_wrap {
 		height:vw(195); margin:vw(40) 0 0;
 		@include backgroundSoltC(50%, 0, no-repeat, auto 100%);
 	}
-	.txt_wrap {
+	.txt_wrap { 
 		background-color:$white; padding:vw(70) vw(90);
 		@include borderRadius(vw(25));
 		@include boxShadow(0 vw(2) vw(15) vw(-10) $black);
@@ -45,9 +45,9 @@
 				padding:0;
 				dd {color:#f4bb44;}
 			}
-			&:nth-of-type(2) dd {color:#2dbd9b;}
-			&:nth-of-type(3) dd {color:#195090;}
-			&:nth-of-type(4) dd {color:#9964da;}
+			&:nth-of-type(2) dd { color: #2dbd9b; }
+			&:nth-of-type(3) dd { color: #195090; }
+			&:nth-of-type(4) dd { color: #9964da; }
 		}
 		dt {font-size:vw(38); font-weight:$bold;}
 		dd {
@@ -56,26 +56,26 @@
 		}
 	}
 	.result_btn_wrap {
-		padding:vw(45) vw(15) 0; display: flex; gap: vw(30);
+		padding: vw(45) vw(80) 0; display: flex; gap: vw(30); flex-wrap: wrap;
 		@include boxSizing;
 		#tryAgain {
 			width:100%; height: vw(100); position: relative; color: #cfcfcf; font-size: vw(36); font-weight: $bold;
-			background-color: #464646; color: $white; text-shadow: vw(2) vw(2) vw(2) #2c2c2c; 
+			background-color: #464646; color: $white; text-shadow: vw(2) vw(2) vw(2) #2c2c2c;
 			@include borderRadius(vw(100));
 			@include boxSizing;
 			&:before {
-				width: vw(25); height: vw(24); content: ""; display: inline-block; position: relative; top:vw(2); left:vw(-4);
+				width: vw(25); height: vw(24); content: ""; display: inline-block; position: relative; top:vw(2); left:vw(-10);
 				@include background('./../../images/common/try_again_icon.png', 50%, 50%);
-				
 			}
 		}
 		#shopNowBtn02 {
-			width:100%; height:vw(100); position: relative; color:$white; font-size:vw(36); font-weight: $bold;
+			width: 100%; height: vw(100); position: relative; color: $white; font-size: vw(36); font-weight: $bold;
 			background: linear-gradient(to right, #ea7902, #fac21e); text-shadow: vw(2) vw(2) vw(2) #c06e09; 
+			order: -1;
 			@include borderRadius(vw(100));
          @include boxSizing;
 			&:after {
-				width: vw(13); height: vw(21); content: ""; display: inline-block; position: relative; left: vw(10); top: vw(1);
+				width: vw(13); height: vw(21); content: ""; display: inline-block; position: relative; left: vw(15); top: vw(1);
             @include background('./../../images/common/next_btn_icon.png', 50%, 50%);
          }
 			&:before {
@@ -96,32 +96,16 @@
 			@include borderRadius(25px);
 			@include boxShadow(0 2px 15px -10px $black);
 			@include boxSizing;
-			dl { 
-				padding: 30px 0 0; 
-				&:after { content: ""; display: block; clear: both; }
-				&:nth-of-type(1) {
-					padding: 0;
-					dd { width: 515px; }
-				}
-				&:nth-of-type(2) {
-					dd { width: 530px; }
-				}
-				&:nth-of-type(3) {
-					dd { width: 390px; }
-				}
-				&:nth-of-type(4) {
-					dd { width: 620px; }
-				}
-			}
-			dt { float: left; font-size: 28px; }
+			dl { display: flex; padding: 30px 0 0; }
+			dt { min-width: max-content; font-size: 28px; }
 			dd { 
-				float: left; font-size: 24px; line-height: 40px; padding: 0 0 0 30px; 
+				font-size: 24px; line-height: 40px; padding: 0 0 0 30px; 
 				@include boxSizing;
 				br { display: none; } 
 			}
 		}
 		.result_btn_wrap {
-			width: 580px; margin: 0 auto; padding: 25px 0 30px; gap: 20px;
+			width: 580px; margin: 0 auto; padding: 25px 0 30px; gap: 20px; flex-wrap: nowrap;
 			#tryAgain {
 				height: 60px; font-size: 26px; text-shadow: 2px 2px 2px #2c2c2c; line-height: 60px;
 				@include borderRadius(100px);
@@ -159,21 +143,6 @@
 		.center_img_wrap { height: 160px; }
 		.txt_wrap {
 			width: 730px; padding: 50px 80px;
-			dl { 
-				padding: 20px 0 0; 
-				&:nth-of-type(1) {
-					dd { width: 450px; }
-				}
-				&:nth-of-type(2) {
-					dd { width: 437px; }
-				}
-				&:nth-of-type(3) {
-					dd { width: 357px; }
-				}
-				&:nth-of-type(4) {
-					dd { width: 450px; }
-				}
-			}
 			dt { font-size: 25px; }
 			dd { font-size: 21px; line-height: 35px; padding: 0 0 0 20px; }
 		}
