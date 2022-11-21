@@ -776,7 +776,7 @@ const configData = {
          },
          {
             key: 'Color',
-            value: Color_value5,
+            value: Color_value4,
             content: 'Beige',
             changeData: {
                description: 'Un tocco delicato al colore della tua cucina.',

@@ -422,7 +422,12 @@
 			@include backgroundSolt(0, 0, repeat-x); 
 			&.beige_none {
 				li {
-					&:nth-of-type(4) { display: none; }
+					&:nth-of-type(4) { 
+						button {	
+							padding: vw(37.5) 0;
+							span { display: none; }
+						}
+					}
 				}
 			}
 			ol { display: flex; flex-wrap: wrap; gap: vw(15) vw(10); padding: vw(15) 0 0; }
@@ -889,6 +894,13 @@
 			#qnaImgWrap { height: calc(100vh - 650px); min-height: 230px; max-height: 311px; }
 			#selectWrap {
 				padding: 40px 0 0;
+				&.beige_none {
+					li {
+						&:nth-of-type(4) { 
+							button { padding: 0; }
+						}
+					}
+				}
 				.select_tit { width: 820px; }
 				ol { width: 820px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
