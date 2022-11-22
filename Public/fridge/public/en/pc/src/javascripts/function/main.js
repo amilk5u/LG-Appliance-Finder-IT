@@ -553,7 +553,6 @@ function main() {
                   // All Select 해제 시 전체 데이터 값 삭제 & 선택 해제
                   _this.removeClass('active');
                   _this.siblings().removeClass('active');
-                  // console.log(_step2AnswerBtnActive)
                   for (let i = 0; i < _step2AnswerBtnActive; i++) { // 버튼 active 카운팅 만큼 반복문 실행
                      selectedParameters.splice(-1, 1);
                   }
