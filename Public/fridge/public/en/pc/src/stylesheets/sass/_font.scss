@@ -17,7 +17,16 @@
 	src:url(../../fonts/Berlin_Sans_FB_Regular.woff) format("woff");
 }
 
-// //실제 라이브 할때 LG폰트 삭제
+// LG Smart Bold Italic
+@font-face {
+	font-family: LG_Smart_Bold_Italic; 
+	font-style: normal;
+	font-weight: 600;
+	src: url(../../fonts/LG_Smart_SemiBold_Italic.woff) format("woff");
+}
+
+
+//실제 라이브 할때 LG폰트 삭제
 // @font-face {
 // 	font-family: LG Smart; 
 // 	font-style: normal;

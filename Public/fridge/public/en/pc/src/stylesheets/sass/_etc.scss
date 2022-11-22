@@ -8,7 +8,7 @@
 	&.lader .popup_wrap:nth-of-type(5) { display: block; }
 	.popup_wrap {
 		display:none; 
-		&:nth-of-type(1) {
+		&:nth-of-type(1) { 
 			.tit_wrap i { background-image: url(../../images/step01/popup_icon01.png); }
 		}
 		&:nth-of-type(2) {
@@ -39,7 +39,7 @@
 			&:before,&:after { width: 100%; height: 100%; position: absolute; top: 0; left: 0; content: ""; display: block; background-size: cover; }
 			&:after { z-index: -1; background-image: url(../../images/step01/popup_contents_bg.png); }
 			&:before { z-index: -2; background: linear-gradient(to bottom, #ffda27 4%, #e97300 90%); }
-			strong { font-family: $bau; font-size: vw(36); line-height: vw(54); color: $white; text-shadow: 0 0 vw(8) #744f0a; font-weight: 500; }
+			strong { font-family: $smart_Bold_Italic; font-style: italic; font-size: vw(36); line-height: vw(54); color: $white; text-shadow: 0 0 vw(8) #744f0a; font-weight: 600; }
 			.txt_wrap {
 				padding:vw(10) 0 0;
 				img { width: 100%; position: relative; z-index: 1; -webkit-box-sizing: initial; -moz-box-sizing: initial; -o-box-sizing: initial; box-sizing: initial; }

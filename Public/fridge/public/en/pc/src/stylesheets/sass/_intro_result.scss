@@ -121,7 +121,7 @@
 			}
 			#shopNowBtn02 {
 				height: 60px; font-size: 26px; background: linear-gradient(to right, #ea7902, #fac21e); 
-				text-shadow: 2px 2px 2px #c06e09; line-height: 60px;				
+				text-shadow: 2px 2px 2px #c06e09; line-height: 60px; order: 0; 
 				@include borderRadius(100px);
 				&:after {
 					width: 14px; height: 26px; left: 10px; top: 3px;
