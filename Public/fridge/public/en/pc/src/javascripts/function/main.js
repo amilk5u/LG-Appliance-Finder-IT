@@ -28,6 +28,7 @@ function main() {
 
    // intro animation
    const $introAnimation = $("#introAnimation");
+   const multipleSelections = 'Scegli tutte le opzioni che vuoi.';
 
    let currentUrl = document.location.href; // 현재 url
    let resultPageUrl; // pdp 페이지 (result)
@@ -141,9 +142,8 @@ function main() {
       }
 
       // 항목 버튼 초기화 
-      $selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>');
+      $selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>' + multipleSelections + ' </em></p>');
       $selectWrap.append('<ol></ol>');
-
 
       if (idx === 2) {
          // step 3 데이터 뿌리기
@@ -152,9 +152,14 @@ function main() {
             let _currentHtml = configData.htmlData[_htmlIdx]; // 현재 스텝의 항목 데이터
             let _buttonHtml = '';
             for (let i = 0; i < _currentHtml.length; i++) {
-               _buttonHtml += '<button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '" data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button>';
+               // All Select Option 마크업 예외
+               if (_htmlIdx !== 2 && i === 0) {
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button>`;               
+               } else {
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><p>${_currentHtml[i].content}</p></button>`;               
+               }
             }
-            liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>Scegli tutte le opzioni che vuoi.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
+            liHtml += `<li><span>${configData.finderSetting[idx].key[_htmlIdx - 2]}<div><em>${multipleSelections}</em></div></span><div>${_buttonHtml}</div></li>`;
             _htmlIdx++;
          }
          $selectWrap.find('ol').append(liHtml);
@@ -165,8 +170,8 @@ function main() {
             if ((selectedProduct[0].key !== tall && selectedProduct[0].key !== double) && _currentHtml[i].value === beige) {
                _colorNoneBol = true;
                continue;
-            } 
-            $selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><span></span><p>' + _currentHtml[i].content + '</p></button></li>');
+            }
+            $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}"data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
          }
          // tall & double door beige_none class 추가 or 삭제
          if (_colorNoneBol) {
@@ -176,7 +181,12 @@ function main() {
          }
       } else {
          for (let i = 0; i < _currentHtml.length; i++) {
-            $selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
+            // All Select Option 마크업 예외
+            if (i === 0 && idx !== 0) {
+               $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
+            } else {
+               $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><i></i><p>${_currentHtml[i].content}</p></button></li>`);
+            }
          }
       }
       // All Select Button 에 class 삽입

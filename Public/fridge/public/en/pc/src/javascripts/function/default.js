@@ -906,6 +906,16 @@ const configData = {
       //2번 스탭
       [
          {
+            key: 'step02',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: '',
+               icon: '',
+            }
+         },
+         {
             key: 'Capacity',
             value: under_400L,
             content: 'Meno di 400L',
@@ -940,17 +950,7 @@ const configData = {
                description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
                icon: 'step02/disc_icon04.png',
             }
-         },
-         {
-            key: 'step02',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
-            changeData: {
-               description: '',
-               icon: '',
-            }
-         },
+         },      
       ],
       //3번 스탭
       [
@@ -977,6 +977,11 @@ const configData = {
       ],
       [
          {
+            key: 'step03-1',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+         },
+         {
             key: 'Width',
             value: under_600mm,
             content: 'Meno di 60cm',
@@ -996,13 +1001,13 @@ const configData = {
             value: _910mm_or_more,
             content: '91cm o più',
          },
+      ],
+      [
          {
-            key: 'step03-1',
+            key: 'step03-2',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
          },
-      ],
-      [
          {
             key: 'Height',
             value: under_1800mm,
@@ -1018,14 +1023,19 @@ const configData = {
             value: _2000mm_or_more,
             content: '200cm o più',
          },
-         {
-            key: 'step03-2',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-         },
       ],
       //4번 스탭
       [
+         {
+            key: 'step04',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: '',
+               screenImg: 'step04/que_img01.png',
+            }
+         },
          {
             key: 'Feature',
             value: Plumbed,
@@ -1069,8 +1079,11 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
+      ],
+      //5번스탭
+      [
          {
-            key: 'step04',
+            key: 'step05',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
@@ -1079,9 +1092,6 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
-      ],
-      //5번스탭
-      [
          {
             key: 'Feature',
             value: 'Door_cooling,Linearcooling',
@@ -1121,8 +1131,11 @@ const configData = {
             },
             resultContent: 'step05',
          },
+      ],
+      //6번 스탭
+      [
          {
-            key: 'step05',
+            key: 'step06',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
@@ -1131,9 +1144,6 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
-      ],
-      //6번 스탭
-      [
          {
             key: 'Feature',
             value: Instaview,
@@ -1205,19 +1215,19 @@ const configData = {
             },
             resultContent: 'step06',
          },
+      ],
+      //7번 스탭
+      [
          {
-            key: 'step06',
+            key: 'step07',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
-               screenImg: 'step04/que_img01.png',
+               screenImg: 'que_img04.png',
             }
          },
-      ],
-      //7번 스탭
-      [
          {
             key: 'Color',
             value: black,
@@ -1269,16 +1279,6 @@ const configData = {
                },
             },
             resultContent: 'step07',
-         },
-         {
-            key: 'step07',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
-            changeData: {
-               description: '',
-               screenImg: 'que_img04.png',
-            }
          },
       ],
    ],

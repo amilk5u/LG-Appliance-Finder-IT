@@ -906,6 +906,16 @@ const configData = {
       //2번 스탭
       [
          {
+            key: 'step02',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: '',
+               icon: '',
+            }
+         },
+         {
             key: 'Capacity',
             value: under_400L,
             content: 'Meno di 400L',
@@ -940,17 +950,7 @@ const configData = {
                description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
                icon: 'step02/disc_icon04.png',
             }
-         },
-         {
-            key: 'step02',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
-            changeData: {
-               description: '',
-               icon: '',
-            }
-         },
+         },      
       ],
       //3번 스탭
       [
@@ -977,6 +977,11 @@ const configData = {
       ],
       [
          {
+            key: 'step03-1',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+         },
+         {
             key: 'Width',
             value: under_600mm,
             content: 'Meno di 60cm',
@@ -996,13 +1001,13 @@ const configData = {
             value: _910mm_or_more,
             content: '91cm o più',
          },
+      ],
+      [
          {
-            key: 'step03-1',
+            key: 'step03-2',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
          },
-      ],
-      [
          {
             key: 'Height',
             value: under_1800mm,
@@ -1018,14 +1023,19 @@ const configData = {
             value: _2000mm_or_more,
             content: '200cm o più',
          },
-         {
-            key: 'step03-2',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-         },
       ],
       //4번 스탭
       [
+         {
+            key: 'step04',
+            value: AllSelectOption,
+            content: 'Tutte le opzioni',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: '',
+               screenImg: 'step04/que_img01.png',
+            }
+         },
          {
             key: 'Feature',
             value: Plumbed,
@@ -1069,8 +1079,11 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
+      ],
+      //5번스탭
+      [
          {
-            key: 'step04',
+            key: 'step05',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
@@ -1079,9 +1092,6 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
-      ],
-      //5번스탭
-      [
          {
             key: 'Feature',
             value: 'Door_cooling,Linearcooling',
@@ -1121,8 +1131,11 @@ const configData = {
             },
             resultContent: 'step05',
          },
+      ],
+      //6번 스탭
+      [
          {
-            key: 'step05',
+            key: 'step06',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
@@ -1131,9 +1144,6 @@ const configData = {
                screenImg: 'step04/que_img01.png',
             }
          },
-      ],
-      //6번 스탭
-      [
          {
             key: 'Feature',
             value: Instaview,
@@ -1205,19 +1215,19 @@ const configData = {
             },
             resultContent: 'step06',
          },
+      ],
+      //7번 스탭
+      [
          {
-            key: 'step06',
+            key: 'step07',
             value: AllSelectOption,
             content: 'Tutte le opzioni',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
-               screenImg: 'step04/que_img01.png',
+               screenImg: 'que_img04.png',
             }
          },
-      ],
-      //7번 스탭
-      [
          {
             key: 'Color',
             value: black,
@@ -1269,16 +1279,6 @@ const configData = {
                },
             },
             resultContent: 'step07',
-         },
-         {
-            key: 'step07',
-            value: AllSelectOption,
-            content: 'Tutte le opzioni',
-            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
-            changeData: {
-               description: '',
-               screenImg: 'que_img04.png',
-            }
          },
       ],
    ],
@@ -1420,6 +1420,7 @@ function main() {
 
    // intro animation
    const $introAnimation = $("#introAnimation");
+   const multipleSelections = 'Scegli tutte le opzioni che vuoi.';
 
    let currentUrl = document.location.href; // 현재 url
    let resultPageUrl; // pdp 페이지 (result)
@@ -1533,9 +1534,8 @@ function main() {
       }
 
       // 항목 버튼 초기화 
-      $selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>');
+      $selectWrap.html('<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>' + multipleSelections + ' </em></p>');
       $selectWrap.append('<ol></ol>');
-
 
       if (idx === 2) {
          // step 3 데이터 뿌리기
@@ -1544,9 +1544,14 @@ function main() {
             let _currentHtml = configData.htmlData[_htmlIdx]; // 현재 스텝의 항목 데이터
             let _buttonHtml = '';
             for (let i = 0; i < _currentHtml.length; i++) {
-               _buttonHtml += '<button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '" data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button>';
+               // All Select Option 마크업 예외
+               if (_htmlIdx !== 2 && i === 0) {
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button>`;               
+               } else {
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><p>${_currentHtml[i].content}</p></button>`;               
+               }
             }
-            liHtml += '<li><span>' + configData.finderSetting[idx].key[_htmlIdx - 2] + '<em>Scegli tutte le opzioni che vuoi.</em> </span> <div>' + _buttonHtml + ' </div></li> ';
+            liHtml += `<li><span>${configData.finderSetting[idx].key[_htmlIdx - 2]}<div><em>${multipleSelections}</em></div></span><div>${_buttonHtml}</div></li>`;
             _htmlIdx++;
          }
          $selectWrap.find('ol').append(liHtml);
@@ -1557,8 +1562,8 @@ function main() {
             if ((selectedProduct[0].key !== tall && selectedProduct[0].key !== double) && _currentHtml[i].value === beige) {
                _colorNoneBol = true;
                continue;
-            } 
-            $selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><span></span><p>' + _currentHtml[i].content + '</p></button></li>');
+            }
+            $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}"data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
          }
          // tall & double door beige_none class 추가 or 삭제
          if (_colorNoneBol) {
@@ -1568,7 +1573,12 @@ function main() {
          }
       } else {
          for (let i = 0; i < _currentHtml.length; i++) {
-            $selectWrap.find('ol').append('<li><button class="answer_btn" type="button" data-key="' + _currentHtml[i].key + '"  data-value="' + _currentHtml[i].value + '"><i></i><p>' + _currentHtml[i].content + '</p></button></li>');
+            // All Select Option 마크업 예외
+            if (i === 0 && idx !== 0) {
+               $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
+            } else {
+               $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><i></i><p>${_currentHtml[i].content}</p></button></li>`);
+            }
          }
       }
       // All Select Button 에 class 삽입

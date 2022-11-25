@@ -78,12 +78,16 @@
 	}
 	//하단 선택 버튼 영역
 	#selectWrap {
-		padding:vw(30) vw(45) vw(50);
+		position: relative; padding: vw(30) vw(45) vw(50);
 		@include boxSizing;
 		.caution_open_btn { display: none; }
 		.select_tit {
-			padding: 0 0 0 10px;
-			em { color: #b49759; font-size: vw(22); display: block; }
+			padding: 0 0 0 10px; /* position: absolute; right: vw(45); top: vw(38); */
+         @extend %clearfix;
+			em { 
+            display: block; float: right;
+            color: #b49759; font-size: vw(23); 
+         }
 		}
 		li {
 			button {
@@ -106,6 +110,44 @@
 			p { text-align: left; font-size: vw(36); line-height: vw(44); }
 		}
 	}
+   &.step02, &.step04, &.step05, &.step06, &.step07 {
+      #selectWrap {	
+         ol { position: relative; padding: vw(30) 0 0; }
+			li {				
+				&:nth-of-type(1) {
+               padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-30);
+               display: block;
+               @include borderRadius(0);
+               button {
+                  width: max-content; padding: 0; background-color: transparent; font-weight: $bold; color: $gray1; border: 0; display: block;
+                  @include borderRadius(0);
+                  @extend %clearfix;
+                  &:hover,
+                  &:focus { border-color: none; }
+                  &.active { 
+                     background-color: transparent; border-color: transparent; color: $white; 
+                     span {
+                        background-color: #464646;
+                        &:after { display: block; }
+                     }
+                  }
+                  span {
+                     width: vw(32); height: vw(32); position: relative; display: block; border: vw(2) solid #dadada; float: left; background-color: #fcfcfc;
+                     @include borderRadius(1vw);
+                     &:after {
+                        width: vw(12); height: vw(7); border-bottom: vw(3) solid $white; border-left: vw(3) solid $white; content: ""; position: absolute; top: 50%; left: 50%;
+                        display: none; box-sizing: initial; -webkit-box-sizing: initial; -o-box-sizing: initial; -moz-box-sizing: initial; -ms-box-sizing: initial;
+                        @include transform(translate(-50%, -70%) rotate(-45deg));
+                     }
+                  }
+                  p { width: max-content; padding: 0 0 0 vw(5); float: left; font-size: vw(26); color: #525252; line-height: vw(35); }
+               }
+            }
+            &:nth-of-type(2) { padding: 0; }
+         }
+      }
+   }
+
 	//스텝별
 	&.step01 {
 		.qna_wrap {
@@ -121,11 +163,16 @@
 				}
 			}
 		}
-		#selectWrap {			
+		#selectWrap {	
+         padding:vw(100) vw(45) vw(50);		
 			li {				
 				padding:vw(20) 0 0;
-				&:first-child {padding:0;}
-				&:nth-of-type(1) i {background-image:url(../../images/step01/btn_icon01.png);}
+				&:nth-of-type(1) {
+               padding:0;             
+               i {
+                  background-image:url(../../images/step01/btn_icon01.png);
+               }
+            }
 				&:nth-of-type(2) i {background-image:url(../../images/step01/btn_icon02.png);}
 				&:nth-of-type(3) i {background-image:url(../../images/step01/btn_icon03.png);}
 				&:nth-of-type(4) i {background-image:url(../../images/step01/btn_icon04.png);}
@@ -170,21 +217,20 @@
 		}
 		#qnaImgWrap  { height: vw(506); }
 		#selectWrap {
-			ol { padding: vw(10) 0 0; }
 			li {
 				padding: vw(20) 0 0;
-				&:first-child { padding: 0; }
-				&:nth-of-type(1) i { background-image: url(../../images/step02/btn_icon01.png); }
-				&:nth-of-type(2) i { background-image: url(../../images/step02/btn_icon02.png); }
-				&:nth-of-type(3) i { background-image: url(../../images/step02/btn_icon03.png); }
-				&:nth-of-type(4) i { background-image: url(../../images/step02/btn_icon04.png); }
-				&:nth-of-type(5) {
-					i { display: none; }
-				}
-				&:nth-of-type(1) button.active i { background-image: url(../../images/step02/btn_icon01_on.png); }
-				&:nth-of-type(2) button.active i { background-image: url(../../images/step02/btn_icon02_on.png); }
-				&:nth-of-type(3) button.active i { background-image: url(../../images/step02/btn_icon03_on.png); }
-				&:nth-of-type(4) button.active i { background-image: url(../../images/step02/btn_icon04_on.png); }
+            &:nth-of-type(1) {
+               // padding:0;            
+               i { display: none; }
+            }
+				&:nth-of-type(2) i { background-image: url(../../images/step02/btn_icon01.png); }
+				&:nth-of-type(3) i { background-image: url(../../images/step02/btn_icon02.png); }
+				&:nth-of-type(4) i { background-image: url(../../images/step02/btn_icon03.png); }
+				&:nth-of-type(5) i { background-image: url(../../images/step02/btn_icon04.png); }
+				&:nth-of-type(2) button.active i { background-image: url(../../images/step02/btn_icon01_on.png); }
+				&:nth-of-type(3) button.active i { background-image: url(../../images/step02/btn_icon02_on.png); }
+				&:nth-of-type(4) button.active i { background-image: url(../../images/step02/btn_icon03_on.png); }
+				&:nth-of-type(5) button.active i { background-image: url(../../images/step02/btn_icon04_on.png); }
 				i {
 					min-width: vw(44); min-height: vw(44); display: block; margin: 0 vw(10) 0 0;
 					@include backgroundSoltC;
@@ -231,11 +277,47 @@
 			}
 			ol { width: 100%; padding: vw(10) 0 0; }
 			li {
-				padding: vw(20) 0 0;
+				padding: vw(40) 0 0;
 				&:first-child {
                margin:0;
                span {
                   em { display: none; }
+               }
+            }
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+               > span {
+                  > div { padding: vw(25) 0 vw(10); }
+               }
+               > div {
+                  position: relative;
+                  button { 
+                     &:nth-of-type(1) {
+                        width: auto;
+                        padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-40);
+                        display: block;
+                        @include borderRadius(0);
+                        &:hover,
+                        &:focus { border-color: none; }
+                        &.active { 
+                           background-color: transparent; border-color: transparent; color: $white; 
+                           span {
+                              background-color: #464646;
+                              &:after { display: block; }
+                           }
+                        }
+                        span {
+                           width: vw(32); height: vw(32); position: relative; display: block; border: vw(2) solid #dadada; float: left; background-color: #fcfcfc;
+                           @include borderRadius(1vw);
+                           &:after {
+                              width: vw(12); height: vw(7); border-bottom: vw(3) solid $white; border-left: vw(3) solid $white; content: ""; position: absolute; top: 50%; left: 50%;
+                              display: none; box-sizing: initial; -webkit-box-sizing: initial; -o-box-sizing: initial; -moz-box-sizing: initial; -ms-box-sizing: initial;
+                              @include transform(translate(-50%, -70%) rotate(-45deg));
+                           }
+                        }
+                        p { width: max-content; padding: 0 0 0 vw(5); float: left; font-size: vw(26); color: #525252; line-height: vw(35); }
+                     }
+                  }
                }
             }
 				&:nth-of-type(2) {
@@ -247,8 +329,11 @@
 					button { width: 49.23%; }
 				}
 				> span {
-					font-size: vw(30); color: #333333; font-weight: 600;
-					em { color: #b49759; font-size: vw(22); display: inline-block; margin: 0 0 0 vw(10); }
+               font-size: vw(30); color: #333333; font-weight: 600;
+               > div {                  
+                  @extend %clearfix;
+                  em { color: #b49759; font-size: vw(22); display: block; margin: 0 0 0 vw(10); float: right; }
+               }
 				}
 				> div { display: flex; padding: vw(15) 0 0; gap: vw(15) vw(10); }
 				button { padding: vw(35) 0 vw(32); }
@@ -282,15 +367,17 @@
 		}
 		#qnaImgWrap { height: vw(373); }
 		#selectWrap {
-			padding: vw(20) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
-			ol { padding: vw(10) 0 0; }
+			padding: vw(40) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
+			ol { padding: vw(30) 0 0; }
 			li {
 				padding: vw(20) 0 0;
-				&:first-child { padding: 0; }
-				&:nth-of-type(1) i { background-image: url(../../images/step04/btn_icon01.png); }
-				&:nth-of-type(2) i { background-image: url(../../images/step04/btn_icon02.png); }
-				&:nth-of-type(3) i { background-image: url(../../images/step04/btn_icon03.png); }
-				&:nth-of-type(4) i { display: none; }
+				&:nth-of-type(1) {
+               i { display: none; }
+               button { height: auto; }
+            }
+				&:nth-of-type(2) i { background-image: url(../../images/step04/btn_icon01.png); }
+				&:nth-of-type(3) i { background-image: url(../../images/step04/btn_icon02.png); }
+				&:nth-of-type(4) i { background-image: url(../../images/step04/btn_icon03.png); }
 				&:nth-of-type(5) i { display: none; }
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
@@ -327,17 +414,17 @@
 		}
 		#qnaImgWrap { height: vw(373); }
 		#selectWrap {
-			padding: vw(20) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
-			ol { padding: vw(10) 0 0; }
+			padding: vw(40) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
+			ol { padding: vw(30) 0 0; }
 			li {
 				padding: vw(20) 0 0;
-				&:first-child { padding: 0; }
-				&:nth-of-type(1) i { background-image: url(../../images/step05/btn_icon01.png); }
-				&:nth-of-type(2) i { background-image: url(../../images/step05/btn_icon02.png); }
-				&:nth-of-type(3) i { background-image: url(../../images/step05/btn_icon03.png); }
-				&:nth-of-type(4) {
-					i { display: none; }
-				}
+            &:nth-of-type(1) {
+               i { display: none; }
+               button { height: auto; }
+            }
+				&:nth-of-type(2) i { background-image: url(../../images/step05/btn_icon01.png); }
+				&:nth-of-type(3) i { background-image: url(../../images/step05/btn_icon02.png); }
+				&:nth-of-type(4) i { background-image: url(../../images/step05/btn_icon03.png); }
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active { background-color: #464646; }
@@ -372,20 +459,21 @@
 		}
 		#qnaImgWrap { height: vw(375); }
 		#selectWrap {
-			padding: vw(20) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
-			ol { padding: vw(10) 0 0; }
+			padding: vw(40) vw(40) vw(50); border-top: 2px solid #ddd; background: linear-gradient(to bottom, #f2f2f2 20%, $white 80%);
+			ol { padding: vw(30) 0 0; }
 			li {
 				padding: vw(20) 0 0;
-				&:first-child { padding: 0; }
-				&:nth-of-type(1) i { background-image: url(../../images/step06/btn_icon01.png); }
-				&:nth-of-type(2) i { background-image: url(../../images/step06/btn_icon02.png); }
-				&:nth-of-type(3) i { background-image: url(../../images/step06/btn_icon03.png); }
-				&:nth-of-type(4) i { background-image: url(../../images/step06/btn_icon04.png); }
-				&:nth-of-type(5) i { background-image: url(../../images/step06/btn_icon05.png); }
-				&:nth-of-type(6) i { background-image: url(../../images/step06/btn_icon06.png); }
-				&:nth-of-type(7) {
-					i { display: none; }
-				}
+            &:nth-of-type(1) {
+               padding: 0; 
+               i { display: none; }
+               button { height: auto; }
+            }
+				&:nth-of-type(2) i { background-image: url(../../images/step06/btn_icon01.png); }
+				&:nth-of-type(3) i { background-image: url(../../images/step06/btn_icon02.png); }
+				&:nth-of-type(4) i { background-image: url(../../images/step06/btn_icon03.png); }
+				&:nth-of-type(5) i { background-image: url(../../images/step06/btn_icon04.png); }
+				&:nth-of-type(6) i { background-image: url(../../images/step06/btn_icon05.png); }
+				&:nth-of-type(7) i { background-image: url(../../images/step06/btn_icon06.png); }
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active { background-color: #464646; }
@@ -430,26 +518,29 @@
 					}
 				}
 			}
-			ol { display: flex; flex-wrap: wrap; gap: vw(15) vw(10); padding: vw(15) 0 0; }
+			ol { display: flex; flex-wrap: wrap; gap: vw(15) vw(10); padding: vw(30) 0 0; }
          li {
-				width: 49.23%; 
-				&:nth-of-type(1) { 
+            width: 49.23%; 
+            padding:0;
+            // &:nth-of-type(1) {
+            //    padding: 0; 
+            //    i { display: none; }
+            //    button { height: auto; }
+            // }
+            &:nth-of-type(1) { 
+               button { height: auto; }
+            }
+				&:nth-of-type(2) { 
 					button {	span { background-color: $black; }}
 				}
-				&:nth-of-type(2) { 
+				&:nth-of-type(3) { 
 					button {	span { background-image: url(../../images/step07/btn_icon02.jpg); }}
 				}
-				&:nth-of-type(3) { 
+				&:nth-of-type(4) { 
 					button {	span { background-image: url(../../images/step07/btn_icon03.jpg); }}
 				}
-				&:nth-of-type(4) { 
-					button {	span { background-image: url(../../images/step07/btn_icon04.jpg); }}
-				}
 				&:nth-of-type(5) { 
-					button {	
-						padding: vw(37.5) 0;
-						span { display: none; }
-					}
+					button {	span { background-image: url(../../images/step07/btn_icon04.jpg); }}
 				}
 				button {
 					padding:vw(15) 0;
@@ -600,6 +691,29 @@
 				p { line-height: 36px; font-size: 22px; }
 			}
 		}
+      &.step02, &.step04, &.step05, &.step06, &.step07 {
+         #selectWrap {	
+            ol { position: relative; padding: vw(30) 0 0; }
+            li {				
+               &:nth-of-type(1) {
+                  padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-30);
+                  button {
+                     span {
+                        width: 22px; height: 22px; border: 2px solid #dadada;
+                        @include borderRadius(10px);
+                        &:after {
+                           width: vw(12); height: vw(7); border-bottom: vw(3) solid $white; border-left: vw(3) solid $white; content: ""; position: absolute; top: 50%; left: 50%;
+                           display: none; box-sizing: initial; -webkit-box-sizing: initial; -o-box-sizing: initial; -moz-box-sizing: initial; -ms-box-sizing: initial;
+                           @include transform(translate(-50%, -70%) rotate(-45deg));
+                        }
+                     }
+                     p { padding: 0 0 0 vw(5); font-size: 22px; line-height: vw(35); }
+                  }
+               }
+            }
+         }
+      }
+
 		//스텝별
 		&.step01 {			
 			.qna_wrap {
@@ -666,17 +780,17 @@
 				ol { width: 820px; padding: 15px 0 0; flex-wrap: wrap; justify-content: left; gap: 12px 20px; }
 				li {
 					width: 260px; padding: 0;
-					&:nth-of-type(1) i { background-image: url(../../images/pc/step02/btn_icon01.png); }
-					&:nth-of-type(2) i { background-image: url(../../images/pc/step02/btn_icon02.png); }
-					&:nth-of-type(3) i { background-image: url(../../images/pc/step02/btn_icon03.png); }
-					&:nth-of-type(4) i { background-image: url(../../images/pc/step02/btn_icon04.png); }
-					&:nth-of-type(5) {
+					&:nth-of-type(1) {
 						i { display: none; }
 					}
-					&:nth-of-type(1) button.active i { background-image: url(../../images/pc/step02/btn_icon01_on.png); }
-					&:nth-of-type(2) button.active i { background-image: url(../../images/pc/step02/btn_icon02_on.png); }
-					&:nth-of-type(3) button.active i { background-image: url(../../images/pc/step02/btn_icon03_on.png); }
-					&:nth-of-type(4) button.active i { background-image: url(../../images/pc/step02/btn_icon04_on.png); }
+					&:nth-of-type(2) i { background-image: url(../../images/pc/step02/btn_icon01.png); }
+					&:nth-of-type(3) i { background-image: url(../../images/pc/step02/btn_icon02.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step02/btn_icon03.png); }
+					&:nth-of-type(5) i { background-image: url(../../images/pc/step02/btn_icon04.png); }
+					&:nth-of-type(2) button.active i { background-image: url(../../images/pc/step02/btn_icon01_on.png); }
+					&:nth-of-type(3) button.active i { background-image: url(../../images/pc/step02/btn_icon02_on.png); }
+					&:nth-of-type(4) button.active i { background-image: url(../../images/pc/step02/btn_icon03_on.png); }
+					&:nth-of-type(5) button.active i { background-image: url(../../images/pc/step02/btn_icon04_on.png); }
 					button { width: 100%; height: 60px; padding: 0; }
 					i { min-width: 28px; min-height: 28px; margin: 0 20px 0 0; }
 					p { width: 62%; }
@@ -776,13 +890,13 @@
 				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; }
 				li {
 					width: 500px; padding: 0;
-					&:nth-of-type(1) i { background-image: url(../../images/pc/step04/btn_icon01.png); }
-					&:nth-of-type(2) i { background-image: url(../../images/pc/step04/btn_icon02.png); }
-					&:nth-of-type(3) i { background-image: url(../../images/pc/step04/btn_icon03.png); }
-					&:nth-of-type(4) {
+					&:nth-of-type(1) {
 						button { padding:0 40px; }
 						i { display: none; }
 					} 
+					&:nth-of-type(2) i { background-image: url(../../images/pc/step04/btn_icon01.png); }
+					&:nth-of-type(3) i { background-image: url(../../images/pc/step04/btn_icon02.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step04/btn_icon03.png); }
 					button { height: 120px; padding: 0 30px; justify-content: left; }
 					i {
 						min-width: 57px; min-height: 54px; margin: 0 25px 0 0;
@@ -816,13 +930,13 @@
 				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
 					width: 500px; padding: 0;
-					&:nth-of-type(1) i { background-image: url(../../images/pc/step05/btn_icon01.png); }
-					&:nth-of-type(2) i { background-image: url(../../images/pc/step05/btn_icon02.png); }
-					&:nth-of-type(3) i { background-image: url(../../images/pc/step05/btn_icon03.png); }
-					&:nth-of-type(4) {
+					&:nth-of-type(1) {
 						button { padding:0 40px; }
 						i { display: none; }
 					} 
+					&:nth-of-type(2) i { background-image: url(../../images/pc/step05/btn_icon01.png); }
+					&:nth-of-type(3) i { background-image: url(../../images/pc/step05/btn_icon02.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step05/btn_icon03.png); }
 					button { height: 120px; padding: 0 30px; justify-content: left; }
 					i {
 						min-width: 54px; min-height: 56px; margin: 0 25px 0 0;
@@ -856,13 +970,13 @@
 				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
 					width: 500px; padding: 0;
-					&:nth-of-type(1) i { background-image: url(../../images/pc/step06/btn_icon01.png); }
-					&:nth-of-type(2) i { background-image: url(../../images/pc/step06/btn_icon02.png); }
-					&:nth-of-type(3) i { background-image: url(../../images/pc/step06/btn_icon03.png); }
-					&:nth-of-type(4) i { background-image: url(../../images/pc/step06/btn_icon04.png); }
-					&:nth-of-type(5) i { background-image: url(../../images/pc/step06/btn_icon05.png); }
-					&:nth-of-type(6) i { background-image: url(../../images/pc/step06/btn_icon06.png); }
-					&:nth-of-type(7) i { background-image: url(../../images/pc/step06/btn_icon07.png); }
+					&:nth-of-type(1) i { display: none; }
+					&:nth-of-type(2) i { background-image: url(../../images/pc/step06/btn_icon01.png); }
+					&:nth-of-type(3) i { background-image: url(../../images/pc/step06/btn_icon02.png); }
+					&:nth-of-type(4) i { background-image: url(../../images/pc/step06/btn_icon03.png); }
+					&:nth-of-type(5) i { background-image: url(../../images/pc/step06/btn_icon04.png); }
+					&:nth-of-type(6) i { background-image: url(../../images/pc/step06/btn_icon05.png); }
+					&:nth-of-type(7) i { background-image: url(../../images/pc/step06/btn_icon06.png); }
 					button { height: 120px; padding: 0 30px; justify-content: left; }
 					i {
 						min-width: 56px; min-height: 57px; margin: 0 25px 0 0;
@@ -1019,7 +1133,6 @@
 				width:750px;
 				em { font-size: 16px; }
 			}
-			// ol { width: 700px; }
 			li {
 				p { line-height: 34px; font-size: 20px; }
 			}

@@ -48,7 +48,7 @@ html.no_scroll { overflow:hidden; padding:0 17px 0 0;}
 		}
 	}
 	strong {
-		width:vw(35); height:vw(35); display:inline-block; border:1px solid #d8d8d8;  position:relative; z-index:1; line-height:vw(32); color:#bcbcbc; background-color:$white;
+		width:vw(35); height:vw(35); display:inline-block; border:1px solid #d8d8d8; position:relative; z-index:1; line-height:vw(32); color:#bcbcbc; background-color:$white;
 		@include borderRadius(100%);
 		@include boxSizing;
 		&:before {
