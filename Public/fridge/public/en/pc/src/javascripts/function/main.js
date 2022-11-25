@@ -174,11 +174,11 @@ function main() {
             $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}"data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
          }
          // tall & double door beige_none class 추가 or 삭제
-         if (_colorNoneBol) {
-            $selectWrap.addClass('beige_none');
-         } else {
-            $selectWrap.removeClass('beige_none');
-         }
+         // if (_colorNoneBol) {
+         //    $selectWrap.addClass('beige_none');
+         // } else {
+         //    $selectWrap.removeClass('beige_none');
+         // }
       } else {
          for (let i = 0; i < _currentHtml.length; i++) {
             // All Select Option 마크업 예외

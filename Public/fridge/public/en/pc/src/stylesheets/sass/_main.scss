@@ -115,8 +115,7 @@
          ol { position: relative; padding: vw(30) 0 0; }
 			li {				
 				&:nth-of-type(1) {
-               padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-30);
-               display: block;
+               padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-30); display: block;
                @include borderRadius(0);
                button {
                   width: max-content; padding: 0; background-color: transparent; font-weight: $bold; color: $gray1; border: 0; display: block;
@@ -127,7 +126,7 @@
                   &.active { 
                      background-color: transparent; border-color: transparent; color: $white; 
                      span {
-                        background-color: #464646;
+                        background-color: #464646; border-color: transparent;
                         &:after { display: block; }
                      }
                   }
@@ -293,16 +292,14 @@
                   position: relative;
                   button { 
                      &:nth-of-type(1) {
-                        width: auto;
-                        padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-40);
-                        display: block;
+                        width: auto; padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-40); display: block;
                         @include borderRadius(0);
                         &:hover,
                         &:focus { border-color: none; }
                         &.active { 
                            background-color: transparent; border-color: transparent; color: $white; 
                            span {
-                              background-color: #464646;
+                              background-color: #464646; border-color: transparent;
                               &:after { display: block; }
                            }
                         }
@@ -332,7 +329,7 @@
                font-size: vw(30); color: #333333; font-weight: 600;
                > div {                  
                   @extend %clearfix;
-                  em { color: #b49759; font-size: vw(22); display: block; margin: 0 0 0 vw(10); float: right; }
+                  em { color: #b49759; font-size: vw(22); display: block; margin: 0 0 0 vw(10); float: right; font-weight: $light; }
                }
 				}
 				> div { display: flex; padding: vw(15) 0 0; gap: vw(15) vw(10); }
@@ -508,25 +505,19 @@
 		#selectWrap {
 			padding: vw(55) vw(45) vw(60);
 			@include backgroundSolt(0, 0, repeat-x); 
-			&.beige_none {
-				li {
-					&:nth-of-type(4) { 
-						button {	
-							padding: vw(37.5) 0;
-							span { display: none; }
-						}
-					}
-				}
-			}
+			// &.beige_none {
+			// 	li {
+			// 		&:nth-of-type(5) { 
+			// 			button {	
+			// 				padding: vw(37.5) 0;
+			// 				span { display: none; }
+			// 			}
+			// 		}
+			// 	}
+			// }
 			ol { display: flex; flex-wrap: wrap; gap: vw(15) vw(10); padding: vw(30) 0 0; }
          li {
-            width: 49.23%; 
-            padding:0;
-            // &:nth-of-type(1) {
-            //    padding: 0; 
-            //    i { display: none; }
-            //    button { height: auto; }
-            // }
+            width: 49.23%; padding: 0;
             &:nth-of-type(1) { 
                button { height: auto; }
             }
@@ -693,21 +684,19 @@
 		}
       &.step02, &.step04, &.step05, &.step06, &.step07 {
          #selectWrap {	
-            ol { position: relative; padding: vw(30) 0 0; }
+            ol { padding: 10px 0 0; }
             li {				
                &:nth-of-type(1) {
-                  padding: 0 0 0 vw(8); background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: vw(-30);
+                  padding: 0 0 0 8px; background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: -40px;
                   button {
                      span {
-                        width: 22px; height: 22px; border: 2px solid #dadada;
-                        @include borderRadius(10px);
+                        width: 22px; height: 22px; border: 1px solid #dadada;
+                        @include borderRadius(7px);
                         &:after {
-                           width: vw(12); height: vw(7); border-bottom: vw(3) solid $white; border-left: vw(3) solid $white; content: ""; position: absolute; top: 50%; left: 50%;
-                           display: none; box-sizing: initial; -webkit-box-sizing: initial; -o-box-sizing: initial; -moz-box-sizing: initial; -ms-box-sizing: initial;
-                           @include transform(translate(-50%, -70%) rotate(-45deg));
+                           width: 8px; height: 5px; border-bottom: 2px solid $white; border-left: 2px solid $white;
                         }
                      }
-                     p { padding: 0 0 0 vw(5); font-size: 22px; line-height: vw(35); }
+                     p { padding: 0 0 0 5px; font-size: 22px; line-height: 25px; }
                   }
                }
             }
@@ -849,6 +838,28 @@
 							button { width: 100%; }
 						}
 					}
+               &:nth-of-type(2),
+               &:nth-of-type(3) {
+                  > span {
+                     > div { padding: 20px 0 5px; }
+                     em { font-size: 18px; }
+                  }
+                  > div {
+                     button {                         
+                        &:nth-of-type(1) {
+                           height: auto; padding: 0 0 0 5px; top: -28px;
+                           span {
+                              width: 22px; height: 22px; border: 1px solid #dadada;
+                              @include borderRadius(7px);
+                              &:after {
+                                 width: 8px; height: 5px; border-bottom: 2px solid $white; border-left: 2px solid $white;
+                              }
+                           }
+                           p { padding: 0 0 0 5px; font-size: 22px; line-height: 25px; }
+                        }
+                     }
+                  }
+               }
 					&:nth-of-type(2) {
 						button { width: 260px; }
 					}
@@ -856,15 +867,13 @@
 						button { width: 260px; }
 					}
 					> span {
-						padding: 0 0 0 10px; font-size: 24px;
-						em { font-size: 18px; margin: 0 0 0 10px; font-weight: $light; }
+						padding: 0 0 0 5px; font-size: 24px;
+						em { margin: 0 0 0 10px; font-weight: $light; }
 					}
 					> div { padding: 10px 0 0; gap: 12px 20px; flex-wrap: wrap; }
 					button { width: 260px; padding: 0; }
 					p {
 						font-size: 21px; line-height: 28px;
-						// em { font-size: 22px; }
-						// br { display: none; }
 					}
 				}
 			}
@@ -887,11 +896,12 @@
 			#selectWrap {
 				padding: 30px 0 0; border-top: 1px solid #ddd; background: none;
 				.select_tit { width: 1020px; }
-				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; }
+				ol { width: 1020px; padding: 15px 0 0; flex-wrap: wrap; gap: 12px 20px; }
 				li {
 					width: 500px; padding: 0;
 					&:nth-of-type(1) {
-						button { padding:0 40px; }
+                  padding: 0 0 0 5px; top: -25px;
+						button { padding:0; }
 						i { display: none; }
 					} 
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step04/btn_icon01.png); }
@@ -927,11 +937,12 @@
 			#selectWrap {
 				padding: 30px 0 0; border-top: 1px solid #ddd; background: none;
 				.select_tit { width: 1020px; }
-				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
+				ol { width: 1020px; padding: 15px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
 					width: 500px; padding: 0;
 					&:nth-of-type(1) {
-						button { padding:0 40px; }
+                  padding: 0 0 0 5px; top: -25px;
+						button { padding: 0; }
 						i { display: none; }
 					} 
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step05/btn_icon01.png); }
@@ -967,10 +978,14 @@
 			#selectWrap {
 				padding: 30px 0 0; border-top: 1px solid #ddd; background: none;
 				.select_tit { width: 1020px; }
-				ol { width: 1020px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
+				ol { width: 1020px; padding: 15px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
 					width: 500px; padding: 0;
-					&:nth-of-type(1) i { display: none; }
+					&:nth-of-type(1)  {
+                  padding: 0 0 0 5px; top: -25px;
+						button { padding:0; }
+						i { display: none; }
+               }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step06/btn_icon01.png); }
 					&:nth-of-type(3) i { background-image: url(../../images/pc/step06/btn_icon02.png); }
 					&:nth-of-type(4) i { background-image: url(../../images/pc/step06/btn_icon03.png); }
@@ -982,10 +997,7 @@
 						min-width: 56px; min-height: 57px; margin: 0 25px 0 0;
 						@include backgroundSoltC;
 					}
-					p { 
-						font-size: 24px; line-height: 30px; 
-						// br { display: none; }
-					}
+					p { font-size: 24px; line-height: 30px; }
 				}
 			}
 		}
@@ -1008,17 +1020,21 @@
 			#qnaImgWrap { height: calc(100vh - 650px); min-height: 230px; max-height: 311px; }
 			#selectWrap {
 				padding: 40px 0 0;
-				&.beige_none {
-					li {
-						&:nth-of-type(4) { 
-							button { padding: 0; }
-						}
-					}
-				}
+				// &.beige_none {
+				// 	li {
+				// 		&:nth-of-type(4) { 
+				// 			button { padding: 0; }
+				// 		}
+				// 	}
+				// }
 				.select_tit { width: 820px; }
-				ol { width: 820px; padding: 10px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
+				ol { width: 820px; padding: 15px 0 0; flex-wrap: wrap; gap: 12px 20px; justify-content: left; }
 				li {
 					width: 260px; padding: 0;
+               &:nth-of-type(1)  {
+                  padding: 0 0 0 5px; top: -25px;
+						button { padding:0; }
+               }
 					&:nth-of-type(even) { float:none; }
 					&:nth-of-type(5) { 
 						button { padding: 0; }
