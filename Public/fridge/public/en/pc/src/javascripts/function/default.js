@@ -148,7 +148,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: '',
-      Feature: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Folding_Shelf,],
+      Feature: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Folding_Shelf],
       Color: silver
    },
    'LSR100': { // 7
@@ -159,7 +159,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: ThinQ,
-      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, EnergyGrade_F, Instaview, Door_in_Door,],
+      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, EnergyGrade_F, Instaview, Door_in_Door],
       Color: stainless_steel
    },
 
@@ -172,7 +172,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: ThinQ,
-      Feature: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack,],
+      Feature: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       Color: silver
    },
    'GSXV91MCAE': { // 2
@@ -183,7 +183,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_E,
       SmartTechnology: ThinQ,
-      Feature: [Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack,],
+      Feature: [Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       Color: black
    },
    'GSXV90MBAE': { // 3
@@ -205,97 +205,97 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_E,
       SmartTechnology: ThinQ,
-      Feature: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack,],
+      Feature: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       Color: silver
    },
-   // 'GSXV80PZLE': { // 5
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSJV90BSAE': { // 6
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSJV91PZAE': { // 7
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSLV71PZTM': { // 8
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSLV90PZAE': { // 9
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSLV90PZAD': { // 10
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSBV70DSTM': { // 11
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
-   // 'GSBV70PZTE': { // 12
-   //    Type: american,
-   //    Capacity: _600L_or_more,
-   //    Depth: under_760mm,
-   // Width: _910mm_or_more,
-   // Height: under_1800mm,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [Door_cooling,Linearcooling],
-   //    Color: 
-   // },
+   'GSXV80PZLE': { // 5
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
+      Color: silver
+   },
+   'GSJV90BSAE': { // 6
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
+      Color: silver
+   },
+   'GSJV91PZAE': { // 7
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Non_Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
+      Color: silver
+   },
+   'GSLV71PZTM': { // 8
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      SmartTechnology: ThinQ,
+      Feature: [Non_Plumbed, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GSLV90PZAE': { // 9
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Plumbed, Door_cooling, Linearcooling, Wine_Rack],
+      Color: silver
+   },
+   'GSLV90PZAD': { // 10
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: ThinQ,
+      Feature: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
+      Color: silver
+   },
+   'GSBV70DSTM': { // 11
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GSBV70PZTE': { // 12
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
 
 
    // Combinati
@@ -332,116 +332,293 @@ const product = {
       Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       Color: silver
    },
-   // 'GBB72PZVGN': { // 4
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBB72NSUGN': { // 5
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBB72NSVGN': { // 6
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBB62PZFGN': { // 7
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBB62PZGGN': { // 8
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBP61DSPGN': { // 9
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBP62DSNGN': { // 10
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBB72MCVGN': { // 11
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBP62DSSGR': { // 12
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GBP62DSNCN1': { // 13
-   //    Type: tall,
-   //    Capacity: ,
-   //    Depth: ,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
+   'GBB72PZVGN': { // 4
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: silver
+   },
+   'GBB72NSUGN': { // 5
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: silver
+   },
+   'GBB72NSVGN': { // 6
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: silver
+   },
+   'GBB62PZFGN': { // 7
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack],
+      Color: silver
+   },
+   'GBB62PZGGN': { // 8
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack],
+      Color: silver
+   },
+   'GBP61DSPGN': { // 9
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GBP62DSNGN': { // 10
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GBB72MCVGN': { // 11
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: black
+   },
+   'GBP62DSSGR': { // 12
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GBP62DSNCN1': { // 13
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      Color: silver
+   },
+   'GBP62DSNCC1': { // 14
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      Color: silver
+   },
+   'GBP62PZNCN1': { // 15
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      Color: silver
+   },
+   'GBP62DSXCC1': { // 16
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      Color: silver
+   },
+   'GBB72SAVCN1': { // 17
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+   'GBB72PZVCN1': { // 18
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+   'GBB72SAUCN1': { // 19
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+   'GBB92STBAP': { // 20
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_A,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Wine_Rack, Folding_Shelf],
+      Color: stainless_steel
+   },
+   'GBB92MCABP': { // 21
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_B,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: black
+   },
+   'GBP62PZNBC': { // 22
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_B,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GBB567SECMN': { // 23
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
+      Color: beige
+   },
+   'GBB567PZCMB': { // 24
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+   'GBB569MCAMN': { // 25
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Folding_Shelf],
+      Color: black
+   },
+   'GBB569NSAFB': { // 26
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+   'LSR200B': { // 27
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Instaview, Door_in_Door],
+      Color: stainless_steel
+   },
+   'GBB72NSUCN1': { // 28
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
+      Color: silver
+   },
+   'GBB72NSVCN1': { // 29
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
+      Color: silver
+   },
+
 
    // // Doppia Porta
    'GTF916SEPYD': { // 1
@@ -477,97 +654,86 @@ const product = {
       Feature: [Dummy, Door_cooling, Linearcooling],
       Color: silver
    },
-   // 'GTF744PZPZD': { // 4
-   //    Type: double,
-   //    Capacity: ,
-   //    Depth: under_760mm,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GTF744SEPZD': { // 5
-   //    Type: double,
-   //    Capacity: ,
-   //    Depth: under_760mm,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GTB744BMBZD': { // 6
-   //    Type: double,
-   //    Capacity: ,
-   //    Depth: under_760mm,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GTB574PZHZD': { // 7
-   //    Type: double,
-   //    Capacity: ,
-   //    Depth: under_760mm,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
-   // 'GTB574SEHZD': { // 8
-   //    Type: double,
-   //    Capacity: ,
-   //    Depth: under_760mm,
-   //    Width: ,
-   //    Height: ,
-   //    EnergyGrade: ,
-   //    SmartTechnology: ,
-   //    Feature: [],
-   //    Color: 
-   // },
+   'GTF744PZPZD': { // 4
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Non_Plumbed, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GTF744SEPZD': { // 5
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Non_Plumbed, Door_cooling, Linearcooling],
+      Color: beige
+   },
+   'GTB744BMBZD': { // 6
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: black
+   },
+   'GTB574PZHZD': { // 7
+      Type: double,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: silver
+   },
+   'GTB574SEHZD': { // 8
+      Type: double,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: ThinQ,
+      Feature: [Dummy, Door_cooling, Linearcooling],
+      Color: beige
+   },
 
 
    // // Maxi Side by Side
-   // 'product13': { //1
-   //    Type: lader,
-   //    Capacity: under_400L,
-   //    Depth: Depth_value1,
-   //    Width: _810_900mm,
-   //    Height: under_1800mm,
-   //    EnergyGrade: EnergyGrade_A,
-   //    SmartTechnology: ThinQ,
-   //    Feature: [Plumbed, Instaview, Folding_Shelf, Reversible_Door, Wine_Rack, Pure_N_Fresh],
-   //    Color: beige
-   // },
-   // 'product14': { //1
-   //    Type: lader,
-   //    Capacity: _400L_500L,
-   //    Depth: Depth_value1,
-   //    Width: _610mm_800mm,
-   //    Height: _1800_2000mm,
-   //    EnergyGrade: EnergyGrade_B,
-   //    SmartTechnology: ThinQ,
-   //    Feature: [Non_Plumbed, Instaview, Folding_Shelf, Reversible_Door, Wine_Rack, Door_in_Door],
-   //    Color: beige
-   // },
-   // 'product15': { //1
-   //    Type: lader,
-   //    Capacity: _600L_or_more,
-   //    Depth: Depth_value1,
-   //    Width: under_600mm,
-   //    Height: under_1800mm,
-   //    EnergyGrade: EnergyGrade_A,
-   //    SmartTechnology: ThinQ,
-   //    Feature: [Plumbed, Instaview, Folding_Shelf, Reversible_Door, Linearcooling],
-   //    Color: beige
-   // },
+   'GFT41PZGSZ': { // 1
+      Type: lader,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: '',
+      Feature: [Dummy],
+      Color: silver
+   },
+   'GLT51PZGSZ': { // 2
+      Type: lader,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      SmartTechnology: '',
+      Feature: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Reversible_Door],
+      Color: silver
+   },
 }
 
 const configData = {

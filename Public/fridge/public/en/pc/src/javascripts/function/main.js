@@ -259,7 +259,7 @@ function main() {
                   if (Array.isArray(_lastPro[i][_selectKey])) {
                      for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
                         for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-                           console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+                           // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
                            if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
                               _bol = true;
                               // break;
@@ -276,7 +276,7 @@ function main() {
                      }
                   } else {
                      for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-                        console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[p] === _lastPro[i][_selectKey])
+                        // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[p] === _lastPro[i][_selectKey])
                         if (_selectValue.split(',')[p] === _lastPro[i][_selectKey]) {
                            _judgmentNum++;
                            // break;

@@ -39,7 +39,7 @@
 			&:before,&:after { width: 100%; height: 100%; position: absolute; top: 0; left: 0; content: ""; display: block; background-size: cover; }
 			&:after { z-index: -1; background-image: url(../../images/step01/popup_contents_bg.png); }
 			&:before { z-index: -2; background: linear-gradient(to bottom, #ffda27 4%, #e97300 90%); }
-			strong { font-family: $smart_Bold_Italic; font-style: italic; font-size: vw(36); line-height: vw(54); color: $white; text-shadow: 0 0 vw(8) #744f0a; font-weight: 600; }
+			strong { font-family: $smart_Bold_Italic; font-size: vw(50); line-height: vw(54); color: $white; text-shadow: 0 0 vw(8) #744f0a; font-weight: 600; }
 			.txt_wrap {
 				padding:vw(10) 0 0;
 				img { width: 100%; position: relative; z-index: 1; -webkit-box-sizing: initial; -moz-box-sizing: initial; -o-box-sizing: initial; box-sizing: initial; }
@@ -92,7 +92,7 @@
 				padding: 40px 0 0; 
 				&:after { background-image: none; }
 				&:before { background: none; }
-				strong { font-size: 34px; line-height: 50px; text-shadow: 0 0 8px #744f0a; letter-spacing: 0; }
+				strong { font-size: 42px; line-height: 50px; text-shadow: 0 0 8px #744f0a; letter-spacing: 0; }
 				.txt_wrap {
 					padding: 10px 0 0;
 					img { width: max-content; height: auto; margin: 0 auto; }
@@ -406,8 +406,8 @@
 			&:after { z-index: -1; background-image: url(../../images/step01/popup_contents_bg.png); }
 			&:before { z-index: -2; background: linear-gradient(to bottom, #ffda27 4%, #e97300 90%); }
 			strong {
-				height:vw(170); display:block; font-family:$bau; font-size:vw(34); line-height:vw(52); color:$white; 
-				text-shadow: 0 0 vw(8) #744f0a; font-weight: 500;
+				height:vw(170); display:block; font-family:$bau; font-size:vw(50); line-height:vw(52); color:$white; 
+				text-shadow: 0 0 vw(8) #744f0a; font-weight: 500; font-family: $smart_Bold_Italic;
 			}
 			.txt_wrap {
 				padding:vw(20) 0 0;
@@ -448,7 +448,7 @@
 			.popup_con {
 				padding: 40px 0 0; 
 				&:before,&:after { background: none; }
-				strong { height: 145px; font-size: 34px; line-height: 50px; text-shadow: 0 0 8px #744f0a; letter-spacing: 0; }
+				strong { height: 145px; font-size: 42px; line-height: 50px; text-shadow: 0 0 8px #744f0a; letter-spacing: 0; }
 				.txt_wrap {
 					padding: 10px 0 0;
 					img { width: 414px; height: auto; margin: 0 auto; padding: 0; }
