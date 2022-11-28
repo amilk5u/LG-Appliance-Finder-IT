@@ -1,0 +1,37 @@
+@@include("./include/header.html")
+<!-- Enter Code Here -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--intro-->
+<div id="finderIntro" style="display: none;">
+	<div id="introAnimation">
+		<lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+	</div>	
+</div>
+<!--//intro-->
+<!--result-->
+<div id="finderResult" style="display: block;">
+	<strong class="tit">You’re set out <br>to make a savvy choice!</strong>
+	<div class="center_img_wrap mo_only" style="background-image: url(./images/result/center_img02.png);"></div>
+	<div class="center_img_wrap pc_only" style="background-image: url(./images/pc/result/center_img02.png);"></div>
+	<div class="txt_wrap">
+		<dl>
+			<dt>You chose a</dt>
+		<dd>Washer and Dryer<span>.</span></dd></dl>
+		<dl>
+			<dt>You prioritise</dt>
+		<dd>Gentle Fabric  Care for Minimal Damage<span>.</span></dd></dl>
+		<dl>
+			<dt>We'll recommend you</dt>
+		<dd>Graphite</dd></dl>
+		<dl>
+			<dt>washing machines with</dt>
+		<dd>Smart Assistance<span>.</span></dd></dl>
+	</div>
+	<div class="result_btn_wrap">
+		<button type="button" id="tryAgain">Try Again</button>
+		<button type="button" id="shopNowBtn02" data-link-name="r_Btn_stage7" data-model-description="Washer and Dryer,8kg + 6kg,Under 60cm,Doesn’t matter to me, I’d like to see all models.,Gentle Fabric  Care for Minimal Damage,Smart Assistance,Graphite">Get Result</button>
+	</div>
+</div>
+<!--//result--> @@include("./include/popup.html") @@include("./include/footer.html")
