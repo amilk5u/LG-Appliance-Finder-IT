@@ -28,6 +28,8 @@ function main() {
 
    // intro animation
    const $introAnimation = $("#introAnimation");
+
+   // text
    const multipleSelections = 'Scegli tutte le opzioni che vuoi.';
 
    let currentUrl = document.location.href; // 현재 url
@@ -94,6 +96,7 @@ function main() {
       }
    });
 
+   // next / prev 누를 때 실행
    function stepUpdateEvent(idx, _judgmentStep) {
       let _htmlIdx = idx; // 항목 별 index
       if (idx > 2) { _htmlIdx += 2; }// 페이지 데이터 index
@@ -154,9 +157,9 @@ function main() {
             for (let i = 0; i < _currentHtml.length; i++) {
                // All Select Option 마크업 예외
                if (_htmlIdx !== 2 && i === 0) {
-                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button>`;               
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button>`;
                } else {
-                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><p>${_currentHtml[i].content}</p></button>`;               
+                  _buttonHtml += `<button class="answer_btn" type="button" data-key="${_currentHtml[i].key}" data-value="${_currentHtml[i].value}"><p>${_currentHtml[i].content}</p></button>`;
                }
             }
             liHtml += `<li><span>${configData.finderSetting[idx].key[_htmlIdx - 2]}<div><em>${multipleSelections}</em></div></span><div>${_buttonHtml}</div></li>`;
@@ -173,12 +176,6 @@ function main() {
             }
             $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}"data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
          }
-         // tall & double door beige_none class 추가 or 삭제
-         // if (_colorNoneBol) {
-         //    $selectWrap.addClass('beige_none');
-         // } else {
-         //    $selectWrap.removeClass('beige_none');
-         // }
       } else {
          for (let i = 0; i < _currentHtml.length; i++) {
             // All Select Option 마크업 예외
@@ -382,7 +379,7 @@ function main() {
          let _currentKey = []; // 현재 스텝의 key 값
          let _currentKeyRemoval = []; // 중복된데이터 제거된 key 값
 
-         $(".answer_btn").prop('disabled', true); // default disabled true
+         // $(".answer_btn").prop('disabled', true); // default disabled true
 
          // 현재 스텝의 key 값을 모두 추출 하고, 중복된 key값은 제거
          $('.answer_btn').each(function () {
@@ -1027,11 +1024,11 @@ function main() {
 
    // 결과화면01 (shopNow)
    $showNow.on('click', function () {
-      $(this).hasClass('active') && resultFunction()
+      // $(this).hasClass('active') && resultFunction()
    });
    // 결과화면02 (result Button)
    $finalShowNow.on('click', function () {
-      resultFunction();
+      // resultFunction();
    });
 
    // 이미지 pc / mobile 이미지 전환 

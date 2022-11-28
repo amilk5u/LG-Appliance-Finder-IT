@@ -804,7 +804,7 @@ const configData = {
       },
       {
          finderStep: 'step04',
-         questionText: 'Hai bisogno di un frigorifero che </br>eroghi acqua fresca e ghiaccio?',
+         questionText: 'Hai bisogno di un frigorifero </br>che eroghi acqua fresca e ghiaccio?',
          defaultScreenImg: 'step04/que_img01.png',
       },
       {
