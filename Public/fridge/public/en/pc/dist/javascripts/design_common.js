@@ -2406,7 +2406,7 @@ function main() {
                }
             } else if (i === 3) {
                if (j !== _valueArray[i].length - 1) {
-                  _selectResultTxt += _valueArray[i][j] + '<span> , </span>';
+                  _selectResultTxt += _valueArray[i][j] + '<span>, </span>';
                } else {
                   _selectResultTxt += _valueArray[i][j] + '<span>.</span>';
                }

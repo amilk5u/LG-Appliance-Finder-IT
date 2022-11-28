@@ -687,7 +687,7 @@
             ol { padding: 10px 0 0; }
             li {				
                &:nth-of-type(1) {
-                  padding: 0 0 0 8px; background-color: transparent; font-weight: $bold; color: $gray1; border: 0; position: absolute; top: -40px;
+                  padding: 0 0 0 8px; top: -40px;
                   button {
                      span {
                         width: 22px; height: 22px; border: 1px solid #dadada;
@@ -1154,6 +1154,24 @@
 			}
 
 		}
+
+		&.step02, &.step04, &.step05, &.step06, &.step07 {
+         #selectWrap {	
+            li {				
+               &:nth-of-type(1) {
+                  button {
+							height: auto;
+                     span {
+                        width: 20px; height: 20px; 
+                        @include borderRadius(5px);
+                     }
+                     p { font-size: 20px; line-height: 22px; }
+                  }
+               }
+            }
+         }
+      }
+
 		//스텝별
 		&.step01 {			
 			.qna_wrap {
@@ -1215,12 +1233,25 @@
 				ol { width: 750px; }
 				li {
 					padding: 10px 0 0;
-					&:nth-of-type(2) {
-						button { width: 236.5px; }
-					}
-					&:nth-of-type(3) {
-						button { width: 236.5px; }
-					}
+					&:nth-of-type(2),
+               &:nth-of-type(3) {
+                  // > span {
+                  //    > div { padding: 20px 0 5px; }
+                  //    em { font-size: 18px; }
+                  // }
+                  > div {
+                     button {     
+								width: 236.5px;                     
+                        &:nth-of-type(1) {
+                           span {
+                              width: 20px; height: 20px; 
+                              @include borderRadius(5px);
+                           }
+                           p { font-size: 20px; line-height: 22px; }
+                        }
+                     }
+                  }
+               }
 					> span {
 						padding: 0 0 0 10px; font-size: 22px;
 						em { font-size: 16px; }
@@ -1245,7 +1276,7 @@
 				.qna_description01, .qna_description02 { padding: 40px 0 0; }
 			}
 			#selectWrap {
-				padding: 20px 0 0; 
+				padding: 30px 0 0; 
 				.select_tit { width: 890px; }
 				ol { width: 890px; }
 				li {
@@ -1267,7 +1298,7 @@
 				.qna_description01, .qna_description02 { padding: 40px 0 0; }
 			}
 			#selectWrap {
-				padding: 20px 0 0; 
+				padding: 30px 0 0; 
 				.select_tit { width: 890px; }
 				ol { width: 890px; }
 				li {
@@ -1289,7 +1320,7 @@
 				.qna_description01, .qna_description02 { padding: 40px 0 0; }
 			}
 			#selectWrap {
-				padding: 20px 0 0; 
+				padding: 30px 0 0; 
 				.select_tit { width: 890px; }
 				ol { width: 890px; }
 				li {
