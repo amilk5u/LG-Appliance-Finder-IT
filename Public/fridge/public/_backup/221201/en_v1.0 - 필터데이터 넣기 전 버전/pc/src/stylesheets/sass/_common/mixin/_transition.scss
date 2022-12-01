@@ -1,0 +1,3 @@
+@mixin transition($all : all, $time : .2s, $ease : ease) {
+	@include prefixer(transition, $all $time $ease, webkit moz o ms);
+}
