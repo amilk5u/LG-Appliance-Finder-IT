@@ -254,8 +254,8 @@ function main() {
          } else {
             console.log('여기입니다')
             let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-            let _bol = false;
-            
+            let _prevStepDummyTrue = false;
+
             // 추출된 마지막 제품 갯수 만큼 for 문 실행 
             for (let i = 0; i < _lastPro.length; i++) {
                let _valueCounting = stepCount[stepCount.length - 1]; // step count
@@ -263,39 +263,46 @@ function main() {
                let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
                // 마지막에 선택한 value 값 추출
 
-
                console.log(_valueCounting)
 
                for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
                   let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
                   let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
+                  let _numBoolean = false;
 
-                  if (_selectValue === 'dummy') {
-                     _bol = true;
+                  if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
+                     _prevStepDummyTrue = true;
                      _stepProductArray.push(_lastPro[i]);
                   }
-                  if (!_bol) {
-                     if (Array.isArray(_lastPro[i][_selectKey])) {
-                        let selectValueArray = _lastPro[i][_selectKey];
-                        // , 기준으로 배열 생성
-                        for (let p = 0; p < selectValueArray.length; p++) {
-                           console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', selectValueArray[p], selectValueArray[p] === _selectValue)
-                           if (selectValueArray[p] === _selectValue) {
-                              console.log(_lastPro[i])
-                              idx !== 6 && _stepProductArray.push(_lastPro[i]);
-                              _judgmentNum++;
+
+                  if (!_prevStepDummyTrue) {
+                     if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
+                        for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+                           for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
+                              console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+                              if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
+                                 _numBoolean = true;
+                                 break;
+                              }
                            }
+
                            // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
-                           if (_selectValue === AllSelectOption) {
+                           if (_selectValue.split(',')[p] === AllSelectOption) {
                               _AllSelectBol = true;
                            }
+                        }
+                        if (_numBoolean) {
+                           _judgmentNum++;
                         }
                      } else {
                         console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
                         if (_lastPro[i][_selectKey] === _selectValue) {
                            console.log(_lastPro[i])
-                           idx !== 6 && _stepProductArray.push(_lastPro[i]);
-                           _judgmentNum++;
+                           if (idx !== 6 || idx !== 5) {
+                              _stepProductArray.push(_lastPro[i]);
+                           } else {
+                              _judgmentNum++;
+                           }
                         }
 
                         // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
@@ -303,8 +310,19 @@ function main() {
                            _AllSelectBol = true;
                         }
                      }
+
+                     if (_AllSelectBol) { // All Select 가 있으면 - 1
+                        _valueCounting--;
+                     }
+                     // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
+                     console.log(_judgmentNum, _valueCounting, _judgmentNum === _valueCounting)
+                     if (_judgmentNum === _valueCounting) {
+                        console.debug('선택된 제품 : ', _lastPro[i]);
+                        _stepProductArray.push(_lastPro[i]);
+                     }
                   }
                }
+               console.log(_AllSelectBol)
 
                if (_AllSelectBol) { // All Select 가 있으면 - 1
                   _valueCounting--;
@@ -363,7 +381,6 @@ function main() {
          //                if (_selectValue.split(',')[p] === AllSelectOption) {
          //                   _AllSelectBol = true;
          //                }
-         
          //             }
          //          }
          //       }
