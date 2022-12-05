@@ -159,7 +159,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: ThinQ,
-      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, EnergyGrade_F, Instaview, Door_in_Door],
+      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
       Color: stainless_steel
    },
 
@@ -1644,7 +1644,6 @@ function main() {
             }
             matchingProducts.push(_stepProductArray);
          } else {
-            console.log('여기입니다')
             let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
             let _prevStepDummyTrue = false;
 
@@ -1655,26 +1654,30 @@ function main() {
                let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
                // 마지막에 선택한 value 값 추출
 
-               console.log(_valueCounting)
-
+               console.log('선택된 제품 카운트 : ', _valueCounting, '선택된 제품 : ', _lastPro[i])
                for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
                   let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
                   let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-                  let _numBoolean = false;
+                  let _dataTrueBoolean = false;
 
                   if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
                      _prevStepDummyTrue = true;
                      _stepProductArray.push(_lastPro[i]);
                   }
-
                   if (!_prevStepDummyTrue) {
                      if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
+                        console.log('featrue 배열 포함OOO')
                         for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
                            for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
                               console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
                               if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-                                 _numBoolean = true;
-                                 break;
+                                 if (idx !== 6 && idx !== 5) {
+                                    console.log('******', _lastPro[i])
+                                    _stepProductArray.push(_lastPro[i]);
+                                 } else {
+                                    _dataTrueBoolean = true;
+                                    break;
+                                 }
                               }
                            }
 
@@ -1683,45 +1686,36 @@ function main() {
                               _AllSelectBol = true;
                            }
                         }
-                        if (_numBoolean) {
+                        console.log(_dataTrueBoolean)
+                        if (_dataTrueBoolean) {
                            _judgmentNum++;
                         }
                      } else {
+                        console.log('featrue 배열 미포함XXX')
                         console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
                         if (_lastPro[i][_selectKey] === _selectValue) {
-                           console.log(_lastPro[i])
-                           if (idx !== 6 || idx !== 5) {
+                           if (idx !== 6 && idx !== 5) {
+                              console.log('******', _lastPro[i])
                               _stepProductArray.push(_lastPro[i]);
                            } else {
                               _judgmentNum++;
                            }
                         }
-
                         // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
                         if (_selectValue === AllSelectOption) {
                            _AllSelectBol = true;
                         }
                      }
-
-                     if (_AllSelectBol) { // All Select 가 있으면 - 1
-                        _valueCounting--;
-                     }
-                     // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-                     console.log(_judgmentNum, _valueCounting, _judgmentNum === _valueCounting)
-                     if (_judgmentNum === _valueCounting) {
-                        console.debug('선택된 제품 : ', _lastPro[i]);
-                        _stepProductArray.push(_lastPro[i]);
-                     }
                   }
                }
-               console.log(_AllSelectBol)
 
                if (_AllSelectBol) { // All Select 가 있으면 - 1
                   _valueCounting--;
                }
                // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-               // console.log(_judgmentNum, _valueCounting, _judgmentNum === _valueCounting)
-               if (idx === 6 && _judgmentNum === _valueCounting) {
+               console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+               console.debug('선택된 제품 : ', _lastPro[i])
+               if (idx === 6 || idx === 5 && _judgmentNum === _valueCounting) {
                   _stepProductArray.push(_lastPro[i]);
                }
             }

@@ -159,7 +159,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: ThinQ,
-      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, EnergyGrade_F, Instaview, Door_in_Door],
+      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
       Color: stainless_steel
    },
 
