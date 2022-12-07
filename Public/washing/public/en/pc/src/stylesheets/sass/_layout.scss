@@ -1,0 +1,431 @@
+@charset "UTF-8";
+html,body { max-width: 100%; }
+html.no_scroll { overflow:hidden; padding:0 17px 0 0;}
+.dimmed {
+	width:100%; height:100%; position:fixed; z-index:100; background-color:#000; display:none; top:0;
+	@include opacity(0);
+}
+//스킵 네이게이션
+#skipNavigation a {
+	position:absolute; top:-100px; left:0; z-index:1000; width:100%; border-bottom:1px solid #dbdbdb; background:#f8f7f3; line-height:50px;
+	&:focus {top:0; text-align:center;}
+	@include desktop () {
+		top:0;
+	}
+}
+//상단 네비게이션
+#finderNav {
+	height:vw(80); padding:0 vw(40);
+	ul {
+		text-align:center; font-size:vw(22);
+		@include displayFlexCenter(center, space-between);
+	}
+	li {
+		position:relative;
+		&:nth-of-type(1) {
+			&:before {display:none;}
+			p { left: 3px; @include translate(0,0); }
+		}
+		&:last-of-type {
+			p { left: auto; right: 0; @include translate(0,0); }
+		}
+		&:before {
+			width:vw(86); height:2px; display:block; content:""; background-color:#dbdbdb; position:absolute;
+			top:50%; left:vw(-85); margin:-1px 0 0;
+		}
+		&.active {
+			&:before {background-color:$red;}
+			strong {width:vw(40); height:vw(40); background-color:$red; color:$white; line-height:vw(40); border-color:$red; font-size:vw(30);}
+			p {display:block;}
+		}
+		&.process_check {
+			&:before {background-color:$red;}
+			strong {
+					border-color:$red;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+	}
+	strong {
+		width:vw(35); height:vw(35); display:inline-block; border:1px solid #d8d8d8;  position:relative; z-index:1; line-height:vw(32); color:#bcbcbc; background-color:$white;
+		@include borderRadius(100%);
+		@include boxSizing;
+		&:before {
+			width:100%; height:100%; display:none; content:""; position:absolute; top:0; left:0; background-color:$red;
+			@include borderRadius(100%);
+		}
+		&:after {
+			width:vw(12); height:vw(8); border-bottom:vw(4) solid $white; border-left:vw(4) solid $white; display:none; content:""; position:absolute; top:50%; left:50%;
+			box-sizing: initial; -webkit-box-sizing: initial; -o-box-sizing: initial; -moz-box-sizing: initial; -ms-box-sizing: initial;
+			@include transform(translate(-50%, -70%) rotate(-45deg));
+		}
+	} 
+	p {
+		width:max-content; position:absolute; top:vw(52); left:50%; display:none; color:#898989; font-weight:$bold;
+		@include translate(-50%, 0);
+	}
+	@include desktop () {
+		height: auto; display: inline-block; margin: 0 auto; padding: 0;		
+		ul { 
+			display: block; font-size: 5px;
+			&:after { content: ""; display: block; clear: both; }
+		}
+		li {
+			float: left; padding: 0 0 0 75px;
+			&:before { width: 75px; left: 0; margin: 0; background-color:rgba(226, 209, 153, 0.5); top: 17px; }
+		}
+		strong {			
+			width: 35px; height: 35px; border: 1px solid #d8d8d8; line-height: 32px; font-size: 18px; font-weight: $light;
+			&:after { width: 14px; height: 10px; border-bottom: 2px solid $white; border-left: 2px solid $white; }
+			
+		}
+		p { font-size: 16px; top: 50px; letter-spacing: 0; left: 5px; }
+	}
+	@include tablet () {
+		li {
+			padding: 0 0 0 60px;
+			&:before { width: 60px; top: 14px; }
+		}
+		strong {			
+			width: 30px; height: 30px; line-height: 27px; font-size: 16px; 
+			&:after { width: 11px; height: 7px; }
+		}
+		p { font-size: 15px; top: 40px }
+	}
+}
+//각 스텝별 네비게이션
+#quickFinder {
+	&.step01 {
+		#finderNav ul li:nth-of-type(1) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step02 {
+		#finderNav ul li:nth-of-type(1) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(2) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step03 {
+		#finderNav ul li:nth-of-type(1), #finderNav ul li:nth-of-type(2) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(3) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step04 {
+		#finderNav ul li:nth-of-type(1), #finderNav ul li:nth-of-type(2), #finderNav ul li:nth-of-type(3) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(4) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step05 {
+		#finderNav ul li:nth-of-type(1), #finderNav ul li:nth-of-type(2), #finderNav ul li:nth-of-type(3), #finderNav ul li:nth-of-type(4) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(5) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step06 {
+		#finderNav ul li:nth-of-type(1), #finderNav ul li:nth-of-type(2), #finderNav ul li:nth-of-type(3), #finderNav ul li:nth-of-type(4), #finderNav ul li:nth-of-type(5) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(6) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	&.step07 {
+		#finderNav ul li:nth-of-type(1), #finderNav ul li:nth-of-type(2), #finderNav ul li:nth-of-type(3), #finderNav ul li:nth-of-type(4), #finderNav ul li:nth-of-type(5), #finderNav ul li:nth-of-type(6) {
+			&:before {background-color:$red;}
+			strong {
+					border:none;
+					&:before,
+					&:after {display:block;}
+			}
+		}
+		#finderNav ul li:nth-of-type(7) {
+			&:before {background-color:$red;}
+			strong { width: vw(40); height: vw(40); background-color: $red; color: $white; line-height: vw(39); border-color: $red; font-size: vw(30); }
+			p {display:block;}
+		}
+	}
+	@include desktop () {
+		#finderNav ul li:nth-of-type(1) { 
+			padding:0;
+			strong { width: 35px; height: 35px; }
+		}
+		#finderNav ul li:nth-of-type(2) {
+			padding:0 0 0 75px;
+			&:before { width: 75px; }
+		}
+		&.step01 {
+			#finderNav ul li:nth-of-type(1) {
+				padding:0;
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+			}
+			#finderNav ul li:nth-of-type(2) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+			}
+		}
+		&.step02 {
+			#finderNav ul li:nth-of-type(2) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 121px; }
+			}
+			#finderNav ul li:nth-of-type(3) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }				
+			}
+		}
+		&.step03 {
+			#finderNav ul li:nth-of-type(2) {
+				strong { width: 35px; height: 35px; }
+			}
+			#finderNav ul li:nth-of-type(3) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 120px; }
+			}
+			#finderNav ul li:nth-of-type(4) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+			}
+		}
+		&.step04 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3) {
+				strong { width: 35px; height: 35px; }
+			}
+			#finderNav ul li:nth-of-type(4) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 122px; }
+			}
+			#finderNav ul li:nth-of-type(5) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+			}
+		}
+		&.step05 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3),#finderNav ul li:nth-of-type(4) {
+				strong { width: 35px; height: 35px; }
+			}
+			#finderNav ul li:nth-of-type(5) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 122px; }
+			}
+			#finderNav ul li:nth-of-type(6) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+			}
+		}
+		&.step06 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3),
+			#finderNav ul li:nth-of-type(4),#finderNav ul li:nth-of-type(5) {
+				strong { width: 35px; height: 35px; }
+			}
+			#finderNav ul li:nth-of-type(6) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 120px; }
+			}
+			#finderNav ul li:nth-of-type(7) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+			}
+		}
+		&.step07 {		
+			#finderNav ul li:nth-of-type(2) {
+				padding:0 0 0 82px;
+				&:before { width: 82px; }
+			}
+			#finderNav ul li:nth-of-type(3),
+			#finderNav ul li:nth-of-type(4),
+			#finderNav ul li:nth-of-type(5),
+			#finderNav ul li:nth-of-type(6) {
+				strong { width: 36px; height: 36px; }
+			}
+			#finderNav ul li:nth-of-type(7) {
+				padding:0 0 0 100px;
+				&:before { width: 100px; }
+				strong { width: 38px; height: 38px; line-height: 35px; font-size: 23px; font-weight: $bold; }
+				p { left: 92px; }
+			}
+		}
+	}
+	// tablet 
+	@include tablet () {
+		#finderNav ul li:nth-of-type(1) { 
+			strong { width: 30px; height: 30px; }
+		}
+		#finderNav ul li:nth-of-type(2) {
+			padding: 0 0 0 60px;
+			&:before { width: 60px; }
+		}
+		&.step01 {
+			#finderNav ul li:nth-of-type(1) {
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+			}
+			#finderNav ul li:nth-of-type(2) {
+				padding: 0 0 0 80px;
+				&:before { width: 80px; }
+			}
+		}
+		&.step02 {
+			#finderNav ul li:nth-of-type(2) {
+				padding: 0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 98px; }
+			}
+			#finderNav ul li:nth-of-type(3) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }				
+			}
+		}
+		&.step03 {
+			#finderNav ul li:nth-of-type(2) {
+				strong { width: 30px; height: 30px; }
+			}
+			#finderNav ul li:nth-of-type(3) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 98px; }
+			}
+			#finderNav ul li:nth-of-type(4) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+			}
+		}
+		&.step04 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3) {
+				strong { width: 30px; height: 30px; }
+			}
+			#finderNav ul li:nth-of-type(4) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 98px; }
+			}
+			#finderNav ul li:nth-of-type(5) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+			}
+		}
+		&.step05 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3),#finderNav ul li:nth-of-type(4) {
+				strong { width: 30px; height: 30px; }
+			}
+			#finderNav ul li:nth-of-type(5) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 98px; }
+			}
+			#finderNav ul li:nth-of-type(6) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+			}
+		}
+		&.step06 {
+			#finderNav ul li:nth-of-type(2),#finderNav ul li:nth-of-type(3),#finderNav ul li:nth-of-type(4),#finderNav ul li:nth-of-type(5) {
+				strong { width: 30px; height: 30px; }
+			}
+			#finderNav ul li:nth-of-type(6) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 99px; }
+			}
+			#finderNav ul li:nth-of-type(7) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+			}
+		}
+		&.step07 {		
+			#finderNav ul li:nth-of-type(2) {
+				padding:0 0 0 60px;
+				&:before { width: 60px; }
+			}
+			#finderNav ul li:nth-of-type(3),#finderNav ul li:nth-of-type(4),#finderNav ul li:nth-of-type(5),#finderNav ul li:nth-of-type(6) {
+				strong { width: 30px; height: 30px; }
+			}
+			#finderNav ul li:nth-of-type(7) {
+				padding:0 0 0 80px;
+				&:before { width: 80px; }
+				strong { width: 32px; height: 32px; line-height: 29px; font-size: 20px; }
+				p { left: 70px; }
+			}
+		}
+	}
+} 
+// /* 스테이징 / 라이브 적용시 삭제 */
+// header { 
+// 	height: 84px; 
+// 	background-color: pink;
+// 	margin: 40px 0 0;
+// 	@media screen and (min-width:1326px) {
+// 		margin:0;
+// 		height: 94px; 
+// 	}
+// }
+// footer { height: 500px; }
+// .cookie-banner {
+// 	width: 100%; height: 40px; position: fixed; top: 0; z-index: 1000; background-color: #eee;	
+// 	@media screen and (min-width:1326px) {
+// 		height:1px;
+// 	}
+// }
+// /* //스테이징 / 라이브 적용시 삭제 */

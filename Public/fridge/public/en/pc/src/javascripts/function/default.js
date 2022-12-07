@@ -159,7 +159,7 @@ const product = {
       Height: under_1800mm,
       EnergyGrade: EnergyGrade_F,
       SmartTechnology: ThinQ,
-      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, EnergyGrade_F, Instaview, Door_in_Door],
+      Feature: [Non_Plumbed, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
       Color: stainless_steel
    },
 
@@ -790,7 +790,7 @@ const configData = {
       // 제품 선택
       {
          finderStep: 'step01',
-         questionText: 'Che tipo di frigorifero </br>stai cercando?',
+         questionText: 'Che tipo di frigorifero stai cercando?',
          defaultScreenImg: 'step01/que_img00.png',
       },
       {
@@ -804,7 +804,7 @@ const configData = {
       },
       {
          finderStep: 'step04',
-         questionText: 'Hai bisogno di un frigorifero che </br>eroghi acqua fresca e ghiaccio?',
+         questionText: 'Hai bisogno di un frigorifero </br>che eroghi acqua fresca e ghiaccio?',
          defaultScreenImg: 'step04/que_img01.png',
       },
       {

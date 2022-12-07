@@ -1,0 +1,247 @@
+@import "./mixin/prefixer";
+@import "./mixin/triangle";
+@import "./mixin/timing-functions";
+@import "./mixin/position";
+@import "./mixin/flex";
+@import "./mixin/text-overflow";
+@import "./mixin/transform";
+@import "./mixin/transition";
+
+@mixin appearance ($opt : none) {
+	-webkit-appearance: $opt;
+	-moz-appearance: $opt;
+	appearance: $opt;
+}
+@mixin borderRadius ($size) {
+    -webkit-border-radius: $size;
+       -moz-border-radius: $size;
+            border-radius: $size;
+}
+@mixin borderTopRadius($radii) {
+	border-top-left-radius: $radii;
+	border-top-right-radius: $radii;
+}
+@mixin borderRightRadius($radii) {
+	border-bottom-right-radius: $radii;
+	border-top-right-radius: $radii;
+}
+@mixin borderBottomRadius($radii) {
+	border-bottom-left-radius: $radii;
+	border-bottom-right-radius: $radii;
+}
+@mixin borderLeftRadius($radii) {
+	border-bottom-left-radius: $radii;
+	border-top-left-radius: $radii;
+}
+
+@mixin blur($val : 1px){
+	-webkit-filter: blur($val); /* Safari */
+	filter: blur($val);
+}
+@mixin boxShadow($p) {
+	-moz-box-shadow:$p;
+	-webkit-box-shadow:$p;
+	box-shadow:$p;
+}
+@mixin boxSizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin background($url, $x, $y, $size : 100% 100%, $repeat : no-repeat){
+    background:url($url) $repeat $x $y;
+    background-size:$size;
+}
+@mixin before($p : ""){
+    content: $p;
+    display:inline-block;
+}
+
+@mixin backgroundSolt($x : 50%, $y : 50%, $repeat : no-repeat){
+	-ms-background-position-x:$x; background-position-x:$x;
+	-ms-background-position-y:$y; background-position-y:$y;
+	background-repeat:$repeat;
+}
+@mixin backgroundSoltC($x : 50%, $y : 50%, $repeat : no-repeat, $size : cover){
+	-ms-background-position-x:$x; background-position-x:$x;
+	-ms-background-position-y:$y; background-position-y:$y;
+	-webkit-background-size:$size; background-size:$size;
+	background-repeat:$repeat;
+}
+@mixin borderSet($width : 1px, $style : solid, $color : $gray2){
+	border-width:$width; border-style:solid; border-color:$color;
+}
+
+@mixin imgCut{
+	@include borderRadius(0 0 35px 0);
+}
+
+@mixin scrAnimateSet($x : 0, $y : 30px){
+	@include translate($x, $y);
+	@include opacity(0);
+}
+
+%clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin maxWset(){
+	width:100%; max-width:1800px; min-width:1280px; margin:0 auto;
+	@include boxSizing;
+}
+
+@mixin placeholder($font-size, $color, $line-height){
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+}
+
+@mixin boxAni(){
+	&:hover {
+		.box_link_dot {
+			&:after,
+			&:before { width:100%; @include opacity(1);}
+		}
+		&:after,
+		&:before { height:100%; @include opacity(1);}
+	}
+	&:after,
+	&:before {
+		width:2px; height:0; position:absolute; display:block; content:""; background-color:$blue;
+		@include transition(all,.4s);
+	}
+	&:after { right:0; top:0;}
+	&:before { left:0; bottom:0;}
+	.box_link_dot {
+		&:after,
+		&:before {
+			width:0; height:2px; position:absolute; display:block; content:""; background-color:$blue;
+			@include transition(all,.4s);
+		}
+		&:after { right:0; top:0;}
+		&:before { left:0; bottom:0;}
+	}
+}
+
+@mixin posl($pos : absolute){
+	position: $pos; left: 0;
+}
+@mixin posr($pos : absolute){
+	position: $pos; right: 0;
+}
+@mixin flt_l($flt : left){
+	float: $flt;
+}
+@mixin flt_r($flt : right){
+	float: $flt;
+}
+
+@mixin textLeftLine(){
+	&:before {
+		width:32px; height:2px; background-color:$gray2; position:absolute; content:""; display:block;
+		left:-57px; top:50%; margin:-1px 0 0;
+	}
+}
+
+
+//자주 나오는 주가정보 시세 게시판 - row 기준 게시판
+@mixin stockRowTable {
+	.data-table-area {
+		padding-top:70px; overflow:hidden;
+		.data-table-head { height:30px; position:relative; display:inline-block; width:100%; padding-bottom:25px; vertical-align:top; text-align:right;
+			.data-table-tit { position:absolute; top:0; left:0; font-size:28px; line-height:1em; color:$txt-black; }
+			.data-table-noti { font-family:$noto; font-size:16px; line-height:1em; }
+		}
+	}
+	caption { overflow:hidden; width:1px; height:1px; line-height:1px; margin-top:-1px; }
+	.data-row-txt { border-top:2px solid $mint; border-bottom:1px solid $gray2;
+		tbody {
+			tr {
+				&:first-child {
+					th { border-top:none; }
+					td { border-top:none; }
+				}
+			}
+			th { padding:15px 10px 15px 20px; font-size:16px; color:$txt-black; text-align:left; line-height:26px; border-top:1px solid $gray2; font-weight:$bold; vertical-align:top; background-color:#f5f7f9; }
+			td { padding:15px 20px; font-size:16px; color:$gray2; text-align:left; line-height:26px; border-top:1px solid $gray2; }
+		}
+	}
+}
+
+@mixin blueBtn {
+	width:380px; height:80px; margin:45px 0 0; display:inline-block; text-indent:-52px; border:2px solid $blue;
+	background-color:$blue; color:$white; font-weight:$bold; position:relative; font-size:20px;
+	@include transition;
+	i {
+		position:absolute; top:49%; right:162px;
+		@include transition(all, .2s);
+		&:before {
+			width:25px; height:1px; display:block; content:""; background-color:$white; position:absolute;
+			@include transition(background-color, .2s);
+		}
+		&:after {
+			width:0; height:0; display:block; content:""; position:absolute; top:-2px; right:-25px;
+			border-bottom:3px solid transparent; border-top:3px solid transparent; border-left:5px solid $white;
+			@include transition(border-color, .2s);
+		}
+	}
+	&:hover,
+	&:focus {
+		background-color:$white; color:$blue;
+		input[type=submit] {color:$blue;}
+		i {
+			@include translate(5px, 0);
+			&:before {background-color:$blue;}
+			&:after {border-left-color:$blue;}
+		}
+	}
+}
+
+// Break Point (Desktop First 기준 내림차순 설정)
+$mobile-width	: 1024px;
+$tablet-width	: 1600px;
+
+// desktop
+@mixin desktop {
+	@media screen and (min-width: #{$mobile-width}) {
+		@content;
+	}
+}
+// tablet
+@mixin tablet {
+	@media screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@function vw($size) {
+	$vwSize: (768 * 0.01);
+	@return ($size / $vwSize) * 1vw;
+}

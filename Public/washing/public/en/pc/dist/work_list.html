@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>LG Appliances-finder IT(이태리) / washing machine(세탁기) - 반응형</title>
+	<style type="text/css">
+
+		body{width:100%; height:100%;  font-family:vernada; margin:20px auto;}
+		#secretWrapper{width :98%; margin:0 auto;}
+		#secretWrapper h1{font-size:30px; text-align:center; margin:0 0 119px;}
+		#secretWrapper h2{font-size:20px; margin:30px 0 20px;}
+		#secretWrapper table{width:100%; border-top:1px solid #99948e; border-left:1px solid #99948e; border-collapse:collapse;}
+		#secretWrapper table .title1{background-color:#e6002d; color:#fff; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title2{background-color:#f7f7f7; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title3{background-color:#dfdfdf; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table th{border-right:1px solid #99948e; border-bottom:1px solid #99948e; padding:5px 0;}
+		#secretWrapper table td{border-right:1px solid #99948e; border-bottom:1px solid #99948e;}
+		#secretWrapper table tbody td{padding:8px 20px; font-size:12px;}
+		#secretWrapper table tbody tr td a {color:#333; text-decoration:underline;}
+
+		#secretWrapper table tbody tr.ok th,
+		#secretWrapper table tbody tr.ok td{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td.dev{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok2 td{background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td.dev {background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok3 td{background:#6e58c6; color:#fff;}
+		#secretWrapper table tbody tr.ok3 td.dev {background:#a07fff; color:#333}
+		#secretWrapper table tbody tr.ok3 td a{color:#fff;}
+		#secretWrapper table tbody tr.del td{background:#999; color:#333;}
+
+		.caution {background-color:lightblue;}
+
+		body *{margin:0; padding:0;}
+		#secretWrapper .depth_info { width:98%; position:absolute; top:83px;}
+		#secretWrapper .depth_info.fix { position:fixed; top:0;}
+
+		.ia_guide {padding:30px 0 0;}
+		.ia_guide strong {font-size:20px;}
+		.ia_guide div {padding:20px 0 20px 30px; color:#fff; margin:20px 0 0;}
+		.ia_guide .ok {background-color:#9f9f95;}
+		.ia_guide .ok3 {background-color:#c62b4a;}
+		.ia_guide .ok2 {background-color:#6e58c6;}
+
+		.last_update {position:absolute; right:1%; top:40px;}
+	</style>
+	<script src="javascripts/jquery-1.8.2.min.js"></script>
+	<script>
+		$(function () {
+			var $table = $("table");
+			var $tbody = $table.find("tbody");
+			$table.each(function () {
+				var _this = $(this);
+				var divisionDepth = _this.find("tbody > tr");
+				var divisionLength = divisionDepth.length;
+
+				divisionDepth.eq(0).find("td").eq(0).attr("rowspan", divisionLength);
+			});
+
+			var $depthInfo = $(".depth_info");
+			$(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if(st > 83){
+					$depthInfo.addClass("fix");
+				} else {
+					$depthInfo.removeClass("fix");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="secretWrapper">
+	<table class="depth_info">
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<thead>
+		<tr class="title1">
+			<th colspan="3">DEPTH</th>
+			<th colspan="2">코딩현황</th>
+			<th>개발현황</th>
+		</tr>
+		<tr class="title2">
+			<th></th>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th colspan="2">마크업 파일명</th>
+			<th>작업처리</th>
+		</tr>
+		<tr class="title3">
+			<th>구분</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th>Folder</th>
+			<th>File</th>
+			<th>상태</th>
+		</tr>
+		</thead>
+	</table>
+
+	<h1>LG Appliances-finder IT(이태리) / washing machine(세탁기) - 반응형</h1>
+	<div class="ia_guide">
+		<strong>테이블에 색에 따른 진행 상태 분류</strong>
+		<div class="ok">퍼블 완료 </div>
+		<div class="ok2">개발 완료 </div>
+	</div>
+
+	<!-- 메인 -->
+	<h2>Main</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td>Main</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="./index.html" target="_blank">index</a></td>
+			<td class="">개발 진행 하는 페이지</td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //메인 -->
+
+	<h2>intro</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="">
+			<td>intro</td>
+			<td>인트로</td>
+			<td></td>
+			<td></td>
+			<td><a href="./intro.html" target="_blank">intro</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 1</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step01</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step01.html" target="_blank">step01</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step01_popup.html" target="_blank">step01_popup</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 2</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step02</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step02.html" target="_blank">step02</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 3</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step03</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step03.html" target="_blank">step03</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step03_popup.html" target="_blank">step03_popup</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 4</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step04</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step04.html" target="_blank">step04</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 5</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step05</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step05.html" target="_blank">step05</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step05_popup.html" target="_blank">step05_popup</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 6</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step06</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step06.html" target="_blank">step06</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Step 7</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>step07</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step07.html" target="_blank">step07</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./step07_popup.html" target="_blank">step07_popup</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Result</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>result</td>
+			<td>파인더</td>
+			<td></td>
+			<td></td>
+			<td><a href="./result.html" target="_blank">result</a></td>
+			<td class="">결과 페이지</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

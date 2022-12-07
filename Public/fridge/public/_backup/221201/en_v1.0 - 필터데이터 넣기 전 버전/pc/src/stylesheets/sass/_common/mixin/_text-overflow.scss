@@ -1,0 +1,13 @@
+@mixin multi-text-overflow($line : 2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line; /* 라인수 */
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+}
+@mixin text-overflow(){
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
