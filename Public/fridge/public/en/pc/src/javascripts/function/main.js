@@ -21,7 +21,7 @@ function main() {
       $popupClose = $('.popup_close_btn'),
       $interactionClose = $('.close_btn'),
       $loadMoreBtn = $('.load_more_btn'),
-      $learnMoreBtn = $('.learn_more_btn');
+      $learnMoreBtn = $('.learn_more_btn'); 
 
    //popup
    const $popupStp3 = $('.popup_step03');
