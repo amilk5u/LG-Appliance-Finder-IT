@@ -1341,53 +1341,53 @@ function imgPreload() {
 intro();
 main();
 function intro() {
-	var popupStep05swiper = new Swiper(".popup_step05_slide", {
-		pagination: {
-			el: ".popup_step05 .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep05swiper = new Swiper(".popup_step05_slide", {
+      pagination: {
+         el: ".popup_step05 .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
-	var popupStep03swiperMulti = new Swiper(".popup_step03 .multi", {
-		pagination: {
-			el: ".popup_step03 .multi .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep03swiperMulti = new Swiper(".popup_step03 .multi", {
+      pagination: {
+         el: ".popup_step03 .multi .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
-	var popupStep03swiperAmerican = new Swiper(".popup_step03 .american", {
-		pagination: {
-			el: ".popup_step03 .american .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep03swiperAmerican = new Swiper(".popup_step03 .american", {
+      pagination: {
+         el: ".popup_step03 .american .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
-	var popupStep03swiperTall = new Swiper(".popup_step03 .tall", {
-		pagination: {
-			el: ".popup_step03 .tall .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep03swiperTall = new Swiper(".popup_step03 .tall", {
+      pagination: {
+         el: ".popup_step03 .tall .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
-	var popupStep03swiperDouble = new Swiper(".popup_step03 .double", {
-		pagination: {
-			el: ".popup_step03 .double .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep03swiperDouble = new Swiper(".popup_step03 .double", {
+      pagination: {
+         el: ".popup_step03 .double .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
-	var popupStep03swiperLader = new Swiper(".popup_step03 .lader", {
-		pagination: { 
-			el: ".popup_step03 .lader .indicator",
-		},
-		observe: true,
-		effect: "fade"
-	});
+   var popupStep03swiperLader = new Swiper(".popup_step03 .lader", {
+      pagination: {
+         el: ".popup_step03 .lader .indicator",
+      },
+      observe: true,
+      effect: "fade"
+   });
 
 }
 function main() {
@@ -1434,10 +1434,11 @@ function main() {
    currentUrl.includes('lg.com') ? stageLiveDecide = true : stageLiveDecide = false;
 
    if (stageLiveDecide) {
-      resultPageUrl = './../promotions/fridge-freezers-finder-result';
+      resultPageUrl = './../frigoriferi/trova-il-frigorifero';
    } else {
-      resultPageUrl = 'https://wwwstg.lg.com/it/promotions/fridge-freezers-finder-result';
+      resultPageUrl = 'https://wwwstg.lg.com/it/frigoriferi/risultati-della-ricerca';
    }
+
 
    // json animation Desktop / Mobile 구분
    if (window.innerWidth >= 1024) {
@@ -2145,29 +2146,31 @@ function main() {
          let _key = selectedParameters[i].split('=')[0];
          let _val = selectedParameters[i].split('=')[1];
 
-         // (content 내용 보기용 테스트)
-         for (let j = 0; j < configData.htmlData.length; j++) {
-            for (let p = 0; p < configData.htmlData[j].length; p++) {
-               if (configData.htmlData[j][p].value === _val) {
-                  test += configData.htmlData[j][p].key + ' : ' + configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, '') + '\n'
+         if (_val !== AllSelectOption) {
+            // (content 내용 보기용 테스트)
+            for (let j = 0; j < configData.htmlData.length; j++) {
+               for (let p = 0; p < configData.htmlData[j].length; p++) {
+                  if (configData.htmlData[j][p].value === _val) {
+                     test += configData.htmlData[j][p].key + ' : ' + configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, '') + '\n'
+                  }
                }
             }
-         }
-         if (selectedParameters[i].includes(',')) {
-            let _key = selectedParameters[i].split('=')[0];
-            let _val = selectedParameters[i].split('=')[1];
-            for (let j = 0; j < _val.split(',').length; j++) {
-               result += _key + '=' + _val.split(',')[j] + '&'
-            }
-         } else {
-            if (_val === 'FTV0329693V') {
-               result += selectedParameters[i] + '&'
-               result += _key + '=' + 'FV65319312&'
+            if (selectedParameters[i].includes(',')) {
+               let _key = selectedParameters[i].split('=')[0];
+               let _val = selectedParameters[i].split('=')[1];
+               for (let j = 0; j < _val.split(',').length; j++) {
+                  result += _key + '=' + _val.split(',')[j] + '&'
+               }
             } else {
-               if (_val === 'dummy') {
-                  result += ''
-               } else {
+               if (_val === 'FTV0329693V') {
                   result += selectedParameters[i] + '&'
+                  result += _key + '=' + 'FV65319312&'
+               } else {
+                  if (_val === 'dummy') {
+                     result += ''
+                  } else {
+                     result += selectedParameters[i] + '&'
+                  }
                }
             }
          }

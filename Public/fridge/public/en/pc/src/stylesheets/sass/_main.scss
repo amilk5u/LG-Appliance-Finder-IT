@@ -73,7 +73,7 @@
 		}
 	}
 	#qnaImgWrap {
-		width:100%; height:vw(500);
+		width: 100%; height: vw(501);
 		@include backgroundSoltC;
 	}
 	//하단 선택 버튼 영역
@@ -553,7 +553,7 @@
                @include borderRadius(vw(100));
                @include boxSizing;
             }
-				p { width: 65%; text-align: left; font-size: vw(30); line-height: vw(30); padding:0 0 0 vw(20); }
+				p { width: 60%; text-align: left; font-size: vw(30); line-height: vw(30); padding:0 0 0 vw(20); }
 			}
 		}
 	}
@@ -687,10 +687,12 @@
             ol { padding: 10px 0 0; }
             li {				
                &:nth-of-type(1) {
-                  padding: 0 0 0 8px; top: -40px;
+                  padding: 0 0 0 8px; top: -21px;
                   button {
+                     height: auto; padding: 0;
                      span {
                         width: 22px; height: 22px; border: 1px solid #dadada;
+                        -webkit-box-sizing: content-box; -moz-box-sizing: content-box; -ms-box-sizing: content-box; -o-box-sizing: content-box;
                         @include borderRadius(7px);
                         &:after {
                            width: 8px; height: 5px; border-bottom: 2px solid $white; border-left: 2px solid $white;
@@ -769,7 +771,7 @@
 				ol { width: 820px; padding: 20px 0 0; flex-wrap: wrap; justify-content: left; gap: 12px 20px; }
 				li {
 					width: 260px; padding: 0;
-					&:nth-of-type(1) {
+					&:nth-of-type(1) {                  
 						i { display: none; }
 					}
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step02/btn_icon01.png); }
@@ -831,7 +833,7 @@
 				}
 				ol { width: 820px; padding: 0; display: block; text-align: left; }
 				li {					
-					padding: 20px 0 0;
+					padding: 30px 0 0;
 					&:first-of-type { 
 						> div {
 							flex-wrap: nowrap;
@@ -841,7 +843,7 @@
                &:nth-of-type(2),
                &:nth-of-type(3) {
                   > span {
-                     > div { padding: 30px 0 10px; }
+                     > div { padding: 17px 0 10px; }
                      em { font-size: 18px; }
                   }
                   > div {
@@ -899,9 +901,7 @@
 				ol { width: 1020px; padding: 20px 0 0; flex-wrap: wrap; gap: 12px 20px; }
 				li {
 					width: 500px; padding: 0;
-					&:nth-of-type(1) {
-                  padding: 0 0 0 5px; top: -25px;
-						button { padding:0; }
+					&:nth-of-type(1) {                  
 						i { display: none; }
 					} 
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step04/btn_icon01.png); }
@@ -941,8 +941,6 @@
 				li {
 					width: 500px; padding: 0;
 					&:nth-of-type(1) {
-                  padding: 0 0 0 5px; top: -25px;
-						button { padding: 0; }
 						i { display: none; }
 					} 
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step05/btn_icon01.png); }
@@ -982,8 +980,6 @@
 				li {
 					width: 500px; padding: 0;
 					&:nth-of-type(1)  {
-                  padding: 0 0 0 5px; top: -25px;
-						button { padding:0; }
 						i { display: none; }
                }
 					&:nth-of-type(2) i { background-image: url(../../images/pc/step06/btn_icon01.png); }
@@ -1032,7 +1028,7 @@
 				li {
 					width: 260px; padding: 0;
                &:nth-of-type(1)  {
-                  padding: 0 0 0 5px; top: -25px;
+                  padding: 0 0 0 5px; top: -21px;
 						button { padding:0; }
                }
 					&:nth-of-type(even) { float:none; }
@@ -1159,7 +1155,7 @@
          #selectWrap {	
             li {				
                &:nth-of-type(1) {
-						top: -17px;
+						top: -19px;
                   button {
 							height: auto;
                      span {
@@ -1211,7 +1207,7 @@
 			}			
 			#selectWrap {
 				ol { width: 750px; }
-				li { width: 365px; }
+				li { width: 236px; }
 			}
 			#selectWrap {
 				li {
@@ -1233,7 +1229,7 @@
 				.caution_open_btn { font-size: 18px; line-height: 30px; }
 				ol { width: 750px; }
 				li {
-					padding: 10px 0 0;
+					padding: 20px 0 0;
 					&:nth-of-type(2),
                &:nth-of-type(3) {
                   > div {
@@ -1344,7 +1340,7 @@
 				.select_tit { width: 750px; }
 				ol { width: 750px; }
 				li {
-					width: 235px; 
+					width: 236px; 
 					button { height: 63px; }
 					p { line-height: 34px; font-size: 20px; }
 				}

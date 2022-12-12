@@ -21,7 +21,7 @@ function main() {
       $popupClose = $('.popup_close_btn'),
       $interactionClose = $('.close_btn'),
       $loadMoreBtn = $('.load_more_btn'),
-      $learnMoreBtn = $('.learn_more_btn');
+      $learnMoreBtn = $('.learn_more_btn'); 
 
    //popup
    const $popupStp3 = $('.popup_step03');
@@ -42,10 +42,11 @@ function main() {
    currentUrl.includes('lg.com') ? stageLiveDecide = true : stageLiveDecide = false;
 
    if (stageLiveDecide) {
-      resultPageUrl = './../promotions/fridge-freezers-finder-result';
+      resultPageUrl = './../frigoriferi/trova-il-frigorifero';
    } else {
-      resultPageUrl = 'https://wwwstg.lg.com/it/promotions/fridge-freezers-finder-result';
+      resultPageUrl = 'https://wwwstg.lg.com/it/frigoriferi/risultati-della-ricerca';
    }
+
 
    // json animation Desktop / Mobile 구분
    if (window.innerWidth >= 1024) {
@@ -753,29 +754,31 @@ function main() {
          let _key = selectedParameters[i].split('=')[0];
          let _val = selectedParameters[i].split('=')[1];
 
-         // (content 내용 보기용 테스트)
-         for (let j = 0; j < configData.htmlData.length; j++) {
-            for (let p = 0; p < configData.htmlData[j].length; p++) {
-               if (configData.htmlData[j][p].value === _val) {
-                  test += configData.htmlData[j][p].key + ' : ' + configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, '') + '\n'
+         if (_val !== AllSelectOption) {
+            // (content 내용 보기용 테스트)
+            for (let j = 0; j < configData.htmlData.length; j++) {
+               for (let p = 0; p < configData.htmlData[j].length; p++) {
+                  if (configData.htmlData[j][p].value === _val) {
+                     test += configData.htmlData[j][p].key + ' : ' + configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, '') + '\n'
+                  }
                }
             }
-         }
-         if (selectedParameters[i].includes(',')) {
-            let _key = selectedParameters[i].split('=')[0];
-            let _val = selectedParameters[i].split('=')[1];
-            for (let j = 0; j < _val.split(',').length; j++) {
-               result += _key + '=' + _val.split(',')[j] + '&'
-            }
-         } else {
-            if (_val === 'FTV0329693V') {
-               result += selectedParameters[i] + '&'
-               result += _key + '=' + 'FV65319312&'
+            if (selectedParameters[i].includes(',')) {
+               let _key = selectedParameters[i].split('=')[0];
+               let _val = selectedParameters[i].split('=')[1];
+               for (let j = 0; j < _val.split(',').length; j++) {
+                  result += _key + '=' + _val.split(',')[j] + '&'
+               }
             } else {
-               if (_val === 'dummy') {
-                  result += ''
-               } else {
+               if (_val === 'FTV0329693V') {
                   result += selectedParameters[i] + '&'
+                  result += _key + '=' + 'FV65319312&'
+               } else {
+                  if (_val === 'dummy') {
+                     result += ''
+                  } else {
+                     result += selectedParameters[i] + '&'
+                  }
                }
             }
          }
