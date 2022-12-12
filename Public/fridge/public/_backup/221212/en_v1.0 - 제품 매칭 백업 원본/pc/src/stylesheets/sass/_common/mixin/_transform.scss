@@ -1,0 +1,25 @@
+@mixin transform($transforms) {
+	@include prefixer(transition, $transforms, webkit moz o ms);
+}
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+@mixin scaleX($scale) {
+	@include transform(scaleX($scale));
+}
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+@mixin preserve3d(){
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+

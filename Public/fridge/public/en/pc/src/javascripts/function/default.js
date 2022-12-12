@@ -800,7 +800,7 @@ const configData = {
       {
          finderStep: 'step03',
          questionText: 'Quanto spazio hai a disposizione in casa?',
-         key: ['Profondità', 'Larghezza', 'Altezza'],
+         key: ['Profondità', 'Larghezza', 'ALTEZZA'],
       },
       {
          finderStep: 'step04',
