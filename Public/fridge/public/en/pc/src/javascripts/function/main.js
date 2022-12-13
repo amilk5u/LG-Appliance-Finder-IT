@@ -627,18 +627,18 @@ function main() {
 
    // 매칭 제품
    function aaa() {
-      
-      // console.log(matchingProducts[idx - 1]);
-
       console.log(matchingProducts[idx - 1])
 
-      console.log(idx > 1 && matchingProducts[idx - 1] === undefined)
       if (idx > 1 && matchingProducts[idx - 1] === undefined) { // back 했을때를 고려해서 undefined 구분
          let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
          let _prevStepDummyTrue = false;
          /* 
-            1. 일단.. 클릭하면서 해당된 
+            1. 일단.. 클릭하면서 해당된 것들으 ㄹ찾자            
             2. 
+            3. 일단 / if (console.log('dfdf)) {
+               console.log('dfdfd);
+               alert('dfkdf);
+            }
          */
 
          for (let i = 0; i < _lastPro.length; i++) {
