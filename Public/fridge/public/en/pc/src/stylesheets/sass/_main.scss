@@ -2,6 +2,10 @@
 #quickFinder {
 	padding: vw(20) 0 0; position: relative; overflow: hidden; 
 	button:focus { outline: none; }
+   &.productNotPopup {
+      background-color: red;
+      
+   }
 	.qna_wrap {
 		padding: 0 0 vw(20);
 		.que_title {

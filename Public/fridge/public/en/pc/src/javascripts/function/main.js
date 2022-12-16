@@ -168,11 +168,9 @@ function main() {
          }
          $selectWrap.find('ol').append(liHtml);
       } else if (idx === 6) {
-         let _colorNoneBol = false; // tall & double door 아닐 때 판단 
          for (let i = 0; i < _currentHtml.length; i++) {
             // tall & double door 가 아닐 때 베이지 컬러 삭제
             if ((selectedProduct[0].key !== tall && selectedProduct[0].key !== double) && _currentHtml[i].value === beige) {
-               _colorNoneBol = true;
                continue;
             }
             $selectWrap.find('ol').append(`<li><button class="answer_btn" type="button" data-key="${_currentHtml[i].key}"data-value="${_currentHtml[i].value}"><span></span><p>${_currentHtml[i].content}</p></button></li>`);
@@ -188,7 +186,7 @@ function main() {
          }
       }
       // All Select Button 에 class 삽입
-      $('.answer_btn').each(function () {
+      $('.answer_btn').each(function (i) {
          if ($(this).data('value') === AllSelectOption) {
             $(this).addClass('all_select');
          }
@@ -387,6 +385,25 @@ function main() {
                _this.removeAttr('disabled');
             }
          });
+
+
+         /* 매칭된 제품이 없을 시 팝업 생성 */
+         let disabledButtonNum = 0, optionButtonNum = 0;
+         $('.answer_btn').each(function () {
+            /* 모두 disbaled 일때 add class 추가하기 */
+            if ($(this).data('value') !== AllSelectOption) {
+               optionButtonNum++;
+               if ($(this).attr('disabled') !== undefined) {
+                  disabledButtonNum++;
+               }
+            }
+         });
+         if (optionButtonNum === disabledButtonNum) {
+            // $('.product_not_popup').addClass('is_open')
+         } else {
+            // $('.product_not_popup').removeClass('is_open')
+            // $('.product_not_popup').addClass('is_open')
+         }
       }
 
       // backStep
@@ -453,7 +470,7 @@ function main() {
          let _btnAllCount1 = 0; // All Select 제외한 나머지 버튼 count
          let _activeBtn1 = 0; // 현재 클릭된 버튼 count
 
-         
+
 
          $('.answer_btn').each(function () {
             if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
@@ -611,6 +628,7 @@ function main() {
          // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
+         console.log(idx, _currentHtml, _lastAnswerValue)
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
       });
    }
@@ -793,21 +811,24 @@ function main() {
 
    /* @22-07-28 태깅 관련 스크립트 삽입 (s) */
    function taggingEvent(elm) {
-      stageCont = []; // 누적 선택한 항목 컨텐츠 
+      stageCont = []; // 누적 선택한 항목 컨텐츠
 
       // 선택한 항목 for 문 실행
       for (let i = 0; i < selectedParameters.length; i++) {
          let _selectKey = selectedParameters[i].split('=')[0]; // key
          let _selectVal = selectedParameters[i].split('=')[1]; // value
-         // html 데이터 for 문 실행
-         for (let j = 0; j < configData.htmlData.length; j++) {
-            for (let p = 0; p < configData.htmlData[j].length; p++) {
-               let _configKey = configData.htmlData[j][p].key;
-               let _configVal = configData.htmlData[j][p].value;
-               // console.log(_configKey, _selectKey, _configVal, _selectVal, _configKey === _selectKey && _configVal === _selectVal)
-               // 선택한 key, value 값의 해당하는 content 추출 
-               if (_configKey === _selectKey && _configVal === _selectVal) {
-                  stageCont.push(configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, ''));
+
+         if (AllSelectOption !== _selectVal) {
+            // html 데이터 for 문 실행
+            for (let j = 0; j < configData.htmlData.length; j++) {
+               for (let p = 0; p < configData.htmlData[j].length; p++) {
+                  let _configKey = configData.htmlData[j][p].key;
+                  let _configVal = configData.htmlData[j][p].value;
+                  // console.log(_configKey, _selectKey, _configVal, _selectVal, _configKey === _selectKey && _configVal === _selectVal)
+                  // 선택한 key, value 값의 해당하는 content 추출 
+                  if (_configKey === _selectKey && _configVal === _selectVal) {
+                     stageCont.push(configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, ''));
+                  }
                }
             }
          }
@@ -914,6 +935,61 @@ function main() {
          _this.parents('.video_wrap').find('video').get(0).pause();
       }
    });
+
+
+
+
+
+
+   $('#backResetButton').on('click', function () {
+      console.log('dddd')
+      $('.product_not_popup').removeClass('is_open')
+
+
+      $('.que_title').css('display', 'none');
+      $description.css('display', 'none');
+      $descHeadWrap.css('display', 'block');
+      $nextBtn.addClass('active');
+      $showNow.addClass('active');
+      TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
+
+      // 앞전 스텝에서 항목을 클릭 했을 때 (값이 있을 경우) 선택한 항목/카운트 배열 삭제
+      if (stepCount[idx + 1] !== undefined || stepCount[idx + 1] === 0) {
+         // selectedParameters 앞전 데이터 삭제
+         for (let i = 0; i < stepCount[stepCount.length - 1]; i++) {
+            selectedParameters.pop();
+         }
+         // 앞전 카운트 삭제
+         stepCount.pop();
+      }
+
+      // 현재 선택된 카운트 만큼 for문 실행 
+      for (let i = 0; i < stepCount[stepCount.length - 1]; i++) {
+         // console.log(selectedParameters[selectedParameters.length - (1 + i)])
+         let _selectKey = selectedParameters[selectedParameters.length - (1 + i)].split('=')[0]; // key
+         let _selectValue = selectedParameters[selectedParameters.length - (1 + i)].split('=')[1]; // value
+
+         // 버튼 value와 저장된 value와 같으면 active 
+         $('.answer_btn').each(function () {
+            let _thisValue = $(this).data('value');
+            let _thisKey = $(this).data('key');
+            // console.log(_thisKey, _selectKey, _selectValue, _thisValue, _thisKey === _selectKey && _selectValue === _thisValue)
+            if (_thisKey === _selectKey && _selectValue === _thisValue) {
+               $(this).addClass('active');
+            }
+         });
+      }
+      _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
+      sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
+      taggingEvent(); // 태깅 함수
+   })
+   
+
+
+
+
+
+
 
    // result 페이지 열기
    function resultChoice() {
