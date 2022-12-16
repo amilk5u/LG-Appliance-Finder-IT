@@ -42,7 +42,7 @@ function main() {
    currentUrl.includes('lg.com') ? stageLiveDecide = true : stageLiveDecide = false;
 
    if (stageLiveDecide) {
-      resultPageUrl = './../frigoriferi/trova-il-frigorifero';
+      resultPageUrl = './risultati-della-ricerca';
    } else {
       resultPageUrl = 'https://wwwstg.lg.com/it/frigoriferi/risultati-della-ricerca';
    }
@@ -120,7 +120,7 @@ function main() {
       $(window).scrollTop(headerH);
 
       // next 버튼에 내용 step 별 내용 심기
-      $nextBtn.attr('data-link-name', 'Next : Q' + (idx + 1) + ' ' + $('#finderNav li').eq(idx).find('p').text());
+      $nextBtn.attr('data-link-name', 'AVANTI : Q' + (idx + 1) + ' ' + $('#finderNav li').eq(idx).find('p').text());
 
       // step 해당 질문 뿌리기
       $('.que_title').remove();

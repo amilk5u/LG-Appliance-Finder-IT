@@ -187,8 +187,8 @@
 			<div class="popup_con">
 				<strong>La scelta più indicata se devi conservare tanti alimenti o se hai una famiglia numerosa</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img01.png" alt="family & Multidoor">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img01.png" alt="family & Multidoor">
+					<img class="mo_only" src="./images/step01/popup_contents_img01.png" alt="Multidoor">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img01.png" alt="Multidoor">
 					<div class="txt_box">
 						<p>Comodo per le famiglie numerose o per chi usa spesso la zona frigo, facilmente raggiungibile senza chinarti. Chiamato anche frigorifero francese, sta trovando sempre più spazio anche qui in Italia.</p>
 						<button type="button" class="close_btn">Andiamo avanti</button>
@@ -206,8 +206,8 @@
 			<div class="popup_con">
 				<strong>Una scelta indicata se usi spesso il freezer e se hai bisogno di tanto spazio di conservazione</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img02.png" alt="cooking & Side-by-Side">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img02.png" alt="cooking & Side-by-Side">
+					<img class="mo_only" src="./images/step01/popup_contents_img02.png" alt="Side-by-Side">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img02.png" alt="Side-by-Side">
 					<div class="txt_box">
 						<p>Chiamato anche "americano", è sempre più popolare anche qui in Italia. Ha il frigorifero a destra e il congelatore a sinistra e offre tanto spazio per gli alimenti. </p>
 						<button type="button" class="close_btn">Andiamo avanti</button>
@@ -225,8 +225,8 @@
 			<div class="popup_con">
 				<strong>Una soluzione pratica dall'ingombro ridotto</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="best seller & Combinati (Combi)">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="best seller & Combinati (Combi)">
+					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="Combinati">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="Combinati">
 					<div class="txt_box">
 						<p>È la tipologia più diffusa qui in Italia: il classico frigorifero alto e snello con congelatore in basso, particolarmente indicato per chi fa la spesa più volte nell'arco della settimana.</p>
 						<button type="button" class="close_btn">Andiamo avanti</button>
@@ -244,8 +244,8 @@
 			<div class="popup_con">
 				<strong>Il frigorifero Doppia porta è indicato se hai bisogno di più spazio di conservazione nel comparto frigo</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img04.png" alt="best seller & Doppia Porta (Top Freezer)">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img04.png" alt="best seller & Doppia Porta (Top Freezer)">
+					<img class="mo_only" src="./images/step01/popup_contents_img04.png" alt="Doppia Porta">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img04.png" alt="Doppia Porta">
 					<div class="txt_box">
 						<p>Più largo e capiente dei frigoriferi combinati tradizionali, è indicato se hai bisogno di tanto spazio per i tuoi cibi, ma non vuoi passare a un modello Side-by-Side o Multidoor.</p>
 						<button type="button" class="close_btn">Andiamo avanti</button>
@@ -263,8 +263,8 @@
 			<div class="popup_con">
 				<strong>La scelta migliore se hai bisogno di separare frigo e congelatore</strong>
 				<div class="txt_wrap">
-					<img class="mo_only" src="./images/step01/popup_contents_img05.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
-					<img class="pc_only" src="./images/pc/step01/popup_contents_img05.png" alt="best seller & Frigoriferi Maxi Side-by-Side (Lader & Freezer)">
+					<img class="mo_only" src="./images/step01/popup_contents_img05.png" alt="Frigoriferi Maxi Side-by-Side">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img05.png" alt="Frigoriferi Maxi Side-by-Side">
 					<div class="txt_box">
 						<p>Questi elettrodomestici sono perfetti se vuoi un frigo o un congelatore supplementare per conservare ancora più alimenti. Sono modelli componibili in base alle tue esigenze.</p>
 						<button type="button" class="close_btn">Andiamo avanti</button>
@@ -561,7 +561,7 @@
 					</li>
 				</ol>
 			</div>
-			<button type="button" class="close_btn">Scopri il frigo per te</button>
+			<button type="button" class="close_btn">Scopri i consigli per te!</button>
 			<div class="indicator"></div>
 		</div>
 	</div>
