@@ -928,7 +928,7 @@ const configData = {
          },
          {
             key: 'FT06515688',
-            value: _400L_500L,
+            value: 'FTV0335756V,FTV0335754V',
             content: 'Da 400L a 500L',
             changeData: {
                description: 'La capacità ideale se fai la spesa una volta alla settimana e devi conservare tanto cibo.',
@@ -937,7 +937,7 @@ const configData = {
          },
          {
             key: 'FT06515688',
-            value: '_500L_600L',
+            value: 'FTV0335753V,FV65346230',
             content: 'Da 500L a 600L',
             changeData: {
                description: 'Consigliato se hai una famiglia numerosa e vuoi avere più spazio per i tuoi alimenti rispetto a un frigo tradizionale.',

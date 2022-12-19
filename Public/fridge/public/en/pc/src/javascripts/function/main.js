@@ -273,7 +273,7 @@ function main() {
                         // console.log('featrue 배열 포함OOO')
                         for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
                            for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-                              // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+                              console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
                               if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
                                  if (idx !== 6 && idx !== 5) {
                                     // console.log('******', _lastPro[i])
@@ -294,13 +294,25 @@ function main() {
                            _judgmentNum++;
                         }
                      } else {
-                        // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
-                        if (_lastPro[i][_selectKey] === _selectValue) {
-                           if (idx !== 6 && idx !== 5) {
-                              // console.log('******', _lastPro[i])
-                              _stepProductArray.push(_lastPro[i]);
-                           } else {
-                              _judgmentNum++;
+                        if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
+                           for (let h = 0; h < _selectValue.split(',').length; h++) {
+                              console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
+                              if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
+                                 console.debug('******', _lastPro[i])
+                                 _stepProductArray.push(_lastPro[i]);
+                                 break;
+                              }
+                           }
+
+                        } else {
+                           console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
+                           if (_lastPro[i][_selectKey] === _selectValue) {
+                              if (idx !== 6 && idx !== 5) {
+                                 console.debug('******', _lastPro[i])
+                                 _stepProductArray.push(_lastPro[i]);
+                              } else {
+                                 _judgmentNum++;
+                              }
                            }
                         }
                         // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
@@ -315,9 +327,8 @@ function main() {
                   _valueCounting--;
                }
                // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-               // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
-               // console.debug('선택된 제품 : ', _lastPro[i])
                if (idx === 6 || idx === 5 && _judgmentNum === _valueCounting) {
+                  console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
                   _stepProductArray.push(_lastPro[i]);
                }
             }
