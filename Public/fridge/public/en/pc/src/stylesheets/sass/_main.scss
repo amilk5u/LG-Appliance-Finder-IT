@@ -610,6 +610,15 @@
 			}
       }
 	}
+	// .product_none_popup {
+	// 	width: 100%; height: 100%; background-color: black;
+	// 	position: fixed; top: 0; left: 0;
+	// 	.popup_wrap {
+	// 		width:200px; height:300px;
+	// 		background-color: white;
+	// 	}
+	// }
+
 	// desktop
 	@include desktop() {
 		position: relative; padding: 0; background-color:#f6f6f6; z-index: 1;
@@ -1369,6 +1378,9 @@
 		}
 	}
 }
+
+
+
 /* #onlyMobile { 
 	width: 100%; height:970px; display: none;	background:url(../../images/common/only_mobile_banner.jpg) 50% 50% no-repeat;
 	@include boxSizing;
