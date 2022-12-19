@@ -65,11 +65,11 @@ function main() {
 
    // 인트로 삭제
    if (currentUrl.includes('intro=no')) {
-      // $introAnimation.css('display', 'none');
-      // $quickFinder.css('display', 'block');
+      $introAnimation.css('display', 'none');
+      $quickFinder.css('display', 'block');
    } else {
       introLottie.addEventListener('complete', function () {
-         // TweenMax.to($introAnimation, .3, { opacity: 0, display: "none" });
+         TweenMax.to($introAnimation, .3, { opacity: 0, display: "none" });
          $(window).scrollTop(headerH);
       });
    }
@@ -607,8 +607,8 @@ function main() {
             stepCount.push($('.answer_btn.active').length);
          }
 
-         // console.log('stepCount : ', stepCount);
-         // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
+         console.log('stepCount : ', stepCount);
+         console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
