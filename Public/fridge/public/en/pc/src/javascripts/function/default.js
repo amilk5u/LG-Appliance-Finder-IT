@@ -13,6 +13,8 @@ let stageDesc; // link-name
 let stageCont; // 누적 선택한 옵션 컨텐츠 
 let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
+const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
+
 if (window.innerWidth >= 1024) {
    imgPath = './images/pc/';
    imgPreload();
@@ -908,7 +910,7 @@ const configData = {
          {
             key: 'step02',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -979,7 +981,7 @@ const configData = {
          {
             key: 'step03-1',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
          },
          {
             key: 'Width',
@@ -1006,7 +1008,7 @@ const configData = {
          {
             key: 'step03-2',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
          },
          {
             key: 'Height',
@@ -1029,7 +1031,7 @@ const configData = {
          {
             key: 'step04',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1085,7 +1087,7 @@ const configData = {
          {
             key: 'step05',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1137,7 +1139,7 @@ const configData = {
          {
             key: 'step06',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1221,7 +1223,7 @@ const configData = {
          {
             key: 'step07',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',

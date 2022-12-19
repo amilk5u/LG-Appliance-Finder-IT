@@ -13,6 +13,8 @@ let stageDesc; // link-name
 let stageCont; // 누적 선택한 옵션 컨텐츠 
 let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
+const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
+
 if (window.innerWidth >= 1024) {
    imgPath = './images/pc/';
    imgPreload();
@@ -908,7 +910,7 @@ const configData = {
          {
             key: 'step02',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -979,7 +981,7 @@ const configData = {
          {
             key: 'step03-1',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
          },
          {
             key: 'Width',
@@ -1006,7 +1008,7 @@ const configData = {
          {
             key: 'step03-2',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
          },
          {
             key: 'Height',
@@ -1029,7 +1031,7 @@ const configData = {
          {
             key: 'step04',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1085,7 +1087,7 @@ const configData = {
          {
             key: 'step05',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1137,7 +1139,7 @@ const configData = {
          {
             key: 'step06',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1221,7 +1223,7 @@ const configData = {
          {
             key: 'step07',
             value: AllSelectOption,
-            content: 'Tutte le opzioni',
+            content: allSelectContent,
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
             changeData: {
                description: '',
@@ -1457,11 +1459,11 @@ function main() {
 
    // 인트로 삭제
    if (currentUrl.includes('intro=no')) {
-      $introAnimation.css('display', 'none');
-      $quickFinder.css('display', 'block');
+      // $introAnimation.css('display', 'none');
+      // $quickFinder.css('display', 'block');
    } else {
       introLottie.addEventListener('complete', function () {
-         TweenMax.to($introAnimation, .3, { opacity: 0, display: "none" });
+         // TweenMax.to($introAnimation, .3, { opacity: 0, display: "none" });
          $(window).scrollTop(headerH);
       });
    }
@@ -1845,7 +1847,7 @@ function main() {
          let _btnAllCount1 = 0; // All Select 제외한 나머지 버튼 count
          let _activeBtn1 = 0; // 현재 클릭된 버튼 count
 
-         
+
 
          $('.answer_btn').each(function () {
             if ($(this).attr('disabled') === undefined && $(this).data('value') !== AllSelectOption) { // acitve 없고, diabled 없고, All Select 가 아닌 버튼의 kay / value 값 
@@ -2191,15 +2193,18 @@ function main() {
       for (let i = 0; i < selectedParameters.length; i++) {
          let _selectKey = selectedParameters[i].split('=')[0]; // key
          let _selectVal = selectedParameters[i].split('=')[1]; // value
-         // html 데이터 for 문 실행
-         for (let j = 0; j < configData.htmlData.length; j++) {
-            for (let p = 0; p < configData.htmlData[j].length; p++) {
-               let _configKey = configData.htmlData[j][p].key;
-               let _configVal = configData.htmlData[j][p].value;
-               // console.log(_configKey, _selectKey, _configVal, _selectVal, _configKey === _selectKey && _configVal === _selectVal)
-               // 선택한 key, value 값의 해당하는 content 추출 
-               if (_configKey === _selectKey && _configVal === _selectVal) {
-                  stageCont.push(configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, ''));
+
+         if (AllSelectOption !== _selectVal) {
+            // html 데이터 for 문 실행
+            for (let j = 0; j < configData.htmlData.length; j++) {
+               for (let p = 0; p < configData.htmlData[j].length; p++) {
+                  let _configKey = configData.htmlData[j][p].key;
+                  let _configVal = configData.htmlData[j][p].value;
+                  // console.log(_configKey, _selectKey, _configVal, _selectVal, _configKey === _selectKey && _configVal === _selectVal)
+                  // 선택한 key, value 값의 해당하는 content 추출 
+                  if (_configKey === _selectKey && _configVal === _selectVal) {
+                     stageCont.push(configData.htmlData[j][p].content.replace(/(<([^>]+)>)/ig, ''));
+                  }
                }
             }
          }
