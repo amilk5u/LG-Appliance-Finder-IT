@@ -359,7 +359,7 @@
 			padding: 0;
 			.que_title {
 				padding: vw(65) vw(70);
-				// br { display: none; }
+				br { display: none; }
 			}
 			.qna_description {
 				.txt_box {
@@ -921,7 +921,10 @@
 		&.step04 {
 			.qna_wrap {
 				margin: 0; padding: 0;
-				.que_title { padding: 70px 0 55px; }
+				.que_title { 
+					padding: 70px 0 55px; 
+					br { display: block; }
+				}
 				.qna_description {
 					margin: 0 auto; 
 					strong { br { display: none; } }

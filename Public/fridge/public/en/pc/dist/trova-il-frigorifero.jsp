@@ -148,6 +148,14 @@
 				<button type="button" id="nextStepBtn">AVANTI</button>
 			</div>
 		</div>
+		<!-- 미매칭 팝업 -->
+		<div class="product_none_popup">
+			<div class="popup_wrap">
+				<p>No Model matches when selecting this option. Choose another option and continue with the Fridge finder.</p>
+				<button type="button" id="selectAgainBtn">Select again</button>
+				<button type="button" id="selectAgainCloseBtn">close button</button>
+			</div>
+		</div>
 	</div>
 	<!-- //finder -->
 
