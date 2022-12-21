@@ -106,7 +106,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling, Door_in_Door, Folding_Shelf],
+      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Door_in_Door, Folding_Shelf],
       FT06515694: silver
    },
    'GMX844MC6F': { // 3
