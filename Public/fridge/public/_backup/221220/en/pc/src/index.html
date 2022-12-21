@@ -1,0 +1,147 @@
+@@include("./include/header.html")
+	<!-- Enter Code Here -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
+	<!-- pc 배너 모바일 QR 코드 -->
+	<!-- <div id="onlyMobile">
+				<div class="txt_wrap">
+					<strong>Appliance finder only offers <br>a mobile version for now,</strong>
+					<p> so we ask that you <br> use your phone to access it. <br> Stay tuned for the upcoming <span>desktop version! </span>
+					</p>
+				</div>
+			</div> -->
+	<!-- // pc 배너 모바일 QR 코드 -->
+
+	<!--intro-->
+	<div id="finderIntro">
+		<!-- <div id="introAnimation">  -->
+		<div id="introAnimation" style="display: none;"> 
+			<div id="animationPlayer"></div>
+		</div> 
+	</div>	
+	<!--//intro-->
+
+	<!-- finder -->
+	<div id="quickFinder" class="step01">
+		<div class="finder_wrap">
+			<!--navigation-->
+			<div id="finderNav">
+				<ul>
+					<li>
+						<strong>1</strong>
+						<p>Tipologia</p>
+					</li>
+					<li>
+						<strong>2</strong>
+						<p>CAPACITÀ</p>
+					</li>
+					<li>
+						<strong>3</strong>
+						<p>DIMENSIONI</p>
+					</li>
+					<li>
+						<strong>4</strong>
+						<p>DISPENSER DI ACQUA E GHIACCIO</p>
+					</li>
+					<li>
+						<strong>5</strong>
+						<p>PRESTAZIONI</p>
+					</li>
+					<li>
+						<strong>6</strong>
+						<p>CARATTERISTICHE</p>
+					</li>
+					<li>
+						<strong>7</strong>
+						<p>COLORE</p>
+					</li>
+				</ul>
+			</div>
+			<!--//navigation-->
+			<!--question & answer area-->
+			<div class="qna_wrap">
+				<div class="qna_description qna_description01">
+					<div class="txt_box">
+						<i></i>
+						<p></p>
+						<button type="button" class="load_more_btn">Scopri di più</button>
+						<button type="button" class="learn_more_btn">Scopri di più</button>
+					</div>
+				</div>
+				<div class="qna_description qna_description02">
+					<div class="txt_box">
+						<p></p>
+						<button id="detailCloseBtn" type="button" class="close_more_btn">CHIUDI</button>
+					</div>
+				</div>
+			</div>
+			<!--//question & answer area-->
+			<!--question image-->
+			<div id="qnaImgWrap">
+				<!-- <img src="./images/pc/step02/people_icon.png" alt="people image"> -->
+			</div>
+			<!--//question image-->
+		</div>
+		<!--선택 항목 버튼-->
+		<!--선택 된 항목은 button에 active 클래스-->
+		<!--선택 불가 항목은 button에 disable 클래스-->
+		<div id="selectWrap">
+			<button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button>
+			<div class="select_tit">
+				<strong></strong>
+			</div>
+			<ol></ol>
+		</div>
+		<!--//선택 항목 버튼-->
+		<!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+		<div class="show_now_wrap">
+			<button type="button" id="shopNowBtn">Vai subito ai prodotti</button>
+		</div>
+		<!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+		<div class="step_move_wrap">
+			<div class="btn_cont">
+				<button type="button" id="backStepBtn">INDIETRO</button>
+			</div>
+			<div class="btn_cont">
+				<button type="button" id="nextStepBtn">AVANTI</button>
+			</div>
+		</div>
+
+		<div class="product_none_popup">
+			<div class="popup_wrap">
+				<p>No Model matches when selecting this option. Choose another option and continue with the Fridge finder.</p>
+				<button type="button" id="selectAgainBtn">Select again</button>
+				<button type="button" id="selectAgainCloseBtn">close button</button>
+			</div>
+		</div>
+	</div>
+	<!-- //finder -->
+
+	<!--result-->
+	<div id="finderResult">
+		<strong class="tit">Ecco un riepilogo di <br>ciò che hai selezionato!</strong>
+		<div class="center_img_wrap"></div>
+		<div class="txt_wrap">
+			<dl>
+				<dt>Hai scelto un</dt>
+			</dl>
+			<dl>
+				<dt>Ti interessa</dt>
+			</dl>
+			<dl>
+				<dt>Ti consiglieremo un frigo</dt>
+			</dl>
+			<dl>
+				<dt>con</dt>
+			</dl>
+		</div>
+		<div class="result_btn_wrap">
+			<button type="button" id="tryAgain">Cambia le scelte</button>
+			<button type="button" id="shopNowBtn02">Vai ai risultati</button>
+		</div>
+	</div>
+	<!--//result--> 
+	
+@@include("./include/popup.html") @@include("./include/footer.html")

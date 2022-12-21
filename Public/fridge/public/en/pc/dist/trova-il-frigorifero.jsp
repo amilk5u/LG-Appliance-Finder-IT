@@ -7,13 +7,13 @@
    <%@ include file="/WEB-INF/jsp/gp/common/include/head/meta-sns-tag.jsp" %>
    <!-- chrome audits -->
    <meta name="theme-color" content="#a50034" />
-   <title>Fridge freezer finder | LG UK</title>
-   <meta name="Keywords" content="Multi Door Fridge Freezer, American Style Fridge Freezer, Tall Fridge Freezer, LG, LG fridge freezer, LG Refrigerator, Combi, Bottom Freezer,  Side by Side Frigde Freezer">
-   <meta name="Description" content="Do you need some help choosing a fridge freezer? LG's appliance finder is here to help guide you on your journey.">
-   <meta property="og:title" content="Fridge freezer finder | LG UK" />
-   <meta property="og:url" content="https://www.lg.com/uk/fridge-freezer/appliance-finder">
-   <meta property="og:description" content="Do you need some help choosing a fridge freezer? LG's appliance finder is here to help guide you on your journey." />
-   <meta property="og:image" content="https://www.lg.com/uk/fridge-freezer/images/common/og_banner.jpg">
+   <title>Strumento di ricerca frigoriferi | LG Italia</title>
+   <meta name="Keywords" content="Frigo combinato Multidoor, Frigo combinato americano, Frigo combinato alto, LG, Frigo combinato LG, Frigorifero LG, Combinato, Freezer inferiore, Frigo combinato Side by Side, Frigo combinato French door">
+   <meta name="Description" content="Ti serve assistenza nella scelta di un frigo combinato? Lo strumento di ricerca elettrodomestici di LG è pensato per aiutarti in questa decisione.">
+   <meta property="og:title" content="Strumento di ricerca frigoriferi | LG Italia" />
+   <meta property="og:url" content="https://www.lg.com/it/frigoriferi/trova-il-frigorifero">
+   <meta property="og:description" content="Ti serve assistenza nella scelta di un frigo combinato? Lo strumento di ricerca elettrodomestici di LG è pensato per aiutarti in questa decisione." />
+	<meta property="og:image" content="https://www.lg.com/it/frigoriferi/images/common/og_banner.jpg">
    <jsp:include page="/WEB-INF/jsp/gp/common/include/head/head-css.jsp" />
    <jsp:include page="/WEB-INF/jsp/gp/common/include/head/font-woff.jsp" />
    <!-- // default code -->
@@ -146,6 +146,14 @@
 			</div>
 			<div class="btn_cont">
 				<button type="button" id="nextStepBtn">AVANTI</button>
+			</div>
+		</div>
+		<!-- 미매칭 팝업 -->
+		<div class="product_none_popup">
+			<div class="popup_wrap">
+				<p>No Model matches when selecting this option. Choose another option and continue with the Fridge finder.</p>
+				<button type="button" id="selectAgainBtn">Select again</button>
+				<button type="button" id="selectAgainCloseBtn">close button</button>
 			</div>
 		</div>
 	</div>

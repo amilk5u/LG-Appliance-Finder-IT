@@ -71,8 +71,7 @@
 	<!-- 스테이징 / 라이브 적용시 삭제 -->
 	<!-- <header>header</header> -->
 	<!-- //스테이징 / 라이브 적용시 삭제 -->
-	<!-- <div class="cookie-banner"></div> -->
-<!-- Enter Code Here -->
+	<!-- <div class="cookie-banner"></div> --> <!-- Enter Code Here -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -83,86 +82,96 @@
    </div>
 </div>
 <!--//intro-->
-<div id="quickFinder" style="display: block;" class="step01">
+<div id="quickFinder" class="step01">
    <div class="finder_wrap">
       <!--navigation-->
       <div id="finderNav">
          <ul>
             <li>
                <strong>1</strong>
-               <p>TYPE</p>
+               <p>Tipologia</p>
             </li>
             <li>
                <strong>2</strong>
-               <p>CAPACITY</p>
+               <p>CAPACITÀ</p>
             </li>
             <li>
                <strong>3</strong>
-               <p>SIZE</p>
+               <p>DIMENSIONI</p>
             </li>
             <li>
                <strong>4</strong>
-               <p>ICE & WATER DISPENSER</p>
+               <p>DISPENSER DI ACQUA E GHIACCIO</p>
             </li>
             <li>
                <strong>5</strong>
-               <p>PERFORMAMCE</p>
+               <p>PRESTAZIONI</p>
             </li>
             <li>
                <strong>6</strong>
-               <p>FEATURE</p>
+               <p>CARATTERISTICHE</p>
             </li>
             <li>
                <strong>7</strong>
-               <p>COLOUR</p>
+               <p>COLORE</p>
             </li>
          </ul>
       </div>
       <!--//navigation-->
       <!--question & answer area-->
-      <div class="qna_wrap">
-         <strong class="que_title" style="display: block;">What type of fridge are <br> you looking for?</strong>
-         <div class="qna_description qna_description01" style="display: none;"><strong>What type of fridge are <br> you looking for?</strong>
+      <div class="qna_wrap"><strong class="que_title" style="display: block;">Che tipo di frigorifero stai cercando?</strong>
+         <div class="qna_description qna_description01" style="display: none;"><strong>Che tipo di frigorifero stai cercando?</strong>
             <div class="txt_box">
                <i></i>
                <p></p>
-               <button type="button" class="load_more_btn">LOAD MORE</button>
-               <button type="button" class="learn_more_btn">Learn More</button>
+               <button type="button" class="load_more_btn">Scopri di più</button>
+               <button type="button" class="learn_more_btn">Scopri di più</button>
             </div>
          </div>
          <div class="qna_description qna_description02" style="display: none;">
             <div class="txt_box">
                <p></p>
-               <button id="detailCloseBtn" type="button" class="close_more_btn">CLOSE</button>
+               <button id="detailCloseBtn" type="button" class="close_more_btn">CHIUDI</button>
             </div>
          </div>
       </div>
       <!--//question & answer area-->
       <!--question image-->
-      <div id="qnaImgWrap" class="mo_only" style="background-image:url(./images/step01/que_img00.png)"></div>
-      <div id="qnaImgWrap" class="pc_only" style="background-image:url(./images/pc/step01/que_img00.png)"></div>
+      <div id="qnaImgWrap" style="background-image:url(./images/pc/step01/que_img00.png)">
+         <!-- <img src="./images/pc/step02/people_icon.png" alt="people image"> -->
+      </div>
       <!--//question image-->
    </div>
    <!--선택 항목 버튼-->
    <!--선택 된 항목은 button에 active 클래스-->
    <!--선택 불가 항목은 button에 disable 클래스-->
    <div id="selectWrap">
-      <button type="button" class="caution_open_btn">Click here for a guide to dimensions and measurement.</button>
-      <p class="select_tit"><em>You Can Select Multiple Choices.</em></p>
+      <button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button>
+      <p class="select_tit"><em>Scegli tutte le opzioni che vuoi. </em></p>
       <ol>
          <li>
-            <button class="answer_btn" type="button" data-key="FT06513471" data-value="FV65320784"> <i></i>
-               <p> Multi Door Fridge Freezer</p>
+            <button class="answer_btn" type="button" data-key="FT05707162" data-value="FV65064400"><i></i>
+               <p>Multidoor</p>
             </button>
          </li>
          <li>
-            <button class="answer_btn" type="button" data-key="FT06513471" data-value="FV65320783"> <i></i>
-               <p> American Style Fridge Freezer</p>
+            <button class="answer_btn" type="button" data-key="FT05707162" data-value="FV65064399"><i></i>
+               <p>Side-by-Side</p>
             </button>
          </li>
          <li>
-            <button class="answer_btn" type="button" data-key="FT06513471" data-value="FV65320785"> <i></i>
-               <p> Tall Fridge Freezer</p>
+            <button class="answer_btn" type="button" data-key="FT05707162" data-value="FV65064397"><i></i>
+               <p>Combinato</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT05707162" data-value="FV65064398"><i></i>
+               <p>Doppia porta</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT05707162" data-value="FV65064402"><i></i>
+               <p>Maxi Side-by-Side componibile</p>
             </button>
          </li>
       </ol>
@@ -170,18 +179,26 @@
    <!--//선택 항목 버튼-->
    <!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
    <div class="show_now_wrap">
-      <button type="button" id="shopNowBtn">See Results Now</button>
+      <button type="button" id="shopNowBtn">Vai subito ai prodotti</button>
    </div>
    <!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
    <div class="step_move_wrap">
       <div class="btn_cont">
-         <button type="button" id="backStepBtn" style="display: block;">BACK</button>
+         <button type="button" id="backStepBtn" style="display: none;">INDIETRO</button>
       </div>
       <div class="btn_cont">
-         <button type="button" id="nextStepBtn" data-link-name="Next : Q2 CAPACITY" class="active" style="opacity: 1; display: block;">NEXT</button>
+         <button type="button" id="nextStepBtn" data-link-name="AVANTI : Q1 Tipologia" style="opacity: 0; display: none;">AVANTI</button>
       </div>
    </div>
-</div>    
+   <div class="product_none_popup">
+      <div class="popup_wrap">
+         <p>No Model matches when selecting this option. Choose another option and continue with the Fridge finder.</p>
+         <button type="button" id="selectAgainBtn">Select again</button>
+         <button type="button" id="selectAgainCloseBtn">close button</button>
+      </div>
+   </div>
+</div> 
+   
    <!-- step01 Interactive Popup -->
 	<div class="popup_step01 popup_step">
 		<!-- Multidoor -->
@@ -413,7 +430,7 @@
 	<div class="popup_movie_step05 popup_step">
 		<div class="popup_wrap">
 			<div class="long">
-				<strong>Mantenimento della freschezza</strong>
+				<strong>Mantenimento della <br> freschezza</strong>
 				<div class="video_wrap">
 					<video playsinline="" muted="" loop="">
 						<source src="./datafile/video01.mp4" type="video/mp4">

@@ -1,0 +1,27 @@
+@mixin displayFlex($flexwrap : stretch){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: $flexwrap;
+	flex-wrap: $flexwrap;
+}
+@mixin displayFlexCenter($align : center, $justify : center){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: $align;
+	align-items: $align;
+	-webkit-justify-content: $justify;
+	justify-content: $justify;
+}
+@mixin flex($count : 1){
+	-webkit-box-flex: $count;
+	-moz-box-flex: $count;
+	-webkit-flex: $count;
+	-ms-flex: $count;
+	flex: $count;
+}

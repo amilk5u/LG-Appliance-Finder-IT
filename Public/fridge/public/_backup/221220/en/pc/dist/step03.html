@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="Description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta name="Keywords" content="">
+	<meta name="Author" content="">
+	<meta name="robots" content="ALL">
+	<link rel="stylesheet" href="./stylesheets/css/common.css">
+	<script src="./javascripts/jquery-1.8.2.min.js"></script>
+	<!-- <script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WMRN2JB');
+	</script>
+	<script>
+		var standardData = {};
+		standardData = {
+			"siteType": "B2C",
+			"pageType": "MICROSITE",
+			"pdpStatus": "",
+			"level1": "ha",
+			// "level2": "",
+			// "level3": ""
+		};
+		_dl = {
+			"page_name": {
+				"super_category": "home-appliances",
+				"bu": "ha",
+				"sub_category_list": "",
+				"sub_category": "",
+				"page_purpose": "microsite",
+				"category": "refrigerators"
+			},
+			"country_code": "uk",
+			"language_code": "en",
+			"microsite_name": "appliance finder"
+		};
+	</script> -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69014947-51"></script> -->
+	<!-- <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-69014947-51');
+	</script> -->
+</head>
+<body>
+	<noscript> <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WMRN2JB" height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager iframe"> </iframe> </noscript>
+	<!-- <div class="guide_line">
+      <div class="guide_70"></div>
+      <div class="guide_center"></div>
+      <div class="guide_1320"></div> 
+      <div class="guide_1180"></div>
+   </div> -->
+
+	<!-- 스테이징 / 라이브 적용시 삭제 -->
+	<!-- <header>header</header> -->
+	<!-- //스테이징 / 라이브 적용시 삭제 -->
+	<!-- <div class="cookie-banner"></div> -->
+<!-- Enter Code Here -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--intro-->
+<div id="finderIntro" style="display: none;">
+   <div id="introAnimation">
+      <lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+   </div>
+</div>
+<!--//intro-->
+<div id="quickFinder" style="display: block;" class="step03">
+   <div class="finder_wrap">
+      <!--navigation-->
+      <div id="finderNav">
+         <ul>
+            <li>
+               <strong>1</strong>
+               <p>TYPE</p>
+            </li>
+            <li>
+               <strong>2</strong>
+               <p>CAPACITY</p>
+            </li>
+            <li>
+               <strong>3</strong>
+               <p>SIZE</p>
+            </li>
+            <li>
+               <strong>4</strong>
+               <p>ICE & WATER DISPENSER</p>
+            </li>
+            <li>
+               <strong>5</strong>
+               <p>PERFORMAMCE</p>
+            </li>
+            <li>
+               <strong>6</strong>
+               <p>FEATURE</p>
+            </li>
+            <li>
+               <strong>7</strong>
+               <p>COLOUR</p>
+            </li>
+         </ul>
+      </div>
+      <!--//navigation-->
+      <!--question & answer area-->
+      <div class="qna_wrap">
+         <strong class="que_title" style="display: block;">Which size best fits <br> your space?</strong>
+         <div class="qna_description qna_description01" style="display: none;"><strong>Which size best fits <br> your space?</strong>
+            <div class="txt_box">
+               <i style="background-image:url(./images/pc/step02/disc_icon03.png)"></i>
+               <p>For those who do a big grocery shop, or share the fridge with many others.</p>
+               <button type="button" class="load_more_btn">LOAD MORE</button>
+               <button type="button" class="learn_more_btn">Learn More</button>
+            </div>
+         </div>
+         <div class="qna_description qna_description02" style="display: none;">
+            <div class="txt_box">
+               <p></p>
+               <button id="detailCloseBtn" type="button" class="close_more_btn">CLOSE</button>
+            </div>
+         </div>
+      </div>
+      <!--//question & answer area-->
+      <!--question image-->
+      <div id="qnaImgWrap" style="background-image:url(./images/pc/step02/que_img02.png)"></div>
+      <!--//question image-->
+   </div>
+   <!--선택 항목 버튼-->
+   <!--선택 된 항목은 button에 active 클래스-->
+   <!--선택 불가 항목은 button에 disable 클래스-->
+   <div id="selectWrap"><button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button><p class="select_tit"><em>Scegli tutte le opzioni che vuoi. </em></p><ol><li><span>Profondità<div><em>Scegli tutte le opzioni che vuoi.</em></div></span><div><button class="answer_btn active" type="button" data-key="Depth" data-value="under_760mm"><p>Meno di 76cm</p></button><button class="answer_btn" type="button" data-key="" data-value="dummy" disabled=""><p>76cm o più</p></button></div></li><li><span>Larghezza<div><em>Scegli tutte le opzioni che vuoi.</em></div></span><div><button class="answer_btn all_select" type="button" data-key="step03-1" data-value="AllSelectOption"><span></span><p>Tutte le opzioni</p></button><button class="answer_btn" type="button" data-key="Width" data-value="under_600mm" disabled=""><p>Meno di 60cm</p></button><button class="answer_btn" type="button" data-key="Width" data-value="_610mm_800mm" disabled=""><p>Da 61 a 80cm</p></button><button class="answer_btn" type="button" data-key="Width" data-value="_810_900mm"><p>Da 81 a 90cm</p></button><button class="answer_btn" type="button" data-key="Width" data-value="_910mm_or_more" disabled=""><p>91cm o più</p></button></div></li><li><span>Altezza<div><em>Scegli tutte le opzioni che vuoi.</em></div></span><div><button class="answer_btn all_select" type="button" data-key="step03-2" data-value="AllSelectOption"><span></span><p>Tutte le opzioni</p></button><button class="answer_btn" type="button" data-key="Height" data-value="under_1800mm"><p>Meno di 180cm</p></button><button class="answer_btn" type="button" data-key="Height" data-value="_1800_2000mm" disabled=""><p>Da 180 a 200cm</p></button><button class="answer_btn" type="button" data-key="Height" data-value="_2000mm_or_more" disabled=""><p>200cm o più</p></button></div></li></ol></div>
+   <!--//선택 항목 버튼-->
+   <!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+   <div class="show_now_wrap">
+      <button type="button" id="shopNowBtn" data-link-name="r_Btn_stage2" data-model-description="American Style Fridge Freezer,600L or more" class="">See Results Now</button>
+   </div>
+   <!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+   <div class="step_move_wrap">
+      <div class="btn_cont">
+         <button type="button" id="backStepBtn" style="display: block;">BACK</button>
+      </div>
+      <div class="btn_cont">
+         <button type="button" id="nextStepBtn" data-link-name="Next : Q2 CAPACITY" class="active" style="opacity: 1; display: block;">NEXT</button>
+      </div>
+   </div>
+</div> 	<!-- step01 Interactive Popup -->
+	<div class="popup_step01 popup_step">
+		<!-- Multidoor -->
+		<div class="popup_wrap">
+			<div class="tit_wrap">
+				<i></i>
+				<strong>Multidoor</strong>
+			</div>
+			<div class="popup_con">
+				<strong>La scelta più indicata se devi conservare tanti alimenti o se hai una famiglia numerosa</strong>
+				<div class="txt_wrap">
+					<img class="mo_only" src="./images/step01/popup_contents_img01.png" alt="Multidoor">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img01.png" alt="Multidoor">
+					<div class="txt_box">
+						<p>Comodo per le famiglie numerose o per chi usa spesso la zona frigo, facilmente raggiungibile senza chinarti. Chiamato anche frigorifero francese, sta trovando sempre più spazio anche qui in Italia.</p>
+						<button type="button" class="close_btn">Andiamo avanti</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Multidoor -->
+		<!-- Side-by-Side -->
+		<div class="popup_wrap">
+			<div class="tit_wrap">
+				<i></i>
+				<strong>Side-by-Side</strong>
+			</div>
+			<div class="popup_con">
+				<strong>Una scelta indicata se usi spesso il freezer e se hai bisogno di tanto spazio di conservazione</strong>
+				<div class="txt_wrap">
+					<img class="mo_only" src="./images/step01/popup_contents_img02.png" alt="Side-by-Side">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img02.png" alt="Side-by-Side">
+					<div class="txt_box">
+						<p>Chiamato anche "americano", è sempre più popolare anche qui in Italia. Ha il frigorifero a destra e il congelatore a sinistra e offre tanto spazio per gli alimenti. </p>
+						<button type="button" class="close_btn">Andiamo avanti</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Side-by-Side -->
+		<!-- Combinati -->
+		<div class="popup_wrap">
+			<div class="tit_wrap">
+				<i></i>
+				<strong>Combinati</strong>
+			</div>
+			<div class="popup_con">
+				<strong>Una soluzione pratica dall'ingombro ridotto</strong>
+				<div class="txt_wrap">
+					<img class="mo_only" src="./images/step01/popup_contents_img03.png" alt="Combinati">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img03.png" alt="Combinati">
+					<div class="txt_box">
+						<p>È la tipologia più diffusa qui in Italia: il classico frigorifero alto e snello con congelatore in basso, particolarmente indicato per chi fa la spesa più volte nell'arco della settimana.</p>
+						<button type="button" class="close_btn">Andiamo avanti</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Combinati -->
+		<!-- Doppia Porta -->
+		<div class="popup_wrap">
+			<div class="tit_wrap">
+				<i></i>
+				<strong>Doppia Porta</strong>
+			</div>
+			<div class="popup_con">
+				<strong>Il frigorifero Doppia porta è indicato se hai bisogno di più spazio di conservazione nel comparto frigo</strong>
+				<div class="txt_wrap">
+					<img class="mo_only" src="./images/step01/popup_contents_img04.png" alt="Doppia Porta">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img04.png" alt="Doppia Porta">
+					<div class="txt_box">
+						<p>Più largo e capiente dei frigoriferi combinati tradizionali, è indicato se hai bisogno di tanto spazio per i tuoi cibi, ma non vuoi passare a un modello Side-by-Side o Multidoor.</p>
+						<button type="button" class="close_btn">Andiamo avanti</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Doppia Porta -->
+		<!-- Frigoriferi Maxi Side-by-Side -->
+		<div class="popup_wrap">
+			<div class="tit_wrap">
+				<i></i>
+				<strong>Frigoriferi Maxi Side-by-Side</strong>
+			</div>
+			<div class="popup_con">
+				<strong>La scelta migliore se hai bisogno di separare frigo e congelatore</strong>
+				<div class="txt_wrap">
+					<img class="mo_only" src="./images/step01/popup_contents_img05.png" alt="Frigoriferi Maxi Side-by-Side">
+					<img class="pc_only" src="./images/pc/step01/popup_contents_img05.png" alt="Frigoriferi Maxi Side-by-Side">
+					<div class="txt_box">
+						<p>Questi elettrodomestici sono perfetti se vuoi un frigo o un congelatore supplementare per conservare ancora più alimenti. Sono modelli componibili in base alle tue esigenze.</p>
+						<button type="button" class="close_btn">Andiamo avanti</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Frigoriferi Maxi Side-by-Side -->
+	</div>
+	<!-- //step01 Interactive Popup -->
+
+	<!-- step03 Size Popup -->
+	<div class="popup_step03 popup_step">
+		<div class="popup_wrap">
+			<strong>INFO SULLE DIMENSIONI</strong>
+			<div class="multi">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img01_1.jpg" alt="Multidoor, Larghezza / Altezza / Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img01_1.jpg" alt="Multidoor, Larghezza / Altezza / Profondità">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img01_2.jpg" alt="Multidoor, Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img01_2.jpg" alt="Multidoor, Profondità">
+						<div class="depth_size">
+							<div class="size_elm">
+								<p>In linea con <br> l'arredamento</p>
+							</div>
+							<div class="size_elm">
+								<p>Sporgente</p>
+							</div>
+						</div>
+						<div class="under_more_txt">
+							<span>Meno di 760mm</span>
+							<span>Più di 760mm</span>
+						</div>
+					</div>
+				</div>
+				<div class="indicator"></div>
+			</div>
+			<div class="american">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img02_1.jpg" alt="Side-by-Side, Larghezza / Altezza / Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img02_1.jpg" alt="Side-by-Side, Larghezza / Altezza / Profondità">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img02_2.jpg" alt="Side-by-Side, Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img02_2.jpg" alt="Side-by-Side, Profondità">
+						<div class="depth_size">
+							<div class="size_elm">
+								<p>In linea con <br> l'arredamento</p>
+							</div>
+							<div class="size_elm">
+								<p>Sporgente</p>
+							</div>
+						</div>
+						<div class="under_more_txt">
+							<span>Meno di 760mm</span>
+							<span>Più di 760mm</span>
+						</div>
+					</div>
+				</div>
+				<div class="indicator"></div>
+			</div>
+			<div class="tall">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img03_1.jpg" alt="Combinato, Larghezza / Altezza / Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img03_1.jpg" alt="Combinato, Larghezza / Altezza / Profondità">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
+					</div>
+				</div>
+				<div class="indicator"></div>
+			</div>
+			<div class="double">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img04_1.jpg" alt="Doppia porta, Larghezza / Altezza / Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img04_1.jpg" alt="Doppia porta, Larghezza / Altezza / Profondità">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
+					</div>
+				</div>
+				<div class="indicator"></div>
+			</div>
+			<div class="lader">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img05_1.jpg" alt="Frigoriferi Maxi Side-by-Side, Larghezza / Altezza / Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img05_1.jpg" alt="Frigoriferi Maxi Side-by-Side, Larghezza / Altezza / Profondità">
+						<div class="size_txt">
+							<span>Profondità</span>
+							<span>Larghezza</span>
+							<span>Altezza</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img class="mo_only" src="./images/step03/popup_img05_2.jpg" alt="Frigoriferi Maxi Side-by-Side, Profondità">
+						<img class="pc_only" src="./images/pc/step03/popup_img05_2.jpg" alt="Frigoriferi Maxi Side-by-Side, Profondità">
+						<div class="depth_size">
+							<div class="size_elm">
+								<p>In linea con <br> l'arredamento</p>
+							</div>
+							<div class="size_elm">
+								<p>Sporgente</p>
+							</div>
+						</div>
+						<div class="under_more_txt">
+							<span>Meno di 760mm</span>
+							<span>Più di 760mm</span>
+						</div>
+					</div>
+				</div>
+				<div class="indicator"></div>
+			</div>			
+			<button type="button" class="popup_close_btn">pulsante di chiusura</button>
+		</div>
+	</div>
+	<!-- //step03 Size Popup -->
+
+	<!-- step05 Video Popup -->
+	<div class="popup_movie_step05 popup_step">
+		<div class="popup_wrap">
+			<div class="long">
+				<strong>Mantenimento della <br> freschezza</strong>
+				<div class="video_wrap">
+					<video playsinline="" muted="" loop="">
+						<source src="./datafile/video01.mp4" type="video/mp4">
+					</video>
+					<i></i>
+					<img src="./images/common/video01_poster_img.jpg" alt="Mantenimento della freschezza manifesto">
+					<button type="button" class="video_btn" data-link-name="riproduzione Video : Mantenimento della freschezza">riproduzione Video pulsante</button>
+				</div>
+				<div class="desc">
+					<span>*La posizione delle bocchette del Door Cooling+ può variare a seconda del modello.</span>
+					<span>*Il prodotto mostrato nel video è puramente indicativo e può differire dal modello reale. Il sistema Door Cooling+ non è attivo quando la porta del frigo è aperta.</span>
+				</div>
+			</div>
+			<div class="ventilation">
+				<strong>Ventilazione</strong>
+				<div class="video_wrap">
+					<video playsinline="" muted="" loop="">
+						<source src="./datafile/video02.mp4" type="video/mp4">
+					</video>
+					<i></i>
+					<img src="./images/common/video02_poster_img.jpg" alt="Ventilazione manifesto">
+					<button type="button" class="video_btn" data-link-name="riproduzione Video : Ventilazione">riproduzione Video pulsante</button>
+				</div>
+				<div class="desc">
+					<span>*La posizione del filtro Pure N Fresh può variare a seconda del modello.</span>
+				</div>
+			</div>
+			<div class="instaview">
+				<strong>InstaView™ Door-in-Door®</strong>
+				<div class="video_wrap">
+					<video playsinline="" muted="" loop="">
+						<source src="./datafile/video03.mp4" type="video/mp4">
+					</video>
+					<i></i>
+					<img src="./images/common/video03_poster_img.jpg" alt="InstaView™ Door-in-Door® manifesto">
+					<button type="button" class="video_btn" data-link-name="riproduzione Video : InstaView™ Door-in-Door®">riproduzione Video pulsante</button>
+				</div>
+			</div> 
+			<div class="smart_ai_features">
+				<strong>Funzioni Smart con <br>Intelligenza Artificiale</strong>
+				<div class="video_wrap">
+					<video playsinline="" muted="" loop="">
+						<source src="./datafile/video04.mp4" type="video/mp4">
+					</video>
+					<i></i>
+					<img src="./images/common/video04_poster_img.jpg" alt="Funzioni Smart con Intelligenza Artificiale">
+					<button type="button" class="video_btn" data-link-name="riproduzione Video : Funzioni Smart con Intelligenza Artificiale">riproduzione Video pulsante</button>
+				</div>	
+				<div class="desc">
+					<span>*Google e Google Home sono marchi di Google LLC.</span>
+					<span>*LG SmartThinQ è anche conosciuto come LG ThinQ.</span>
+					<span>*Le funzioni smart e quelle degli assistenti vocali possono variare in base al modello e al Paese. Verifica sul sito LG.com la disponibilità dei servizi.</span>
+					<span>*Smart speaker con assistente vocale non incluso.</span>
+					<span>*Il video delle funzionalità e del prodotto potrebbe differire dal prodotto reale.</span>
+				</div>			
+			</div>
+			<button type="button" class="popup_close_btn">pulsante di chiusura</button>
+		</div>
+	</div>
+	<!-- //step05 Video Popup -->
+	
+	<!-- step07 Interactive Popup -->
+	<div class="popup_step07 popup_step">
+		<div class="popup_wrap">
+			<div class="popup_step07_slide">
+				<ol class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="tit_wrap">
+							<i></i>
+							<strong>Nero</strong>
+						</div>
+						<div class="popup_con">
+							<strong>Sempre di moda</strong>
+							<div class="txt_wrap">
+								<img src="" alt="Nero product">
+								<div class="txt_box">
+									<div>
+										<p>La superficie nera opaca trattiene meno le impronte, risultando sempre elegante.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="tit_wrap">
+							<i></i>
+							<strong>Acciaio inox</strong>
+						</div>
+						<div class="popup_con">
+							<strong>Sfumature eleganti che valorizzano i tuoi interni</strong>
+							<div class="txt_wrap">
+								<img src="" alt="Acciaio inox product">
+								<div class="txt_box">
+									<div>
+										<p>Il look inox non è solo bello da vedere, ma è anche facile da pulire.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="tit_wrap">
+							<i></i>
+							<strong>Argento</strong>
+						</div>
+						<div class="popup_con">
+							<strong>Uno dei colori più venduti che si adatta a tutti gli stili di arredamento</strong>
+							<div class="txt_wrap">
+								<img src="" alt="Argento product">
+								<div class="txt_box">
+									<div>
+										<p>L'argento si abbina con praticamente qualunque colore e stile di cucina.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="tit_wrap">
+							<i></i>
+							<strong>Bianco</strong>
+						</div>
+						<div class="popup_con">
+							<strong>Il bianco è una scelta di classe. Chiaro e facile da pulire</strong>
+							<div class="txt_wrap">
+								<img src="" alt="Bianco product">
+								<div class="txt_box">
+									<div>
+										<p>Il tuo nuovo frigorifero starà benissimo con tutti i tipi di arredamento.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="tit_wrap">
+							<i></i>
+							<strong>Beige</strong>
+						</div>
+						<div class="popup_con">
+							<strong>Aggiungi un tocco di calore alla tua cucina</strong>
+							<div class="txt_wrap">
+								<img src="" alt="Beige product">
+								<div class="txt_box">
+									<div>
+										<p>Il beige scalda l'atmosfera in cucina e la rende più confortevole.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ol>
+			</div>
+			<button type="button" class="close_btn">Scopri i consigli per te!</button>
+			<div class="indicator"></div>
+		</div>
+	</div>
+	<!-- //step07 Interactive Popup -->   
+	<!-- 스테이징 / 라이브 적용시 삭제 -->
+	<!-- <footer>footer</footer> -->
+	<!-- //스테이징 / 라이브 적용시 삭제 -->
+	<script src="./javascripts/plugin.js"></script>
+	<script src="./javascripts/design_common.js"></script>
+</body>
+</html>
