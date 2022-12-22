@@ -51,10 +51,10 @@ let _1800_2000mm = 'FTV0335762V';
 let _2000mm_or_more = 'FTV0335763V';
 
 let Plumbed = 'FTV0335946V';
-let Non_Plumbed = 'FTV0336031V';
+let Non_Plumbed = 'FV65347014';
 let Water_Only = 'FTV0336033V';
 
-let Door_cooling = 'FV65346616';  // Door_cooling,Linearcooling
+let Door_cooling = 'FTV0335958V';  // Door_cooling,Linearcooling
 let Linearcooling = 'FTV0335957V';
 let Pure_N_Fresh = 'FTV0336055V';
 
@@ -66,7 +66,7 @@ let EnergyGrade_D = 'FV65346305';
 let EnergyGrade_E = 'FV65346303';
 let EnergyGrade_F = 'FV65346304';
 
-let Instaview = 'FV65346610';
+let Instaview = 'FTV0335944V';
 let Door_in_Door = 'FTV0335968V';
 let Wine_Rack = 'FTV0335943V';
 let Folding_Shelf = 'FTV0335950V';
@@ -98,7 +98,7 @@ const product = {
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door, Folding_Shelf],
       FT06515694: black
    },
-   'GML945NS9E': { // 2 
+   'GML945NS9E': { // 2
       FT05707162: multi,
       FT06515688: _600L_or_more,
       FT06515690: under_760mm,
@@ -106,7 +106,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Door_in_Door, Folding_Shelf],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Door_in_Door, Folding_Shelf],
       FT06515694: silver
    },
    'GMX844MC6F': { // 3
@@ -115,7 +115,7 @@ const product = {
       FT06515690: under_760mm,
       FT06515689: _810_900mm,
       FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
+      FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door, Folding_Shelf],
       FT06515694: black
@@ -161,20 +161,21 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_F,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
       FT06515694: stainless_steel
    },
+
 
    // Side-by-Side (american)
    'GSXV91BSAF': { // 1
       FT05707162: american,
       FT06515688: _600L_or_more,
-      FT06515690: _600L_or_more,
+      FT06515690: under_760mm,
       FT06515689: _910mm_or_more,
       FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
+      FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
+      FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSXV91MCAE': { // 2
@@ -185,7 +186,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
+      FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: black
    },
    'GSXV90MBAE': { // 3
@@ -218,7 +219,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Dummy, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSJV90BSAE': { // 6
@@ -240,21 +241,10 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
-   'GSLV71PZTM': { // 8
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling],
-      FT06515694: silver
-   },
-   'GSLV90PZAE': { // 9
+   'GSLV90PZAE': { // 8
       FT05707162: american,
       FT06515688: _600L_or_more,
       FT06515690: under_760mm,
@@ -265,7 +255,7 @@ const product = {
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Wine_Rack],
       FT06515694: silver
    },
-   'GSLV90PZAD': { // 10
+   'GSLV90PZAD': { // 9
       FT05707162: american,
       FT06515688: _600L_or_more,
       FT06515690: under_760mm,
@@ -276,7 +266,7 @@ const product = {
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
-   'GSBV70DSTM': { // 11
+   'GSBV70DSTM': { // 10
       FT05707162: american,
       FT06515688: _600L_or_more,
       FT06515690: under_760mm,
@@ -284,10 +274,10 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_F,
       FT06515502: '',
-      FT06515762: [Dummy, Door_cooling, Linearcooling],
+      FT06515762: [Door_cooling, Linearcooling],
       FT06515694: silver
    },
-   'GSBV70PZTE': { // 12
+   'GSBV70PZTE': { // 11
       FT05707162: american,
       FT06515688: _600L_or_more,
       FT06515690: under_760mm,
@@ -295,9 +285,44 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
-      FT06515762: [Dummy, Door_cooling, Linearcooling],
+      FT06515762: [Door_cooling, Linearcooling],
       FT06515694: silver
    },
+   'GSLV51WBXM': { // 12
+      FT05707162: american,
+      FT06515688: _600L_or_more,
+      FT06515690: under_760mm,
+      FT06515689: _910mm_or_more,
+      FT06515691: under_1800mm,
+      FT06515693: EnergyGrade_F,
+      FT06515502: '',
+      FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling],
+      FT06515694: black
+   },
+   'GSJV31DSXF': { // 13
+      FT05707162: american,
+      FT06515688: _600L_or_more,
+      FT06515690: under_760mm,
+      FT06515689: _910mm_or_more,
+      FT06515691: under_1800mm,
+      FT06515693: EnergyGrade_F,
+      FT06515502: '',
+      FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Door_in_Door],
+      FT06515694: silver
+   },
+   'GSJV70WBTF': { // 14
+      FT05707162: american,
+      FT06515688: _600L_or_more,
+      FT06515690: under_760mm,
+      FT06515689: _910mm_or_more,
+      FT06515691: under_1800mm,
+      FT06515693: EnergyGrade_F,
+      FT06515502: ThinQ,
+      FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door],
+      FT06515694: black
+   },
+
+
 
 
    // Combinati
@@ -613,16 +638,72 @@ const product = {
       FT05707162: tall,
       FT06515688: under_400L,
       FT06515690: under_760mm,
-      FT06515689: under_600mm,
+      FT06515689: _500L_600L,
       FT06515691: _2000mm_or_more,
       FT06515693: EnergyGrade_C,
       FT06515502: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
+   'GBB72SAVGN': { // 30
+      FT05707162: tall,
+      FT06515688: under_400L,
+      FT06515690: under_760mm,
+      FT06515689: _500L_600L,
+      FT06515691: _2000mm_or_more,
+      FT06515693: EnergyGrade_D,
+      FT06515502: '',
+      FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
+      FT06515694: silver
+   },
+   'GBB62PZJMN': { // 31
+      FT05707162: tall,
+      FT06515688: under_400L,
+      FT06515690: under_760mm,
+      FT06515689: _500L_600L,
+      FT06515691: _2000mm_or_more,
+      FT06515693: EnergyGrade_E,
+      FT06515502: '',
+      FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      FT06515694: silver
+   },
+   'GBB61PZJMN': { // 32
+      FT05707162: tall,
+      FT06515688: under_400L,
+      FT06515690: under_760mm,
+      FT06515689: _500L_600L,
+      FT06515691: _1800_2000mm,
+      FT06515693: EnergyGrade_E,
+      FT06515502: '',
+      FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
+      FT06515694: silver
+   },
+   'GBB61BLHEC': { // 33
+      FT05707162: tall,
+      FT06515688: under_400L,
+      FT06515690: under_760mm,
+      FT06515689: under_600mm,
+      FT06515691: _1800_2000mm,
+      FT06515693: EnergyGrade_E,
+      FT06515502: ThinQ,
+      FT06515762: [Dummy, Door_cooling, Linearcooling, Door_in_Door, Reversible_Door],
+      FT06515694: black
+   },
+   'GBF61BLHMN': { // 34
+      FT05707162: tall,
+      FT06515688: under_400L,
+      FT06515690: under_760mm,
+      FT06515689: under_600mm,
+      FT06515691: _1800_2000mm,
+      FT06515693: EnergyGrade_E,
+      FT06515502: ThinQ,
+      FT06515762: [Water_Only, Door_cooling, Linearcooling, Reversible_Door],
+      FT06515694: black
+   },
 
 
-   // // Doppia Porta
+
+   // Doppia Porta
    'GTF916SEPYD': { // 1
       FT05707162: double,
       FT06515688: _500L_600L,
@@ -631,7 +712,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Dummy, Door_cooling, Linearcooling],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling],
       FT06515694: beige
    },
    'GTF916PZPYD': { // 2
@@ -642,8 +723,8 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Dummy, Door_cooling, Linearcooling],
-      FT06515694: beige
+      FT06515762: [Plumbed, Door_cooling, Linearcooling],
+      FT06515694: silver
    },
    'GTB744PZHZD': { // 3
       FT05707162: double,
@@ -664,7 +745,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling],
+      FT06515762: [Plumbed, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTF744SEPZD': { // 5
@@ -675,7 +756,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Non_Plumbed, Door_cooling, Linearcooling],
+      FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: beige
    },
    'GTB744BMBZD': { // 6
@@ -713,7 +794,8 @@ const product = {
    },
 
 
-   // // Maxi Side by Side
+
+   // Maxi Side by Side
    'GFT41PZGSZ': { // 1
       FT05707162: lader,
       FT06515688: under_400L,
@@ -952,7 +1034,7 @@ const configData = {
                description: 'Perfetto per soddisfare le esigenze di una famiglia numerosa grazie alla maxi capacità.',
                icon: 'step02/disc_icon04.png',
             }
-         },      
+         },
       ],
       //3번 스탭
       [
@@ -1096,7 +1178,7 @@ const configData = {
          },
          {
             key: 'FT06515762',
-            value: 'FTV0335968V,FTV0335957V',
+            value: 'FTV0335958V,FTV0335957V',
             content: 'Mantenimento della freschezza',
             changeData: {
                description: 'Le tecnologie di raffreddamento e di controllo della temperatura dei nostri frigoriferi mantengono i cibi freschi.',
@@ -1674,7 +1756,7 @@ function main() {
                         for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
                            for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
                               if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-                                 console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+                                 // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
                                  if (idx !== 6 && idx !== 5) {
                                     // console.log('******', _lastPro[i])
                                     _stepProductArray.push(_lastPro[i]);
@@ -1697,8 +1779,8 @@ function main() {
                         if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
                            for (let h = 0; h < _selectValue.split(',').length; h++) {
                               if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
-                                 console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
-                                 console.debug('******', _lastPro[i])
+                                 // console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
+                                 // console.debug('******', _lastPro[i])
                                  _stepProductArray.push(_lastPro[i]);
                                  break;
                               }
@@ -1706,9 +1788,9 @@ function main() {
 
                         } else {
                            if (_lastPro[i][_selectKey] === _selectValue) {
-                              console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
+                              // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
                               if (idx !== 6 && idx !== 5) {
-                                 console.debug('******', _lastPro[i])
+                                 // console.debug('******', _lastPro[i])
                                  _stepProductArray.push(_lastPro[i]);
                               } else {
                                  _judgmentNum++;
@@ -1728,7 +1810,7 @@ function main() {
                }
                // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
                if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
-                  console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                  // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
                   _stepProductArray.push(_lastPro[i]);
                }
             }
