@@ -66,7 +66,7 @@ let EnergyGrade_D = 'FV65346305';
 let EnergyGrade_E = 'FV65346303';
 let EnergyGrade_F = 'FV65346304';
 
-let Instaview = 'FTV0335944V';
+let Instaview = 'FV65346610';
 let Door_in_Door = 'FTV0335968V';
 let Wine_Rack = 'FTV0335943V';
 let Folding_Shelf = 'FTV0335950V';
@@ -274,7 +274,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_F,
       FT06515502: '',
-      FT06515762: [Door_cooling, Linearcooling],
+      FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GSBV70PZTE': { // 11
@@ -285,7 +285,7 @@ const product = {
       FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
-      FT06515762: [Door_cooling, Linearcooling],
+      FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GSLV51WBXM': { // 12
@@ -712,7 +712,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Plumbed, Door_cooling, Linearcooling],
+      FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: beige
    },
    'GTF916PZPYD': { // 2
@@ -723,7 +723,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Plumbed, Door_cooling, Linearcooling],
+      FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTB744PZHZD': { // 3
@@ -745,7 +745,7 @@ const product = {
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
-      FT06515762: [Plumbed, Door_cooling, Linearcooling],
+      FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTF744SEPZD': { // 5
