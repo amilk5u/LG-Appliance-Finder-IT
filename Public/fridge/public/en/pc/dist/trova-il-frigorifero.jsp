@@ -636,7 +636,7 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-69014947-28');
+		gtag('config', 'UA-69014947-28'); 
 	</script>
 	<!-- //Global site tag (gtag.js) - Google Analytics -->
    
