@@ -731,7 +731,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling],
@@ -742,7 +742,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
@@ -753,7 +753,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
@@ -764,7 +764,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
@@ -792,7 +792,6 @@ const product = {
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: beige
    },
-
 
 
    // Maxi Side by Side
@@ -1299,6 +1298,16 @@ const configData = {
             },
             resultContent: 'step06',
          },
+         {
+            key: 'FT06515502',
+            value: 'dummy',
+            content: 'Non ho particolari esigenze, </br>fammi vedere tutti i modelli.',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: 'Doesn’t matter to me, I’d like to see all models.',
+               screenImg: 'step06/que_img01.png',
+            }
+         },
       ],
       //7번 스탭
       [
@@ -1392,34 +1401,152 @@ function imgPreload() {
 
       // result
       './images/pc/result/bg_unit.jpg',
+      './images/pc/result/center_img01.png',
+      './images/pc/result/center_img02.png',
+      './images/pc/result/center_img03.png',
+      './images/pc/result/center_img04.png',
+      './images/pc/result/center_img05.png',
 
       // step01
       './images/pc/step01/btn_icon01.png',
-
+      './images/pc/step01/btn_icon01_on.png',
+      './images/pc/step01/btn_icon02.png',
+      './images/pc/step01/btn_icon02_on.png',
+      './images/pc/step01/btn_icon03.png',
+      './images/pc/step01/btn_icon03_on.png',
+      './images/pc/step01/btn_icon04.png',
+      './images/pc/step01/btn_icon04_on.png',
+      './images/pc/step01/btn_icon05.png',
+      './images/pc/step01/btn_icon05_on.png',
+      './images/pc/step01/popup_contents_img01.png',
+      './images/pc/step01/popup_contents_img02.png',
+      './images/pc/step01/popup_contents_img03.png',
+      './images/pc/step01/popup_contents_img04.png',
+      './images/pc/step01/popup_contents_img05.png',
+      './images/pc/step01/popup_icon01.png',
+      './images/pc/step01/popup_icon02.png',
+      './images/pc/step01/popup_icon03.png',
+      './images/pc/step01/popup_icon04.png',
+      './images/pc/step01/popup_icon05.png',
+      './images/pc/step01/que_img00.png',
+      './images/pc/step01/que_img01.png',
+      './images/pc/step01/que_img01.png',
+      './images/pc/step01/que_img03.png',
+      './images/pc/step01/que_img04.png',
+      './images/pc/step01/que_img05.png',
+      './images/pc/step01/txt_bubble_icon.png',
 
       // step02
       './images/pc/step02/btn_icon01.png',
-
+      './images/pc/step02/btn_icon01_on.png',
+      './images/pc/step02/btn_icon02.png',
+      './images/pc/step02/btn_icon02_on.png',
+      './images/pc/step02/btn_icon03.png',
+      './images/pc/step02/btn_icon03_on.png',
+      './images/pc/step02/btn_icon04.png',
+      './images/pc/step02/btn_icon04_on.png',
+      './images/pc/step02/disc_icon01.png',
+      './images/pc/step02/disc_icon02.png',
+      './images/pc/step02/disc_icon03.png',
+      './images/pc/step02/disc_icon04.png',
+      './images/pc/step02/people_icon.png',
+      './images/pc/step02/que_img01.png',
+      './images/pc/step02/que_img02.png',
+      './images/pc/step02/que_img03.png',
+      './images/pc/step02/que_img04.png',
+      './images/pc/step02/que_img05.png',
+      './images/pc/step02/txt_bubble_icon.png',
 
       // step03
       './images/pc/step03/caution_icon.png',
-
+      './images/pc/step03/disc_icon01.png',
+      './images/pc/step03/popup_img01_1.jpg',
+      './images/pc/step03/popup_img01_2.jpg',
+      './images/pc/step03/popup_img02_1.jpg',
+      './images/pc/step03/popup_img02_2.jpg',
+      './images/pc/step03/popup_img03_1.jpg',
+      './images/pc/step03/popup_img04_1.jpg',
+      './images/pc/step03/popup_img05_1.jpg',
+      './images/pc/step03/popup_img05_2.jpg',
 
       // step04
       './images/pc/step04/btn_icon01.png',
-
+      './images/pc/step04/btn_icon02.png',
+      './images/pc/step04/btn_icon03.png',
+      './images/pc/step04/que_img01.png',
+      './images/pc/step04/que_img02.png',
+      './images/pc/step04/que_img03.png',
+      './images/pc/step04/que_img04.png',
 
       // step05
       './images/pc/step05/btn_icon01.png',
-
+      './images/pc/step05/btn_icon02.png',
+      './images/pc/step05/btn_icon03.png',
+      './images/pc/step05/que_img01.png',
+      './images/pc/step05/que_img02.png',
+      './images/pc/step05/que_img03.png',
+      './images/pc/step05/que_img04.png',
 
       // step06
       './images/pc/step06/btn_icon01.png',
-
+      './images/pc/step06/btn_icon02.png',
+      './images/pc/step06/btn_icon03.png',
+      './images/pc/step06/btn_icon04.png',
+      './images/pc/step06/btn_icon05.png',
+      './images/pc/step06/btn_icon06.png',
+      './images/pc/step06/que_img01.png',
+      './images/pc/step06/que_img02.png',
+      './images/pc/step06/que_img03.png',
+      './images/pc/step06/que_img04.png',
+      './images/pc/step06/que_img05.png',
+      './images/pc/step06/que_img06.png',
+      './images/pc/step06/que_img07.png',
 
       // step07
       './images/pc/step07/american_black_popup_img.png',
-
+      './images/pc/step07/american_que_img01.png',
+      './images/pc/step07/american_que_img02.png',
+      './images/pc/step07/american_que_img03.png',
+      './images/pc/step07/american_que_img04.png',
+      './images/pc/step07/american_silver_popup_img.png',
+      './images/pc/step07/american_steel_popup_img.png',
+      './images/pc/step07/american_white_popup_img.png',
+      './images/pc/step07/double_beige_popup_img.png',
+      './images/pc/step07/double_black_popup_img.png',
+      './images/pc/step07/double_que_img01.png',
+      './images/pc/step07/double_que_img02.png',
+      './images/pc/step07/double_que_img03.png',
+      './images/pc/step07/double_que_img04.png',
+      './images/pc/step07/double_que_img05.png',
+      './images/pc/step07/double_silver_popup_img.png',
+      './images/pc/step07/double_steel_popup_img.png',
+      './images/pc/step07/double_white_popup_img.png',
+      './images/pc/step07/lader_black_popup_img.png',
+      './images/pc/step07/lader_que_img01.png',
+      './images/pc/step07/lader_que_img02.png',
+      './images/pc/step07/lader_que_img03.png',
+      './images/pc/step07/lader_que_img04.png',
+      './images/pc/step07/lader_silver_popup_img.png',
+      './images/pc/step07/lader_steel_popup_img.png',
+      './images/pc/step07/lader_white_popup_img.png',
+      './images/pc/step07/multi_black_popup_img.png',
+      './images/pc/step07/multi_que_img01.png',
+      './images/pc/step07/multi_que_img02.png',
+      './images/pc/step07/multi_que_img03.png',
+      './images/pc/step07/multi_que_img04.png',
+      './images/pc/step07/multi_silver_popup_img.png',
+      './images/pc/step07/multi_steel_popup_img.png',
+      './images/pc/step07/multi_white_popup_img.png',
+      './images/pc/step07/tall_beige_popup_img.png',
+      './images/pc/step07/tall_black_popup_img.png',
+      './images/pc/step07/tall_que_img01.png',
+      './images/pc/step07/tall_que_img02.png',
+      './images/pc/step07/tall_que_img03.png',
+      './images/pc/step07/tall_que_img04.png',
+      './images/pc/step07/tall_que_img05.png',
+      './images/pc/step07/tall_silver_popup_img.png',
+      './images/pc/step07/tall_steel_popup_img.png',
+      './images/pc/step07/tall_white_popup_img.png',
    ]);
 }
 intro();
@@ -1555,7 +1682,7 @@ function main() {
    // 다음버튼
    $nextBtn.on('click', function () {
       let _judgmentStep = 'nextStep';
-      
+
       idx === 6 && resultChoice() // 마지막 스텝에서 result 화면실행
       // active 가 있을때 실행 & finderSetting 갯수보다 작으면 실행
       if (idx < configData.finderSetting.length - 1 && $(this).hasClass('active')) {
@@ -1590,7 +1717,7 @@ function main() {
       let _stepProductArray = []; // 스텝별 제품 추출
       currentStep = configData.finderSetting[idx]; // 인터렉션 페이지 유/무
 
-      console.log('index : ', idx, ' -------------------------------------------------')
+      // console.log('index : ', idx, ' -------------------------------------------------')
       !stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
       idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
       // 앞전 데이터 삭제
@@ -2115,8 +2242,8 @@ function main() {
             stepCount.push($('.answer_btn.active').length);
          }
 
-         console.log('stepCount : ', stepCount);
-         console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
+         // console.log('stepCount : ', stepCount);
+         // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
@@ -2397,7 +2524,7 @@ function main() {
       $('.popup_' + currentStep.finderStep).removeClass().addClass('popup_' + currentStep.finderStep).addClass('popup_step'); // class 초기화
    });
 
-   $('#selectAgainCloseBtn').on('click',function(){
+   $('#selectAgainCloseBtn').on('click', function () {
       $quickFinder.removeClass('not_matched');
    })
 
@@ -2456,6 +2583,11 @@ function main() {
                }
             }
          }
+      }
+
+      // step6에서 아무것도 선택하지 않았을 때 텍스트 변경
+      if (_valueArray[3].length < 1) {
+         $('#finderResult dl:last-child dt').text('con.');
       }
 
       // 선택한 content 뿌리기

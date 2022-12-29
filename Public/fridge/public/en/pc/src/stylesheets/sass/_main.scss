@@ -482,6 +482,7 @@
 				&:nth-of-type(5) i { background-image: url(../../images/step06/btn_icon04.png); }
 				&:nth-of-type(6) i { background-image: url(../../images/step06/btn_icon05.png); }
 				&:nth-of-type(7) i { background-image: url(../../images/step06/btn_icon06.png); }
+				&:nth-of-type(8) i { display: none; }
 				button {
 					height:vw(200); padding:0 vw(70) 0 vw(60); background-color:$white; 
 					&.active { background-color: #464646; }

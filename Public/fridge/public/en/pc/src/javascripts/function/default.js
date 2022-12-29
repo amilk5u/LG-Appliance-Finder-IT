@@ -731,7 +731,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling],
@@ -742,7 +742,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
@@ -753,7 +753,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
@@ -764,7 +764,7 @@ const product = {
       FT06515688: _500L_600L,
       FT06515690: under_760mm,
       FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
+      FT06515691: under_1800mm,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
@@ -792,7 +792,6 @@ const product = {
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: beige
    },
-
 
 
    // Maxi Side by Side
@@ -1298,6 +1297,16 @@ const configData = {
                },
             },
             resultContent: 'step06',
+         },
+         {
+            key: 'FT06515502',
+            value: 'dummy',
+            content: 'Non ho particolari esigenze, </br>fammi vedere tutti i modelli.',
+            DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
+            changeData: {
+               description: 'Doesn’t matter to me, I’d like to see all models.',
+               screenImg: 'step06/que_img01.png',
+            }
          },
       ],
       //7번 스탭

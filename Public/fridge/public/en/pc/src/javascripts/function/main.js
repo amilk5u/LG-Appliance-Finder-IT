@@ -79,7 +79,7 @@ function main() {
    // 다음버튼
    $nextBtn.on('click', function () {
       let _judgmentStep = 'nextStep';
-      
+
       idx === 6 && resultChoice() // 마지막 스텝에서 result 화면실행
       // active 가 있을때 실행 & finderSetting 갯수보다 작으면 실행
       if (idx < configData.finderSetting.length - 1 && $(this).hasClass('active')) {
@@ -114,7 +114,7 @@ function main() {
       let _stepProductArray = []; // 스텝별 제품 추출
       currentStep = configData.finderSetting[idx]; // 인터렉션 페이지 유/무
 
-      console.log('index : ', idx, ' -------------------------------------------------')
+      // console.log('index : ', idx, ' -------------------------------------------------')
       !stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
       idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
       // 앞전 데이터 삭제
@@ -639,8 +639,8 @@ function main() {
             stepCount.push($('.answer_btn.active').length);
          }
 
-         console.log('stepCount : ', stepCount);
-         console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
+         // console.log('stepCount : ', stepCount);
+         // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
@@ -921,7 +921,7 @@ function main() {
       $('.popup_' + currentStep.finderStep).removeClass().addClass('popup_' + currentStep.finderStep).addClass('popup_step'); // class 초기화
    });
 
-   $('#selectAgainCloseBtn').on('click',function(){
+   $('#selectAgainCloseBtn').on('click', function () {
       $quickFinder.removeClass('not_matched');
    })
 
@@ -980,6 +980,11 @@ function main() {
                }
             }
          }
+      }
+
+      // step6에서 아무것도 선택하지 않았을 때 텍스트 변경
+      if (_valueArray[3].length < 1) {
+         $('#finderResult dl:last-child dt').text('con.');
       }
 
       // 선택한 content 뿌리기
