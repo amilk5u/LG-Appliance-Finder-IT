@@ -88,79 +88,79 @@ let AllSelectOption = 'AllSelectOption'; // All Select Option
 const product = {
    // Multidoor (multi)
    'GMX945MC9F': { // 1
-      FT05707162: multi,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door, Folding_Shelf],
       FT06515694: black
    },
    'GML945NS9E': { // 2
-      FT05707162: multi,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Door_in_Door, Folding_Shelf],
       FT06515694: silver
    },
    'GMX844MC6F': { // 3
-      FT05707162: multi,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door, Folding_Shelf],
       FT06515694: black
    },
    'GMQ844MC5E': { // 4
-      FT05707162: multi,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door, Folding_Shelf],
       FT06515694: black
    },
    'GML844PZ6F': { // 5
-      FT05707162: multi,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Folding_Shelf],
       FT06515694: silver
    },
    'GMB844PZFG': { // 6
-      FT05707162: multi,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: '',
+      Type: multi,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Folding_Shelf],
       FT06515694: silver
    },
    'LSR100': { // 7
-      FT05707162: multi,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
+      Type: multi,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Pure_N_Fresh, Instaview, Door_in_Door],
       FT06515694: stainless_steel
    },
@@ -168,156 +168,156 @@ const product = {
 
    // Side-by-Side (american)
    'GSXV91BSAF': { // 1
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSXV91MCAE': { // 2
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: black
    },
    'GSXV90MBAE': { // 3
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSXV90BSAE': { // 4
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSXV80PZLE': { // 5
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Instaview, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSJV90BSAE': { // 6
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSJV91PZAE': { // 7
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSLV90PZAE': { // 8
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Wine_Rack],
       FT06515694: silver
    },
    'GSLV90PZAD': { // 9
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_D,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door, Wine_Rack],
       FT06515694: silver
    },
    'GSBV70DSTM': { // 10
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: '',
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GSBV70PZTE': { // 11
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GSLV51WBXM': { // 12
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: '',
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: '',
       FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling],
       FT06515694: black
    },
    'GSJV31DSXF': { // 13
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: '',
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: '',
       FT06515762: [Plumbed, Non_Plumbed, Door_cooling, Linearcooling, Door_in_Door],
       FT06515694: silver
    },
    'GSJV70WBTF': { // 14
-      FT05707162: american,
-      FT06515688: _600L_or_more,
-      FT06515690: under_760mm,
-      FT06515689: _910mm_or_more,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
+      Type: american,
+      Capacity: _600L_or_more,
+      Depth: under_760mm,
+      Width: _910mm_or_more,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: ThinQ,
       FT06515762: [Plumbed, Door_cooling, Linearcooling, Door_in_Door],
       FT06515694: black
    },
@@ -327,376 +327,376 @@ const product = {
 
    // Combinati
    'GBB72MCUGN': { // 1
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: black
    },
    'GBB72PZUGN': { // 2
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB71PZUGN': { // 3
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB72PZVGN': { // 4
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB72NSUGN': { // 5
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB72NSVGN': { // 6
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB62PZFGN': { // 7
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack],
       FT06515694: silver
    },
    'GBB62PZGGN': { // 8
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack],
       FT06515694: silver
    },
    'GBP61DSPGN': { // 9
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GBP62DSNGN': { // 10
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GBB72MCVGN': { // 11
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: black
    },
    'GBP62DSSGR': { // 12
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GBP62DSNCN1': { // 13
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBP62DSNCC1': { // 14
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBP62PZNCN1': { // 15
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBP62DSXCC1': { // 16
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBB72SAVCN1': { // 17
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB72PZVCN1': { // 18
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB72SAUCN1': { // 19
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB92STBAP': { // 20
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_A,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_A,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Pure_N_Fresh, Wine_Rack, Folding_Shelf],
       FT06515694: stainless_steel
    },
    'GBB92MCABP': { // 21
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_B,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_B,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: black
    },
    'GBP62PZNBC': { // 22
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_B,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_B,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GBB567SECMN': { // 23
-      FT05707162: tall,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
       FT06515694: beige
    },
    'GBB567PZCMB': { // 24
-      FT05707162: tall,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB569MCAMN': { // 25
-      FT05707162: tall,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Folding_Shelf],
       FT06515694: black
    },
    'GBB569NSAFB': { // 26
-      FT05707162: tall,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_D,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'LSR200B': { // 27
-      FT05707162: tall,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_F,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_F,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Instaview, Door_in_Door],
       FT06515694: stainless_steel
    },
    'GBB72NSUCN1': { // 28
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf],
       FT06515694: silver
    },
    'GBB72NSVCN1': { // 29
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: _500L_600L,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_C,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: _500L_600L,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_C,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB72SAVGN': { // 30
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: _500L_600L,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_D,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: _500L_600L,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_D,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Folding_Shelf, Reversible_Door],
       FT06515694: silver
    },
    'GBB62PZJMN': { // 31
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: _500L_600L,
-      FT06515691: _2000mm_or_more,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: _500L_600L,
+      Height: _2000mm_or_more,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBB61PZJMN': { // 32
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: _500L_600L,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: _500L_600L,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: silver
    },
    'GBB61BLHEC': { // 33
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling, Door_in_Door, Reversible_Door],
       FT06515694: black
    },
    'GBF61BLHMN': { // 34
-      FT05707162: tall,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: tall,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling, Reversible_Door],
       FT06515694: black
    },
@@ -705,90 +705,90 @@ const product = {
 
    // Doppia Porta
    'GTF916SEPYD': { // 1
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: beige
    },
    'GTF916PZPYD': { // 2
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _810_900mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _810_900mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTB744PZHZD': { // 3
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTF744PZPZD': { // 4
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTF744SEPZD': { // 5
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Water_Only, Door_cooling, Linearcooling],
       FT06515694: beige
    },
    'GTB744BMBZD': { // 6
-      FT05707162: double,
-      FT06515688: _500L_600L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: double,
+      Capacity: _500L_600L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: black
    },
    'GTB574PZHZD': { // 7
-      FT05707162: double,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: silver
    },
    'GTB574SEHZD': { // 8
-      FT05707162: double,
-      FT06515688: _400L_500L,
-      FT06515690: under_760mm,
-      FT06515689: _610mm_800mm,
-      FT06515691: under_1800mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: ThinQ,
+      Type: double,
+      Capacity: _400L_500L,
+      Depth: under_760mm,
+      Width: _610mm_800mm,
+      Height: under_1800mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: ThinQ,
       FT06515762: [Dummy, Door_cooling, Linearcooling],
       FT06515694: beige
    },
@@ -796,24 +796,24 @@ const product = {
 
    // Maxi Side by Side
    'GFT41PZGSZ': { // 1
-      FT05707162: lader,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: lader,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy],
       FT06515694: silver
    },
    'GLT51PZGSZ': { // 2
-      FT05707162: lader,
-      FT06515688: under_400L,
-      FT06515690: under_760mm,
-      FT06515689: under_600mm,
-      FT06515691: _1800_2000mm,
-      FT06515693: EnergyGrade_E,
-      FT06515502: '',
+      Type: lader,
+      Capacity: under_400L,
+      Depth: under_760mm,
+      Width: under_600mm,
+      Height: _1800_2000mm,
+      EnergyGrade: EnergyGrade_E,
+      ThinQ: '',
       FT06515762: [Dummy, Door_cooling, Linearcooling, Wine_Rack, Reversible_Door],
       FT06515694: silver
    },
@@ -911,7 +911,7 @@ const configData = {
       //1번 스탭
       [
          {
-            key: 'FT05707162',
+            key: 'Type',
             value: multi,
             content: 'Multidoor',
             changeData: {
@@ -926,7 +926,7 @@ const configData = {
             resultContent: 'step01',
          },
          {
-            key: 'FT05707162',
+            key: 'Type',
             value: american,
             content: 'Side-by-Side',
             changeData: {
@@ -941,7 +941,7 @@ const configData = {
             resultContent: 'step01',
          },
          {
-            key: 'FT05707162',
+            key: 'Type',
             value: tall,
             content: 'Combinato',
             changeData: {
@@ -956,7 +956,7 @@ const configData = {
             resultContent: 'step01',
          },
          {
-            key: 'FT05707162',
+            key: 'Type',
             value: double,
             content: 'Doppia porta',
             changeData: {
@@ -971,7 +971,7 @@ const configData = {
             resultContent: 'step01',
          },
          {
-            key: 'FT05707162',
+            key: 'Type',
             value: lader,
             content: 'Maxi Side-by-Side componibile',
             changeData: {
@@ -999,7 +999,7 @@ const configData = {
             }
          },
          {
-            key: 'FT06515688',
+            key: 'Capacity',
             value: under_400L,
             content: 'Meno di 400L',
             changeData: {
@@ -1008,8 +1008,8 @@ const configData = {
             }
          },
          {
-            key: 'FT06515688',
-            value: 'FTV0335756V,FTV0335754V',
+            key: 'Capacity',
+            value: _400L_500L,
             content: 'Da 400L a 500L',
             changeData: {
                description: 'La capacità ideale se fai la spesa una volta alla settimana e devi conservare tanto cibo.',
@@ -1017,8 +1017,8 @@ const configData = {
             }
          },
          {
-            key: 'FT06515688',
-            value: 'FTV0335753V,FV65346230',
+            key: 'Capacity',
+            value: _500L_600L,
             content: 'Da 500L a 600L',
             changeData: {
                description: 'Consigliato se hai una famiglia numerosa e vuoi avere più spazio per i tuoi alimenti rispetto a un frigo tradizionale.',
@@ -1026,7 +1026,7 @@ const configData = {
             }
          },
          {
-            key: 'FT06515688',
+            key: 'Capacity',
             value: _600L_or_more,
             content: 'Oltre 600L',
             changeData: {
@@ -1038,7 +1038,7 @@ const configData = {
       //3번 스탭
       [
          {
-            key: 'FT06515690',
+            key: 'Depth',
             value: under_760mm,
             content: 'Meno di 76cm',
             changeData: {
@@ -1065,22 +1065,22 @@ const configData = {
             content: allSelectContent,
          },
          {
-            key: 'FT06515689',
+            key: 'Width',
             value: under_600mm,
             content: 'Meno di 60cm',
          },
          {
-            key: 'FT06515689',
+            key: 'Width',
             value: _610mm_800mm,
             content: 'Da 61 a 80cm',
          },
          {
-            key: 'FT06515689',
+            key: 'Width',
             value: _810_900mm,
             content: 'Da 81 a 90cm',
          },
          {
-            key: 'FT06515689',
+            key: 'Width',
             value: _910mm_or_more,
             content: '91cm o più',
          },
@@ -1092,17 +1092,17 @@ const configData = {
             content: allSelectContent,
          },
          {
-            key: 'FT06515691',
+            key: 'Height',
             value: under_1800mm,
             content: 'Meno di 180cm',
          },
          {
-            key: 'FT06515691',
+            key: 'Height',
             value: _1800_2000mm,
             content: 'Da 180 a 200cm',
          },
          {
-            key: 'FT06515691',
+            key: 'Height',
             value: _2000mm_or_more,
             content: '200cm o più',
          },
@@ -1202,7 +1202,7 @@ const configData = {
             resultContent: 'step05',
          },
          {
-            key: 'FT06515693',
+            key: 'EnergyGrade',
             value: 'FV65346308,FV65346307,FV65346306',
             content: 'Classe di efficienza </br>energetica A o superiore',
             changeData: {
@@ -1285,7 +1285,7 @@ const configData = {
             resultContent: 'step06',
          },
          {
-            key: 'FT06515502',
+            key: 'ThinQ',
             value: ThinQ,
             content: 'Funzioni Smart con </br>Intelligenza Artificiale',
             // content: '띵큐',
@@ -1299,7 +1299,7 @@ const configData = {
             resultContent: 'step06',
          },
          {
-            key: 'FT06515502',
+            key: 'ThinQ',
             value: 'dummy',
             content: 'Non ho particolari esigenze, </br>fammi vedere tutti i modelli.',
             DataNon: true, // 항목 클릭시 보여줘야할 데이터 없을 때
@@ -1717,7 +1717,7 @@ function main() {
       let _stepProductArray = []; // 스텝별 제품 추출
       currentStep = configData.finderSetting[idx]; // 인터렉션 페이지 유/무
 
-      // console.log('index : ', idx, ' -------------------------------------------------')
+      console.log('index : ', idx, ' -------------------------------------------------')
       !stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
       idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
       // 앞전 데이터 삭제
@@ -2090,133 +2090,151 @@ function main() {
          let _activeBtn1 = 0; // 현재 클릭된 버튼 count
 
 
+
+         console.log(idx > 1, matchingProducts[idx - 1] === undefined, matchingProducts[idx - 1])
+
          // step 2 부터 동작
          if (idx > 1 && matchingProducts[idx - 1] === undefined) { // back 했을때를 고려해서 undefined 구분
-            if (idx === 3) {
-               // let _wholeKey = []; // 선택한 key 값 
-               // let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-
-               // console.debug(_lastPro)
-
-               // for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-               //    let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
-               //    _wholeKey.push(_selectKey);
-               // }
-               // let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
-               // let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
-               //    if (item !== 'step03-1' && item !== 'step03-2') {
-               //       return item;
-               //    }
-               // });
-
-               // // 제품 갯수만큼 for 문 실행
-               // for (let i = 0; i < _lastPro.length; i++) {
-               //    let _judgmentNum = 0; // true 된 갯수 판단
-               //    // console.log('_lastPro 선택된 제품 : ', _lastPro[i])
-               //    // 선택한 value 값 추출
-               //    for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-               //       let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-
-               //       for (let p = 0; p < _restKeyLength.length; p++) {
-               //          // console.log(_lastPro[i][_restKeyLength[p]], _selectValue, _lastPro[i][_restKeyLength[p]] === _selectValue)
-               //          if (_lastPro[i][_restKeyLength[p]] === _selectValue) {
-               //             _judgmentNum++
-               //          }
-               //       }
-               //    }
-               //    // console.debug(_judgmentNum, _restKeyLength.length, _judgmentNum === _restKeyLength.length)
-               //    if (_judgmentNum === _restKeyLength.length) {
-               //       _stepProductArray.push(_lastPro[i]);
-               //    }
-               // }
-               // matchingProducts.push(_stepProductArray);
-               console.log('matchingProducts=asas');
-            } else {
+            if (idx === 2) {
+               let _wholeKey = []; // 선택한 key 값 
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-               let _prevStepDummyTrue = false;
+               console.debug(_lastPro)
+               for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+                  let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+                  _wholeKey.push(_selectKey);
+               }
+               let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
+               let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
+                  if (item !== 'step03-1' && item !== 'step03-2') {
+                     return item;
+                  }
+               });
 
-               // 추출된 마지막 제품 갯수 만큼 for 문 실행 
+               console.log(_restKeyLength)
+            }
+
+            if (idx === 3) {
+               let _wholeKey = []; // 선택한 key 값 
+               let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
+
+               for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+                  let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+                  _wholeKey.push(_selectKey);
+               }
+               let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
+               let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
+                  if (item !== 'step03-1' && item !== 'step03-2') {
+                     return item;
+                  }
+               });
+
+               // 제품 갯수만큼 for 문 실행
                for (let i = 0; i < _lastPro.length; i++) {
-                  let _valueCounting = stepCount[stepCount.length - 1]; // step count
-                  let _judgmentNum = 0; // 매칭 count
-                  let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
-                  // 마지막에 선택한 value 값 추출
-
-                  // console.log('선택된 제품 카운트 : ', _valueCounting, '선택된 제품 : ', _lastPro[i])
+                  let _judgmentNum = 0; // true 된 갯수 판단
+                  // console.log('_lastPro 선택된 제품 : ', _lastPro[i])
+                  // 선택한 value 값 추출
                   for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-                     let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
                      let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-                     let _dataTrueBoolean = false;
 
-                     if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
-                        _prevStepDummyTrue = true;
-                        _stepProductArray.push(_lastPro[i]);
-                     }
-                     if (!_prevStepDummyTrue) {
-                        if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
-                           // console.log('featrue 배열 포함OOO')
-                           for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-                              for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-                                 if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-                                    // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
-                                    if (idx !== 6 && idx !== 5) {
-                                       // console.log('******', _lastPro[i])
-                                       _stepProductArray.push(_lastPro[i]);
-                                    } else {
-                                       _dataTrueBoolean = true;
-                                       break;
-                                    }
-                                 }
-                              }
-
-                              // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
-                              if (_selectValue.split(',')[p] === AllSelectOption) {
-                                 _AllSelectBol = true;
-                              }
-                           }
-                           if (_dataTrueBoolean) {
-                              _judgmentNum++;
-                           }
-                        } else {
-                           if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
-                              for (let h = 0; h < _selectValue.split(',').length; h++) {
-                                 if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
-                                    // console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
-                                    // console.debug('******', _lastPro[i])
-                                    _stepProductArray.push(_lastPro[i]);
-                                    break;
-                                 }
-                              }
-
-                           } else {
-                              if (_lastPro[i][_selectKey] === _selectValue) {
-                                 // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
-                                 if (idx !== 6 && idx !== 5) {
-                                    // console.debug('******', _lastPro[i])
-                                    _stepProductArray.push(_lastPro[i]);
-                                 } else {
-                                    _judgmentNum++;
-                                 }
-                              }
-                           }
-                           // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
-                           if (_selectValue === AllSelectOption) {
-                              _AllSelectBol = true;
-                           }
+                     for (let p = 0; p < _restKeyLength.length; p++) {
+                        // console.log(_lastPro[i][_restKeyLength[p]], _selectValue, _lastPro[i][_restKeyLength[p]] === _selectValue)
+                        if (_lastPro[i][_restKeyLength[p]] === _selectValue) {
+                           _judgmentNum++
                         }
                      }
                   }
-
-                  if (_AllSelectBol) { // All Select 가 있으면 - 1
-                     _valueCounting--;
-                  }
-                  // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-                  if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
-                     // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                  // console.debug(_judgmentNum, _restKeyLength.length, _judgmentNum === _restKeyLength.length)
+                  if (_judgmentNum === _restKeyLength.length) {
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
                matchingProducts.push(_stepProductArray);
+            } else {
+               // let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
+               // let _prevStepDummyTrue = false;
+
+               // // 추출된 마지막 제품 갯수 만큼 for 문 실행 
+               // for (let i = 0; i < _lastPro.length; i++) {
+               //    let _valueCounting = stepCount[stepCount.length - 1]; // step count
+               //    let _judgmentNum = 0; // 매칭 count
+               //    let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
+               //    // 마지막에 선택한 value 값 추출
+
+               //    // console.log('선택된 제품 카운트 : ', _valueCounting, '선택된 제품 : ', _lastPro[i])
+               //    for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+               //       let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+               //       let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
+               //       let _dataTrueBoolean = false;
+
+               //       if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
+               //          _prevStepDummyTrue = true;
+               //          _stepProductArray.push(_lastPro[i]);
+               //       }
+               //       if (!_prevStepDummyTrue) {
+               //          if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
+               //             // console.log('featrue 배열 포함OOO')
+               //             for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+               //                for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
+               //                   if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
+               //                      // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+               //                      if (idx !== 6 && idx !== 5) {
+               //                         // console.log('******', _lastPro[i])
+               //                         _stepProductArray.push(_lastPro[i]);
+               //                      } else {
+               //                         _dataTrueBoolean = true;
+               //                         break;
+               //                      }
+               //                   }
+               //                }
+
+               //                // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+               //                if (_selectValue.split(',')[p] === AllSelectOption) {
+               //                   _AllSelectBol = true;
+               //                }
+               //             }
+               //             if (_dataTrueBoolean) {
+               //                _judgmentNum++;
+               //             }
+               //          } else {
+               //             if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
+               //                for (let h = 0; h < _selectValue.split(',').length; h++) {
+               //                   if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
+               //                      // console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
+               //                      // console.debug('******', _lastPro[i])
+               //                      _stepProductArray.push(_lastPro[i]);
+               //                      break;
+               //                   }
+               //                }
+
+               //             } else {
+               //                if (_lastPro[i][_selectKey] === _selectValue) {
+               //                   // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
+               //                   if (idx !== 6 && idx !== 5) {
+               //                      // console.debug('******', _lastPro[i])
+               //                      _stepProductArray.push(_lastPro[i]);
+               //                   } else {
+               //                      _judgmentNum++;
+               //                   }
+               //                }
+               //             }
+               //             // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+               //             if (_selectValue === AllSelectOption) {
+               //                _AllSelectBol = true;
+               //             }
+               //          }
+               //       }
+               //    }
+
+               //    if (_AllSelectBol) { // All Select 가 있으면 - 1
+               //       _valueCounting--;
+               //    }
+               //    // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
+               //    if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
+               //       // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+               //       _stepProductArray.push(_lastPro[i]);
+               //    }
+               // }
+               // matchingProducts.push(_stepProductArray);
             }
          }
 
@@ -2387,8 +2405,8 @@ function main() {
             stepCount.push($('.answer_btn.active').length);
          }
 
-         // console.log('stepCount : ', stepCount);
-         // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
+         console.log('stepCount : ', stepCount);
+         console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기

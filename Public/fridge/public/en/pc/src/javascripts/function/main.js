@@ -114,7 +114,7 @@ function main() {
       let _stepProductArray = []; // 스텝별 제품 추출
       currentStep = configData.finderSetting[idx]; // 인터렉션 페이지 유/무
 
-      // console.log('index : ', idx, ' -------------------------------------------------')
+      console.log('index : ', idx, ' -------------------------------------------------')
       !stageLiveDecide && console.log('selectedParameters : ', selectedParameters); // 선택된 key,value
       idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
       // 앞전 데이터 삭제
@@ -487,133 +487,151 @@ function main() {
          let _activeBtn1 = 0; // 현재 클릭된 버튼 count
 
 
+
+         console.log(idx > 1, matchingProducts[idx - 1] === undefined, matchingProducts[idx - 1])
+
          // step 2 부터 동작
          if (idx > 1 && matchingProducts[idx - 1] === undefined) { // back 했을때를 고려해서 undefined 구분
-            if (idx === 3) {
-               // let _wholeKey = []; // 선택한 key 값 
-               // let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-
-               // console.debug(_lastPro)
-
-               // for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-               //    let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
-               //    _wholeKey.push(_selectKey);
-               // }
-               // let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
-               // let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
-               //    if (item !== 'step03-1' && item !== 'step03-2') {
-               //       return item;
-               //    }
-               // });
-
-               // // 제품 갯수만큼 for 문 실행
-               // for (let i = 0; i < _lastPro.length; i++) {
-               //    let _judgmentNum = 0; // true 된 갯수 판단
-               //    // console.log('_lastPro 선택된 제품 : ', _lastPro[i])
-               //    // 선택한 value 값 추출
-               //    for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-               //       let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-
-               //       for (let p = 0; p < _restKeyLength.length; p++) {
-               //          // console.log(_lastPro[i][_restKeyLength[p]], _selectValue, _lastPro[i][_restKeyLength[p]] === _selectValue)
-               //          if (_lastPro[i][_restKeyLength[p]] === _selectValue) {
-               //             _judgmentNum++
-               //          }
-               //       }
-               //    }
-               //    // console.debug(_judgmentNum, _restKeyLength.length, _judgmentNum === _restKeyLength.length)
-               //    if (_judgmentNum === _restKeyLength.length) {
-               //       _stepProductArray.push(_lastPro[i]);
-               //    }
-               // }
-               // matchingProducts.push(_stepProductArray);
-               console.log('matchingProducts=asas');
-            } else {
+            if (idx === 2) {
+               let _wholeKey = []; // 선택한 key 값 
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-               let _prevStepDummyTrue = false;
+               console.debug(_lastPro)
+               for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+                  let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+                  _wholeKey.push(_selectKey);
+               }
+               let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
+               let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
+                  if (item !== 'step03-1' && item !== 'step03-2') {
+                     return item;
+                  }
+               });
 
-               // 추출된 마지막 제품 갯수 만큼 for 문 실행 
+               console.log(_restKeyLength)
+            }
+
+            if (idx === 3) {
+               let _wholeKey = []; // 선택한 key 값 
+               let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
+
+               for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+                  let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+                  _wholeKey.push(_selectKey);
+               }
+               let _restKey = Array.from(new Set(_wholeKey)); // select 한 value의 중복 제거 된 key 값 추출
+               let _restKeyLength = _restKey.filter((item) => { // All Selet Key 에 해당되는 배열 삭제
+                  if (item !== 'step03-1' && item !== 'step03-2') {
+                     return item;
+                  }
+               });
+
+               // 제품 갯수만큼 for 문 실행
                for (let i = 0; i < _lastPro.length; i++) {
-                  let _valueCounting = stepCount[stepCount.length - 1]; // step count
-                  let _judgmentNum = 0; // 매칭 count
-                  let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
-                  // 마지막에 선택한 value 값 추출
-
-                  // console.log('선택된 제품 카운트 : ', _valueCounting, '선택된 제품 : ', _lastPro[i])
+                  let _judgmentNum = 0; // true 된 갯수 판단
+                  // console.log('_lastPro 선택된 제품 : ', _lastPro[i])
+                  // 선택한 value 값 추출
                   for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
-                     let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
                      let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
-                     let _dataTrueBoolean = false;
 
-                     if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
-                        _prevStepDummyTrue = true;
-                        _stepProductArray.push(_lastPro[i]);
-                     }
-                     if (!_prevStepDummyTrue) {
-                        if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
-                           // console.log('featrue 배열 포함OOO')
-                           for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
-                              for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
-                                 if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
-                                    // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
-                                    if (idx !== 6 && idx !== 5) {
-                                       // console.log('******', _lastPro[i])
-                                       _stepProductArray.push(_lastPro[i]);
-                                    } else {
-                                       _dataTrueBoolean = true;
-                                       break;
-                                    }
-                                 }
-                              }
-
-                              // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
-                              if (_selectValue.split(',')[p] === AllSelectOption) {
-                                 _AllSelectBol = true;
-                              }
-                           }
-                           if (_dataTrueBoolean) {
-                              _judgmentNum++;
-                           }
-                        } else {
-                           if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
-                              for (let h = 0; h < _selectValue.split(',').length; h++) {
-                                 if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
-                                    // console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
-                                    // console.debug('******', _lastPro[i])
-                                    _stepProductArray.push(_lastPro[i]);
-                                    break;
-                                 }
-                              }
-
-                           } else {
-                              if (_lastPro[i][_selectKey] === _selectValue) {
-                                 // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
-                                 if (idx !== 6 && idx !== 5) {
-                                    // console.debug('******', _lastPro[i])
-                                    _stepProductArray.push(_lastPro[i]);
-                                 } else {
-                                    _judgmentNum++;
-                                 }
-                              }
-                           }
-                           // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
-                           if (_selectValue === AllSelectOption) {
-                              _AllSelectBol = true;
-                           }
+                     for (let p = 0; p < _restKeyLength.length; p++) {
+                        // console.log(_lastPro[i][_restKeyLength[p]], _selectValue, _lastPro[i][_restKeyLength[p]] === _selectValue)
+                        if (_lastPro[i][_restKeyLength[p]] === _selectValue) {
+                           _judgmentNum++
                         }
                      }
                   }
-
-                  if (_AllSelectBol) { // All Select 가 있으면 - 1
-                     _valueCounting--;
-                  }
-                  // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-                  if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
-                     // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                  // console.debug(_judgmentNum, _restKeyLength.length, _judgmentNum === _restKeyLength.length)
+                  if (_judgmentNum === _restKeyLength.length) {
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
                matchingProducts.push(_stepProductArray);
+            } else {
+               // let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
+               // let _prevStepDummyTrue = false;
+
+               // // 추출된 마지막 제품 갯수 만큼 for 문 실행 
+               // for (let i = 0; i < _lastPro.length; i++) {
+               //    let _valueCounting = stepCount[stepCount.length - 1]; // step count
+               //    let _judgmentNum = 0; // 매칭 count
+               //    let _AllSelectBol = false; // All Select 데이터가 있는지 없는지 판단
+               //    // 마지막에 선택한 value 값 추출
+
+               //    // console.log('선택된 제품 카운트 : ', _valueCounting, '선택된 제품 : ', _lastPro[i])
+               //    for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
+               //       let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
+               //       let _selectValue = selectedParameters[selectedParameters.length - (1 + j)].split('=')[1]; // value
+               //       let _dataTrueBoolean = false;
+
+               //       if (_selectValue === 'dummy') { // 더미가 선택 됬을 경우
+               //          _prevStepDummyTrue = true;
+               //          _stepProductArray.push(_lastPro[i]);
+               //       }
+               //       if (!_prevStepDummyTrue) {
+               //          if (Array.isArray(_lastPro[i][_selectKey])) { // feature 배열이 포함 되어 있을 때
+               //             // console.log('featrue 배열 포함OOO')
+               //             for (let p = 0; p < _selectValue.split(',').length; p++) { // feature 중에 value 값이 여러개인 값 판단
+               //                for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
+               //                   if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
+               //                      // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
+               //                      if (idx !== 6 && idx !== 5) {
+               //                         // console.log('******', _lastPro[i])
+               //                         _stepProductArray.push(_lastPro[i]);
+               //                      } else {
+               //                         _dataTrueBoolean = true;
+               //                         break;
+               //                      }
+               //                   }
+               //                }
+
+               //                // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+               //                if (_selectValue.split(',')[p] === AllSelectOption) {
+               //                   _AllSelectBol = true;
+               //                }
+               //             }
+               //             if (_dataTrueBoolean) {
+               //                _judgmentNum++;
+               //             }
+               //          } else {
+               //             if (_selectValue.includes(',')) { // 에너지 그레이드 key 값 여러개 일 때
+               //                for (let h = 0; h < _selectValue.split(',').length; h++) {
+               //                   if (_selectValue.split(',')[h] === _lastPro[i][_selectKey]) {
+               //                      // console.log('선택된 데이터 : ', _selectValue.split(',')[h], '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _selectValue.split(',')[h] === _lastPro[i][_selectKey])
+               //                      // console.debug('******', _lastPro[i])
+               //                      _stepProductArray.push(_lastPro[i]);
+               //                      break;
+               //                   }
+               //                }
+
+               //             } else {
+               //                if (_lastPro[i][_selectKey] === _selectValue) {
+               //                   // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
+               //                   if (idx !== 6 && idx !== 5) {
+               //                      // console.debug('******', _lastPro[i])
+               //                      _stepProductArray.push(_lastPro[i]);
+               //                   } else {
+               //                      _judgmentNum++;
+               //                   }
+               //                }
+               //             }
+               //             // AllSelectOption 데이터 존재할 경우에 _valueCounting -1 개를 삭제
+               //             if (_selectValue === AllSelectOption) {
+               //                _AllSelectBol = true;
+               //             }
+               //          }
+               //       }
+               //    }
+
+               //    if (_AllSelectBol) { // All Select 가 있으면 - 1
+               //       _valueCounting--;
+               //    }
+               //    // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
+               //    if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
+               //       // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+               //       _stepProductArray.push(_lastPro[i]);
+               //    }
+               // }
+               // matchingProducts.push(_stepProductArray);
             }
          }
 
@@ -784,8 +802,8 @@ function main() {
             stepCount.push($('.answer_btn.active').length);
          }
 
-         // console.log('stepCount : ', stepCount);
-         // console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
+         console.log('stepCount : ', stepCount);
+         console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
          _lastAnswerValue = selectedParameters[selectedParameters.length - 1].split('=')[1]; //선택된 마지막 value 값 추출
          sprayData(idx, _currentHtml, _lastAnswerValue); // 선택한 항목의 대한 데이터 뿌리기
