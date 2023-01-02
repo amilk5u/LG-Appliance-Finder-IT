@@ -1,0 +1,16 @@
+@mixin posxCenter($w, $pos : absolute){
+	position:$pos;
+	left:50%;
+	width : $w;
+	margin-left : -$w/2;
+}
+@mixin posyCenter($h, $pos : absolute){
+	position:$pos;
+	top:50%;
+	height : $h;
+	margin-top : -$h/2;
+}
+@mixin posCenter($w, $h, $pos : absolute){
+	@include posxCenter($w, $pos);
+	@include posyCenter($h, $pos);
+}

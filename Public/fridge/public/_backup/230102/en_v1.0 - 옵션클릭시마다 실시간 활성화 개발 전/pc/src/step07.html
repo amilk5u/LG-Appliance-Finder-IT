@@ -1,0 +1,112 @@
+@@include("./include/header.html")
+<!-- Enter Code Here -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--intro-->
+<div id="finderIntro" style="display: none;">
+	<div id="introAnimation">
+		<lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+	</div>
+</div>
+<!--//intro-->
+<div id="quickFinder" style="display: block;" class="step07">
+	<div class="finder_wrap">
+		<!--navigation-->
+		<div id="finderNav">
+			<ul>
+				<li>
+					<strong>1</strong>
+					<p>TYPE</p>
+				</li>
+				<li>
+					<strong>2</strong>
+					<p>CAPACITY</p>
+				</li>
+				<li>
+					<strong>3</strong>
+					<p>SIZE</p>
+				</li>
+				<li>
+					<strong>4</strong>
+					<p>ICE & WATER DISPENSER</p>
+				</li>
+				<li>
+					<strong>5</strong>
+					<p>PERFORMAMCE</p>
+				</li>
+				<li>
+					<strong>6</strong>
+					<p>FEATURE</p>
+				</li>
+				<li>
+					<strong>7</strong>
+					<p>COLOUR</p>
+				</li>
+			</ul>
+		</div>
+		<!--//navigation-->
+		<!--question & answer area-->
+		<div class="qna_wrap">
+			<strong class="que_title" style="display: block;">Which colour theme <br> matches your interior?</strong>
+			<div class="qna_description qna_description01" style="display: none;"><strong>Which colour theme <br> matches your interior?</strong>
+				<div class="txt_box">
+					<i style="background-image:url(./images/pc/step03/disc_icon01.png)"></i>
+					<p>Easy-access opening system allows you to quickly reach your favourite foods.</p>
+					<button type="button" class="load_more_btn">LOAD MORE</button>
+					<button type="button" class="learn_more_btn">Learn More</button>
+				</div>
+			</div>
+			<div class="qna_description qna_description02" style="display: none;">
+				<div class="txt_box">
+					<p>When connecting to a direct water supply isn’t feasible, non-plumbed fridges offer the convenient alternative of refillable water tanks connected to a door-mounted dispenser.</p>
+					<button id="detailCloseBtn" type="button" class="close_more_btn">CLOSE</button>
+				</div>
+			</div>
+		</div>
+		<!--//question & answer area-->
+		<!--question image-->
+		<div id="qnaImgWrap" style="background-image:url(./images/pc/step07/american_que_img04.png)"></div>
+		<!--//question image-->
+	</div>
+	<!--선택 항목 버튼-->
+	<!--선택 된 항목은 button에 active 클래스-->
+	<!--선택 불가 항목은 button에 disable 클래스-->
+	<div id="selectWrap" class="beige_none"><button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button>
+		<p class="select_tit"><em>Scegli tutte le opzioni che vuoi.</em></p>
+		<ol>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value1"><span></span>
+					<p>Nero</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value2"><span></span>
+					<p>Acciaio inox</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value3"><span></span>
+					<p>Argento</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value4"><span></span>
+					<p>Bianco</p>
+				</button></li>
+			<li><button class="answer_btn" type="button" data-key="Color" data-value="Color_value5"><span></span>
+					<p>Beige</p>
+				</button></li>
+			<li><button class="answer_btn all_select" type="button" data-key="step07" data-value="AllSelectOption"><span></span>
+					<p>Scelta multipla</p>
+				</button></li>
+		</ol>
+	</div>
+	<!--//선택 항목 버튼-->
+	<!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+	<div class="show_now_wrap">
+		<button type="button" id="shopNowBtn" data-link-name="r_Btn_stage6" data-model-description="American Style Fridge Freezer,600L or more,UNDER 760mm (COUNTER DEPTH),Non Plumbed,Plumbed,760mm OR MORE (STANDARD DEPTH),Doesn’t matter to me,  I’d like to see all models.,Ventilation,Long-lasting freshness,InstaView™ Door-in-Door®,Door-in-Door®" class="">See Results Now</button>
+	</div>
+	<!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+	<div class="step_move_wrap">
+		<div class="btn_cont">
+			<button type="button" id="backStepBtn" style="display: block;">INDIETRO</button>
+		</div>
+		<div class="btn_cont">
+			<button type="button" class="last_step" id="nextStepBtn" data-link-name="Next : Q7 COLORE" style="opacity: 1; display: block;" class="active">Abbiamo quasi finito!</button>
+		</div>
+	</div>
+</div> @@include("./include/popup.html") @@include("./include/footer.html")

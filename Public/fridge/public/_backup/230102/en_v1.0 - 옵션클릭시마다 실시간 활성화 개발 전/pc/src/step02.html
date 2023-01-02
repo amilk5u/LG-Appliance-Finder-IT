@@ -1,0 +1,127 @@
+@@include("./include/header.html") 
+<!-- Enter Code Here -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--intro-->
+<div id="finderIntro" style="display: none;">
+   <div id="introAnimation">
+      <lottie-player id="animationPlayer" src="./images/intro/intro_animation.json" mode="bounce" background="transparent" speed="1" autoplay></lottie-player>
+   </div>
+</div>
+<!--//intro-->
+<div id="quickFinder" class="step02">
+   <div class="finder_wrap">
+      <!--navigation-->
+      <div id="finderNav">
+         <ul>
+            <li>
+               <strong>1</strong>
+               <p>Tipologia</p>
+            </li>
+            <li>
+               <strong>2</strong>
+               <p>CAPACITÀ</p>
+            </li>
+            <li>
+               <strong>3</strong>
+               <p>DIMENSIONI</p>
+            </li>
+            <li>
+               <strong>4</strong>
+               <p>DISPENSER DI ACQUA E GHIACCIO</p>
+            </li>
+            <li>
+               <strong>5</strong>
+               <p>PRESTAZIONI</p>
+            </li>
+            <li>
+               <strong>6</strong>
+               <p>CARATTERISTICHE</p>
+            </li>
+            <li>
+               <strong>7</strong>
+               <p>COLORE</p>
+            </li>
+         </ul>
+      </div>
+      <!--//navigation-->
+      <!--question & answer area-->
+      <div class="qna_wrap"><strong class="que_title" style="display: block;">Qual è la capacità del frigo che stai cercando?</strong>
+         <div class="qna_description qna_description01" style="display: none;"><strong>Qual è la capacità del frigo che stai cercando?</strong>
+            <div class="txt_box">
+               <i></i>
+               <p>Modello a due porte, dove il congelatore sta nella parte superiore e il frigo in quella inferiore.</p>
+               <button type="button" class="load_more_btn">Scopri di più</button>
+               <button type="button" class="learn_more_btn active" id="interactionBtn" data-link-name="Interaction Page : Doppia porta" data-popup="double">Scopri di più</button>
+            </div>
+         </div>
+         <div class="qna_description qna_description02" style="display: none;">
+            <div class="txt_box">
+               <p></p>
+               <button id="detailCloseBtn" type="button" class="close_more_btn">CHIUDI</button>
+            </div>
+         </div>
+      </div>
+      <!--//question & answer area-->
+      <!--question image-->
+      <div id="qnaImgWrap" style="background-image:url(./images/pc/step02/que_img04.png)">
+         <!-- <img src="./images/pc/step02/people_icon.png" alt="people image"> -->
+      </div>
+      <!--//question image-->
+   </div>
+   <!--선택 항목 버튼-->
+   <!--선택 된 항목은 button에 active 클래스-->
+   <!--선택 불가 항목은 button에 disable 클래스-->
+   <div id="selectWrap"><button type="button" class="caution_open_btn">Clicca qui per vedere i consigli su misure e dimensioni.</button>
+      <p class="select_tit"><em>Scegli tutte le opzioni che vuoi. </em></p>
+      <ol>
+         <li>
+            <button class="answer_btn all_select" type="button" data-key="step02" data-value="AllSelectOption"><span></span>
+               <p>Tutte le opzioni</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT06515688" data-value="FTV0335751V" disabled=""><i></i>
+               <p>Meno di 400L</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT06515688" data-value="FTV0335756V,FTV0335754V"><i></i>
+               <p>Da 400L a 500L</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT06515688" data-value="FTV0335753V,FV65346230"><i></i>
+               <p>Da 500L a 600L</p>
+            </button>
+         </li>
+         <li>
+            <button class="answer_btn" type="button" data-key="FT06515688" data-value="FTV0335752V" disabled=""><i></i>
+               <p>Oltre 600L</p>
+            </button>
+         </li>
+      </ol>
+   </div>
+   <!--//선택 항목 버튼-->
+   <!--항목 선택 됬을 때 shopNowBtn 클래스에 active 추가-->
+   <div class="show_now_wrap">
+      <button type="button" id="shopNowBtn" data-link-name="r_Btn_stage1" data-model-description="Doppia porta" class="">Vai subito ai prodotti</button>
+   </div>
+   <!--항목 선택되면 nextStepBtn id에 active 클래스 추가-->
+   <div class="step_move_wrap">
+      <div class="btn_cont">
+         <button type="button" id="backStepBtn" style="display: block;">INDIETRO</button>
+      </div>
+      <div class="btn_cont">
+         <button type="button" id="nextStepBtn" data-link-name="AVANTI : Q2 CAPACITÀ" style="opacity: 0; display: none;" class="active">AVANTI</button>
+      </div>
+   </div>
+   <div class="product_none_popup">
+      <div class="popup_wrap">
+         <p>No Model matches when selecting this option. Choose another option and continue with the Fridge finder.</p>
+         <button type="button" id="selectAgainBtn">Select again</button>
+         <button type="button" id="selectAgainCloseBtn">close button</button>
+      </div>
+   </div>
+</div> @@include("./include/popup.html") @@include("./include/footer.html")

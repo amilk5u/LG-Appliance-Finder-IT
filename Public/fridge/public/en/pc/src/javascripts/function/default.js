@@ -24,61 +24,61 @@ if (window.innerWidth >= 1024) {
 
 /* 변수 정의 start -------------------------------*/
 // product
-let multi = 'FV65064400';
-let american = 'FV65064399';
-let tall = 'FV65064397';
-let double = 'FV65064398';
-let lader = 'FV65064402';
+let multi = 'multi';
+let american = 'american';
+let tall = 'tall';
+let double = 'double';
+let lader = 'lader';
 
 // capacity
-let under_400L = 'FTV0335751V';
-let _400L_500L = 'FTV0335756V';
-let _500L_600L = 'FTV0335753V';
-let _600L_or_more = 'FTV0335752V';
+let under_400L = 'under_400L';
+let _400L_500L = '_400L_500L';
+let _500L_600L = '_500L_600L';
+let _600L_or_more = '_600L_or_more';
 
 // depth
-let under_760mm = 'FTV0335761V';
+let under_760mm = 'under_760mm';
 
 // width
-let under_600mm = 'FTV0335757V';
-let _610mm_800mm = 'FTV0335758V';
-let _810_900mm = 'FTV0335759V';
-let _910mm_or_more = 'FTV0335760V';
+let under_600mm = 'under_600mm';
+let _610mm_800mm = '_610mm_800mm';
+let _810_900mm = '_810_900mm';
+let _910mm_or_more = '_910mm_or_more';
 
 // height
-let under_1800mm = 'FTV0335764V';
-let _1800_2000mm = 'FTV0335762V';
-let _2000mm_or_more = 'FTV0335763V';
+let under_1800mm = 'under_1800mm';
+let _1800_2000mm = '_1800_2000mm';
+let _2000mm_or_more = '_2000mm_or_more';
 
-let Plumbed = 'FTV0335946V';
-let Non_Plumbed = 'FV65347014';
-let Water_Only = 'FTV0336033V';
+let Plumbed = 'Plumbed';
+let Non_Plumbed = 'Non_Plumbed';
+let Water_Only = 'Water_Only';
 
-let Door_cooling = 'FTV0335958V';  // Door_cooling,Linearcooling
-let Linearcooling = 'FTV0335957V';
-let Pure_N_Fresh = 'FTV0336055V';
+let Door_cooling = 'Door_cooling';  // Door_cooling,Linearcooling
+let Linearcooling = 'Linearcooling';
+let Pure_N_Fresh = 'Pure_N_Fresh';
 
 // energy grade
-let EnergyGrade_A = 'FV65346308';
-let EnergyGrade_B = 'FV65346307';
-let EnergyGrade_C = 'FV65346306';
-let EnergyGrade_D = 'FV65346305';
-let EnergyGrade_E = 'FV65346303';
-let EnergyGrade_F = 'FV65346304';
+let EnergyGrade_A = 'EnergyGrade_A';
+let EnergyGrade_B = 'EnergyGrade_B';
+let EnergyGrade_C = 'EnergyGrade_C';
+let EnergyGrade_D = 'EnergyGrade_D';
+let EnergyGrade_E = 'EnergyGrade_E';
+let EnergyGrade_F = 'EnergyGrade_F';
 
-let Instaview = 'FV65346610';
-let Door_in_Door = 'FTV0335968V';
-let Wine_Rack = 'FTV0335943V';
-let Folding_Shelf = 'FTV0335950V';
-let Reversible_Door = 'FTV0335951V';
+let Instaview = 'Instaview';
+let Door_in_Door = 'Door_in_Door';
+let Wine_Rack = 'Wine_Rack';
+let Folding_Shelf = 'Folding_Shelf';
+let Reversible_Door = 'Reversible_Door';
 
-let ThinQ = 'FV65345059';
+let ThinQ = 'ThinQ';
 
 // color
-let black = 'FTV0335778V';
-let stainless_steel = 'FTV0335779V';
-let silver = 'FTV0335780V';
-let beige = 'FTV0335777V';
+let black = 'black';
+let stainless_steel = 'stainless_steel';
+let silver = 'silver';
+let beige = 'beige';
 
 let Dummy = 'dummy'; // dummy (더미데이터)
 let AllSelectOption = 'AllSelectOption'; // All Select Option

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+#finderIntro {
+	// mobile
+	#introAnimation {
+		width:100%; height:100%; position:fixed; top:0; left:0; background-color:rgba(0,0,0,.5); z-index:10000; 
+		#animationPlayer { 
+			width: 100%; position: fixed; top: 50%; left: 50%;
+			@include translate(-50%,-50%);
+		}
+	} 
+	// 1024 이상 ~ 1920 이하
+	@include desktop () { 
+		#introAnimation {
+			display: flex; justify-content: center; align-items: center;
+			#animationPlayer { 
+				width: auto; position: static; top: 0; left: 0;
+				@include translate(0,0);
+				svg { width: 1920px !important; height: 1080px !important; }
+			}
+		}		
+	}
+	@include tablet () {
+		#introAnimation {
+			#animationPlayer { 
+				svg { width: 1650px !important; height: auto !important;}
+			}
+		}	
+	}
+}
+#finderResult {
+	padding:vw(90) vw(45) vw(40); background:url(../../images/result/bg_unit.jpg) 50% 0 no-repeat #fff2ca;
+	-webkit-background-size: 100% auto; background-size: 100%; display: none;
+	.tit { font-size: vw(52); line-height: vw(64); text-align: center; display: block; }
+	.center_img_wrap {
+		height:vw(195); margin:vw(40) 0 0;
+		@include backgroundSoltC(50%, 0, no-repeat, auto 100%);
+	}
+	.txt_wrap { 
+		background-color:$white; padding:vw(70) vw(90);
+		@include borderRadius(vw(25));
+		@include boxShadow(0 vw(2) vw(15) vw(-10) $black);
+		dl {
+			padding:vw(40) 0 0;
+			&:nth-of-type(1) {
+				padding:0;
+				dd {color:#f4bb44;}
+			}
+			&:nth-of-type(2) dd { color: #2dbd9b; }
+			&:nth-of-type(3) dd { color: #195090; }
+			&:nth-of-type(4) dd { color: #9964da; }
+		}
+		dt {font-size:vw(38); font-weight:$bold;}
+		dd {
+			font-size:vw(28); line-height:vw(46); font-family:$bau; padding:vw(10) 0 0;
+			span { color:$gray1; }
+		}
+	}
+	.result_btn_wrap {
+		padding: vw(45) vw(80) 0; display: flex; gap: vw(30); flex-wrap: wrap;
+		@include boxSizing;
+		#tryAgain {
+			width:100%; height: vw(100); position: relative; color: #cfcfcf; font-size: vw(36); font-weight: $bold;
+			background-color: #464646; color: $white; text-shadow: vw(2) vw(2) vw(2) #2c2c2c;
+			@include borderRadius(vw(100));
+			@include boxSizing;
+			&:before {
+				width: vw(25); height: vw(24); content: ""; display: inline-block; position: relative; top:vw(2); left:vw(-10);
+				@include background('./../../images/common/try_again_icon.png', 50%, 50%);
+			}
+		}
+		#shopNowBtn02 {
+			width: 100%; height: vw(100); position: relative; color: $white; font-size: vw(36); font-weight: $bold;
+			background: linear-gradient(to right, #ea7902, #fac21e); text-shadow: vw(2) vw(2) vw(2) #c06e09; 
+			order: -1;
+			@include borderRadius(vw(100));
+         @include boxSizing;
+			&:after {
+				width: vw(13); height: vw(21); content: ""; display: inline-block; position: relative; left: vw(15); top: vw(1);
+            @include background('./../../images/common/next_btn_icon.png', 50%, 50%);
+         }
+			&:before {
+				width: vw(136); height: vw(117); content: ""; display: block; position: absolute; top: vw(-96); right: vw(10);
+				@include background('./../../images/common/shop_now_character.png', 50%, 50%);
+			}
+		}
+	}
+	@include desktop () {
+		padding: 0; background:url(../../images/pc/result/bg_unit.jpg) 50% 0 no-repeat #fff2ca;
+		.tit { 
+			padding: 90px 0 40px; font-size: 44px; line-height: 56px; letter-spacing: 0;
+			br { display: none; }
+		}
+		.center_img_wrap { height: 205px; margin: 0; }
+		.txt_wrap {
+			width: 820px; margin: 0 auto; padding: 60px 80px;
+			@include borderRadius(25px);
+			@include boxShadow(0 2px 15px -10px $black);
+			@include boxSizing;
+			dl { display: flex; padding: 30px 0 0; }
+			dt { min-width: max-content; font-size: 28px; }
+			dd { 
+				font-size: 24px; line-height: 40px; padding: 0 0 0 30px; 
+				@include boxSizing;
+				br { display: none; } 
+			}
+		}
+		.result_btn_wrap {
+			width: 580px; margin: 0 auto; padding: 25px 0 30px; gap: 20px; flex-wrap: nowrap;
+			#tryAgain {
+				height: 60px; font-size: 26px; text-shadow: 2px 2px 2px #2c2c2c; line-height: 60px;
+				@include borderRadius(100px);
+				&:before {
+					width: 20px; height: 19px; top: 2px; left: -10px;
+					@include background('./../../images/pc/common/try_again_icon.png', 50%, 50%);
+					@include transition(all, .5s);
+				}
+				&:hover { 
+					background-color: #333; 
+					&:before { @include transform(rotate(-360deg)); }
+				}
+			}
+			#shopNowBtn02 {
+				height: 60px; font-size: 26px; background: linear-gradient(to right, #ea7902, #fac21e); 
+				text-shadow: 2px 2px 2px #c06e09; line-height: 60px; order: 0; 
+				@include borderRadius(100px);
+				&:after {
+					width: 14px; height: 26px; left: 10px; top: 3px;
+					@include background('./../../images/pc/common/next_btn_icon2.png', 50%, 50%);
+					@include transition(all, .2s);
+				}
+				&:before {
+					width: 89px; height: 77px; top: -58px; right: -6px;
+					@include background('./../../images/pc/common/shop_now_character.png', 50%, 50%);
+				}
+				&:hover { 
+					&:after { left: 16px; }
+				}
+			}
+		}
+	}
+	@include tablet () {
+		.tit { padding: 80px 0 40px; font-size: 38px; line-height: 40px; }
+		.center_img_wrap { height: 160px; }
+		.txt_wrap {
+			width: 730px; padding: 50px 80px;
+			dt { font-size: 25px; }
+			dd { font-size: 21px; line-height: 35px; padding: 0 0 0 20px; }
+		}
+		.result_btn_wrap {
+			width: 480px; padding: 25px 0 30px; gap: 20px;
+			#tryAgain {
+				height: 53px; font-size: 21px; line-height: 53px;
+				&:before { top: 4px; left: -6px; }
+			}
+			#shopNowBtn02 { 
+				height: 53px; font-size: 21px; line-height: 53px; 
+				&:after { top: 4px; }
+			}
+		}
+	}
+}
