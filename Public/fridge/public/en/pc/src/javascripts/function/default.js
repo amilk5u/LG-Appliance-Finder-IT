@@ -15,6 +15,8 @@ let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
 const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
 
+
+
 if (window.innerWidth >= 1024) {
    imgPath = './images/pc/';
    imgPreload();
@@ -1177,7 +1179,7 @@ const configData = {
          },
          {
             key: 'FT06515762',
-            value: 'FTV0335958V,FTV0335957V',
+            value: 'Door_cooling,Linearcooling',
             content: 'Mantenimento della freschezza',
             changeData: {
                description: 'Le tecnologie di raffreddamento e di controllo della temperatura dei nostri frigoriferi mantengono i cibi freschi.',
@@ -1203,7 +1205,7 @@ const configData = {
          },
          {
             key: 'EnergyGrade',
-            value: 'FV65346308,FV65346307,FV65346306',
+            value: 'EnergyGrade_A,EnergyGrade_B,EnergyGrade_C',
             content: 'Classe di efficienza </br>energetica A o superiore',
             changeData: {
                description: {
