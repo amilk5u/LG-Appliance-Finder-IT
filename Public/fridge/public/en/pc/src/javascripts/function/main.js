@@ -793,7 +793,6 @@ function main() {
                $(".answer_btn").prop('disabled', true); // default disabled true
             }
 
-
             // 현재 스텝의 key 값을 모두 추출 하고, 중복된 key값은 제거
             $('.answer_btn').each(function () {
                _currentKey.push($(this).data('key'));
@@ -802,7 +801,6 @@ function main() {
 
             // 추출된 제품 갯수만큼 for 문 실행 
             for (let i = 0; i < _lastPro.length; i++) {
-
                // console.log(_lastPro[i])
                // 현재 스텝의 있는 key 갯수만큼 for 문 실행
                for (let j = 0; j < _currentKeyRemoval.length; j++) {
