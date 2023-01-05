@@ -433,7 +433,9 @@ function main() {
          $showNow.addClass('active');
          TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
 
-         // console.log('백했습니다!')
+         console.log('백했습니다!')
+         console.log(backMatchingProducts)
+
 
          // 앞전 스텝에서 항목을 클릭 했을 때 (값이 있을 경우) 선택한 항목/카운트 배열 삭제
          if (stepCount[idx + 1] !== undefined || stepCount[idx + 1] === 0) {
@@ -468,13 +470,10 @@ function main() {
          $('.que_title').css('display', 'block');
          $description.css('display', 'none');
 
-
-
-         console.log(back);
-         console.log(ddd);
-
-
-
+         backMatchingProducts = []; // 초기화
+         console.log('next---------------------------------');
+         console.log(ddd)
+         backMatchingProducts = ddd;
       }
       !stageLiveDecide && console.log('matchingProducts : ', matchingProducts) // 매칭된 제품
       answerSelectEvent(idx, _htmlIdx); // 항목 클릭 함수
