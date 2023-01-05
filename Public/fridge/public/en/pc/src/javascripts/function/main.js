@@ -339,6 +339,7 @@ function main() {
                }
             }
             matchingProducts.push(_stepProductArray);
+            console.log('_stepProductArray : ', _stepProductArray)
          }
       }
 
@@ -430,6 +431,9 @@ function main() {
          $showNow.addClass('active');
          TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
 
+         console.log('백했습니다!')
+         console.debug('ddd : ', ddd)
+
          // 앞전 스텝에서 항목을 클릭 했을 때 (값이 있을 경우) 선택한 항목/카운트 배열 삭제
          if (stepCount[idx + 1] !== undefined || stepCount[idx + 1] === 0) {
             // selectedParameters 앞전 데이터 삭제
@@ -471,7 +475,6 @@ function main() {
    function answerSelectEvent(idx, _htmlIdx) {
       let _lastAnswerValue; // 저장된 데이터에서 마지막 value
       let _currentHtml = configData.htmlData[_htmlIdx]; // 현재 스텝의 항목 데이터
-
 
       // 항목 클릭 
       $('.answer_btn').on('click', function () {
@@ -644,20 +647,14 @@ function main() {
          console.log('selectedParameters (배열에 저장된 키/벨류 값) : ', selectedParameters);
 
 
-
-
-
-
-
-
-         // console.log(idx > 1, matchingProducts[idx - 1] === undefined, matchingProducts[idx - 1])
-
          // step 2 부터 동작
          // if (idx > 1 && matchingProducts[idx - 1] === undefined) { // back 했을때를 고려해서 undefined 구분
          if (idx > 1) {
             if (idx === 2) {
                let _wholeKey = []; // 선택한 key 값 
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
+               ddd = []; // 제품 데이터 초기화
+
                for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
                   let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
                   _wholeKey.push(_selectKey);
@@ -668,6 +665,7 @@ function main() {
                      return item;
                   }
                });
+               // console.log('_lastPro 선택된 제품 : ', _lastPro)
 
                // 제품 갯수만큼 for 문 실행
                for (let i = 0; i < _lastPro.length; i++) {
@@ -689,11 +687,14 @@ function main() {
                   }
                }
                console.log(_stepProductArray)
+               ddd = _stepProductArray;
+               console.debug('ddd : ', ddd)
+               aaa.push(ddd); 
             } else {
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
                let _prevStepDummyTrue = false;
-
-               console.log(_lastPro)
+               // _stepProductArray = []; // 스텝별 제품 추출
+               ddd = []; // 제품 데이터 초기화 
 
                // 추출된 마지막 제품 갯수 만큼 for 문 실행 
                for (let i = 0; i < _lastPro.length; i++) {
@@ -719,7 +720,7 @@ function main() {
                               for (let u = 0; u < _lastPro[i][_selectKey].length; u++) {
                                  if (_selectValue.split(',')[p] === _lastPro[i][_selectKey][u]) {
                                     // console.log('선택된 데이터 : ', _selectValue.split(',')[p], '비교될 제품 데이터 : ', _lastPro[i][_selectKey][u], _selectValue.split(',')[p] === _lastPro[i][_selectKey][u])
-                                    if (idx !== 6 && idx !== 5) {
+                                    if (idx !== 4 && idx !== 5) {
                                        // console.log('******', _lastPro[i])
                                        _stepProductArray.push(_lastPro[i]);
                                     } else {
@@ -751,7 +752,7 @@ function main() {
                            } else {
                               if (_lastPro[i][_selectKey] === _selectValue) {
                                  // console.log('선택된 데이터 : ', _selectValue, '비교될 제품 데이터 : ', _lastPro[i][_selectKey], _lastPro[i][_selectKey] === _selectValue)
-                                 if (idx !== 6 && idx !== 5) {
+                                 if (idx !== 4 && idx !== 5) {
                                     // console.debug('******', _lastPro[i])
                                     _stepProductArray.push(_lastPro[i]);
                                  } else {
@@ -771,16 +772,18 @@ function main() {
                      _valueCounting--;
                   }
                   // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
-                  if ((idx === 6 || idx === 5) && _judgmentNum === _valueCounting) {
-                     // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                  if ((idx === 4 || idx === 5) && _judgmentNum === _valueCounting) {
+                     console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
                      _stepProductArray.push(_lastPro[i]);
-
                   }
                }
-               // matchingProducts.push(_stepProductArray);
                console.log(_stepProductArray)
+               ddd = _stepProductArray;
+               console.debug('ddd : ', ddd)    
+               aaa.push(ddd);       
             }
          }
+         console.log('aaa', aaa)
 
          // disabled 
          if (idx !== 0) {
@@ -818,7 +821,7 @@ function main() {
             // disabled 하기 
             let _arrayDataValue = Array.from(new Set(_dataValue)); // 추출된 제품 중복되는 value 제거한 나머지 최종 value
 
-            console.log(_arrayDataValue)
+            // console.log(_arrayDataValue)
 
             // 1:1 비교
             for (let i = 0; i < _arrayDataValue.length; i++) {
@@ -841,7 +844,7 @@ function main() {
                         }
                      }
                   }
-               } 
+               }
                // All Select Option (전체선택)
                if (_this.data('value') === AllSelectOption) {
                   _this.removeAttr('disabled');

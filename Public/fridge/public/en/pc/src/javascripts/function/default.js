@@ -16,6 +16,10 @@ let imgPath = ''; // desktop / mobile 이미지 경로 구분
 const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
 
 
+let aaa = [];
+let ddd; // 앞전에서 저장된 제품 데이터 값 기억해놓기..
+
+
 
 if (window.innerWidth >= 1024) {
    imgPath = './images/pc/';
