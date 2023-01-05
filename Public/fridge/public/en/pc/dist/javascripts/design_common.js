@@ -15,8 +15,7 @@ let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
 const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
 
-
-let aaa = [];
+let back;
 let ddd; // 앞전에서 저장된 제품 데이터 값 기억해놓기..
 
 
@@ -1728,6 +1727,8 @@ function main() {
       idx === 0 ? $backBtn.css('display', 'none') : $backBtn.css('display', 'block') // step 1에서 back 버튼 삭제
       // 앞전 데이터 삭제
       _judgmentStep === 'backStep' && matchingProducts.pop();
+
+
       $('body,html').scrollTop(0);
       $descDetailWrap.removeClass('open');
       TweenMax.to($nextBtn, .2, { display: 'none', opacity: 0 });
@@ -2040,8 +2041,7 @@ function main() {
          $showNow.addClass('active');
          TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
 
-         console.log('백했습니다!')
-         console.debug('ddd : ', ddd)
+         // console.log('백했습니다!')
 
          // 앞전 스텝에서 항목을 클릭 했을 때 (값이 있을 경우) 선택한 항목/카운트 배열 삭제
          if (stepCount[idx + 1] !== undefined || stepCount[idx + 1] === 0) {
@@ -2075,6 +2075,14 @@ function main() {
       } else {
          $('.que_title').css('display', 'block');
          $description.css('display', 'none');
+
+
+
+         console.log(back);
+         console.log(ddd);
+
+
+
       }
       !stageLiveDecide && console.log('matchingProducts : ', matchingProducts) // 매칭된 제품
       answerSelectEvent(idx, _htmlIdx); // 항목 클릭 함수
@@ -2263,6 +2271,8 @@ function main() {
                let _wholeKey = []; // 선택한 key 값 
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
                ddd = []; // 제품 데이터 초기화
+               console.log('_lastPro : ', _lastPro)
+
 
                for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
                   let _selectKey = selectedParameters[selectedParameters.length - (1 + j)].split('=')[0]; // key
@@ -2295,15 +2305,15 @@ function main() {
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
-               console.log(_stepProductArray)
+               console.log('_stepProductArray :', _stepProductArray);
                ddd = _stepProductArray;
-               console.debug('ddd : ', ddd)
-               aaa.push(ddd); 
+               console.debug('ddd : ', ddd);
             } else {
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
                let _prevStepDummyTrue = false;
-               // _stepProductArray = []; // 스텝별 제품 추출
                ddd = []; // 제품 데이터 초기화 
+
+               console.log('_lastPro : ', _lastPro)
 
                // 추출된 마지막 제품 갯수 만큼 for 문 실행 
                for (let i = 0; i < _lastPro.length; i++) {
@@ -2386,13 +2396,11 @@ function main() {
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
-               console.log(_stepProductArray)
+               console.log('_stepProductArray :', _stepProductArray)
                ddd = _stepProductArray;
-               console.debug('ddd : ', ddd)    
-               aaa.push(ddd);       
+               console.debug('ddd : ', ddd);
             }
          }
-         console.log('aaa', aaa)
 
          // disabled 
          if (idx !== 0) {
