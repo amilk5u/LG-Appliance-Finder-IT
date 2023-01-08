@@ -314,6 +314,11 @@
                               &:after { display: block; }
                            }
                         }
+                        &[disabled], &:disabled { 
+                           background-color: transparent; 
+                           span { background-color: #dfdfdf; }
+                           p { color: #c3c3c3; }
+                        }
                         span {
                            width: vw(32); height: vw(32); position: relative; display: block; border: vw(2) solid #dadada; float: left; background-color: #fcfcfc;
                            @include borderRadius(1vw);

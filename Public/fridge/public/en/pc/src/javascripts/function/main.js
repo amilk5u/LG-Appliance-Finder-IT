@@ -422,6 +422,11 @@ function main() {
             $('#quickFinder').removeClass('not_matched');
             $('.all_select').prop('disabled', false);
          }
+
+         // all Select 비활성화
+         if (idx === 2 || idx === 5) {
+            $('.all_select').prop('disabled', true);
+         }
       }
 
       // backStep
@@ -934,6 +939,10 @@ function main() {
                   _this.removeAttr('disabled');
                }
             });
+            // 실시간 클릭시 all Select 비활성화
+            if (idx === 2 || idx === 5) {
+               $('.all_select').prop('disabled', true);
+            }
          }
 
 
