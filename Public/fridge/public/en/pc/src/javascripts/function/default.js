@@ -15,8 +15,10 @@ let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
 const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
 
-let backMatchingProducts; // back 에서 저장된 제품 데이터 
-let ddd; // 옵션 클릭시 마다 실시간으로 제품 데이터 저장
+
+// 실시간 데이터 저장 변수
+let backMatchingProducts = []; // back 에서 저장된 제품 데이터 
+let productStorage; // 옵션 클릭시 마다 실시간으로 제품 데이터 저장
 
 
 

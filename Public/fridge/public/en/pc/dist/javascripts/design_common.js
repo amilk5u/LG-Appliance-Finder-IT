@@ -15,8 +15,10 @@ let imgPath = ''; // desktop / mobile 이미지 경로 구분
 
 const allSelectContent = 'Tutte le opzioni'; // Tutte le opzioni
 
-let backMatchingProducts; // back 에서 저장된 제품 데이터 
-let ddd; // 옵션 클릭시 마다 실시간으로 제품 데이터 저장
+
+// 실시간 데이터 저장 변수
+let backMatchingProducts = []; // back 에서 저장된 제품 데이터 
+let productStorage; // 옵션 클릭시 마다 실시간으로 제품 데이터 저장
 
 
 
@@ -1949,7 +1951,7 @@ function main() {
                }
             }
             matchingProducts.push(_stepProductArray);
-            console.log('_stepProductArray : ', _stepProductArray)
+            // console.log('_stepProductArray : ', _stepProductArray)
          }
       }
 
@@ -2041,10 +2043,6 @@ function main() {
          $showNow.addClass('active');
          TweenMax.to($nextBtn, .2, { display: 'block', opacity: 1 })
 
-         console.log('백했습니다!')
-         console.log(backMatchingProducts)
-
-
          // 앞전 스텝에서 항목을 클릭 했을 때 (값이 있을 경우) 선택한 항목/카운트 배열 삭제
          if (stepCount[idx + 1] !== undefined || stepCount[idx + 1] === 0) {
             // selectedParameters 앞전 데이터 삭제
@@ -2054,6 +2052,84 @@ function main() {
             // 앞전 카운트 삭제
             stepCount.pop();
          }
+
+         if (idx > 1) {
+            console.log('백했습니다!')
+            productStorage = backMatchingProducts[backMatchingProducts.length - 1]
+            if (backMatchingProducts.length !== idx - 3) {
+               backMatchingProducts.pop();
+            }
+            console.log('productStorage : ', productStorage)
+            console.debug('backMatchingProducts : ', backMatchingProducts)
+         }
+
+         // disabled 
+         if (idx !== 0) {
+            var _dataValue = []; // 추출된 제품에서 현재스텝의 마크업과 비교될 value 값 추출 배열
+            let _lastPro = productStorage;
+            let _currentKey = []; // 현재 스텝의 key 값
+            let _currentKeyRemoval = []; // 중복된데이터 제거된 key 값
+
+            if (idx === 2 || idx === 5) {
+               $(".answer_btn").prop('disabled', true); // default disabled true
+            }
+
+            // 현재 스텝의 key 값을 모두 추출 하고, 중복된 key값은 제거
+            $('.answer_btn').each(function () {
+               _currentKey.push($(this).data('key'));
+            });
+            _currentKeyRemoval = Array.from(new Set(_currentKey)); // 중복된 key 값 제거
+
+            // 추출된 제품 갯수만큼 for 문 실행 
+            for (let i = 0; i < _lastPro.length; i++) {
+               // 현재 스텝의 있는 key 갯수만큼 for 문 실행
+               for (let j = 0; j < _currentKeyRemoval.length; j++) {
+                  // 현재스텝의 key에 Feature 가 있을 때 _dataValue에 value값 모두 push
+                  if (Array.isArray(_lastPro[i][_currentKeyRemoval[j]])) {
+                     let binArray = _lastPro[i][_currentKeyRemoval[j]];
+                     for (let p = 0; p < binArray.length; p++) {
+                        _dataValue.push(binArray[p]);
+                     }
+                  } else {
+                     _dataValue.push(_lastPro[i][_currentKeyRemoval[j]])
+                  }
+               }
+            }
+            // disabled 하기 
+            let _arrayDataValue = Array.from(new Set(_dataValue)); // 추출된 제품 중복되는 value 제거한 나머지 최종 value
+
+            // console.log(_arrayDataValue)
+
+            // 1:1 비교
+            for (let i = 0; i < _arrayDataValue.length; i++) {
+               $('.answer_btn[data-value="' + _arrayDataValue[i]).removeAttr('disabled');
+            }
+
+            // 1:n 다중비교
+            $('.answer_btn').each(function () {
+               let _this = $(this);
+               // value 값이 여러개가 있는지 없는지 판단
+               if (_this.data('value').includes(',')) {
+                  let severalValue = _this.data('value').split(','); // 다중 value
+                  // 여러개의 밸류값은 갯수만큼 배열 생성하여 반복
+                  for (let j = 0; j < severalValue.length; j++) {
+                     // 선택한 value 값 만큼 반복
+                     for (let i = 0; i < _arrayDataValue.length; i++) {
+                        // 같은 value 값이 있으면 false
+                        if (severalValue[j] === _arrayDataValue[i]) {
+                           _this.removeAttr('disabled');
+                        }
+                     }
+                  }
+               }
+               // All Select Option (전체선택)
+               if (_this.data('value') === AllSelectOption) {
+                  _this.removeAttr('disabled');
+               }
+            });
+         }
+
+
 
          // 현재 선택된 카운트 만큼 for문 실행 
          for (let i = 0; i < stepCount[stepCount.length - 1]; i++) {
@@ -2077,11 +2153,14 @@ function main() {
       } else {
          $('.que_title').css('display', 'block');
          $description.css('display', 'none');
-
-         backMatchingProducts = []; // 초기화
-         console.log('next---------------------------------');
-         console.log(ddd)
-         backMatchingProducts = ddd;
+         if (idx > 2) {
+            console.log('다음 입니다!!!!')
+            console.log('productStorage : ', productStorage)
+            if (backMatchingProducts.length === idx - 3) {
+               backMatchingProducts.push(productStorage)
+            }
+            console.log('backMatchingProducts : ', backMatchingProducts)
+         }
       }
       !stageLiveDecide && console.log('matchingProducts : ', matchingProducts) // 매칭된 제품
       answerSelectEvent(idx, _htmlIdx); // 항목 클릭 함수
@@ -2104,7 +2183,6 @@ function main() {
          // step 02          
          let _btnAllCount1 = 0; // All Select 제외한 나머지 버튼 count
          let _activeBtn1 = 0; // 현재 클릭된 버튼 count
-
          let _stepProductArray = []; // 스텝별 제품 추출
 
          $('.answer_btn').each(function () {
@@ -2269,8 +2347,8 @@ function main() {
             if (idx === 2) {
                let _wholeKey = []; // 선택한 key 값 
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
-               ddd = []; // 제품 데이터 초기화
-               console.log('_lastPro : ', _lastPro)
+               productStorage = []; // 제품 데이터 초기화
+               // console.log('_lastPro : ', _lastPro)
 
 
                for (let j = 0; j < stepCount[stepCount.length - 1]; j++) {
@@ -2299,20 +2377,20 @@ function main() {
                         }
                      }
                   }
-                  // console.debug('true 갯수 : ', _judgmentNum, '총 갯수 : ', _restKeyLength.length, _judgmentNum === _restKeyLength.length)
+                  // console.debug('true 갯수 : ', _judgmentNum, '총 ole.log('productStorage : ', productSto갯수 : ', _restKeyLength.length, _judgmentNum === _restKeyLength.length)
                   if (_judgmentNum === _restKeyLength.length) {
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
-               console.log('_stepProductArray :', _stepProductArray);
-               ddd = _stepProductArray;
-               console.debug('ddd : ', ddd);
+               // console.log('_stepProductArray :', _stepProductArray);
+               productStorage = _stepProductArray;
+               // console.log('productStorage : ', productStorage);
             } else {
                let _lastPro = matchingProducts[matchingProducts.length - 1]; // 라스트 추출 제품 가져오기
                let _prevStepDummyTrue = false;
-               ddd = []; // 제품 데이터 초기화 
+               productStorage = []; // 제품 데이터 초기화 
 
-               console.log('_lastPro : ', _lastPro)
+               // console.log('_lastPro : ', _lastPro)
 
                // 추출된 마지막 제품 갯수 만큼 for 문 실행 
                for (let i = 0; i < _lastPro.length; i++) {
@@ -2391,13 +2469,13 @@ function main() {
                   }
                   // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
                   if ((idx === 4 || idx === 5) && _judgmentNum === _valueCounting) {
-                     console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                     // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
-               console.log('_stepProductArray :', _stepProductArray)
-               ddd = _stepProductArray;
-               console.debug('ddd : ', ddd);
+               // console.log('_stepProductArray :', _stepProductArray)
+               productStorage = _stepProductArray;
+               // console.log('productStorage : ', productStorage);
             }
          }
 
