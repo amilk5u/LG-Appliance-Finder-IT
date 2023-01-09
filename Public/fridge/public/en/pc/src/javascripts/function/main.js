@@ -876,7 +876,7 @@ function main() {
                   }
                   // 선택한 벨류값의 갯수와 true 된 갯수와 같으면 제품 추출
                   if ((idx === 4 || idx === 5) && _judgmentNum === _valueCounting) {
-                     // console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
+                     console.debug('true 된 갯수 : ', _judgmentNum, '카운트 갯수 : ', _valueCounting, _judgmentNum === _valueCounting)
                      _stepProductArray.push(_lastPro[i]);
                   }
                }
