@@ -31,65 +31,126 @@ if (window.innerWidth >= 1024) {
 
 /* 변수 정의 start -------------------------------*/
 // product
-let multi = 'FV65064400';
-let american = 'FV65064399';
-let tall = 'FV65064397';
-let double = 'FV65064398';
-let lader = 'FV65064402';
+let multi = 'multi';
+let american = 'american';
+let tall = 'tall';
+let double = 'double';
+let lader = 'lader';
 
 // capacity
-let under_400L = 'FTV0335751V';
-let _400L_500L = 'FTV0335756V';
-let _500L_600L = 'FTV0335753V';
-let _600L_or_more = 'FTV0335752V';
+let under_400L = 'under_400L';
+let _400L_500L = '_400L_500L';
+let _500L_600L = '_500L_600L';
+let _600L_or_more = '_600L_or_more';
 
 // depth
 let under_760mm = 'FTV0335761V';
 
 // width
-let under_600mm = 'FTV0335757V';
-let _610mm_800mm = 'FTV0335758V';
-let _810_900mm = 'FTV0335759V';
-let _910mm_or_more = 'FTV0335760V';
+let under_600mm = 'under_600mm';
+let _610mm_800mm = '_610mm_800mm';
+let _810_900mm = '_810_900mm';
+let _910mm_or_more = '_910mm_or_more';
 
 // height
-let under_1800mm = 'FTV0335764V';
-let _1800_2000mm = 'FTV0335762V';
-let _2000mm_or_more = 'FTV0335763V';
+let under_1800mm = 'under_1800mm';
+let _1800_2000mm = '_1800_2000mm';
+let _2000mm_or_more = '_2000mm_or_more';
 
-let Plumbed = 'FTV0335946V';
-let Non_Plumbed = 'FV65347014';
-let Water_Only = 'FTV0336033V';
+let Plumbed = 'Plumbed';
+let Non_Plumbed = 'Non_Plumbed';
+let Water_Only = 'Water_Only';
 
-let Door_cooling = 'FTV0335958V';  // Door_cooling,Linearcooling
-let Linearcooling = 'FTV0335957V';
-let Pure_N_Fresh = 'FTV0336055V';
+let Door_cooling = 'Door_cooling';  // Door_cooling,Linearcooling
+let Linearcooling = 'Linearcooling';
+let Pure_N_Fresh = 'Pure_N_Fresh';
 
 // energy grade
-let EnergyGrade_A = 'FV65346308';
-let EnergyGrade_B = 'FV65346307';
-let EnergyGrade_C = 'FTV0336547V';
-let EnergyGrade_D = 'FV65346305';
-let EnergyGrade_E = 'FV65346303';
-let EnergyGrade_F = 'FV65346304';
+let EnergyGrade_A = 'EnergyGrade_A';
+let EnergyGrade_B = 'EnergyGrade_B';
+let EnergyGrade_C = 'EnergyGrade_C';
+let EnergyGrade_D = 'EnergyGrade_D';
+let EnergyGrade_E = 'EnergyGrade_E';
+let EnergyGrade_F = 'EnergyGrade_F';
 
-let Instaview = 'FV65346610';
-let Door_in_Door = 'FTV0335968V';
-let Wine_Rack = 'FTV0335943V';
-let Folding_Shelf = 'FTV0335950V';
-let Reversible_Door = 'FTV0335951V';
+let Instaview = 'Instaview';
+let Door_in_Door = 'Door_in_Door';
+let Wine_Rack = 'Wine_Rack';
+let Folding_Shelf = 'Folding_Shelf';
+let Reversible_Door = 'Reversible_Door';
 
-let ThinQ = 'FV65345059';
+let ThinQ = 'ThinQ';
 
 // color
-let black = 'FTV0335778V';
-let stainless_steel = 'FTV0335779V';
-let silver = 'FTV0335780V';
-let beige = 'FTV0335777V';
+let black = 'black';
+let stainless_steel = 'stainless_steel';
+let silver = 'silver';
+let beige = 'beige';
 
 let Dummy = 'dummy'; // dummy (더미데이터)
 let AllSelectOption = 'AllSelectOption'; // All Select Option
 /* 변수 정의 end -------------------------------*/
+// /* 변수 정의 start -------------------------------*/
+// // product
+// let multi = 'FV65064400';
+// let american = 'FV65064399';
+// let tall = 'FV65064397';
+// let double = 'FV65064398';
+// let lader = 'FV65064402';
+
+// // capacity
+// let under_400L = 'FTV0335751V';
+// let _400L_500L = 'FTV0335756V';
+// let _500L_600L = 'FTV0335753V';
+// let _600L_or_more = 'FTV0335752V';
+
+// // depth
+// let under_760mm = 'FTV0335761V';
+
+// // width
+// let under_600mm = 'FTV0335757V';
+// let _610mm_800mm = 'FTV0335758V';
+// let _810_900mm = 'FTV0335759V';
+// let _910mm_or_more = 'FTV0335760V';
+
+// // height
+// let under_1800mm = 'FTV0335764V';
+// let _1800_2000mm = 'FTV0335762V';
+// let _2000mm_or_more = 'FTV0335763V';
+
+// let Plumbed = 'FTV0335946V';
+// let Non_Plumbed = 'FV65347014';
+// let Water_Only = 'FTV0336033V';
+
+// let Door_cooling = 'FTV0335958V';  // Door_cooling,Linearcooling
+// let Linearcooling = 'FTV0335957V';
+// let Pure_N_Fresh = 'FTV0336055V';
+
+// // energy grade
+// let EnergyGrade_A = 'FV65346308';
+// let EnergyGrade_B = 'FV65346307';
+// let EnergyGrade_C = 'FTV0336547V';
+// let EnergyGrade_D = 'FV65346305';
+// let EnergyGrade_E = 'FV65346303';
+// let EnergyGrade_F = 'FV65346304';
+
+// let Instaview = 'FV65346610';
+// let Door_in_Door = 'FTV0335968V';
+// let Wine_Rack = 'FTV0335943V';
+// let Folding_Shelf = 'FTV0335950V';
+// let Reversible_Door = 'FTV0335951V';
+
+// let ThinQ = 'FV65345059';
+
+// // color
+// let black = 'FTV0335778V';
+// let stainless_steel = 'FTV0335779V';
+// let silver = 'FTV0335780V';
+// let beige = 'FTV0335777V';
+
+// let Dummy = 'dummy'; // dummy (더미데이터)
+// let AllSelectOption = 'AllSelectOption'; // All Select Option
+// /* 변수 정의 end -------------------------------*/
 
 // 제품 키 / 벨류
 const product = {
@@ -645,7 +706,7 @@ const product = {
       FT05707162: tall,
       FT06515688: under_400L,
       FT06515690: under_760mm,
-      FT06515689: _500L_600L,
+      FT06515689: under_600mm,
       FT06515691: _2000mm_or_more,
       FT06515693: EnergyGrade_C,
       FT06515502: '',
@@ -656,7 +717,7 @@ const product = {
       FT05707162: tall,
       FT06515688: under_400L,
       FT06515690: under_760mm,
-      FT06515689: _500L_600L,
+      FT06515689: under_600mm,
       FT06515691: _2000mm_or_more,
       FT06515693: EnergyGrade_D,
       FT06515502: '',
@@ -667,7 +728,7 @@ const product = {
       FT05707162: tall,
       FT06515688: under_400L,
       FT06515690: under_760mm,
-      FT06515689: _500L_600L,
+      FT06515689: under_600mm,
       FT06515691: _2000mm_or_more,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
@@ -678,7 +739,7 @@ const product = {
       FT05707162: tall,
       FT06515688: under_400L,
       FT06515690: under_760mm,
-      FT06515689: _500L_600L,
+      FT06515689: under_600mm,
       FT06515691: _1800_2000mm,
       FT06515693: EnergyGrade_E,
       FT06515502: '',
@@ -1016,7 +1077,8 @@ const configData = {
          },
          {
             key: 'FT06515688',
-            value: 'FTV0335756V,FTV0335754V',
+            value: '_400L_500L,FTV0335754V',
+            // value: 'FTV0335756V,FTV0335754V',
             content: 'Da 400L a 500L',
             changeData: {
                description: 'La capacità ideale se fai la spesa una volta alla settimana e devi conservare tanto cibo.',
@@ -1025,7 +1087,8 @@ const configData = {
          },
          {
             key: 'FT06515688',
-            value: 'FTV0335753V,FV65346230',
+            value: '_500L_600L,FV65346230',
+            // value: 'FTV0335753V,FV65346230',
             content: 'Da 500L a 600L',
             changeData: {
                description: 'Consigliato se hai una famiglia numerosa e vuoi avere più spazio per i tuoi alimenti rispetto a un frigo tradizionale.',
@@ -1184,7 +1247,8 @@ const configData = {
          },
          {
             key: 'FT06515762',
-            value: 'FTV0335958V,FTV0335957V',
+            value: 'Door_cooling,Linearcooling',
+            // value: 'FTV0335958V,FTV0335957V',
             content: 'Mantenimento della freschezza',
             changeData: {
                description: 'Le tecnologie di raffreddamento e di controllo della temperatura dei nostri frigoriferi mantengono i cibi freschi.',
@@ -1210,7 +1274,7 @@ const configData = {
          },
          {
             key: 'FT06515693',
-            value: 'FV65346308,FV65346307,FTV0336547V',
+            value: 'EnergyGrade_A,EnergyGrade_B,EnergyGrade_C',
             content: 'Classe di efficienza </br>energetica A o superiore',
             changeData: {
                description: {
